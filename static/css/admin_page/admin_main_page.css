@@ -93,3 +93,48 @@ body {
 .actions .btn:hover {
     background-color: #0056b3;
 }
+
+/* 사이드바 스타일 */
+.MenuItems_section__qApp6 {
+    margin-bottom: 10px;
+}
+
+.MenuItems_menu__QgJck {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.MenuItems_label__2ceJf {
+    flex-grow: 1;
+}
+
+.MenuItems_menu__QgJck:hover {
+    background-color: #f0f0f0;
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.MenuItems_hasSubmenu__1EhTS:focus + .submenu, 
+.MenuItems_hasSubmenu__1EhTS:hover + .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #666;
+    padding: 5px 0;
+}
+
+.submenu a:hover {
+    color: #333;
+}

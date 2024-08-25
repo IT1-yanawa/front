@@ -1,0 +1,115 @@
+/* 전체적인 레이아웃 설정 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f7f8fa;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+#__next {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bYgkfd {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.knxcxI {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.jEFBQW {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Form 스타일 */
+form {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e1e3e8;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    border-color: #40a9ff;
+    box-shadow: 0 0 8px rgba(64, 169, 255, 0.2);
+    outline: none;
+}
+
+.char-count {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #999;
+}
+
+/* 버튼 스타일 */
+button {
+    width: 100%;
+    max-width: 900px;
+    padding: 14px 0;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #40a9ff;
+}
+
+/* 오류 시 빨간색 테두리 */
+input.error,
+textarea.error {
+    border-color: red;
+}

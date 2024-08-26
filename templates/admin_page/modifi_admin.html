@@ -314,64 +314,46 @@
         </div>
     </body>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // 버튼 요소를 가져오기.
-            const infoButton = document.querySelector('.ProjectInfo_infoButton');
-            // 보이거나 숨겨야 할 div 요소를 가져오기.
-            const infoBox = document.querySelector('.ProjectInfo_infoBox');
-    
-            // 기본값: infoBox를 숨기기.
-            infoBox.style.display = 'none';
-            infoButton.setAttribute('aria-expanded', 'false');
-    
-            // 버튼 클릭 시 이벤트 처리
-            infoButton.addEventListener('click', function () {
-                // 현재 aria-expanded 속성 값을 가져오기.
-                const expanded = infoButton.getAttribute('aria-expanded') === 'true';
-    
-                // 속성 값에 따라 표시 여부를 토글.
-                infoButton.setAttribute('aria-expanded', !expanded);
-                infoBox.style.display = expanded ? 'none' : 'block';
-            });
+        // 버튼 요소를 가져오기.
+        const infoButton = document.querySelector('.ProjectInfo_infoButton');
+        // 보이거나 숨겨야 할 div 요소를 가져오기.
+        const infoBox = document.querySelector('.ProjectInfo_infoBox');
+
+        // 기본값: infoBox를 숨기기.
+        infoBox.style.display = 'none';
+        infoButton.setAttribute('aria-expanded', 'false');
+
+        // 버튼 클릭 시 이벤트 처리
+        infoButton.addEventListener('click', function () {
+            // 현재 aria-expanded 속성 값을 가져오기.
+            const expanded = infoButton.getAttribute('aria-expanded') === 'true';
+
+            // 속성 값에 따라 표시 여부를 토글.
+            infoButton.setAttribute('aria-expanded', !expanded);
+            infoBox.style.display = expanded ? 'none' : 'block';
         });
 
         
-        document.addEventListener('DOMContentLoaded', function () {
-        // 모든 대카테고리 링크 요소를 가져옵니다.
-        const menuLinks = document.querySelectorAll('.MenuItems_menu.MenuItems_hasSubmenu');
+        // 모든 대카테고리를 불러오기.
+        const menuItems = document.querySelectorAll('.MenuItems_menu');
 
-        // 각 링크에 대해 클릭 이벤트를 추가합니다.
-        menuLinks.forEach(function (link) {
-            link.addEventListener('click', function (event) {
-                // 클릭 시 페이지 이동을 막습니다.
-                event.preventDefault();
+// 각 대카테고리에 대해 클릭 이벤트를 추가
+menuItems.forEach(function (menuItem) {
+    const submenuContainer = menuItem.nextElementSibling; // 해당 대카테고리의 중카테고리 컨테이너
 
-                // 링크의 다음 요소인 하위 카테고리 컨테이너를 찾습니다.
-                const submenuContainer = link.nextElementSibling;
-
-                // 모든 중카테고리 링크를 찾습니다.
-                const submenus = submenuContainer.querySelectorAll('.MenuItems_submenu');
-
-                // 중카테고리가 현재 보이는지 여부를 확인합니다.
-                const isExpanded = submenuContainer.style.display === 'block';
-
-                // 클릭 시 중카테고리의 표시 여부를 토글합니다.
-                if (isExpanded) {
-                    submenus.forEach(function (submenu) {
-                        submenu.style.display = 'none';
-                    });
-                    submenuContainer.style.display = 'none';
-                } else {
-                    submenus.forEach(function (submenu) {
-                        submenu.style.display = 'block';
-                    });
-                    submenuContainer.style.display = 'block';
-                }
-            });
-        });
+    menuItem.addEventListener('click', function () {
+        // 현재 중카테고리가 열려있는지 확인
+        const isExpanded = submenuContainer.classList.contains('MenuItems_show');
+        console.log("중카")
+        
+        if (isExpanded) {
+            // 중카테고리가 열려 있다면, 클래스를 삭제
+            submenuContainer.classList.remove('MenuItems_show');
+        } else {
+            // 중카테고리가 닫혀 있다면, 클래스를 추가
+            submenuContainer.classList.add('MenuItems_show');
+        }
     });
-
-
-        
+});
     </script>
 </html>

@@ -291,6 +291,13 @@ label,
 summary {
     touch-action: manipulation;
 }
+.wrap11 a {
+    cursor: pointer;
+}
+
+.wrap21 a {
+    cursor: pointer;
+}
 
 /* 드롭다운 메뉴 스타일 */
 .wrap7 {

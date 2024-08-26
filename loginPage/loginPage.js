@@ -26,6 +26,10 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const loginButton = document.getElementById("loginButton");
 
+const togglePassword = document.getElementById("togglePassword");
+const eyeIcon = document.getElementById("eye-icon");
+const eyeSlashIcon = document.getElementById("eye-slash-icon");
+
 (function () {
     // 입력 필드의 값을 확인하고 버튼 활성화 여부를 결정하는 함수
     function updateButtonState() {
@@ -54,7 +58,7 @@ emailInput.addEventListener("focus", (e) => {
 });
 emailInput.addEventListener("blur", (e) => {
     if (emailInput.value.trim() === "") {
-        e.target.style.border = "1px solid rgb(255, 66, 66)"; // 비어있는 경우 빨간색 테두리
+        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 빨간색 테두리
     } else {
         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
     }
@@ -65,15 +69,11 @@ passwordInput.addEventListener("focus", (e) => {
 });
 passwordInput.addEventListener("blur", (e) => {
     if (passwordInput.value.trim() === "") {
-        e.target.style.border = "1px solid rgb(255, 66, 66)"; // 비어있는 경우 빨간색 테두리
+        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 빨간색 테두리
     } else {
         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
     }
 });
-
-const togglePassword = document.getElementById("togglePassword");
-const eyeIcon = document.getElementById("eye-icon");
-const eyeSlashIcon = document.getElementById("eye-slash-icon");
 
 togglePassword.addEventListener("click", () => {
     // 현재 비밀번호 입력 필드의 타입을 체크하고 전환

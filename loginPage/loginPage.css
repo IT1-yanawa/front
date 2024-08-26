@@ -202,18 +202,18 @@ body {
 }
 
 #email-span {
-    /* color: rgb(255, 66, 66);
+    color: rgb(255, 66, 66);
     font-weight: 400;
     letter-spacing: 0.0192em;
     font-size: 13px;
     text-align: left;
-    line-height: 18px; */
+    line-height: 18px;
     display: none;
 }
 
-/* .show {
+.show {
     display: block;
-} */
+}
 
 input::placeholder {
     color: rgb(210 211 212);
@@ -262,7 +262,7 @@ input::placeholder {
     justify-content: inherit;
 }
 
-.toggle-icon-2 {
+.toggle-icon-2, .toggle-icon-3 {
     user-select: none;
     width: 1em;
     height: 1em;

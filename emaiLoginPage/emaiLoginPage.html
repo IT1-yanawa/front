@@ -8,9 +8,9 @@
     </head>
     <body>
         <div id="login-Page">
-            <!-- main -->
+            <!-- Main -->
             <main class="main">
-                <!-- header -->
+                <!-- Header -->
                 <header class="header">
                     <div class="header-div">
                         <button type="button">
@@ -64,7 +64,7 @@
                         </button>
                     </div>
                 </header>
-                <!-- section -->
+                <!-- Section -->
                 <section class="section">
                     <!-- 회원가입 전체 div -->
                     <div class="login-main-1">
@@ -79,7 +79,6 @@
                                         class="login-withEmail-left-1"
                                     >
                                         <span class="login-withEmail-left-2">
-                                            <!-- ***************************************** -->
                                             <svg
                                                 viewBox="0 0 24 24"
                                                 class="login-withEmail-left-3"
@@ -108,6 +107,7 @@
                                     <!-- 이메일, 비밀번호, 로그인 div -->
                                     <div>
                                         <div class="email">
+                                            <!-- 이메일-1 -->
                                             <div class="email-1">
                                                 <div class="margin-bottom">
                                                     <label
@@ -117,7 +117,26 @@
                                                     >
                                                 </div>
                                                 <input
-                                                    id="email"
+                                                    id="email-1"
+                                                    type="text"
+                                                    placeholder="이메일을 입력해주세요."
+                                                    name="email"
+                                                    autofocus=""
+                                                    autocomplete="on"
+                                                    class="input-style"
+                                                />
+                                            </div>
+                                            <!-- 이메일-2 -->
+                                            <div class="email-2">
+                                                <div class="margin-bottom">
+                                                    <label
+                                                        for="email"
+                                                        class="label-style"
+                                                        >이메일</label
+                                                    >
+                                                </div>
+                                                <input
+                                                    id="email-2"
                                                     type="text"
                                                     placeholder="이메일을 입력해주세요."
                                                     name="email"
@@ -127,7 +146,7 @@
                                                 />
                                             </div>
                                             <span
-                                                id="email-span"
+                                                id="email-error"
                                                 class="message"
                                             >
                                                 올바른 이메일을 입력해주세요.
@@ -163,6 +182,16 @@
                                                     >
                                                 </div>
                                             </div>
+                                            <!-- 로그인 실패 시 오류메시지 -->
+                                            <p
+                                                id="loginFailed"
+                                                class="loginFailed"
+                                            >
+                                                이메일 또는 비밀번호가 올바르지
+                                                않습니다.<br />
+                                                입력한 내용을 다시 확인해
+                                                주세요.
+                                            </p>
                                             <button
                                                 type="button"
                                                 class="toggle-icon"

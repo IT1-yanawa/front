@@ -45,8 +45,6 @@
 //     }
 // }
 
-// *******************
-
 // // 블러 이벤트 리스너 추가
 // emailInput.addEventListener("blur", (e) => {
 //     // 이메일 입력 여부 검증
@@ -60,5 +58,54 @@
 //         // e.classList.remove("valid");
 //         // e.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 입력 안했을 시 발생 시 빨간 테두리
 //         message.classList.add("show"); // 메시지 표시
+//     }
+// });
+
+// const emailInput1 = document.getElementById("email-1");
+
+// // **이메일 입력 시 이벤트(+ 오류 메시지 없음)
+
+// emailInput1.addEventListener("focus", (e) => {
+//     e.target.style.border = "1px solid #0066ff"; // 포커스 시 파란색 테두리
+// });
+// emailInput1.addEventListener("blur", (e) => {
+//     if (emailInput1.value.trim() === "") {
+//         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 기본 색상
+//     } else {
+//         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
+//     }
+// });
+
+// // **이메일 입력 시 이벤트(+ 오류 메시지 기능구현)
+// const emailInput2 = document.getElementById("email-2");
+// const message = document.getElementById("email-span");
+
+// // keydown 이벤트 리스너 추가
+// emailInput2.addEventListener("input", (e) => {
+//     console.log(e);
+
+//     // 이메일 입력 여부 검증
+//     if (e.target.value) {
+//         e.target.classList.remove("invalid");
+//         e.target.classList.add("valid");
+//         message.classList.remove("show"); // 메시지 숨김
+//     } else {
+//         e.target.classList.remove("valid");
+//         e.target.classList.add("invalid");
+//         message.classList.add("show"); // 메시지 표시
+//     }
+// });
+
+// // **비밀번호 포커스 시 파란색 테두리
+// const passwordInput = document.getElementById("password");
+
+// passwordInput.addEventListener("focus", (e) => {
+//     e.target.style.border = "1px solid #0066ff"; // 포커스 시 파란색 테두리
+// });
+// passwordInput.addEventListener("blur", (e) => {
+//     if (passwordInput.value.trim() === "") {
+//         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 기본 색상
+//     } else {
+//         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
 //     }
 // });

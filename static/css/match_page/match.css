@@ -33,7 +33,7 @@ div {
     line-height: normal;
 }
 .match-main-image {
-    background-image: url("images/match.jpg");
+    background-image: url("/static/images/match_page/match.jpg");
     background-size: 2000px 900px;
     height: 800px;
     width: 100%;

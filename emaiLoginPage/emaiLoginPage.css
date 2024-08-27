@@ -3,6 +3,11 @@
     src: url("./fonts/Pretendard-Regular.woff") format(woff);
 }
 
+@font-face {
+    font-family: "Pretendard-Bold";
+    src: url("fonts/Pretendard-Bold.woff") format(woff);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +26,7 @@ body {
     font-family: "Pretendard";
 }
 
-/* main */
+/* Main*/
 .main {
     display: flex;
     flex-direction: column;
@@ -29,7 +34,47 @@ body {
     min-height: 100%;
 }
 
-/* section */
+/* Header */
+.header {
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    border-bottom: 1px solid #0000000d;
+}
+
+.header-div {
+    display: flex;
+    align-items: center;
+    max-width: 1060px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 14px 20px;
+}
+
+.header-div >button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header-span {
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.header-svg {
+    user-select: none;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    font-size: inherit;
+    height: 32px;
+    width: 156px;
+}
+
+/* Section */
 .section {
     width: 100%;
     display: flex;
@@ -96,8 +141,6 @@ body {
     fill: inherit;
 }
 
-/*********************************************/
-
 .login-withEmail-left-3 {
     user-select: none;
     width: 1em;
@@ -106,7 +149,6 @@ body {
     flex-shrink: 0;
     font-size: 24px;
 }
-
 
 /* '이메일로 로그인' div */
 .login-withEmail-middle {
@@ -117,6 +159,7 @@ body {
     font-size: 28px;
     font-weight: 700;
     color: #171719;
+    font-family: "Pretendard-Bold";
 }
 
 .login-withEmail-middle-1 {
@@ -164,7 +207,7 @@ body {
     gap: 8px;
 }
 
-.email-1 {
+.email-1, .email-2 {
     position: relative;
 }
 
@@ -184,8 +227,6 @@ body {
     line-height: 20px;
 }
 
-/*************************************************************************/
-
 /* '이메일, 비밀번호' input */
 .input-style {
     width: 100%;
@@ -201,18 +242,22 @@ body {
     font-weight: 400;
 }
 
-#email-span {
+.input-style:focus {
+    border: 1px solid #0066ff; 
+}
+
+/* 이메일-2 (+오류 메시지) */
+#email-2 {
+    border: 1px solid rgb(255, 66, 66);
+}
+
+#email-error {
     color: rgb(255, 66, 66);
     font-weight: 400;
     letter-spacing: 0.0192em;
     font-size: 13px;
     text-align: left;
     line-height: 18px;
-    display: none;
-}
-
-.show {
-    display: block;
 }
 
 input::placeholder {
@@ -223,7 +268,6 @@ input::placeholder {
 .password {
     position: relative;
 }
-
 
 /* 로그인 유지 */
 .stay-login {
@@ -255,7 +299,6 @@ input::placeholder {
     cursor: pointer;
 }
 
-
 .toggle-icon-1 {
     display: flex;
     align-items: inherit;
@@ -276,6 +319,19 @@ input::placeholder {
     display: none;
 }
 
+/* 로그인 실패 시 오류메시지 */
+.password >p {
+    margin-bottom: -15px;
+}
+
+#loginFailed {
+    color: rgb(255, 66, 66);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.0192em;
+    font-size: 13px;
+    line-height: 18px;
+}
 
 /* 로그인 */
 .login {
@@ -290,7 +346,6 @@ input::placeholder {
     cursor: default;
 }
 
-
 .login >span {
     display: inline-block;
 }
@@ -304,8 +359,8 @@ input::placeholder {
 }
 
 #loginButton.active {
-    background-color: #0066ff; /* 활성화 상태에서 파란색 배경색 */
-    cursor: pointer; /* 클릭할 수 있음 */
+    background-color: #0066ff;
+    cursor: pointer;
     color: #ffffff;
 }
 
@@ -349,7 +404,6 @@ input::placeholder {
     align-items: center;
     gap: 8px;
 }
-
 
 /* 이메일로 회원가입 */
 .signup-and-reset >div button {

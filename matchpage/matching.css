@@ -16,21 +16,11 @@ body * {
     border: 0px;
     font: inherit;
     vertical-align: baseline;
-    background-repeat: no-repeat;
-    appearance: none;
 }
 div {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    font: inherit;
-    vertical-align: baseline;
-    background-repeat: no-repeat;
-    appearance: none;
-}
-html {
-    -webkit-font-smoothing: antialiased;
-    text-size-adjust: 100%;
 }
 .matching-main {
     margin: 0px auto;
@@ -172,4 +162,3 @@ html {
     white-space: normal;
     font-weight: 500;
 }
-/* https://www.wanted.co.kr/gigs/premium */

@@ -2,44 +2,20 @@ const message = document.getElementById("email-span");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 
-//**포커스 시 파란색 테두리,  포커스 안할 시 기본 색상 테두리
-// keydown 이벤트 리스너 추가
-emailInput.addEventListener("input", (e) => {
-    console.log(e);
-
-    // 이메일 입력 여부 검증
-    if (e.target.value) {
-        e.target.classList.remove("invalid");
-        e.target.classList.add("valid");
-        message.classList.remove("show"); // 메시지 숨김
-    } else {
-        e.target.classList.remove("valid");
-        e.target.classList.add("invalid");
-        message.classList.add("show"); // 메시지 표시
-    }
-});
-
-passwordInput.addEventListener("focus", (e) => {
-    e.target.style.border = "1px solid #0066ff"; // 포커스 시 파란색 테두리
-});
-passwordInput.addEventListener("blur", (e) => {
-    if (passwordInput.value.trim() === "") {
-        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 기본 색상
-    } else {
-        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
-    }
-});
-
 // //**포커스 시 파란색 테두리,  포커스 안할 시 기본 색상 테두리
+// // keydown 이벤트 리스너 추가
+// emailInput.addEventListener("input", (e) => {
+//     console.log(e);
 
-// emailInput.addEventListener("focus", (e) => {
-//     e.target.style.border = "1px solid #0066ff"; // 포커스 시 파란색 테두리
-// });
-// emailInput.addEventListener("blur", (e) => {
-//     if (emailInput.value.trim() === "") {
-//         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 기본 색상
+//     // 이메일 입력 여부 검증
+//     if (e.target.value) {
+//         e.target.classList.remove("invalid");
+//         e.target.classList.add("valid");
+//         message.classList.remove("show"); // 메시지 숨김
 //     } else {
-//         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
+//         e.target.classList.remove("valid");
+//         e.target.classList.add("invalid");
+//         message.classList.add("show"); // 메시지 표시
 //     }
 // });
 
@@ -53,6 +29,30 @@ passwordInput.addEventListener("blur", (e) => {
 //         e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
 //     }
 // });
+
+// //**포커스 시 파란색 테두리,  포커스 안할 시 기본 색상 테두리
+
+emailInput.addEventListener("focus", (e) => {
+    e.target.style.border = "1px solid #0066ff"; // 포커스 시 파란색 테두리
+});
+emailInput.addEventListener("blur", (e) => {
+    if (emailInput.value.trim() === "") {
+        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 기본 색상
+    } else {
+        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
+    }
+});
+
+passwordInput.addEventListener("focus", (e) => {
+    e.target.style.border = "1px solid #0066ff"; // 포커스 시 파란색 테두리
+});
+passwordInput.addEventListener("blur", (e) => {
+    if (passwordInput.value.trim() === "") {
+        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있는 경우 기본 색상
+    } else {
+        e.target.style.border = "1px solid rgba(112, 115, 124, 0.22)"; // 비어있지 않은 경우 기본 색상
+    }
+});
 
 const loginButton = document.getElementById("loginButton");
 const togglePassword = document.getElementById("togglePassword");

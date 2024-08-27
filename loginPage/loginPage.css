@@ -8,7 +8,6 @@
     src: url("fonts/Pretendard-Bold.woff") format(woff);
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -142,8 +141,6 @@ body {
     fill: inherit;
 }
 
-/*********************************************/
-
 .login-withEmail-left-3 {
     user-select: none;
     width: 1em;
@@ -152,7 +149,6 @@ body {
     flex-shrink: 0;
     font-size: 24px;
 }
-
 
 /* '이메일로 로그인' div */
 .login-withEmail-middle {
@@ -215,7 +211,6 @@ body {
     position: relative;
 }
 
-
 /* '이메일, 비밀번호, 로그인 유지' margin-bottom */
 .margin-bottom {
     margin-bottom: 8px;
@@ -247,19 +242,16 @@ body {
     font-weight: 400;
 }
 
-
 .input-style:focus {
     border: 1px solid #0066ff; 
 }
 
+/* 이메일-2 (+오류 메시지) */
 #email-2 {
     border: 1px solid rgb(255, 66, 66);
 }
 
-#email-2:focus {
-    border: 1px solid #0066ff; 
-}
-#email-span {
+#email-error {
     color: rgb(255, 66, 66);
     font-weight: 400;
     letter-spacing: 0.0192em;
@@ -267,7 +259,6 @@ body {
     text-align: left;
     line-height: 18px;
 }
-
 
 input::placeholder {
     color: rgb(210 211 212);
@@ -277,7 +268,6 @@ input::placeholder {
 .password {
     position: relative;
 }
-
 
 /* 로그인 유지 */
 .stay-login {
@@ -308,7 +298,6 @@ input::placeholder {
     background: none;
     cursor: pointer;
 }
-
 
 .toggle-icon-1 {
     display: flex;
@@ -415,7 +404,6 @@ input::placeholder {
     align-items: center;
     gap: 8px;
 }
-
 
 /* 이메일로 회원가입 */
 .signup-and-reset >div button {

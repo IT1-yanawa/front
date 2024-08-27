@@ -3,10 +3,10 @@
     flex-direction: column;
     height: 100%;
 }
-body * {
+body {
     font-family: "Pretendard";
 }
-body * {
+body {
     font-family: Pretendard !important;
 }
 div {
@@ -27,10 +27,6 @@ div {
     vertical-align: baseline;
     background-repeat: no-repeat;
     appearance: none;
-}
-html {
-    -webkit-font-smoothing: antialiased;
-    text-size-adjust: 100%;
 }
 .match-main {
     background-color: white;

@@ -55,11 +55,11 @@ canvas, img, picture, video {
     position: relative;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .AppLayout_container {
         overflow-y: auto;
     }
-}
+/* } */
 
 .AppGNBNavbar_container {
     box-shadow: 0 1px 0 0 rgba(10, 22, 70, .06);
@@ -80,11 +80,11 @@ canvas, img, picture, video {
     height: 56px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .AppGNBNavbar_container {
         height: 72px;
     }
-}
+/* } */
 
 a, address, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, label, legend, li, mark, menu, nav, object, ol, p, pre, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, u, ul, var, video {
     margin: 0;
@@ -119,11 +119,12 @@ a, address, article, aside, audio, b, big, blockquote, body, button, canvas, cap
     padding: 20px 16px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .StudioLogo_container {
         padding: 0;
+        min-width: 240px
     }
-}
+/* } */
 
 .StudioStatus_stateBox {
     display: -ms-flexbox;
@@ -151,14 +152,14 @@ button:not(:disabled) {
     height: 14px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .StudioLogo_logo {
         /*로고 이미지 바꾸기 20/08/26*/
         background-image: url(https://static.wadiz.kr/studio/funding/static/media/wadiz-studio-logo.db1cb560.svg);
         width: 190px;
         height: 21px;
     }
-}
+/* } */
 
 button {
     color: inherit;
@@ -192,13 +193,13 @@ a, button {
     color: #868e96;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .Admin_page_logo {
         font-size: 14px;
         font-weight: 700;
         line-height: 1.5;
     }
-}
+/* } */
 
 .StudioStatus_stateBox {
     display: -ms-flexbox;
@@ -245,11 +246,11 @@ a, button {
     padding: 16px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .ProjectInfo_container {
         padding: 0;
     }
-}
+/* } */
 
 button:not(:disabled) {
     cursor: pointer;
@@ -276,11 +277,11 @@ button:not(:disabled) {
     gap: 4px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .ProjectInfo_infoButton {
         height: 37px;
     }
-}
+/* } */
 
 
 button, input, span, textarea {
@@ -323,7 +324,7 @@ a, button {
     padding: 24px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .ProjectInfo_infoBox {
         position: absolute;
         top: 100%;
@@ -334,7 +335,7 @@ a, button {
         background-color: #fff;
         width: 280px;
     }
-}
+/* } */
 
 
 
@@ -479,14 +480,14 @@ img, video {
     padding-top: 56px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .AppLayout_container .AppLayout_main_1 {
         display: -ms-flexbox;
         display: flex;
         padding-top: 72px;
         height: 100%;
     }
-}
+/* } */
 
 .AppSidebarLayout_content {
     padding-bottom: 80px;
@@ -514,7 +515,7 @@ img, video {
     min-width: 240px;
 }
 
-@media screen and (min-width: 240px) {
+/* @media screen and (min-width: 240px) { */
     .AppSidebarLayout_container {
         position: relative;
         
@@ -525,7 +526,7 @@ img, video {
         height: 100%;
         min-width: 240px;
     }
-}
+/* } */
 .MenuItems_section {
     padding: 0;
 }

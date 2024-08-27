@@ -26,7 +26,7 @@ body {
     font-family: "Pretendard";
 }
 
-/* main */
+/* Main*/
 .main {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
     min-height: 100%;
 }
 
-/* header */
+/* Header */
 .header {
     width: 100%;
     height: 60px;
@@ -74,7 +74,7 @@ body {
     width: 156px;
 }
 
-/* section */
+/* Section */
 .section {
     width: 100%;
     display: flex;

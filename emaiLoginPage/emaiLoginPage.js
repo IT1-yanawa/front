@@ -5,7 +5,7 @@ const togglePassword = document.getElementById("togglePassword");
 const eyeIcon = document.getElementById("eye-icon");
 const eyeSlashIcon = document.getElementById("eye-slash-icon");
 
-// **비밀번호 보기/숨기기 (눈 아이콘) 기능
+// **비밀번호 보기/숨기기 (눈 아이콘) 기능**
 togglePassword.addEventListener("click", () => {
     // 현재 비밀번호 입력 필드의 타입을 체크하고 전환
     const type = passwordInput.type === "password" ? "text" : "password";
@@ -21,7 +21,7 @@ togglePassword.addEventListener("click", () => {
     }
 });
 
-// **로그인 버튼 활성화 기능
+// **로그인 버튼 활성화 기능**
 (function () {
     // 입력 필드의 값을 확인하고 버튼 활성화 여부를 결정하는 함수
     function updateButtonState() {

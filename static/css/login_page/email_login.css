@@ -1,11 +1,6 @@
 @font-face {
     font-family: "Pretendard";
-    src: url("./fonts/Pretendard-Regular.woff") format(woff);
-}
-
-@font-face {
-    font-family: "Pretendard-Bold";
-    src: url("fonts/Pretendard-Bold.woff") format(woff);
+    src: url("/static/css/fonts/PretendardVariable.woff2") format(woff2);
 }
 
 * {
@@ -23,7 +18,6 @@ body {
     text-rendering: optimizeLegibility;
     word-break: keep-all;
     overflow-wrap: anywhere;
-    font-family: "Pretendard";
 }
 
 /* Main*/
@@ -32,6 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100%;
+    font-family: "Pretendard";
 }
 
 /* Header */
@@ -88,7 +83,7 @@ body {
 }
 
 /* 회원가입 전체 div */
-.login-main-1 {
+.login-section-1 {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
@@ -98,7 +93,7 @@ body {
 }
 
 /* 회원가입 div */
-.login-main-2 {
+.login-section-2 {
     width: 100%;
     max-width: 400px;
     background-color: #ffffff;

@@ -108,6 +108,7 @@
                                     <!-- 이메일, 비밀번호, 로그인 div -->
                                     <div>
                                         <div class="email">
+                                            <!-- email-1 -->
                                             <div class="email-1">
                                                 <div class="margin-bottom">
                                                     <label
@@ -117,7 +118,26 @@
                                                     >
                                                 </div>
                                                 <input
-                                                    id="email"
+                                                    id="email-1"
+                                                    type="text"
+                                                    placeholder="이메일을 입력해주세요."
+                                                    name="email"
+                                                    autofocus=""
+                                                    autocomplete="on"
+                                                    class="input-style"
+                                                />
+                                            </div>
+                                            <!-- email-2 -->
+                                            <div class="email-2">
+                                                <div class="margin-bottom">
+                                                    <label
+                                                        for="email"
+                                                        class="label-style"
+                                                        >이메일</label
+                                                    >
+                                                </div>
+                                                <input
+                                                    id="email-2"
                                                     type="text"
                                                     placeholder="이메일을 입력해주세요."
                                                     name="email"
@@ -163,6 +183,13 @@
                                                     >
                                                 </div>
                                             </div>
+                                            <!-- 로그인 실패 시 메세지 -->
+                                            <p class="loginFailed">
+                                                이메일 또는 비밀번호가 올바르지
+                                                않습니다.<br />
+                                                입력한 내용을 다시 확인해
+                                                주세요.
+                                            </p>
                                             <button
                                                 type="button"
                                                 class="toggle-icon"

@@ -211,9 +211,10 @@ body {
     gap: 8px;
 }
 
-.email-1 {
+.email-1, .email-2 {
     position: relative;
 }
+
 
 /* '이메일, 비밀번호, 로그인 유지' margin-bottom */
 .margin-bottom {
@@ -334,6 +335,20 @@ input::placeholder {
 
 .hidden {
     display: none;
+}
+
+/* 로그인 실패 시 메세지 */
+.password >p {
+    margin-bottom: -15px;
+}
+
+.loginFailed {
+    color: rgb(255, 66, 66);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.0192em;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 

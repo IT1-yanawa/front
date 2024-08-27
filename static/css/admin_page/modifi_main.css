@@ -55,7 +55,7 @@ canvas, img, picture, video {
     position: relative;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .AppLayout_container {
         overflow-y: auto;
     }
@@ -80,7 +80,7 @@ canvas, img, picture, video {
     height: 56px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .AppGNBNavbar_container {
         height: 72px;
     }
@@ -119,7 +119,7 @@ a, address, article, aside, audio, b, big, blockquote, body, button, canvas, cap
     padding: 20px 16px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .StudioLogo_container {
         padding: 0;
     }
@@ -151,7 +151,7 @@ button:not(:disabled) {
     height: 14px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .StudioLogo_logo {
         /*로고 이미지 바꾸기 20/08/26*/
         background-image: url(https://static.wadiz.kr/studio/funding/static/media/wadiz-studio-logo.db1cb560.svg);
@@ -192,7 +192,7 @@ a, button {
     color: #868e96;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .Admin_page_logo {
         font-size: 14px;
         font-weight: 700;
@@ -245,7 +245,7 @@ a, button {
     padding: 16px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .ProjectInfo_container {
         padding: 0;
     }
@@ -276,7 +276,7 @@ button:not(:disabled) {
     gap: 4px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .ProjectInfo_infoButton {
         height: 37px;
     }
@@ -304,7 +304,7 @@ a, button {
 }
 
 .ProjectInfo_infoButton[aria-expanded=true] [class*=withIcon_icon] {
-    -webkit-transform: rotate(180deg);
+    
     transform: rotate(180deg);
 }
 
@@ -323,7 +323,7 @@ a, button {
     padding: 24px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .ProjectInfo_infoBox {
         position: absolute;
         top: 100%;
@@ -479,7 +479,7 @@ img, video {
     padding-top: 56px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .AppLayout_container .AppLayout_main_1 {
         display: -ms-flexbox;
         display: flex;
@@ -511,17 +511,19 @@ img, video {
     z-index: 16;
     background-color: #fff;
     width: 324px;
+    min-width: 240px;
 }
 
-@media screen and (min-width: 1096px) {
+@media screen and (min-width: 240px) {
     .AppSidebarLayout_container {
         position: relative;
-        -webkit-transform: none;
+        
         transform: none;
         transition: none;
         z-index: 0;
         width: 240px;
         height: 100%;
+        min-width: 240px;
     }
 }
 .MenuItems_section {
@@ -584,8 +586,8 @@ img, video {
 }
 
 .MenuItems_menu.MenuItems_hasSubmenu .MenuItems_downIcon.MenuItems_open_1 {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    
+    transform: rotate(0deg);
 }
 
 .MenuItems_submenuContainer {

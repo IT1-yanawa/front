@@ -115,7 +115,7 @@
                                     </span>
                                 </a>
                                 <!-- 중카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">문의 답변</a>
                                     <a class="MenuItems_submenu" href="">공지사항 작성</a>
                                     
@@ -138,7 +138,7 @@
                                     </span>
                                 </a>
                                 <!-- 중카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">회원 목록 조회</a>
                                     <a class="MenuItems_submenu" href="">회원 상세 정보</a>
                                     <a class="MenuItems_submenu" href="">회원 정보 수정</a>
@@ -161,7 +161,7 @@
                                     </span>
                                 </a>
                                 <!-- 중카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">게시판 목록 조회</a>
                                     <a class="MenuItems_submenu" href="">게시판 수정</a>
                                     <a class="MenuItems_submenu" href="">댓글 수정</a>
@@ -185,7 +185,7 @@
                                     </span>
                                 </a>
                                 <!-- 중카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">결제 관리</a>
                                     <a class="MenuItems_submenu" href="">환불 처리</a>
                                     <a class="MenuItems_submenu" href="">결제 실패 내역 및 재처리</a>
@@ -208,7 +208,7 @@
                                     </span>
                                 </a>
                                 <!-- 중카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">통합 배너 관리</a>
                                 </div>
 
@@ -231,7 +231,7 @@
                                     </span>
                                 </a>
                                 <!-- 서비스 소카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">공고 상세페이지</a>
                                     <a class="MenuItems_submenu" href="">공고 게시판 수정</a>
                                 </div>
@@ -253,7 +253,7 @@
                                     </span>
                                 </a>
                                 <!-- 서비스 소카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">등록/신청 경기 목록 조회</a>
                                     <a class="MenuItems_submenu" href="">경기 페이지 상세 조회</a>
                                 </div>
@@ -275,7 +275,7 @@
                                     </span>
                                 </a>
                                 <!-- 서비스 소카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">팀 상세페이지 조회</a>
                                     <a class="MenuItems_submenu" href="">팀 수정</a>
                                 </div>
@@ -297,7 +297,7 @@
                                     </span>
                                 </a>
                                 <!-- 서비스 소카테고리 -->
-                                <div class="MenuItems_submenuContainer MenuItems_show">
+                                <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">장소 상세페이지 조회</a>
                                     <a class="MenuItems_submenu" href="">장소 수정</a>
                                 </div>
@@ -313,47 +313,5 @@
             
         </div>
     </body>
-    <script>
-        // 버튼 요소를 가져오기.
-        const infoButton = document.querySelector('.ProjectInfo_infoButton');
-        // 보이거나 숨겨야 할 div 요소를 가져오기.
-        const infoBox = document.querySelector('.ProjectInfo_infoBox');
-
-        // 기본값: infoBox를 숨기기.
-        infoBox.style.display = 'none';
-        infoButton.setAttribute('aria-expanded', 'false');
-
-        // 버튼 클릭 시 이벤트 처리
-        infoButton.addEventListener('click', function () {
-            // 현재 aria-expanded 속성 값을 가져오기.
-            const expanded = infoButton.getAttribute('aria-expanded') === 'true';
-
-            // 속성 값에 따라 표시 여부를 토글.
-            infoButton.setAttribute('aria-expanded', !expanded);
-            infoBox.style.display = expanded ? 'none' : 'block';
-        });
-
-        
-        // 모든 대카테고리를 불러오기.
-        const menuItems = document.querySelectorAll('.MenuItems_menu');
-
-// 각 대카테고리에 대해 클릭 이벤트를 추가
-menuItems.forEach(function (menuItem) {
-    const submenuContainer = menuItem.nextElementSibling; // 해당 대카테고리의 중카테고리 컨테이너
-
-    menuItem.addEventListener('click', function () {
-        // 현재 중카테고리가 열려있는지 확인
-        const isExpanded = submenuContainer.classList.contains('MenuItems_show');
-        console.log("중카")
-        
-        if (isExpanded) {
-            // 중카테고리가 열려 있다면, 클래스를 삭제
-            submenuContainer.classList.remove('MenuItems_show');
-        } else {
-            // 중카테고리가 닫혀 있다면, 클래스를 추가
-            submenuContainer.classList.add('MenuItems_show');
-        }
-    });
-});
-    </script>
+    <script src="/static/js/admin_page/admin.js"></script>
 </html>

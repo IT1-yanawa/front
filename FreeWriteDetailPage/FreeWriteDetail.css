@@ -30,10 +30,10 @@ body {
     background-color: rgb(247, 248, 250);
 }
 
-:root {
+/* :root {
     --swiper-navigation-size: 44px;
     --swiper-theme-color: #007aff;
-}
+} */
 
 html {
     font-family: sans-serif;

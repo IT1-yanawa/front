@@ -51,17 +51,17 @@ canvas, img, picture, video {
 /* element.style {
 } */
 
-.AppLayout_container__2g11i {
+.AppLayout_container {
     position: relative;
 }
 
-@media screen and (min-width: 1096px) {
-    .AppLayout_container__2g11i {
+/* @media screen and (min-width: 1096px) {
+    .AppLayout_container {
         overflow-y: auto;
     }
-}
+} */
 
-.AppGNBNavbar_container__1icQW {
+.AppGNBNavbar_container {
     box-shadow: 0 1px 0 0 rgba(10, 22, 70, .06);
     display: -ms-flexbox;
     display: flex;
@@ -81,7 +81,7 @@ canvas, img, picture, video {
 }
 
 @media screen and (min-width: 1096px) {
-    .AppGNBNavbar_container__1icQW {
+    .AppGNBNavbar_container {
         height: 72px;
     }
 }
@@ -93,7 +93,7 @@ a, address, article, aside, audio, b, big, blockquote, body, button, canvas, cap
     vertical-align: baseline;
 }
 
-.AppGNBNavbar_flex__2DD3K {
+.AppGNBNavbar_flex {
     display: -ms-flexbox;
     display: flex;
     -ms-flex: 1 1;
@@ -104,14 +104,14 @@ a, address, article, aside, audio, b, big, blockquote, body, button, canvas, cap
     justify-content: flex-start;
 }
 
-.AppGNBNavbar_rightBox__1qtn6 {
+.AppGNBNavbar_rightBox_1 {
     justify-content: flex-end;
     grid-gap: 24px;
     gap: 24px;
 }
 
 
-.StudioLogo_container__2u4Eb {
+.StudioLogo_container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -120,12 +120,12 @@ a, address, article, aside, audio, b, big, blockquote, body, button, canvas, cap
 }
 
 @media screen and (min-width: 1096px) {
-    .StudioLogo_container__2u4Eb {
+    .StudioLogo_container {
         padding: 0;
     }
 }
 
-.StudioStatus_stateBox__21QpO {
+.StudioStatus_stateBox {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -139,7 +139,7 @@ button:not(:disabled) {
     cursor: pointer;
 }
 
-.StudioLogo_logo__pXI-Y {
+.StudioLogo_logo {
     display: block;
     margin-right: 8px;
     margin-bottom: 4px;
@@ -152,7 +152,7 @@ button:not(:disabled) {
 }
 
 @media screen and (min-width: 1096px) {
-    .StudioLogo_logo__pXI-Y {
+    .StudioLogo_logo {
         /*로고 이미지 바꾸기 20/08/26*/
         background-image: url(https://static.wadiz.kr/studio/funding/static/media/wadiz-studio-logo.db1cb560.svg);
         width: 190px;
@@ -184,7 +184,7 @@ a, button {
 }
 
 
-.StudioLogo_type__2Sksn {
+.Admin_page_logo {
     font-size: 10px;
     font-weight: 600;
     line-height: 1.5;
@@ -193,14 +193,14 @@ a, button {
 }
 
 @media screen and (min-width: 1096px) {
-    .StudioLogo_type__2Sksn {
+    .Admin_page_logo {
         font-size: 14px;
         font-weight: 700;
         line-height: 1.5;
     }
 }
 
-.StudioStatus_stateBox__21QpO {
+.StudioStatus_stateBox {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -209,7 +209,7 @@ a, button {
     gap: 4px;
 }
 
-.StudioStatus_stateBox__21QpO .StudioStatus_state__2OMTs {
+.StudioStatus_stateBox .StudioStatus_state {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.5;
@@ -221,7 +221,7 @@ a, button {
 
 
 
-.AppGNBNavbar_flex__2DD3K {
+.AppGNBNavbar_flex {
     display: -ms-flexbox;
     display: flex;
     -ms-flex: 1 1;
@@ -232,21 +232,21 @@ a, button {
     justify-content: flex-start;
 }
 
-.AppGNBNavbar_rightBox__1qtn6 {
+.AppGNBNavbar_rightBox_1 {
     -ms-flex-pack: end;
     justify-content: flex-end;
     grid-gap: 24px;
     gap: 24px;
 }
 
-.ProjectInfo_container__3jAST {
+.ProjectInfo_container {
     position: relative;
     margin-right: 0;
     padding: 16px;
 }
 
 @media screen and (min-width: 1096px) {
-    .ProjectInfo_container__3jAST {
+    .ProjectInfo_container {
         padding: 0;
     }
 }
@@ -255,7 +255,7 @@ button:not(:disabled) {
     cursor: pointer;
 }
 
-.ProjectInfo_infoButton__2bg95 {
+.ProjectInfo_infoButton {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.5;
@@ -277,7 +277,7 @@ button:not(:disabled) {
 }
 
 @media screen and (min-width: 1096px) {
-    .ProjectInfo_infoButton__2bg95 {
+    .ProjectInfo_infoButton {
         height: 37px;
     }
 }
@@ -291,19 +291,19 @@ a, button {
     outline: none;
 }
 
-.ProjectInfo_infoButton__2bg95 .ProjectInfo_emphasis__1i34c {
+.ProjectInfo_infoButton .ProjectInfo_emphasis {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
     color: #00c4c4;
 }
 
-.ProjectInfo_infoButton__2bg95 .ProjectInfo_text__3evR- {
+.ProjectInfo_infoButton .ProjectInfo_text_info {
     margin-left: 12px;
     color: #495057;
 }
 
-.ProjectInfo_infoButton__2bg95[aria-expanded=true] [class*=withIcon_icon] {
+.ProjectInfo_infoButton[aria-expanded=true] [class*=withIcon_icon] {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
@@ -313,7 +313,7 @@ a, button {
     clip-rule: evenodd;
 } */
 
-.ProjectInfo_infoBox__2x8RL {
+.ProjectInfo_infoBox {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -324,7 +324,7 @@ a, button {
 }
 
 @media screen and (min-width: 1096px) {
-    .ProjectInfo_infoBox__2x8RL {
+    .ProjectInfo_infoBox {
         position: absolute;
         top: 100%;
         right: 0;
@@ -338,34 +338,34 @@ a, button {
 
 
 
-.Button_button__35X6_.Button_contained__1XlJQ {
+.Button_button.Button_contained {
     border-color: #495057;
     background-color: #495057;
     color: #fff;
 }
 
-.Button_button__35X6_.Button_primary__1vdas {
+.Button_button.Button_primary {
     border-color: #00c4c4;
     color: #00c4c4;
 }
 
-.Button_button__35X6_.Button_sm__3vobZ {
+.Button_button.Button_sm {
     padding: 6px 11px;
     height: 32px;
     font-size: 14px;
 }
 
-.Button_button__35X6_.Button_primary__1vdas.Button_contained__1XlJQ {
+.Button_button.Button_primary.Button_contained {
     border-color: #00c4c4;
     background-color: #00c4c4;
     color: #fff;
 }
 
-.Button_button__35X6_.Button_block__3y0pW {
+.Button_button.Button_block {
     width: 100%;
 }
 
-.ProjectInfo_infoBox__2x8RL .ProjectInfo_content__1VmXE {
+.ProjectInfo_infoBox .ProjectInfo_content {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
@@ -390,11 +390,11 @@ img, video {
     height: auto;
 }
 
-.ProjectInfo_infoBox__2x8RL .ProjectInfo_content__1VmXE:first-of-type {
+.ProjectInfo_infoBox .ProjectInfo_content:first-of-type {
     margin-top: 0;
 }
 
-.ProjectInfo_infoBox__2x8RL .ProjectInfo_profileImage__1PLV0 {
+.ProjectInfo_infoBox .ProjectInfo_profileImage_admin {
     border: 1px solid rgba(0, 0, 0, .05);
     border-radius: 50%;
     background-color: #fff;
@@ -402,18 +402,18 @@ img, video {
     height: 24px;
 }
 
-.ProjectInfo_container__3jAST img {
+.ProjectInfo_container img {
     object-fit: cover;
     -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
-.ProjectInfo_infoBox__2x8RL .ProjectInfo_makerName__KIDrd {
+.ProjectInfo_infoBox .ProjectInfo_makerName {
     font-weight: 700;
     overflow-wrap: anywhere;
 }
 
-.AnnouncementButton_container__1p1gr {
+.AnnouncementButton_container_1-1 {
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -422,23 +422,23 @@ img, video {
     cursor: pointer;
 }
 
-.AnnouncementButton_icon__29AtY {
+.AnnouncementButton_icon {
     padding: 4px;
 }
 
-.Badge_container__3exWO {
+.Badge_container {
     position: relative;
     flex-shrink: 0;
     vertical-align: middle;
 }
 
-.AnnouncementButton_badge__2Jq25 {
+.AnnouncementButton_badge {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.PreviewExitButtons_container__1R35v {
+.PreviewExitButtons_container {
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -450,7 +450,7 @@ img, video {
     gap: 0;
 }
 
-.PreviewExitButtons_container__1R35v .PreviewExitButtons_button__2tixf[class*=Button_button] {
+.PreviewExitButtons_container .PreviewExitButtons_button[class*=Button_button] {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
@@ -462,25 +462,25 @@ img, video {
     color: #495057;
 }
 
-.PreviewExitButtons_container__1R35v .PreviewExitButtons_button__2tixf[class*=Button_button]:first-child {
+.PreviewExitButtons_container .PreviewExitButtons_button[class*=Button_button]:first-child {
     border-radius: 4px 0 0 4px;
 }
 
-.PreviewExitButtons_container__1R35v .PreviewExitButtons_button__2tixf[class*=Button_button]~.PreviewExitButtons_button__2tixf {
+.PreviewExitButtons_container .PreviewExitButtons_button[class*=Button_button]~.PreviewExitButtons_button {
     margin-left: -1px;
     border-left: 1px solid #e9ecef;
 }
 
-.PreviewExitButtons_container__1R35v .PreviewExitButtons_button__2tixf[class*=Button_button]:last-child {
+.PreviewExitButtons_container .PreviewExitButtons_button[class*=Button_button]:last-child {
     border-radius: 0 4px 4px 0;
 }
 
-.AppLayout_container__2g11i .AppLayout_main__3h4EB {
+.AppLayout_container .AppLayout_main_1 {
     padding-top: 56px;
 }
 
 @media screen and (min-width: 1096px) {
-    .AppLayout_container__2g11i .AppLayout_main__3h4EB {
+    .AppLayout_container .AppLayout_main_1 {
         display: -ms-flexbox;
         display: flex;
         padding-top: 72px;
@@ -488,13 +488,13 @@ img, video {
     }
 }
 
-.AppSidebarLayout_content__3VHIu {
+.AppSidebarLayout_content {
     padding-bottom: 80px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-.AppSidebarLayout_container__3ldf5 {
+.AppSidebarLayout_container {
     display: -ms-flexbox;
     display: flex;
     position: fixed;
@@ -514,7 +514,7 @@ img, video {
 }
 
 @media screen and (min-width: 1096px) {
-    .AppSidebarLayout_container__3ldf5 {
+    .AppSidebarLayout_container {
         position: relative;
         -webkit-transform: none;
         transform: none;
@@ -524,15 +524,15 @@ img, video {
         height: 100%;
     }
 }
-.MenuItems_section__qApp6 {
+.MenuItems_section {
     padding: 0;
 }
 
-.MenuItems_section__qApp6:first-of-type, .MenuItems_section__qApp6:nth-of-type(2) {
+.MenuItems_section:first-of-type, .MenuItems_section:nth-of-type(2) {
     border-bottom: 1px solid #f2f4f6;
 }
 
-.MenuItems_menu__QgJck {
+.MenuItems_menu {
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -545,14 +545,14 @@ img, video {
     width: 100%;
 }
 
-.MenuItems_menu__QgJck.MenuItems_hasSubmenu__1EhTS {
+.MenuItems_menu.MenuItems_hasSubmenu {
     display: block;
     outline: none;
     border: none;
     width: 100%;
 }
 
-.MenuItems_menu__QgJck .MenuItems_label__2ceJf {
+.MenuItems_menu .MenuItems_label {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
@@ -565,17 +565,17 @@ img, video {
     gap: 12px;
 }
 
-.MenuItems_active__tDqWg .MenuItems_label__2ceJf {
+.MenuItems_active .MenuItems_label {
     color: #212529;
     font-weight: 700;
 }
 
-.MenuItems_menu__QgJck .MenuItems_label__2ceJf svg {
+.MenuItems_menu .MenuItems_label svg {
     width: 16px;
     height: 16px;
 }
 
-.MenuItems_menu__QgJck.MenuItems_hasSubmenu__1EhTS .MenuItems_downIcon__2GVY9 {
+.MenuItems_menu.MenuItems_hasSubmenu .MenuItems_downIcon {
     position: absolute;
     top: 50%;
     right: 16px;
@@ -583,17 +583,17 @@ img, video {
     color: #adb5bd;
 }
 
-.MenuItems_menu__QgJck.MenuItems_hasSubmenu__1EhTS .MenuItems_downIcon__2GVY9.MenuItems_open__2VtAS {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+.MenuItems_menu.MenuItems_hasSubmenu .MenuItems_downIcon.MenuItems_open_1 {
+    
+    transform: rotate(0deg);
 }
 
-.MenuItems_submenuContainer__3sALs {
+.MenuItems_submenuContainer {
     transition: height .3s ease-out;
     height: 0;
     overflow-y: hidden;
 }
-.MenuItems_submenuContainer__3sALs.MenuItems_show__1ldUA {
+.MenuItems_submenuContainer.MenuItems_show {
     height: auto;
 }
 
@@ -603,7 +603,7 @@ a {
     color: inherit;
 }
 
-.MenuItems_submenuContainer__3sALs .MenuItems_submenu__3RDKb {
+.MenuItems_submenuContainer .MenuItems_submenu {
     display: block;
     background-color: #f9fafb;
     cursor: pointer;
@@ -613,3 +613,4 @@ a {
     font-weight: 500;
     line-height: 1.5;
 }
+

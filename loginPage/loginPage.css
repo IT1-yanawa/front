@@ -232,8 +232,6 @@ body {
     line-height: 20px;
 }
 
-/*************************************************************************/
-
 /* '이메일, 비밀번호' input */
 .input-style {
     width: 100%;
@@ -249,19 +247,18 @@ body {
     font-weight: 400;
 }
 
+
 .input-style:focus {
-    border: 1px solid #0066ff; /* 포커스 시 파란 테두리 */
+    border: 1px solid #0066ff; 
 }
 
-.input-style.invalid {
-    border: 1px solid rgb(255, 66, 66); /* 오류 발생 시 빨간 테두리 */
+#email-2 {
+    border: 1px solid rgb(255, 66, 66);
 }
 
-.input-style.valid {
-    border: 1px solid #0066ff; /* 올바른 이메일 입력 시 파란 테두리 */
+#email-2:focus {
+    border: 1px solid #0066ff; 
 }
-
-
 #email-span {
     color: rgb(255, 66, 66);
     font-weight: 400;
@@ -269,12 +266,8 @@ body {
     font-size: 13px;
     text-align: left;
     line-height: 18px;
-    display: none;
 }
 
-#email-span.show {
-    display: block;
-}
 
 input::placeholder {
     color: rgb(210 211 212);
@@ -337,12 +330,12 @@ input::placeholder {
     display: none;
 }
 
-/* 로그인 실패 시 메세지 */
+/* 로그인 실패 시 오류메시지 */
 .password >p {
     margin-bottom: -15px;
 }
 
-.loginFailed {
+#loginFailed {
     color: rgb(255, 66, 66);
     font-weight: 400;
     text-align: left;
@@ -350,7 +343,6 @@ input::placeholder {
     font-size: 13px;
     line-height: 18px;
 }
-
 
 /* 로그인 */
 .login {
@@ -365,7 +357,6 @@ input::placeholder {
     cursor: default;
 }
 
-
 .login >span {
     display: inline-block;
 }
@@ -379,8 +370,8 @@ input::placeholder {
 }
 
 #loginButton.active {
-    background-color: #0066ff; /* 활성화 상태에서 파란색 배경색 */
-    cursor: pointer; /* 클릭할 수 있음 */
+    background-color: #0066ff;
+    cursor: pointer;
     color: #ffffff;
 }
 

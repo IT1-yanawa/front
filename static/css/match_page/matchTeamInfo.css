@@ -141,8 +141,11 @@ section {
     padding: 0px 20px;
     margin: 0px auto;
 }
-.team-detail-layout .content {
+.main-div .team-detail-layout > .content {
     width: 59%;
+}
+.main-div .team-detail-layout > div {
+    float: left;
 }
 .left-content .team-wrapper {
     border-radius: 6px;
@@ -435,7 +438,178 @@ button {
     font-size: 13px;
     letter-spacing: 0.0192em;
 }
-.team-detail-layout .sider {
+.team-detail-layout .sider-1 {
     width: 39%;
     margin-left: 2%;
+}
+.sider-section {
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    text-align: left;
+    height: 100%;
+}
+.wrapper-div {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 219px;
+    justify-content: space-between;
+}
+.context-area {
+    line-height: 20px;
+}
+.confirm-title {
+    font-size: 20px;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+    word-break: break-all;
+    font-weight: bold;
+}
+.wrapper-div .confirm-descript.gap {
+    padding-top: 12px;
+}
+.wrapper-div .confirm-descript {
+    font-size: 14px;
+    color: rgb(109, 114, 120);
+}
+.side-btn-area {
+    padding-top: 30px;
+}
+.side-btn-area button {
+    padding: 0px;
+    cursor: pointer;
+}
+.side-match-btn {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(51, 102, 255);
+    color: white !important;
+}
+.span-text {
+    font-weight: 600;
+}
+.side-match-btn span {
+    color: inherit;
+}
+.span-text {
+    word-break: break-all;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0056em;
+}
+.span-span {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    inset: 0px;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.2s;
+    will-change: opacity;
+    cursor: inherit;
+    background-color: rgb(23, 23, 23);
+}
+.similar-section {
+    position: relative;
+    margin-top: 40px;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: rgb(247, 248, 250);
+}
+.similar-h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+}
+.similar-h2 em {
+    color: rgb(51, 102, 255);
+}
+.similar-section > ul > li {
+    margin-bottom: 20px;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.similar-team {
+    position: relative;
+    padding: 20px 58px 20px 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+.similar-h3 {
+    white-space: normal;
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.0236em;
+}
+.similar-ul {
+    margin: 14px 0px 22px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+.similar-date {
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(151, 157, 164);
+}
+.similar-date label {
+    margin-right: 3px;
+    padding-left: 20px;
+    background-image: url("https://www.wanted.co.kr/gigs/images/icons/icon-20x20-calendar.svg");
+    background-size: 20px 20px;
+    background-position: left -3px;
+}
+.similar-date strong {
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+}
+/* 여기 부분이 기본요소 */
+.sider-1 {
+    display: none;
+}
+.team-detail-layout .sider-2 {
+    width: 39%;
+    margin-left: 2%;
+}
+.apply-section {
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    text-align: left;
+    height: 100%;
+}
+.apply-title {
+    background-color: white;
+}
+.apply-container {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(242, 244, 247);
+    position: relative;
+    padding: 28px 24px !important;
+}
+.apply-close-btn {
+    position: absolute;
+    right: 7%;
+    top: 27px;
+}
+img {
+    vertical-align: middle;
 }

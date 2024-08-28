@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'NanumSquareNeoLight';
     background-color: #f7f8fa;
     height: 100%;
     display: flex;
@@ -48,6 +48,18 @@ header {
     transform: translateX(-50%);
     margin-top: -30px;
 }
+.content11 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+.content16 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
 
 .content1 {
     font-size: 24px;
@@ -83,7 +95,7 @@ form {
 input,
 textarea,
 button {
-    font-family: 'Pretendard', sans-serif;
+    
     font-size: 14px;
     color: #333;
 }
@@ -95,6 +107,7 @@ textarea {
     border: 1px solid #e1e3e8;
     border-radius: 6px;
     transition: border-color 0.3s;
+    font-family: 'NanumSquareNeoLight';
 }
 
 input:focus,
@@ -120,7 +133,7 @@ textarea:focus {
     padding: 8px 12px; /* 패딩 조정하여 크기 조절 */
     border-radius: 6px;
     font-size: 14px; /* 폰트 크기 설정 */
-    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+   font-weight: 600;
     color: #333;
     text-align: center;
     cursor: pointer;
@@ -151,7 +164,7 @@ textarea:focus {
     color: #333;
     background-color: #f7f7f7;
     cursor: not-allowed;
-    font-family: 'Pretendard', sans-serif;
+   
 }
 
 
@@ -168,6 +181,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'NanumSquareNeoLight';
 }
 
 button:hover {

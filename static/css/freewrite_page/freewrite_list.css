@@ -94,16 +94,17 @@ video {
 }
 
 html {
-    font-family: Pretendard, sans-serif;
+   
     line-height: 1.15;
-    -webkit-font-smoothing: antialiased;
+   
     text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   
 }
 
 body {
     line-height: normal;
     background-color: rgb(247, 248, 250);
+    font-family: 'NanumSquareNeoLight';
 }
 
 /* 공통 요소 스타일 */
@@ -192,7 +193,7 @@ ul {
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    top: 13%;
+    top: 15%;
 }
 
 /* 검색 입력 필드 스타일 */
@@ -257,6 +258,7 @@ ul {
 .wrap3 .content7 {
     flex: auto;
     max-width: 100%;
+    
     
 }
 
@@ -493,7 +495,7 @@ img.rotate {
     text-overflow: ellipsis;
     white-space: unset;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
+  
 }
 
 /* 페이지네이션 스타일 */

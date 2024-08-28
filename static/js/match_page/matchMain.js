@@ -86,3 +86,13 @@ setInterval(() => {
     colorChange.style.color = color ? redColor : originColor;
     color = !color;
 }, 500);
+
+// 팀 등록하가 div가져오기
+const register = document.querySelector(".register-div");
+
+// 조회하기 눌렀을때 알림 + form 제출로 조회결과 제출
+register.addEventListener("click", () => {
+    // 예시로 해놓은거
+    alert("등록이 완료되었습니다!");
+    // 위에 alert 지우고 등록하기 버튼 눌렀을때 등록 페이지로 이동하게 코드작성
+});

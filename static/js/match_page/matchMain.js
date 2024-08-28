@@ -87,7 +87,7 @@ setInterval(() => {
     color = !color;
 }, 500);
 
-// 팀 등록하가 div가져오기
+// 팀 등록하기 div가져오기
 const register = document.querySelector(".register-div");
 
 // 조회하기 눌렀을때 알림 + form 제출로 조회결과 제출

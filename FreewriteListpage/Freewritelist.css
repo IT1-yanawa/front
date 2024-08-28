@@ -192,7 +192,7 @@ ul {
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    top: 13%;
+    top: 15%;
 }
 
 /* 검색 입력 필드 스타일 */
@@ -257,6 +257,7 @@ ul {
 .wrap3 .content7 {
     flex: auto;
     max-width: 100%;
+    
     
 }
 

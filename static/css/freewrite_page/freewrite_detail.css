@@ -3,7 +3,7 @@
 }
 
 body, body * {
-    font-family: Pretendard !important;
+    font-family: 'NanumSquareNeoLight'!important;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, button, video {
@@ -14,6 +14,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
     background-repeat: no-repeat;
     appearance: none;
+    font-weight: 600;
 }
 
 *, :after, :before {
@@ -39,12 +40,12 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     text-size-adjust: 100%;
-    overflow-style: scrollbar;
-    tap-highlight-color: rgba(0, 0, 0, 0);
-    font-smoothing: antialiased;
+   
+ 
+    
 }
 
-@media (min-width: 767px) {
+
     .wrap1::before {
         content: "";
         display: block;
@@ -54,7 +55,7 @@ html {
         height: 221px;
         background-color: black;
     }
-}
+
 
 #__next {
     display: flex;
@@ -148,7 +149,7 @@ img, svg {
     font-size: 14px;
     line-height: 1.5714285714285714;
     list-style: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+   
     border-block-start: 1px solid rgba(5, 5, 5, 0.06);
 }
 
@@ -218,7 +219,7 @@ ul {
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 40px;
-    unicode-bidi: isolate;
+  
 }
 
 .content32 {
@@ -446,12 +447,12 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
-    unicode-bidi: isolate;
+  
 }
 li {
     display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
+ 
+  
 }
 .content26 {
     position: relative;

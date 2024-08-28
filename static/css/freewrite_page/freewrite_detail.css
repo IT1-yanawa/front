@@ -1,4 +1,4 @@
-.emVXXL {
+.wrap1 {
     position: relative;
 }
 
@@ -38,16 +38,14 @@ body {
 html {
     font-family: sans-serif;
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-font-smoothing: antialiased;
     text-size-adjust: 100%;
+    overflow-style: scrollbar;
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    font-smoothing: antialiased;
 }
 
 @media (min-width: 767px) {
-    .emVXXL::before {
+    .wrap1::before {
         content: "";
         display: block;
         position: absolute;
@@ -64,7 +62,7 @@ html {
     height: 100%;
 }
 
-.emVXXL > div {
+.wrap1 > div {
     max-width: 1080px;
     margin: 0 auto;
     position: relative;
@@ -73,7 +71,7 @@ html {
     column-gap: 20px;
 }
 
-.emVXXL > div::before {
+.wrap1 > div::before {
     content: "";
     position: absolute;
     top: 0;
@@ -85,7 +83,7 @@ html {
     background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fgigs%2Fwww%2Fpremium%2Fpremium_detail_top_bg_mw.png&w=1440&q=85");
 }
 
-.ebYKek {
+.wrap3 {
     position: relative;
     flex: 1 1 0%;
     margin-bottom: 150px;
@@ -98,19 +96,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-:where(.css-1qhpsh8).ant-space {
+.wrap4 {
     display: inline-flex;
 }
 
-:where(.css-1qhpsh8).ant-space-align-start {
+.wrap4.content1.content2 {
     align-items: flex-start;
 }
 
-:where(.css-1qhpsh8).ant-space-align-center {
+.wrap4.content1.content7 {
     align-items: center;
 }
 
-.eFBHfh {
+.content4 {
     position: relative;
     border-radius: 50%;
     flex: 0 0 auto;
@@ -118,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     height: 70px;
 }
 
-.eFBHfh > img {
+.content4 > img {
     width: 100%;
     height: 100%;
     border-radius: inherit;
@@ -130,11 +128,11 @@ img, svg {
     overflow: clip;
 }
 
-.ggsuAt {
+.content7 {
     margin-top: 8px;
 }
 
-:where(.css-1qhpsh8).ant-divider-horizontal {
+.wrap4.content1.content11 {
     display: flex;
     clear: both;
     width: 100%;
@@ -142,7 +140,7 @@ img, svg {
     margin: 24px 0;
 }
 
-:where(.css-1qhpsh8).ant-divider {
+.wrap4.content1.content11 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -154,15 +152,15 @@ img, svg {
     border-block-start: 1px solid rgba(5, 5, 5, 0.06);
 }
 
-:where(.css-1qhpsh8).ant-space-vertical {
+.wrap5 {
     flex-direction: column;
 }
 
-:where(.css-1qhpsh8).ant-space .ant-space-item:empty {
+.wrap4.content1 .content12:empty {
     display: none;
 }
 
-.fYMWEi {
+.content15 {
     word-break: break-all;
     font-size: 14px;
     font-weight: 600;
@@ -173,7 +171,7 @@ img, svg {
     white-space: normal;
 }
 
-.dZiJTl {
+.content18 {
     word-break: break-all;
     font-size: 13px;
     font-weight: 400;
@@ -197,7 +195,7 @@ label {
     cursor: default;
 }
 
-.evQdKJ {
+.wrap8 {
     display: grid;
     gap: 14px;
     grid-template-columns: repeat(auto-fill, minmax(31%, auto));
@@ -223,14 +221,14 @@ ul {
     unicode-bidi: isolate;
 }
 
-.cljmON {
+.content32 {
     display: inline-block;
     margin-top: 6px;
     max-width: 192px;
     height: 140px;
 }
 
-.jMaWCT {
+.content35 {
     display: block;
     width: 100%;
     border: 1px solid rgb(225, 227, 232);
@@ -250,7 +248,6 @@ button {
     border: 0;
     outline: 0;
     background-color: transparent;
-    appearance: auto;
     text-rendering: auto;
     letter-spacing: normal;
     word-spacing: normal;
@@ -272,15 +269,9 @@ button {
     border-image: initial;
 }
 
-.fGWAZR {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-}
 
-.fGWAZR .react-pdf__Document {
+
+.content29 .react-pdf__Document {
     height: 100px;
     overflow: hidden;
 }
@@ -290,19 +281,19 @@ canvas {
     aspect-ratio: auto 200 / 282;
 }
 
-cFxDxd {
+.cFxDxd {
     display: block;
     cursor: pointer;
 }
 
-:where(.css-1qhpsh8) a {
+.wrap4.content1.content11 a {
     color: #1677ff;
     text-decoration: none;
     background-color: transparent;
     outline: none;
     cursor: pointer;
     transition: color 0.3s;
-    -webkit-text-decoration-skip: objects;
+    text-decoration-skip: objects;
 }
 
 .hxLnac {
@@ -446,7 +437,8 @@ g {
 }
 ol, ul {
     list-style: none;
-}ul {
+}
+ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -455,16 +447,19 @@ ol, ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
-}li {
+}
+li {
     display: list-item;
     text-align: -webkit-match-parent;
     unicode-bidi: isolate;
-}.inJseO {
+}
+.content26 {
     position: relative;
     left: -10px;
     width: calc(100% + 20px);
     border-color: rgb(242, 244, 247);
-}.kFlciJ {
+}
+.content27 {
     width: 100%;
     margin: 0px auto;
     border-width: 1px 0px 0px;
@@ -477,11 +472,13 @@ ol, ul {
     border-image: initial;
     border-top-style: solid;
     border-top-color: rgb(225, 227, 232);
-}hr {
+}
+hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible;
-}hr {
+}
+hr {
     display: block;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
@@ -491,29 +488,36 @@ ol, ul {
     overflow: hidden;
     border-style: inset;
     border-width: 1px;
-}.gnKcgJ {
+}
+.content29 {
     display: flex;
     flex-direction: row;
     padding: 16px 0px;
-}@media (min-width: 767px) {
-    .eWOqmf {
+}
+
+    .wrap11 {
         min-width: 117px;
         max-width: 120px;
     }
-}.eWOqmf {
+
+.wrap11 {
     margin-right: 32px;
-}.gnKcgJ * * {
+}
+.content29 * * {
     line-height: 17px;
     letter-spacing: 0.5px;
-}.hjYKvr {
+}
+.content32 {
     font-size: 12px;
     color: rgb(51, 51, 51);
-}.cUQzwj {
+}
+.content34 {
     font-weight: 600;
     font-size: 13px;
     color: rgb(51, 51, 51);
     word-break: break-all;
-}h3 {
+}
+h3 {
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;
@@ -522,26 +526,30 @@ ol, ul {
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
-}:where(.css-1qhpsh8).ant-space-align-center {
+}
+.wrap4.content1.content7 {
     align-items: center;
-}.fEGNDi {
+}
+.content35 {
     margin-top: 8px;
-}.eQpygT {
+}
+.content37 {
     display: block;
     font-size: 11px;
     color: rgb(51, 51, 51);
     word-break: break-all;
-}[type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+}
+[type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
-}[type=reset], [type=submit], button, html [type=button] {
-    -webkit-appearance: button;
-}.jehgmj {
+}
+[type=reset], [type=submit], button, html [type=button] {
+    appearance: button;
+}
+.content38 {
     position: relative;
     width: 100%;
     display: inline-flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     height: 40px;
     padding: 9px 20px;
@@ -549,34 +557,41 @@ ol, ul {
     background-color: white;
     border: 1px solid rgb(225, 226, 228);
     color: rgb(23, 23, 23) !important;
-}button {
+}
+button {
     border: 0px;
     outline: 0px;
     background-color: transparent;
-}.bdRHQL.bdRHQL.bdRHQL {
+}
+.content39.content39.content39 {
     text-align: center;
     white-space: normal;
     font-weight: 600;
-}.jehgmj span[data-testid="Typography"] {
+}
+.content38 span[data-testid="Typography"] {
     color: inherit;
-}.bdRHQL {
+}
+.content39 {
     word-break: break-all;
     font-size: 15px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.0096em;
     color: rgb(51, 51, 51);
-}.dWLNVU.dWLNVU.dWLNVU {
+}
+.content40.content40.content40 {
     text-align: center;
     white-space: normal;
     font-weight: 600;
-}.dWLNVU {
+}
+.content40 {
     word-break: break-all;
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.0192em;
     color: rgb(51, 51, 51);
-}.dWLNVU.dWLNVU.dWLNVU strong {
+}
+.content40.content40.content40 strong {
     color: rgb(51, 102, 255);
 }

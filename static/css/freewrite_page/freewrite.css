@@ -17,7 +17,9 @@ body, html {
     width: 100%;
     height: 100%; /* 부모 크기 채우기 */
 }
-
+.content3{
+    padding: 0px 0px;
+}
 .wrap2 {
     width: 100%;
     height: 100%; /* 화면 전체를 채우도록 설정 */
@@ -89,7 +91,7 @@ button {
 input,
 textarea {
     width: 100%;
-    padding: 10px 12px;
+    padding: 10px 0px;
     border: 1px solid #e1e3e8;
     border-radius: 6px;
     transition: border-color 0.3s;
@@ -151,6 +153,7 @@ textarea:focus {
     cursor: not-allowed;
     font-family: 'Pretendard', sans-serif;
 }
+
 
 /* 버튼 스타일 */
 button {

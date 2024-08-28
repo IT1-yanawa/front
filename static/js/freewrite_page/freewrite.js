@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentLength = titleInput.value.length;
         charCountElement.textContent = `${currentLength}/${maxLength}`;
 
-        // 제목 글자 수 초과 시 제한
+        // 제목 글자 수 초과 시 제한(이미 만들어놔서 지우지않음)
         if (currentLength > maxLength) {
             titleInput.value = titleInput.value.slice(0, maxLength);
             charCountElement.textContent = `${maxLength}/${maxLength}`;

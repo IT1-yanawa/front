@@ -1,23 +1,59 @@
-// 페이지네이션 설정을 위한 변수와 함수들
-const paginationLayout = (() => {
-    const postsPerPage = 25; // 페이지당 게시글 수
-    let currentPage = 1; // 현재 페이지 번호를 저장
-    let totalPages = 1; // 전체 페이지 수를 저장
-    let posts = []; // 전체 게시글 데이터를 저장할 배열
+// 게시글을 가져오는 서비스 객체
+const postService = (() => {
+    // 검색과 필터링된 게시글을 가져오는 함수
+    const searchPosts = async (query, filterType, sortType, callback) => {
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/posts"
+        );
+        let posts = await response.json();
 
-    // 현재 페이지에 해당하는 게시글만을 화면에 표시하는 함수
-    const showPosts = () => {
-        const tbody = document.querySelector("tbody");
-        tbody.innerHTML = ""; // 기존 게시글들을 모두 삭제
+        // 필터 타입에 따른 게시글 필터링
+        if (filterType === "subject") {
+            posts = posts.filter((post) => post.title.includes(query));
+        } else if (filterType === "subject||content") {
+            posts = posts.filter(
+                (post) =>
+                    post.title.includes(query) || post.body.includes(query)
+            );
+        } else if (filterType === "nick") {
+            posts = posts.filter((post) => post.userId.toString() === query);
+        }
 
-        const start = (currentPage - 1) * postsPerPage;
-        const end = start + postsPerPage;
-        const paginatedPosts = posts.slice(start, end); // 현재 페이지에 해당하는 게시글들만 잘라서 가져옴
+        // 정렬 타입에 따른 게시글 정렬
+        posts = postService.sortPosts(posts, sortType);
 
-        // 각 게시글을 <tr> 요소로 만들어 tbody에 추가
-        paginatedPosts.forEach((post) => {
+        // 콜백 함수로 필터링 및 정렬된 게시글 반환
+        if (callback) {
+            callback(posts);
+        }
+    };
+
+    // 게시글 정렬 함수
+    const sortPosts = (posts, sortType) => {
+        if (sortType === "num") {
+            posts.sort((a, b) => a.id - b.id);
+        } else if (sortType === "hit") {
+            posts.sort((a, b) => b.id - a.id);
+        } else if (sortType === "date") {
+            posts.sort((a, b) => b.id - a.id);
+        }
+        return posts;
+    };
+
+    return { searchPosts, sortPosts }; // 검색 및 정렬 기능을 노출
+})();
+
+// 게시글 레이아웃 객체
+const postLayout = (() => {
+    // 게시글을 HTML로 표시하는 함수
+    const showPosts = (posts) => {
+        const tbody = document.querySelector("tbody"); // 게시글이 삽입될 테이블의 tbody 요소 선택
+        let temp = "";
+
+        // 각 게시글을 테이블 행으로 변환하여 HTML에 추가
+        posts.forEach((post) => {
             const { id, title, userId } = post;
-            const row = `
+            temp += `
                 <tr>
                     <td><span class="num num tp1">${id}</span></td>
                     <td><span class="label tp1">카테고리</span></td>
@@ -39,81 +75,67 @@ const paginationLayout = (() => {
                     <td><span class="date">날짜</span></td>
                 </tr>
             `;
-            tbody.insertAdjacentHTML("beforeend", row);
         });
 
-        updatePagination(); // 페이지네이션 업데이트
+        tbody.innerHTML = temp; // tbody에 생성된 HTML을 삽입
     };
 
-    // 페이지네이션을 업데이트하는 함수
-    const updatePagination = () => {
-        const pagination = document.querySelector(".paging-box ul");
-        pagination.innerHTML = ""; // 기존의 페이지 버튼들을 모두 삭제
-
-        totalPages = Math.ceil(posts.length / postsPerPage); // 전체 페이지 수 계산
-
-        // 현재 페이지 그룹에서 시작하는 페이지 번호와 끝나는 페이지 번호 계산
-        const startPage = Math.floor((currentPage - 1) / 10) * 10 + 1;
-        const endPage = Math.min(startPage + 9, totalPages);
-
-        // 페이지 버튼들을 동적으로 생성하여 추가
-        for (let i = startPage; i <= endPage; i++) {
-            const pageItem = `<li><a href="#" class="${
-                i === currentPage ? "on" : ""
-            }" data-page="${i}">${i}</a></li>`;
-            pagination.insertAdjacentHTML("beforeend", pageItem);
-        }
-
-        // 이전, 다음 버튼의 활성화 상태 업데이트
-        document
-            .querySelector(".page-jump.prev")
-            .classList.toggle("active", startPage > 1);
-        document
-            .querySelector(".page-jump.next")
-            .classList.toggle("active", endPage < totalPages);
-    };
-
-    // 주어진 페이지 번호로 이동하여 해당 페이지의 게시글을 표시하는 함수
-    const goToPage = (page) => {
-        if (page < 1 || page > totalPages) return; // 유효한 페이지 번호인지 확인
-        currentPage = page; // 현재 페이지 번호 업데이트
-        showPosts(); // 해당 페이지의 게시글을 표시
-    };
-
-    // 페이지네이션 초기화 함수, 게시글 데이터를 받아 첫 페이지를 로드
-    const init = (postList) => {
-        posts = postList; // 전체 게시글 데이터를 저장
-        goToPage(1); // 첫 페이지로 이동
-    };
-
-    return { init: init, goToPage: goToPage };
+    return { showPosts }; // 게시글 표시 기능을 노출
 })();
 
+// 페이지 로드 후 초기화
 document.addEventListener("DOMContentLoaded", () => {
-    postService.getPosts(paginationLayout.init); // 페이지가 로드될 때 전체 게시글을 불러와 초기화
+    let currentFilterType = "subject"; // 기본 필터 타입
+    let currentSortType = "num"; // 기본 정렬 타입
+    let currentQuery = ""; // 기본 검색어
 
-    document.querySelector(".paging-box ul").addEventListener("click", (e) => {
-        if (e.target.tagName === "A") {
-            const page = parseInt(e.target.getAttribute("data-page"));
-            paginationLayout.goToPage(page); // 클릭한 페이지 번호로 이동
-        }
+    // 게시글을 표시하는 함수
+    const renderPosts = (data) => {
+        postLayout.showPosts(data);
+    };
+
+    // 게시글 데이터를 가져오는 함수
+    const fetchData = async (query, filterType, sortType) => {
+        return new Promise((resolve) => {
+            postService.searchPosts(query, filterType, sortType, resolve); // 검색 및 정렬된 데이터를 반환
+        });
+    };
+
+    // 페이지네이션 초기화 함수
+    const initPagination = (posts) => {
+        $("#pagination-container").pagination({
+            dataSource: posts, // 페이지네이션의 데이터 소스로 게시글 사용
+            pageSize: 25, // 페이지 당 게시글 수
+            callback: function (data, pagination) {
+                renderPosts(data); // 각 페이지에 해당하는 게시글을 렌더링
+            },
+        });
+    };
+
+    // 검색 또는 정렬 조건에 따라 게시글과 페이지네이션을 업데이트하는 함수
+    const updatePosts = async () => {
+        const posts = await fetchData(
+            currentQuery,
+            currentFilterType,
+            currentSortType
+        );
+        initPagination(posts); // 게시글 데이터에 따라 페이지네이션 초기화
+    };
+
+    // 검색 버튼 클릭 시 검색어를 반영하여 게시글 업데이트
+    document.querySelector(".srch-bt").addEventListener("click", () => {
+        currentQuery = document.getElementById("keyword").value;
+        updatePosts();
     });
 
-    // "이전" 버튼 클릭 시 이전 페이지 그룹으로 이동
-    document.querySelector(".page-jump.prev").addEventListener("click", () => {
-        const currentStartPage =
-            Math.floor((paginationLayout.currentPage - 1) / 10) * 10 + 1;
-        if (currentStartPage > 1) {
-            paginationLayout.goToPage(currentStartPage - 10); // 이전 페이지 그룹으로 이동
-        }
-    });
+    // 정렬 옵션 변경 시 정렬 타입을 반영하여 게시글 업데이트
+    document
+        .querySelector("select[name='sort']")
+        .addEventListener("change", (event) => {
+            currentSortType = event.target.value;
+            updatePosts();
+        });
 
-    // "다음" 버튼 클릭 시 다음 페이지 그룹으로 이동
-    document.querySelector(".page-jump.next").addEventListener("click", () => {
-        const currentEndPage =
-            Math.floor((paginationLayout.currentPage - 1) / 10) * 10 + 10;
-        if (currentEndPage < paginationLayout.totalPages) {
-            paginationLayout.goToPage(currentEndPage + 1); // 다음 페이지 그룹으로 이동
-        }
-    });
+    // 페이지 로드 시 게시글 및 페이지네이션 초기화
+    updatePosts();
 });

@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="teamrecruitList.css" />
+        <link
+            href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css"
+            rel="stylesheet"
+        />
         <title>팀원, 팀 조회 페이지</title>
         <style>
             .keen-slider {
@@ -646,19 +650,15 @@
     </body>
 
     <script>
-        const firstBanner = document.createElement("div.a.img");
-        const banner = document.querySelector("div.keen-slider");
+        const banner = document.querySelector(".keen-slider");
         let count = 0;
-
-        firstBanner.innerHTML = `<img src="images/006.png"`;
-        banner.appendChild(firstBanner);
 
         const autoSlide = () => {
             console.log(count);
             count++;
             banner.style.transition = `transform 0.5s`;
             banner.style.transform = `translate(-${1060 * count}px)`;
-            if (count == 5) {
+            if (count === 5) {
                 setTimeout(() => {
                     banner.style.transition = `transform 0s`;
                     banner.style.transform = `translate(0px)`;
@@ -667,55 +667,5 @@
             }
         };
         setInterval(autoSlide, 2000);
-        // 슬라이더 및 슬라이드 요소 선택
-        // const slider = document.querySelector(".keen-slider");
-        // const slides = document.querySelectorAll(".keen-slider__slide");
-        // const buttons = document.querySelectorAll(
-        //     ".SliderContainer_pagination__inner__3dPMY button"
-        // );
-
-        // // 슬라이더 변수
-        // let currentIndex = 0;
-        // const totalSlides = slides.length;
-        // const slideWidth = 1060; // 슬라이드 너비
-
-        // // 슬라이드를 이동시키는 함수
-        // function moveToSlide(index) {
-        //     const xOffset = -(index * slideWidth); // xOffset을 슬라이드 너비만큼 곱한 값으로 계산
-        //     slider.style.transition = "transform 0.5s ease-in-out";
-        //     slider.style.transform = `translate3d(${xOffset}px, 0, 0)`; // translate3d 사용
-        //     updatePagination(index);
-        // }
-
-        // // 페이지네이션 업데이트 함수
-        // function updatePagination(index) {
-        //     buttons.forEach((button, idx) => {
-        //         if (idx === index) {
-        //             button.classList.add("dot-active");
-        //         } else {
-        //             button.classList.remove("dot-active");
-        //         }
-        //     });
-        // }
-
-        // // 자동 슬라이드 기능
-        // function startAutoSlide() {
-        //     setInterval(() => {
-        //         currentIndex = (currentIndex + 1) % totalSlides;
-        //         moveToSlide(currentIndex);
-        //     }, 3000);
-        // }
-
-        // // 버튼 클릭 시 해당 슬라이드로 이동
-        // buttons.forEach((button, idx) => {
-        //     button.addEventListener("click", () => {
-        //         currentIndex = idx;
-        //         moveToSlide(currentIndex);
-        //     });
-        // });
-
-        // // 초기화
-        // moveToSlide(currentIndex);
-        // startAutoSlide();
     </script>
 </html>

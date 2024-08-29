@@ -4,9 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        
         <link rel="stylesheet" href="/static/css/admin_page/amdin_main/sub_main.css">
         <link rel="stylesheet" href="/static/css/admin_page/amdin_main/common_main.css" />
+        <link rel="stylesheet" href="/static/css/admin_page/admin_user_list/common_user_list.css">
+        <link rel="stylesheet" href="/static/css/admin_page/admin_user_list/sub_user_list.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script> -->
     </head>
     <body>
         <noscript>#</noscript>
@@ -48,7 +52,7 @@
                                     <dd class="ProjectInfo_content">
                                         <!-- 아바타 사진 업로드 -->
                                         <span class="Avatar_avatar Avatar_img_admin ProjectInfo_profileImage_admin">
-                                            <span class="Avatar_inner">
+                                      lo      <span class="Avatar_inner">
                                                 <img src="https://static.wadiz.kr/studio/funding/static/media/default-zingugi.de76a099.svg" alt="">
                                             </span>
                                         </span>
@@ -86,7 +90,7 @@
                         <!-- 미리보기/나가기 버튼/ 나가기 버튼은 로그아웃 버튼으로 변경 /미리보기 미정-->
                         <div class="PreviewExitButtons_container">
                             <!-- <button class="Button_button PreviewExitButtons_button" type="button"><span><span class="Button_children">미리보기</span></span></button> -->
-                            <button class="Button_button PreviewExitButtons_button" type="button"><span><span class="Button_children">관리자 페이지 나가기</span></span></button>
+                            <button class="Button_button PreviewExitButtons_button" type="button"><span><span class="Button_children">관리자 로그아웃</span></span></button>
                         </div>
                 </div>
             </div>    
@@ -97,6 +101,7 @@
                         <div class="AppSidebarLayout_content">
                             <!-- 관리자페이지 서비스 기능 카테고리 -->
                             <div class="MenuItems_section">
+
 
                                 <!-- 대카테고리 -->
                                 <a aria-current="page" class="MenuItems_menu MenuItems_hasSubmenu MenuItems_active" href="">
@@ -142,8 +147,11 @@
                                 <div class="MenuItems_submenuContainer ">
                                     <a class="MenuItems_submenu" href="">문의 답변</a>
                                     <a class="MenuItems_submenu" href="">공지사항 작성</a>
+                                    
                                 </div>
                                 
+                                 
+
                                  <!-- 대카테고리 -->
                                  <a aria-current="page" class="MenuItems_menu MenuItems_hasSubmenu MenuItems_active" href="">
                                     <span class="MenuItems_label">
@@ -264,11 +272,243 @@
                         </div>
                     </div>
                     <div id="AppLayout_Contents" class="AppLayout_contents_mainContent">
-
+                        <!-- 회원 목록 조회 -->
+                        <div class="dabate-type-list">
+                            <table>
+                                <colgroup>
+                                    <col style="width:60px">
+                                    <col style="width:78px">
+                                    <col style=" font-weight: 400; font-size: 14px">
+                                    <col style="width:68px">
+                                    <col style="width:120px">
+                                    <col style="width:82px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th><span>회원 번호</span></th>
+                                            <th><span>회원 ID</span></th>
+                                            <th><span>회원 이메일</span></th>
+                                            <th><span>이름</span></th>
+                                            <th><span>닉네임</span></th>
+                                            <th><span>가입 날짜</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="num num tp2"> id </span>
+                                            </td>
+                                             <td>
+                                                <span class="label userId">userId</span>
+                                            </td>
+                                            <td>
+                                                <p class="email">
+                                                    <a href="" class="email-link ">
+                                                    유저 email
+                                                    </a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                    <span class="user-name">
+                                                        이름
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="join-date">
+                                                    24.08.27
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="num num tp2"> id </span>
+                                            </td>
+                                             <td>
+                                                <span class="label userId">userId</span>
+                                            </td>
+                                            <td>
+                                                <p class="email">
+                                                    <a href="" class="email-link ">
+                                                    유저 email
+                                                    </a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                    <span class="user-name">
+                                                        이름
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="join-date">
+                                                    24.08.27
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="num num tp2"> id </span>
+                                            </td>
+                                             <td>
+                                                <span class="label userId">userId</span>
+                                            </td>
+                                            <td>
+                                                <p class="email">
+                                                    <a href="" class="email-link ">
+                                                    유저 email
+                                                    </a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                    <span class="user-name">
+                                                        이름
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="join-date">
+                                                    24.08.27
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="num num tp2"> id </span>
+                                            </td>
+                                             <td>
+                                                <span class="label userId">userId</span>
+                                            </td>
+                                            <td>
+                                                <p class="email">
+                                                    <a href="" class="email-link ">
+                                                    유저 email
+                                                    </a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                    <span class="user-name">
+                                                        이름
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="join-date">
+                                                    24.08.27
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                        <div  class="list-util-area">
+                            <div class="paging-box">
+                                <div class="float-center">
+                                    <!-- <div id="pagination-container"></div> -->
+                                    <a href="" class="page-jump prev">이전
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a class=" on" href="">1</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">2</a>
+                                        </li>
+                                         <li>
+                                            <a class="" href="">3</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">4</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">5</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">6</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">7</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">8</a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="">9</a>
+                                        </li>
+                                    </ul>
+                                    <a href="" class="page-jump next">다음</a>
+                                </div>
+                            </div>
+                            <div class="srch-box">
+                                <div class="srch-sel-area">
+                                    <div class="custom-new-select-wrap">
+                                        <select class="custom-new-select" name="kind">
+                                            <option value="id">번호 검색</option>
+                                            <option value="userId">유저ID 검색</option>
+                                            <option value="user-name">이름 검색</option>
+                                            <option value="nick">닉네임</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="srch-input-area">
+                                    <input type="text" name="keyword" id="keyword" value="" required="" placeholder="검색어를 입력하세요." class=" js-bound">
+                                    <button type="button" class="srch-bt" onclick="searchFormSubmit()">
+                                        <span>검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sort-area">
+                                <div class="custom-new-select-wrap">
+                                    <select class="custom-new-select" name="sort">
+                                        <option value="join-date">가입일 순</option>
+                                        <option value="userId">회원번호 순</option>
+                                        <option value="name">이름 순</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="hidden" id="direction" name="direction" value="DESC">
+                            <a href="" class="write-btn">
+                                <span>회원 추가</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+        <script src="/static/js/adminPage/admin_page/admin.js"></script>
     </body>
-    <script src="/static/js/admin_page/admin.js"></script>
+
 </html>

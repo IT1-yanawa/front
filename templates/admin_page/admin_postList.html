@@ -6,8 +6,11 @@
         <title>Document</title>
         <link rel="stylesheet" href="/static/css/admin_page/amdin_main/sub_main.css">
         <link rel="stylesheet" href="/static/css/admin_page/amdin_main/common_main.css" />
-        <link rel="stylesheet" href="/static/css/admin_page/admin_write_list/common_wirite_list.css">
-        <link rel="stylesheet" href="/static/css/admin_page/admin_write_list/sub_write_list.css">
+        <link rel="stylesheet" href="/static/css/admin_page/admin_post_list/common_post_list.css">
+        <link rel="stylesheet" href="/static/css/admin_page/admin_post_list/sub_post_list.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery 추가 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
     </head>
     <body>
         <noscript>#</noscript>
@@ -49,7 +52,7 @@
                                     <dd class="ProjectInfo_content">
                                         <!-- 아바타 사진 업로드 -->
                                         <span class="Avatar_avatar Avatar_img_admin ProjectInfo_profileImage_admin">
-                                            <span class="Avatar_inner">
+                                      lo      <span class="Avatar_inner">
                                                 <img src="https://static.wadiz.kr/studio/funding/static/media/default-zingugi.de76a099.svg" alt="">
                                             </span>
                                         </span>
@@ -99,6 +102,31 @@
                             <!-- 관리자페이지 서비스 기능 카테고리 -->
                             <div class="MenuItems_section">
 
+
+                                <!-- 대카테고리 -->
+                                <a aria-current="page" class="MenuItems_menu MenuItems_hasSubmenu MenuItems_active" href="">
+                                    <span class="MenuItems_label">
+                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
+                                            <!-- 이미지 -->
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z">
+                                            </path>
+                                        </svg>
+                                        <!-- 기획안 대로 카테고리 변경 -->
+                                        회원 관리
+                                        <!-- 클릭이벤트 이미지 -->
+                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon MenuItems_downIcon MenuItems_open_1" aria-hidden="true">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <!-- 중카테고리 -->
+                                <div class="MenuItems_submenuContainer ">
+                                    <a class="MenuItems_submenu" href="">회원 목록 조회</a>
+                                    <a class="MenuItems_submenu" href="">회원 활동 조회</a>
+                                    <!-- <a class="MenuItems_submenu" href="">회원 정보 수정</a> -->
+                                </div>
+
+
                                 <!-- 대카테고리 -->
                                 <a aria-current="page" class="MenuItems_menu MenuItems_hasSubmenu MenuItems_active" href="">
                                     <span class="MenuItems_label">
@@ -122,28 +150,7 @@
                                     
                                 </div>
                                 
-                                 <!-- 대카테고리 -->
-                                 <a aria-current="page" class="MenuItems_menu MenuItems_hasSubmenu MenuItems_active" href="">
-                                    <span class="MenuItems_label">
-                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
-                                            <!-- 이미지 -->
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z">
-                                            </path>
-                                        </svg>
-                                        <!-- 기획안 대로 카테고리 변경 -->
-                                        회원 관리
-                                        <!-- 클릭이벤트 이미지 -->
-                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon MenuItems_downIcon MenuItems_open_1" aria-hidden="true">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                                <!-- 중카테고리 -->
-                                <div class="MenuItems_submenuContainer ">
-                                    <a class="MenuItems_submenu" href="">회원 목록 조회</a>
-                                    <a class="MenuItems_submenu" href="">회원 활동 조회</a>
-                                    <!-- <a class="MenuItems_submenu" href="">회원 정보 수정</a> -->
-                                </div>
+                                 
 
                                  <!-- 대카테고리 -->
                                  <a aria-current="page" class="MenuItems_menu MenuItems_hasSubmenu MenuItems_active" href="">
@@ -401,18 +408,163 @@
                                                 </span>
                                             </td>
                                         </tr>
-                                        <tr></tr>
-                                        <tr></tr>
-                                        <tr></tr>
-                                        <tr></tr>
-                                        <tr></tr>
+                                        <tr>
+                                            <td>
+                                                <span class="num num tp1"> 0 </span>
+                                            </td>
+                                             <td>
+                                                <span class="label tp1">잡담</span>
+                                            </td>
+                                            <td>
+                                                <p class="title">
+                                                    <a href="" class="subject-link ">
+                                                    게시글 제목
+                                                    </a>
+                                                    <!-- 댓글 수 -->
+                                                    <span class="board-list-comment">(
+                                                        <span class="ctn-count ">1</span>
+                                                    )</span>
+                                                </p>
+                                            </td>
+                                             <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                    <span class="count">
+                                                        30
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    10:35
+                                                </span>
+                                            </td>
+                                        </tr><tr>
+                                            <td>
+                                                <span class="num num tp1"> 0 </span>
+                                            </td>
+                                             <td>
+                                                <span class="label tp1">잡담</span>
+                                            </td>
+                                            <td>
+                                                <p class="title">
+                                                    <a href="" class="subject-link ">
+                                                    게시글 제목
+                                                    </a>
+                                                    <!-- 댓글 수 -->
+                                                    <span class="board-list-comment">(
+                                                        <span class="ctn-count ">1</span>
+                                                    )</span>
+                                                </p>
+                                            </td>
+                                             <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                    <span class="count">
+                                                        30
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    10:35
+                                                </span>
+                                            </td>
+                                        </tr><tr>
+                                            <td>
+                                                <span class="num num tp1"> 0 </span>
+                                            </td>
+                                             <td>
+                                                <span class="label tp1">잡담</span>
+                                            </td>
+                                            <td>
+                                                <p class="title">
+                                                    <a href="" class="subject-link ">
+                                                    게시글 제목
+                                                    </a>
+                                                    <!-- 댓글 수 -->
+                                                    <span class="board-list-comment">(
+                                                        <span class="ctn-count ">1</span>
+                                                    )</span>
+                                                </p>
+                                            </td>
+                                             <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                    <span class="count">
+                                                        30
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    10:35
+                                                </span>
+                                            </td>
+                                        </tr><tr>
+                                            <td>
+                                                <span class="num num tp1"> 0 </span>
+                                            </td>
+                                             <td>
+                                                <span class="label tp1">잡담</span>
+                                            </td>
+                                            <td>
+                                                <p class="title">
+                                                    <a href="" class="subject-link ">
+                                                    게시글 제목
+                                                    </a>
+                                                    <!-- 댓글 수 -->
+                                                    <span class="board-list-comment">(
+                                                        <span class="ctn-count ">1</span>
+                                                    )</span>
+                                                </p>
+                                            </td>
+                                             <td>
+                                                <div class="user-nick-wrap nick">
+                                                    <div class="user-nick-text">
+                                                        <!-- 유저 프로필 이미지 -->
+                                                        <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
+                                                        닉네임
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                    <span class="count">
+                                                        30
+                                                    </span>
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    10:35
+                                                </span>
+                                            </td>
+                                        </tr>
                                     </tbody>
                             </table>
                         </div>
-                        <div class="list-util-area">
+                        <div  class="list-util-area">
                             <div class="paging-box">
                                 <div class="float-center">
-                                    <a href="" class="page-jump prev active">이전</a>
+                                    <div id="pagination-container"></div>
+                                    <a href="javascript:changePage(currentPage - 1)" class="page-jump prev">이전</a>
                                     <ul>
                                         <li>
                                             <a class=" on" href="">1</a>
@@ -442,7 +594,7 @@
                                             <a class="" href="">9</a>
                                         </li>
                                     </ul>
-                                    <a href="" class="page-jump next active">다음</a>
+                                    <a href="javascript:changePage(currentPage + 1)" class="page-jump next">다음</a>
                                 </div>
                             </div>
                             <div class="srch-box">
@@ -466,8 +618,8 @@
                             <div class="sort-area">
                                 <div class="custom-new-select-wrap">
                                     <select class="custom-new-select" name="sort">
-                                        <option value="num, reply">등록일 순</option>
-                                        <option value="good">번호 순</option>
+                                        <option value="date">등록일 순</option>
+                                        <option value="num">번호 순</option>
                                         <option value="hit">조회수 순</option>
                                     </select>
                                 </div>
@@ -481,6 +633,10 @@
                 </div>
             
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+        <script src="/static/js/admin_page/admin.js"></script>
+        <!-- <script src="/static/js/admin_post/admin_write.js"></script> -->
+        <script src="/static/js/admin_post/admin_postpage.js"></script>
     </body>
-    <script src="/static/js/admin_page/admin.js"></script>
+
 </html>

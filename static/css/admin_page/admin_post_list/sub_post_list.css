@@ -185,7 +185,7 @@ a, button {
     color: black;
     font-size: 12px;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 
 .paging-box .float-center .page-jump.active {
@@ -378,6 +378,44 @@ button, .srch-input-area button {
     line-height: 28px;
     box-sizing: border-box;
 }
+
+.paging-box {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-center ul {
+    border: 1px solid #525252;  /* 경계선 추가 */
+    display: inline-block;
+    padding: 0; /* 경계선이 잘리지 않도록 패딩 제거 */
+    margin: 0;
+}
+
+.float-center ul li {
+    display: inline-block;
+    border-left: 1px solid #525252; /* 경계선 추가 */
+}
+
+.float-center ul li:first-child {
+    border-left: 0; /* 첫 번째 요소는 왼쪽 경계선 제거 */
+}
+
+.float-center ul li a {
+    display: inline-block;
+    height: 27px;
+    line-height: 27px; /* 텍스트 가운데 정렬 */
+    font-size: 12px;
+    color: black;
+    padding: 0 8px;
+}
+
+.srch-box {
+    margin-top: 40px; /* 검색 상자와 페이지네이션 사이의 간격 확보 */
+}
+
 
 /* * {
     -webkit-tap-highlight-color: transparent;

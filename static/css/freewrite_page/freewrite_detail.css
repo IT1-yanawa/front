@@ -331,15 +331,7 @@ svg:not(:root) {
 g {
     transform: translate(2, 2);
 }
-.file-upload-container {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid rgb(225, 227, 232);
-    border-radius: 4px;
-    background-color: #fff;
-    margin-bottom: 15px;
-}
+
 
 .file-preview {
     width: 60px;
@@ -386,6 +378,9 @@ g {
     padding: 8px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 308px;
+    margin-top: -194px;
+    
 }
 
 .file-thumbnail {

@@ -4,7 +4,7 @@ body {
     color: #333;
     background-color: #f8f8f8;
     line-height: 1.42857143;
-    font-family: Pretendard Variable, Pretendard JP Variable, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+    font-family: 'NanumSquareNeoLight'!important;
 }
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
@@ -20,9 +20,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 
 html {
     font-size: 10px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+   
 }
 
 button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
@@ -245,10 +243,10 @@ a {
 }
 
 .EventItem_EventItem__C_vQK img {
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
+  
+   
     transition: transform .2s ease;
-    transition: transform .2s ease,-webkit-transform .2s ease;
+  ;
     will-change: auto;
 }
 
@@ -275,10 +273,10 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    -webkit-transform: rotate(180deg);
+ 
     transform: rotate(180deg);
     opacity: 0;
-    -webkit-transition: all .1s ease-out;
+ 
     transition: all .1s ease-out;
 }
 
@@ -307,11 +305,11 @@ a {
 }
 
 .EventItem_EventItem__Section__iN1_Y {
-    display: -ms-flexbox;
+    
     display: flex;
-    -ms-flex-direction: column;
+    
     flex-direction: column;
-    -ms-flex-pack: start;
+    
     justify-content: flex-start;
 }
 
@@ -335,7 +333,7 @@ a {
 }
 
 .EventItem_EventItem__Title__u2tdG {
-    -webkit-box-orient: vertical;
+  
     overflow: hidden;
     margin-top: 3px;
     font-size: 16px;
@@ -343,9 +341,8 @@ a {
     line-height: 150%;
     letter-spacing: .09px;
     color: #171719;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    
+   
     text-overflow: ellipsis;
 }
 
@@ -360,7 +357,7 @@ p {
 
 li {
     display: list-item;
-    text-align: -webkit-match-parent;
+    
     unicode-bidi: isolate;
 }
 
@@ -370,7 +367,7 @@ li {
 }
 
 html {
-    -webkit-locale: "ko-KR";
+    
 }
 
 /* 배너 정보 텍스트를 좌측 하단으로 배치 */

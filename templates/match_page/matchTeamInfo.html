@@ -268,7 +268,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="team-list-menu sider-1">
+                            <div id="sider-1" class="team-list-menu sider-1">
                                 <section class="sider-section">
                                     <div class="wrapper-div">
                                         <div class="context-area">
@@ -362,7 +362,7 @@
                                     </section>
                                 </div>
                             </div>
-                            <div class="team-list-menu sider-2">
+                            <div id="sider-2" class="team-list-menu sider-2">
                                 <section class="apply-section">
                                     <section class="apply-title">
                                         <div class="apply-container">
@@ -379,8 +379,374 @@
                                             </div>
                                         </div>
                                     </section>
-                                    <!-- 여기서부터 작업 -->
-                                    <form></form>
+                                    <form
+                                        id="form"
+                                        class="apply-form"
+                                        style="margin-top: 0px"
+                                    >
+                                        <div class="apply-wrapper">
+                                            <div class="apply-item info">
+                                                <div class="item-wrapper">
+                                                    <div
+                                                        class="form-item item-container"
+                                                    >
+                                                        <div class="form-row">
+                                                            <div
+                                                                class="form-col form-item-label"
+                                                            >
+                                                                <label
+                                                                    for="label-title"
+                                                                    class="form-label-title"
+                                                                >
+                                                                    신청팀명/팀장명<span
+                                                                        class="essential"
+                                                                    >
+                                                                        *
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="form-col form-item-control"
+                                                            >
+                                                                <div
+                                                                    class="form-item-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-item-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="예)신림드래곤즈/용호중"
+                                                                            type="text"
+                                                                            class="item-input"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="form-item-explain"
+                                                                >
+                                                                    * 형식에
+                                                                    맞게
+                                                                    입력해주세요.
+                                                                </div>
+                                                                <div
+                                                                    class="error"
+                                                                >
+                                                                    <!-- 오류났을때 -->
+                                                                    <input
+                                                                        placeholder="예)신림드래곤즈/용호중"
+                                                                        type="text"
+                                                                        class="item-input input-error"
+                                                                    />
+                                                                    <div
+                                                                        class="form-item-explain explain-error"
+                                                                    >
+                                                                        * 형식에
+                                                                        맞게
+                                                                        입력해주세요.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apply-item email">
+                                                <div class="item-wrapper">
+                                                    <div
+                                                        class="form-item item-container"
+                                                    >
+                                                        <div class="form-row">
+                                                            <div
+                                                                class="form-col form-item-label"
+                                                            >
+                                                                <label
+                                                                    for="label-title"
+                                                                    class="form-label-title"
+                                                                >
+                                                                    이메일
+                                                                    입력<span
+                                                                        class="essential"
+                                                                    >
+                                                                        *
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="form-col form-item-control"
+                                                            >
+                                                                <div
+                                                                    class="form-item-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-item-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="예)qwas1234@naver.com"
+                                                                            type="text"
+                                                                            class="item-input"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="form-item-explain"
+                                                                >
+                                                                    * 형식에
+                                                                    맞게
+                                                                    입력해주세요.
+                                                                </div>
+                                                                <div
+                                                                    class="error"
+                                                                >
+                                                                    <!-- 오류났을때 -->
+                                                                    <input
+                                                                        placeholder="예)qwas1234@naver.com"
+                                                                        type="text"
+                                                                        class="item-input input-error"
+                                                                    />
+                                                                    <div
+                                                                        class="form-item-explain explain-error"
+                                                                    >
+                                                                        * 형식에
+                                                                        맞게
+                                                                        입력해주세요.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apply-item phone">
+                                                <div class="item-wrapper">
+                                                    <div
+                                                        class="form-item item-container"
+                                                    >
+                                                        <div class="form-row">
+                                                            <div
+                                                                class="form-col form-item-label"
+                                                            >
+                                                                <label
+                                                                    for="label-title"
+                                                                    class="form-label-title"
+                                                                >
+                                                                    전화번호
+                                                                    입력<span
+                                                                        class="essential"
+                                                                    >
+                                                                        *
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="form-col form-item-control"
+                                                            >
+                                                                <div
+                                                                    class="form-item-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-item-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="예)010-1234-5678"
+                                                                            type="text"
+                                                                            class="item-input"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="form-item-explain"
+                                                                >
+                                                                    * 형식에
+                                                                    맞게
+                                                                    입력해주세요.
+                                                                </div>
+                                                                <div
+                                                                    class="error"
+                                                                >
+                                                                    <!-- 오류났을때 -->
+                                                                    <input
+                                                                        placeholder="예)010-1234-5678"
+                                                                        type="text"
+                                                                        class="item-input input-error"
+                                                                    />
+                                                                    <div
+                                                                        class="form-item-explain explain-error"
+                                                                    >
+                                                                        * 형식에
+                                                                        맞게
+                                                                        입력해주세요.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apply-item choice">
+                                                <div class="item-wrapper">
+                                                    <div
+                                                        class="form-item item-container"
+                                                    >
+                                                        <div class="form-row">
+                                                            <div
+                                                                class="form-col form-item-label"
+                                                            >
+                                                                <label
+                                                                    for="label-title"
+                                                                    class="form-label-title"
+                                                                >
+                                                                    연락받을경로<span
+                                                                        class="essential"
+                                                                    >
+                                                                        *
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="form-col form-item-control"
+                                                            >
+                                                                <div
+                                                                    class="form-item-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-item-control-input-content"
+                                                                    >
+                                                                        <div
+                                                                            class="choice-radio-group"
+                                                                        >
+                                                                            <label
+                                                                                class="radio-wrapper"
+                                                                            >
+                                                                                <input
+                                                                                    type="radio"
+                                                                                    name="route"
+                                                                                    class="radio-email"
+                                                                                />
+                                                                                <span
+                                                                                    >메일</span
+                                                                                >
+                                                                            </label>
+                                                                            <label
+                                                                                class="radio-wrapper"
+                                                                            >
+                                                                                <input
+                                                                                    type="radio"
+                                                                                    name="route"
+                                                                                    class="radio-phone"
+                                                                                />
+                                                                                전화
+                                                                            </label>
+                                                                            <label
+                                                                                class="radio-wrapper"
+                                                                            >
+                                                                                <input
+                                                                                    type="radio"
+                                                                                    name="route"
+                                                                                    class="radio-all"
+                                                                                />
+                                                                                둘다
+                                                                                가능
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apply-item addcontent">
+                                                <div class="check-area">
+                                                    추가 정보를 입력하여
+                                                    <strong
+                                                        >매칭 확률을
+                                                        높여보세요!</strong
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="apply-item">
+                                                <div class="textarea">
+                                                    <div class="item-wrapper">
+                                                        <div
+                                                            class="form-item item-container"
+                                                        >
+                                                            <div
+                                                                class="form-row"
+                                                            >
+                                                                <div
+                                                                    class="form-col form-item-label"
+                                                                >
+                                                                    <label
+                                                                        for="addcontent-label"
+                                                                        class="addcontent-title"
+                                                                    >
+                                                                        추가정보입력
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="form-col form-item-control"
+                                                                >
+                                                                    <div
+                                                                        class="form-item-control-input"
+                                                                    >
+                                                                        <div
+                                                                            class="form-item-control-input-content"
+                                                                        >
+                                                                            <!-- textarea안에서는 줄 바꿈이 안된다 -->
+                                                                            <textarea
+                                                                                type="text"
+                                                                                class="item-input addcontent-input"
+                                                                                placeholder="ex) 팀의 추가정보, 상대팀에게 요구사항, 기타사항을                   입력해주세요."
+                                                                            ></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apply-item">
+                                                <!-- 나중에 submit으로 수정 -->
+                                                <button
+                                                    type="button"
+                                                    class="apply-complete-btn"
+                                                >
+                                                    <span class="apply-span"
+                                                        >신청완료</span
+                                                    >
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                            <div id="sider-3" class="team-list-menu sider-3">
+                                <section class="sider-section">
+                                    <div class="wrapper-div">
+                                        <div class="context-area">
+                                            <div class="confirm-title">
+                                                용호중님,
+                                            </div>
+                                            <div class="confirm-descript gap">
+                                                해당 팀에 이미 신청완료 했습니다
+                                                <br />
+                                                상대팀이 매칭수락하면
+                                                연락드리겠습니다
+                                            </div>
+                                        </div>
+                                        <div class="side-btn-area">
+                                            <button
+                                                type="button"
+                                                class="side-match-btn complete"
+                                            >
+                                                <span class="span-text"
+                                                    >매칭 신청됨</span
+                                                >
+                                                <span class="span-span"></span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </section>
                             </div>
                         </div>

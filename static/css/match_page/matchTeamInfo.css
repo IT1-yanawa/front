@@ -580,8 +580,11 @@ a {
     font-weight: 500;
     color: rgb(102, 102, 102);
 }
-/* 여기 부분이 기본요소 */
-.sider-1 {
+/* 여기 부분이 div바뀌는 부분 */
+.sider-2 {
+    display: none;
+}
+.sider-3 {
     display: none;
 }
 .team-detail-layout .sider-2 {
@@ -612,4 +615,158 @@ a {
 }
 img {
     vertical-align: middle;
+}
+.apply-form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+}
+.apply-form .apply-wrapper {
+    padding: 40px 24px 30px;
+}
+.apply-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 219px;
+    justify-content: space-between;
+}
+.apply-item {
+    padding-bottom: 40px;
+}
+.item-wrapper {
+    position: relative;
+}
+.form-item {
+    position: relative;
+    padding-bottom: 0px;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    vertical-align: top;
+}
+.item-container {
+    margin-bottom: 0px !important;
+}
+.form-item-label {
+    padding-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgb(51, 51, 51);
+}
+.form-item-label > label {
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    height: fit-content !important;
+    font-size: 16px !important;
+}
+.form-item-label label .essential {
+    color: rgb(255, 77, 79);
+    font-size: 14px;
+}
+.form-item-control-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.form-item-control-input-content {
+    flex: auto;
+}
+.item-input {
+    border: 1px solid rgb(225, 227, 232);
+    box-shadow: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 11px;
+    list-style: none;
+    line-height: 1.5714285714285714;
+}
+.form-item-explain {
+    color: rgb(151, 157, 164);
+    font-size: 14px;
+    padding-top: 10px;
+}
+.item-input.input-error {
+    border: 1px solid red;
+}
+.explain-error {
+    color: red;
+}
+.choice-radio-group {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 15px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    display: inline-block;
+}
+.radio-wrapper {
+    color: rgb(151, 157, 164);
+    line-height: 0;
+    margin-inline-end: 8px;
+    cursor: pointer;
+}
+.apply-item.addcontent {
+    padding-top: 40px;
+    border-top: 1px solid rgb(192, 192, 192);
+}
+.check-area {
+    height: 44px;
+    padding-top: 14px;
+    background-color: rgb(245, 247, 255);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    line-height: 1.47;
+}
+.check-area strong {
+    color: rgb(51, 102, 255);
+}
+.textarea {
+    position: relative;
+}
+.form-item-control {
+    width: 100%;
+}
+.item-input.addcontent-input {
+    height: 120px;
+    padding: 10px 10px;
+    resize: none;
+    line-height: 20px;
+    font-size: 13px !important;
+}
+.apply-complete-btn {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    background-color: rgb(51, 102, 255);
+    color: white !important;
+}
+.apply-span {
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+.team-detail-layout .sider-3 {
+    width: 39%;
+    margin-left: 2%;
+}
+.side-match-btn.complete {
+    pointer-events: none;
 }

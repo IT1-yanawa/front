@@ -185,7 +185,7 @@ a, button {
     color: black;
     font-size: 12px;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 
 .paging-box .float-center .page-jump.active {

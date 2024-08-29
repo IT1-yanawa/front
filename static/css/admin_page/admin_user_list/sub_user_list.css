@@ -1,0 +1,73 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body, button, html, input, select, textarea {
+    color: inherit;
+    font-family: pretendard, -apple-system, blinkmacsystemfont, system-ui, roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+}
+
+input, textarea {
+    background: none;
+}
+
+.SettingsToggle_toggle .SettingToggle_input {
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+}
+.SettingsToggle_toggle {
+    display: flex;
+    margin-right: 16px;
+}
+
+.MarketingNotificationSettingsItem_row__2vdY9 label {
+    color: #212529;
+}
+
+
+.SettingsToggle_toggle .SettingToggle_switch {
+    display: block;
+    position: relative;
+    opacity: 1;
+    border: solid 2px rgba(0, 0, 0, .06);
+    border-radius: 16px;
+    background-color: #f5f7fa;
+    cursor: pointer;
+    width: 48px;
+    height: 30px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active {
+    border-color: #00c4c4;
+    background-color: #00c4c4;
+}
+
+.SettingsToggle_toggle .SettingToggle_switch:after {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: .3s all;
+    border-radius: 12px;
+    box-shadow: 0 6px 6px -1px rgba(10, 22, 70, .1), 0 0 5px rgba(10, 22, 70, .06);
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    content: "";
+}
+
+.SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active:after {
+    left: 19px; /* 가상 요소가 오른쪽으로 이동 */
+}
+
+.Allselect_Toggle{
+    display: flex;
+    margin: 12px 0 12px;
+}

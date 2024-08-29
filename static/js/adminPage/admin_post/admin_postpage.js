@@ -1,32 +1,33 @@
 // 게시글을 가져오는 서비스 객체
 const postService = (() => {
     // 검색과 필터링된 게시글을 가져오는 함수
-    const searchPosts = async (query, filterType, sortType, callback) => {
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/posts"
+    // const searchPosts = async (query, filterType, sortType, callback) => {
+    //     const response = await fetch(
+    //         "https://jsonplaceholder.typicode.com/posts"
+    //     );
+    //     let posts = await response.json();
+
+    // 필터 타입에 따른 게시글 필터링
+    if (filterType === "subject") {
+        posts = posts.filter((post) => post.title.includes(query));
+    } else if (filterType === "subject||content") {
+        posts = posts.filter(
+            (post) => post.title.includes(query) || post.body.includes(query)
         );
-        let posts = await response.json();
+    } else if (filterType === "nick") {
+        posts = posts.filter((post) => post.userId.toString().includes(query));
+    } else if (filterType === comment) {
+        posts = posts.filter((post) => post.comment.includes(query));
+    }
 
-        // 필터 타입에 따른 게시글 필터링
-        if (filterType === "subject") {
-            posts = posts.filter((post) => post.title.includes(query));
-        } else if (filterType === "subject||content") {
-            posts = posts.filter(
-                (post) =>
-                    post.title.includes(query) || post.body.includes(query)
-            );
-        } else if (filterType === "nick") {
-            posts = posts.filter((post) => post.userId.toString() === query);
-        }
+    // 정렬 타입에 따른 게시글 정렬
+    posts = postService.sortPosts(posts, sortType);
 
-        // 정렬 타입에 따른 게시글 정렬
-        posts = postService.sortPosts(posts, sortType);
-
-        // 콜백 함수로 필터링 및 정렬된 게시글 반환
-        if (callback) {
-            callback(posts);
-        }
-    };
+    // 콜백 함수로 필터링 및 정렬된 게시글 반환
+    if (callback) {
+        callback(posts);
+    }
+    // };
 
     // 게시글 정렬 함수
     const sortPosts = (posts, sortType) => {

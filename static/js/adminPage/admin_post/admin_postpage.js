@@ -1,142 +1,339 @@
-// 게시글을 가져오는 서비스 객체
-const postService = (() => {
-    // 검색과 필터링된 게시글을 가져오는 함수
-    // const searchPosts = async (query, filterType, sortType, callback) => {
-    //     const response = await fetch(
-    //         "https://jsonplaceholder.typicode.com/posts"
-    //     );
-    //     let posts = await response.json();
+//---------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const allSelectToggle = document.querySelector(
+        ".SettingsToggle_toggle:first-child .SettingToggle_switch"
+    );
+    const toggles = document.querySelectorAll(
+        ".SettingsToggle_toggle .SettingToggle_switch"
+    );
+    console.log("e");
 
-    // 필터 타입에 따른 게시글 필터링
-    if (filterType === "subject") {
-        posts = posts.filter((post) => post.title.includes(query));
-    } else if (filterType === "subject||content") {
-        posts = posts.filter(
-            (post) => post.title.includes(query) || post.body.includes(query)
+    allSelectToggle.addEventListener("click", function () {
+        const isActive = allSelectToggle.classList.contains(
+            "SettingToggle_active"
         );
-    } else if (filterType === "nick") {
-        posts = posts.filter((post) => post.userId.toString().includes(query));
-    } else if (filterType === comment) {
-        posts = posts.filter((post) => post.comment.includes(query));
-    }
 
-    // 정렬 타입에 따른 게시글 정렬
-    posts = postService.sortPosts(posts, sortType);
-
-    // 콜백 함수로 필터링 및 정렬된 게시글 반환
-    if (callback) {
-        callback(posts);
-    }
-    // };
-
-    // 게시글 정렬 함수
-    const sortPosts = (posts, sortType) => {
-        if (sortType === "num") {
-            posts.sort((a, b) => a.id - b.id);
-        } else if (sortType === "hit") {
-            posts.sort((a, b) => b.id - a.id);
-        } else if (sortType === "date") {
-            posts.sort((a, b) => b.id - a.id);
-        }
-        return posts;
-    };
-
-    return { searchPosts, sortPosts }; // 검색 및 정렬 기능을 노출
-})();
-
-// 게시글 레이아웃 객체
-const postLayout = (() => {
-    // 게시글을 HTML로 표시하는 함수
-    const showPosts = (posts) => {
-        const tbody = document.querySelector("tbody"); // 게시글이 삽입될 테이블의 tbody 요소 선택
-        let temp = "";
-
-        // 각 게시글을 테이블 행으로 변환하여 HTML에 추가
-        posts.forEach((post) => {
-            const { id, title, userId } = post;
-            temp += `
-                <tr>
-                    <td><span class="num num tp1">${id}</span></td>
-                    <td><span class="label tp1">카테고리</span></td>
-                    <td>
-                        <p class="title">
-                            <a href="" class="subject-link">${title}</a>
-                            <span class="board-list-comment">(1)</span>
-                        </p>
-                    </td>
-                    <td>
-                        <div class="user-nick-wrap nick">
-                            <div class="user-nick-text">
-                                <img style="width: 20px; height: 20px; vertical-align:middle;" src="" alt="">
-                                사용자 ${userId}
-                            </div>
-                        </div>
-                    </td>
-                    <td><span class="count">조회수</span></td>
-                    <td><span class="date">날짜</span></td>
-                </tr>
-            `;
+        // 모든 하위 스위치 상태 변경
+        toggles.forEach(function (toggle) {
+            if (isActive) {
+                toggle.classList.remove("SettingToggle_active");
+            } else {
+                toggle.classList.add("SettingToggle_active");
+            }
         });
-
-        tbody.innerHTML = temp; // tbody에 생성된 HTML을 삽입
-    };
-
-    return { showPosts }; // 게시글 표시 기능을 노출
-})();
-
-// 페이지 로드 후 초기화
-document.addEventListener("DOMContentLoaded", () => {
-    let currentFilterType = "subject"; // 기본 필터 타입
-    let currentSortType = "num"; // 기본 정렬 타입
-    let currentQuery = ""; // 기본 검색어
-
-    // 게시글을 표시하는 함수
-    const renderPosts = (data) => {
-        postLayout.showPosts(data);
-    };
-
-    // 게시글 데이터를 가져오는 함수
-    const fetchData = async (query, filterType, sortType) => {
-        return new Promise((resolve) => {
-            postService.searchPosts(query, filterType, sortType, resolve); // 검색 및 정렬된 데이터를 반환
-        });
-    };
-
-    // 페이지네이션 초기화 함수
-    const initPagination = (posts) => {
-        $("#pagination-container").pagination({
-            dataSource: posts, // 페이지네이션의 데이터 소스로 게시글 사용
-            pageSize: 25, // 페이지 당 게시글 수
-            callback: function (data, pagination) {
-                renderPosts(data); // 각 페이지에 해당하는 게시글을 렌더링
-            },
-        });
-    };
-
-    // 검색 또는 정렬 조건에 따라 게시글과 페이지네이션을 업데이트하는 함수
-    const updatePosts = async () => {
-        const posts = await fetchData(
-            currentQuery,
-            currentFilterType,
-            currentSortType
-        );
-        initPagination(posts); // 게시글 데이터에 따라 페이지네이션 초기화
-    };
-
-    // 검색 버튼 클릭 시 검색어를 반영하여 게시글 업데이트
-    document.querySelector(".srch-bt").addEventListener("click", () => {
-        currentQuery = document.getElementById("keyword").value;
-        updatePosts();
     });
 
-    // 정렬 옵션 변경 시 정렬 타입을 반영하여 게시글 업데이트
-    document
-        .querySelector("select[name='sort']")
-        .addEventListener("change", (event) => {
-            currentSortType = event.target.value;
-            updatePosts();
+    toggles.forEach(function (toggle, index) {
+        if (index === 0) return; // 첫 번째 스위치는 이미 처리했으므로 제외
+
+        toggle.addEventListener("click", function () {
+            toggle.classList.toggle("SettingToggle_active");
+
+            // 하위 스위치가 하나라도 비활성화되면 전체 스위치도 비활성화
+            const allActive = Array.from(toggles)
+                .slice(1)
+                .every((t) => t.classList.contains("SettingToggle_active"));
+            if (!allActive) {
+                allSelectToggle.classList.remove("SettingToggle_active");
+            } else {
+                allSelectToggle.classList.add("SettingToggle_active"); // 모든 하위 스위치가 활성화된 경우 전체 스위치 활성화
+            }
+        });
+    });
+});
+
+// ---------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const options = document.querySelectorAll(".sort-filter-option");
+
+    options.forEach(function (option) {
+        option.addEventListener("click", function () {
+            // 모든 옵션의 선택된 클래스 초기화
+            options.forEach((opt) => {
+                opt.classList.remove("selected");
+            });
+
+            // 클릭된 옵션에 선택된 클래스 추가
+            option.classList.add("selected");
+        });
+    });
+});
+// -------------------------------------------------------
+document.querySelectorAll(".pagination-page-link").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+        event.preventDefault(); // 기본 링크 동작을 막기
+
+        // 모든 페이지에서 active 클래스를 제거
+        document.querySelectorAll(".pagination-page").forEach(function (page) {
+            page.classList.remove("active");
         });
 
-    // 페이지 로드 시 게시글 및 페이지네이션 초기화
-    updatePosts();
+        // 클릭한 페이지에 active 클래스를 추가
+        this.parentElement.classList.add("active");
+    });
+});
+// ----------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".PostsFilter_filterButton");
+
+    // 기본적으로 첫 번째 버튼에 선택된 클래스를 추가
+    buttons[0].classList.add("PostsFilter_selected");
+
+    // 각 버튼 클릭 시
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            // 모든 버튼의 선택된 클래스와 배경색 초기화
+            buttons.forEach((btn) => {
+                btn.classList.remove("PostsFilter_selected");
+                btn.style.backgroundColor = ""; // 기본 배경색으로 초기화
+            });
+
+            // 클릭된 버튼에 선택된 클래스와 배경색 적용
+            button.classList.add("PostsFilter_selected");
+            button.style.backgroundColor = "#00c4c4"; // 선택된 버튼의 배경색을 #00c4c4로 설정
+
+            // 1초 후에 원래 색으로 돌아오게 설정
+            setTimeout(function () {
+                button.style.backgroundColor = ""; // 기본 배경색으로 돌아오기
+            }, 500); // 1000 밀리초 = 1초
+        });
+    });
+});
+// ---------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const postsContainer = document.querySelector(".section_container");
+    let currentSort = "date"; // 기본 정렬 기준
+    let isAscending = false; // 기본값: 내림차순
+
+    function parseDate(dateString) {
+        const now = new Date();
+
+        if (dateString.includes("분 전")) {
+            const minutes = parseInt(dateString.split("분 전")[0]);
+            return new Date(now.getTime() - minutes * 60000);
+        } else if (dateString.includes("시간 전")) {
+            const hours = parseInt(dateString.split("시간 전")[0]);
+            return new Date(now.getTime() - hours * 3600000);
+        } else if (dateString.includes("개월 전")) {
+            const months = parseInt(dateString.split("개월 전")[0]);
+            return new Date(now.setMonth(now.getMonth() - months));
+        } else {
+            // YYYY.MM.DD 형식일 경우
+            return new Date(dateString);
+        }
+    }
+
+    function sortPosts(criteria) {
+        const posts = Array.from(
+            postsContainer.querySelectorAll(".section_document")
+        );
+        let sortedPosts;
+
+        if (criteria === "date") {
+            sortedPosts = posts.sort((a, b) => {
+                const dateA = parseDate(
+                    a.querySelector(".Post_joinDate").textContent.trim()
+                );
+                const dateB = parseDate(
+                    b.querySelector(".Post_joinDate").textContent.trim()
+                );
+                return isAscending ? dateA - dateB : dateB - dateA;
+            });
+        } else if (criteria === "views") {
+            sortedPosts = posts.sort((a, b) => {
+                const viewsA = parseInt(
+                    a.querySelector(".views-ctn").textContent.trim(),
+                    10
+                );
+                const viewsB = parseInt(
+                    b.querySelector(".views-ctn").textContent.trim(),
+                    10
+                );
+                return isAscending ? viewsA - viewsB : viewsB - viewsA;
+            });
+        } else if (criteria === "replies") {
+            sortedPosts = posts.sort((a, b) => {
+                const repliesA = parseInt(
+                    a.querySelector(".reply").textContent.trim(),
+                    10
+                );
+                const repliesB = parseInt(
+                    b.querySelector(".reply").textContent.trim(),
+                    10
+                );
+                return isAscending ? repliesA - repliesB : repliesB - repliesA;
+            });
+        }
+
+        postsContainer.innerHTML = "";
+        sortedPosts.forEach((post) => postsContainer.appendChild(post));
+    }
+
+    function handleSortClick(criteria) {
+        if (currentSort === criteria) {
+            isAscending = !isAscending; // 같은 버튼을 클릭하면 정렬 방향을 반대로
+        } else {
+            currentSort = criteria;
+            isAscending = false; // 다른 버튼을 클릭하면 기본값은 내림차순
+        }
+        sortPosts(criteria);
+    }
+
+    // 초기 정렬
+    sortPosts("date");
+
+    // 필터 버튼 클릭 이벤트 추가
+    document
+        .getElementById("sort-by-date")
+        .addEventListener("click", function () {
+            handleSortClick("date");
+        });
+
+    document
+        .getElementById("sort-by-views")
+        .addEventListener("click", function () {
+            handleSortClick("views");
+        });
+
+    document
+        .getElementById("sort-by-replies")
+        .addEventListener("click", function () {
+            handleSortClick("replies");
+        });
+});
+// ------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const postsContainer = document.querySelector(".section_container");
+    let currentSort = "date"; // 기본 정렬 기준
+    let isAscending = false; // 기본값: 내림차순
+    let allPosts = Array.from(
+        postsContainer.querySelectorAll(".section_document")
+    );
+
+    function parseDate(dateString) {
+        const now = new Date();
+
+        if (dateString.includes("분 전")) {
+            const minutes = parseInt(dateString.split("분 전")[0]);
+            return new Date(now.getTime() - minutes * 60000);
+        } else if (dateString.includes("시간 전")) {
+            const hours = parseInt(dateString.split("시간 전")[0]);
+            return new Date(now.getTime() - hours * 3600000);
+        } else if (dateString.includes("개월 전")) {
+            const months = parseInt(dateString.split("개월 전")[0]);
+            return new Date(now.setMonth(now.getMonth() - months));
+        } else {
+            // YYYY.MM.DD 형식일 경우
+            return new Date(dateString);
+        }
+    }
+
+    function sortPosts(criteria) {
+        let posts = allPosts;
+        let sortedPosts;
+
+        if (criteria === "date") {
+            sortedPosts = posts.sort((a, b) => {
+                const dateA = parseDate(
+                    a.querySelector(".Post_joinDate").textContent.trim()
+                );
+                const dateB = parseDate(
+                    b.querySelector(".Post_joinDate").textContent.trim()
+                );
+                return isAscending ? dateA - dateB : dateB - dateA;
+            });
+        } else if (criteria === "views") {
+            sortedPosts = posts.sort((a, b) => {
+                const viewsA = parseInt(
+                    a.querySelector(".views-ctn").textContent.trim(),
+                    10
+                );
+                const viewsB = parseInt(
+                    b.querySelector(".views-ctn").textContent.trim(),
+                    10
+                );
+                return isAscending ? viewsA - viewsB : viewsB - viewsA;
+            });
+        } else if (criteria === "replies") {
+            sortedPosts = posts.sort((a, b) => {
+                const repliesA = parseInt(
+                    a.querySelector(".reply").textContent.trim(),
+                    10
+                );
+                const repliesB = parseInt(
+                    b.querySelector(".reply").textContent.trim(),
+                    10
+                );
+                return isAscending ? repliesA - repliesB : repliesB - repliesA;
+            });
+        }
+
+        postsContainer.innerHTML = "";
+        sortedPosts.forEach((post) => postsContainer.appendChild(post));
+    }
+
+    function handleSortClick(criteria) {
+        if (currentSort === criteria) {
+            isAscending = !isAscending; // 같은 버튼을 클릭하면 정렬 방향을 반대로
+        } else {
+            currentSort = criteria;
+            isAscending = false; // 다른 버튼을 클릭하면 기본값은 내림차순
+        }
+        sortPosts(criteria);
+    }
+
+    function filterPostsByKeyword(keyword) {
+        const filteredPosts = allPosts.filter((post) => {
+            const title = post
+                .querySelector(".writetitle")
+                .textContent.toLowerCase();
+            const content = post
+                .querySelector(".writecontent")
+                .textContent.toLowerCase();
+            return (
+                title.includes(keyword.toLowerCase()) ||
+                content.includes(keyword.toLowerCase())
+            );
+        });
+
+        postsContainer.innerHTML = "";
+        filteredPosts.forEach((post) => postsContainer.appendChild(post));
+    }
+
+    // 초기 정렬
+    sortPosts("date");
+
+    // 필터 버튼 클릭 이벤트 추가
+    document
+        .getElementById("sort-by-date")
+        .addEventListener("click", function () {
+            handleSortClick("date");
+        });
+
+    document
+        .getElementById("sort-by-views")
+        .addEventListener("click", function () {
+            handleSortClick("views");
+        });
+
+    document
+        .getElementById("sort-by-replies")
+        .addEventListener("click", function () {
+            handleSortClick("replies");
+        });
+
+    // 검색 기능 추가 (엔터 키를 눌렀을 때)
+    const searchInput = document.querySelector(".PostFilter_searchInput");
+    searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            const keyword = searchInput.value.trim();
+            if (keyword) {
+                filterPostsByKeyword(keyword);
+            } else {
+                // 검색어가 없을 때는 모든 게시글을 다시 표시
+                postsContainer.innerHTML = "";
+                allPosts.forEach((post) => postsContainer.appendChild(post));
+            }
+        }
+    });
 });

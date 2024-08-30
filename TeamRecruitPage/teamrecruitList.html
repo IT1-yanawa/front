@@ -20,18 +20,37 @@
             .keen-slider__slide {
                 flex: 0 0 100%;
                 max-width: 1060px;
-                height: auto; /* 슬라이드의 높이를 자동으로 설정 */
+                height: auto;
                 transition: transform 0.5s ease-in-out;
             }
 
-            .SliderContainer_container__Wt515 {
-                width: 1060px;
-                margin: 0 auto;
-                overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
             }
 
-            .SliderContainer_pagination__inner__3dPMY button.dot-active {
-                background-color: #000;
+            .BannerItem_BannerItem__link__pAUfw {
+                position: relative;
+            }
+
+            .BannerItem_BannerItem__overlay__rzFM2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                pointer-events: none;
+            }
+
+            .BannerItem_BannerItem__info__Whl5h {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: white;
+                z-index: 1;
             }
         </style>
     </head>
@@ -90,7 +109,7 @@
                                     >
                                         <a>
                                             <img
-                                                src="images/004.png"
+                                                src="images/006.png"
                                                 class="BannerItem_BannerItem__link__img__RPD_9"
                                                 style="width: 1060px"
                                             />
@@ -129,7 +148,7 @@
                                     >
                                         <a>
                                             <img
-                                                src="images/003.png"
+                                                src="images/006.png"
                                                 class="BannerItem_BannerItem__link__img__RPD_9"
                                                 style="width: 1060px"
                                             />
@@ -168,7 +187,7 @@
                                     >
                                         <a>
                                             <img
-                                                src="images/002.png"
+                                                src="images/006.png"
                                                 class="BannerItem_BannerItem__link__img__RPD_9"
                                                 style="width: 1060px"
                                             />
@@ -207,7 +226,7 @@
                                     >
                                         <a>
                                             <img
-                                                src="images/001.png"
+                                                src="images/006.png"
                                                 class="BannerItem_BannerItem__link__img__RPD_9"
                                                 style="width: 1060px"
                                             />
@@ -229,7 +248,7 @@
                                         <h3
                                             class="Typography_Typography__root__RdAI1 Typography_Typography__title3__J1fCl Typography_Typography__title3__weightBold__xwZk7 Typography_Typography__weightBold__KkJEY BannerItem_BannerItem__info__title__O8R4Z"
                                         >
-                                            배드민턴
+                                            족구
                                         </h3>
                                         <p
                                             class="Typography_Typography__root__RdAI1 Typography_Typography__body2__5Mmhi Typography_Typography__weightMedium__GXnOM BannerItem_BannerItem__info__desc___I3U3"
@@ -648,24 +667,5 @@
             </main>
         </div>
     </body>
-
-    <script>
-        const banner = document.querySelector(".keen-slider");
-        let count = 0;
-
-        const autoSlide = () => {
-            console.log(count);
-            count++;
-            banner.style.transition = `transform 0.5s`;
-            banner.style.transform = `translate(-${1060 * count}px)`;
-            if (count === 5) {
-                setTimeout(() => {
-                    banner.style.transition = `transform 0s`;
-                    banner.style.transform = `translate(0px)`;
-                }, 500);
-                count = 0;
-            }
-        };
-        setInterval(autoSlide, 2000);
-    </script>
+    <script></script>
 </html>

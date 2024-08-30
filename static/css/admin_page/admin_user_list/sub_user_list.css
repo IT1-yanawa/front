@@ -24,6 +24,7 @@ input, textarea {
 .SettingsToggle_toggle {
     display: flex;
     margin-right: 16px;
+    
 }
 
 .MarketingNotificationSettingsItem_row__2vdY9 label {
@@ -33,15 +34,20 @@ input, textarea {
 
 .SettingsToggle_toggle .SettingToggle_switch {
     display: block;
+    top: 10px;
     position: relative;
     opacity: 1;
     border: solid 2px rgba(0, 0, 0, .06);
     border-radius: 16px;
     background-color: #f5f7fa;
     cursor: pointer;
-    width: 48px;
-    height: 30px;
+    width: 24px;
+    height: 16px;
     transition: background-color 0.3s, border-color 0.3s;
+}
+
+.SettingsToggle_toggle .SettingToggle_switch_all{
+    top: 0px;
 }
 
 
@@ -52,22 +58,119 @@ input, textarea {
 
 .SettingsToggle_toggle .SettingToggle_switch:after {
     position: absolute;
-    top: 1px;
+    top: 0px;
     left: 1px;
     transition: .3s all;
     border-radius: 12px;
     box-shadow: 0 6px 6px -1px rgba(10, 22, 70, .1), 0 0 5px rgba(10, 22, 70, .06);
     background-color: #fff;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     content: "";
 }
 
 .SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active:after {
-    left: 19px; /* 가상 요소가 오른쪽으로 이동 */
+    left: 9px; /* 가상 요소가 오른쪽으로 이동 */
 }
 
-.Allselect_Toggle{
+.Allselect_Toggle {
     display: flex;
-    margin: 12px 0 12px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* 필요시 % 값을 더 늘려주세요 */
 }
+
+.SortFilterOptions {
+    display: flex;
+    gap: 5px; /* 옵션 간의 간격을 줄여도 좋습니다 */
+    align-items: center;
+    white-space: nowrap; /* 이 속성으로 줄 바꿈 방지 */
+}
+
+.sort-filter-option {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sort-filter-option.selected {
+    font-weight: 700;
+    line-height: 1.5;
+    
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.pagination {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+ol, ul, dl {
+    margin: 0 0 1rem;
+}
+
+ol, ul {
+    padding: 0 0 0 1.5rem;
+}
+
+.pagination-list {
+    padding-left: 0;
+}
+
+
+a {
+    touch-action: manipulation;
+    color: rgb(89 189 181);
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* .pagination .pagination-list li{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+} */
+
+.pagination-next, .pagination-prev, .pagination-first, .pagination-last {
+    display: inline-block;
+}
+
+
+.pagination-first, .pagination-prev {
+    display: none; /* 처음엔 숨김 */
+}
+
+.pagination-first-link, .pagination-prev-link, .pagination-next-link, .pagination-last-link {
+    display: inline-block;
+    padding: 0.5em 1.25em;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #403b3b;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.15s ease-in-out;
+}
+
+.pagination-first, .pagination-prev, .pagination-next, .pagination-last {
+    display: inline-block;
+}
+
+.pagination-first-text, .pagination-prev-text, .pagination-next-text, .pagination-last-text {
+    display: inline;
+}
+
+.pagination-first-icon, .pagination-prev-icon, .pagination-next-icon, .pagination-last-icon {
+    display: inline;
+    margin-left: 5px;
+}
+
+

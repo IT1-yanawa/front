@@ -3,8 +3,6 @@ const agreeCheckboxOns = document.querySelectorAll(".agree-checkbox.on");
 const agreeCheckboxOffs = document.querySelectorAll(".agree-checkbox.off");
 const isAgreeAll = document.querySelector("input[name=is_agree_all]");
 
-const selectIconCheckes = document.querySelectorAll(".input-style-check-icon");
-
 isAgreeAll.addEventListener("click", (e) => {
     if (e.target.checked) {
         agreeCheckboxOns.forEach((agreeCheckboxOn, i) => {
@@ -50,12 +48,6 @@ filteredCheckboxes.forEach((filteredCheckbox, i) => {
     });
 });
 
-// const checkIconSvg = document.querySelectorAll(".check-icon-svg");
-// const checkIconPath = checkIconSvg[0].firstElementChild;
-
-// console.log(checkIconSvg);
-// console.log(checkIconPath);
-
 const agreeCheckIcons = document.querySelectorAll(".input-style-check-icon");
 const checkIconSvgOns = document.querySelectorAll(".check-icon-svg.on");
 const checkIconSvgOffs = document.querySelectorAll(".check-icon-svg.off");
@@ -66,20 +58,71 @@ const isAcceptRecruitAll = document.querySelector(
     "input[name=is_accept_recruit_all]"
 );
 
+const agreeCheckIconsArray = [...agreeCheckIcons];
+const firstCheckIcons = agreeCheckIconsArray.slice(0, 3);
+const lastCheckIcons = agreeCheckIconsArray.slice(3, 6);
+
+const checkIconSvgOnsArray = [...checkIconSvgOns];
+const firstCheckIconSvgOns = checkIconSvgOnsArray.slice(0, 3);
+const lastCheckIconSvgOns = checkIconSvgOnsArray.slice(3, 6);
+
+const checkIconSvgOffsArray = [...checkIconSvgOffs];
+const firstCheckIconSvgOffs = checkIconSvgOffsArray.slice(0, 3);
+const lastCheckIconSvgOffs = checkIconSvgOffsArray.slice(3, 6);
+
 isAcceptEventAll.addEventListener("click", (e) => {
-    const originalIndex = i + 1;
     if (e.target.checked) {
-        checkIconSvgOns.forEach((checkIconSvgOn, i) => {
-            checkIconSvgOn.style.display = "block";
-            checkIconSvgOffs[i].style.display = "none";
+        firstCheckIconSvgOns.forEach((firstCheckIconSvgOn, i) => {
+            firstCheckIconSvgOn.style.display = "block";
+            firstCheckIconSvgOffs[i].style.display = "none";
         });
     } else {
-        checkIconSvgOffs.forEach((checkIconSvgOff, i) => {
-            checkIconSvgOns[i].style.display = "none";
-            checkIconSvgOff.style.display = "block";
+        firstCheckIconSvgOffs.forEach((firstCheckIconSvgOff, i) => {
+            firstCheckIconSvgOns[i].style.display = "none";
+            firstCheckIconSvgOff.style.display = "block";
         });
     }
 });
+
+isAcceptRecruitAll.addEventListener("click", (e) => {
+    if (e.target.checked) {
+        lastCheckIconSvgOns.forEach((lastCheckIconSvgOn, i) => {
+            lastCheckIconSvgOn.style.display = "block";
+            lastCheckIconSvgOffs[i].style.display = "none";
+        });
+    } else {
+        lastCheckIconSvgOffs.forEach((lastCheckIconSvgOff, i) => {
+            lastCheckIconSvgOns[i].style.display = "none";
+            lastCheckIconSvgOff.style.display = "block";
+        });
+    }
+});
+
+firstCheckIcons.forEach((firstCheckIcon, i) => {
+    firstCheckIcon.addEventListener("click", (e) => {
+        if (e.target.checked) {
+            filteredCheckboxes[4].target.checked;
+            firstCheckIconSvgOns[i].style.display = "block";
+            firstCheckIconSvgOffs[i].style.display = "none";
+        } else {
+            firstCheckIconSvgOns[i].style.display = "none";
+            firstCheckIconSvgOffs[i].style.display = "block";
+        }
+    });
+});
+
+// lastCheckIcons.forEach((lastCheckIcon, i) => {
+//     lastCheckIcon.addEventListener("click", (e) => {
+//         if (e.target.checked) {
+//             filteredCheckboxes[5].target.checked;
+//             lastCheckIconSvgOns[i].style.display = "block";
+//             lastCheckIconSvgOffs[i].style.display = "none";
+//         } else {
+//             lastCheckIconSvgOns[i].style.display = "none";
+//             lastCheckIconSvgOffs[i].style.display = "block";
+//         }
+//     });
+// });
 
 // path[fill=rgba(55, 56, 60, 0.28)]
 // path[fill=`#0066ff`]

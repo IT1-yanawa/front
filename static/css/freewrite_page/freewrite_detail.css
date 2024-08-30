@@ -15,6 +15,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background-repeat: no-repeat;
     appearance: none;
     font-weight: 600;
+    list-style: none;
 }
 
 *, :after, :before {
@@ -70,6 +71,7 @@ html {
     padding: 90px 20px;
     display: flex;
     column-gap: 20px;
+    overflow: visible; /* 자식 요소가 확장될 수 있도록 설정 */
 }
 
 .wrap1 > div::before {
@@ -91,6 +93,9 @@ html {
     padding: 40px;
     border-radius: 5px;
     background-color: white;
+    overflow: visible; /* 흰 배경이 댓글 길이에 따라 확장되도록 설정 */
+    min-height: 300px; /* 최소 높이를 지정해 흰 배경이 유지되도록 설정 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -154,7 +159,9 @@ img, svg {
 }
 
 .wrap5 {
+    display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 .wrap4.content1 .content12:empty {
@@ -378,10 +385,8 @@ g {
     padding: 8px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 308px;
-    margin-top: -194px;
-    
-}
+    margin-left: 248px;
+    margin-top: -14px;}
 
 .file-thumbnail {
     display: block;
@@ -605,7 +610,7 @@ button {
     border: 1px solid rgb(225, 226, 228);
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    bottom: 750px;
     transform: translateY(50px);
     color: rgb(23, 23, 23) !important;
 }a {
@@ -617,7 +622,7 @@ button {
 }img, svg {
     vertical-align: middle;
 }img {
-    width: 5px;
+    width: 25px;
 }.fvkzXt.fvkzXt.fvkzXt {
     text-align: center;
     white-space: normal;
@@ -934,4 +939,404 @@ button {
     line-height: 14px;
     letter-spacing: 0.031em;
     color: rgb(51, 51, 51);
+}
+/* 기본 폰트 및 스타일 설정 */
+body, html {
+    font-family: Pretendard, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-wrap {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.comment-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.comment-input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.comment-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e1e3e8;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+    height: 80px;
+}
+
+.comment-textarea:focus {
+    border-color: #40a9ff;
+    box-shadow: 0 0 8px rgba(64, 169, 255, 0.2);
+    outline: none;
+}
+
+.comment-char-count {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #999;
+}
+
+.comment-button-wrap {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.comment-submit-button {
+    width: 100%;
+    background-color: #1890ff;
+    color: #ffffff;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.comment-submit-button:hover {
+    background-color: #40a9ff;
+}
+
+/* 오류 시 빨간색 테두리 */
+.comment-textarea.comment-error {
+    border-color: red;
+}
+/* sc-2e6f0be9-0 cTwgCR 내부의 댓글 섹션 스타일 */
+.custom-comment-section {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 200x; /* 댓글 목록의 최대 높이 설정 */
+    overflow-y: auto; /* 댓글이 많아지면 스크롤 생성 */
+    overflow-x: hidden; /* 가로 스크롤은 숨김 */
+    
+    
+}
+
+
+
+.custom-comment-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.custom-comment-list-container {
+    overflow: visible; /* 스크롤바 제거 */
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-bottom: 20px; /* 아래쪽 여백 추가 */
+    
+}
+
+.custom-comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-comment-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.custom-comment-divider {
+    border: 1px solid #e1e3e8;
+    margin: 0 -20px;
+}
+
+.custom-comment-content {
+    display: flex;
+    flex-direction: column;
+    margin: -2px;
+    position: relative;
+    padding-bottom: 16px; /* 하단에 여백 추가 */
+    margin-top: 16px;  /* 다음 요소와의 간격을 유지하기 위해 추가 */
+    border-bottom: 1px solid #e1e3e8; /* 기존 hr 태그와 동일한 선 추가 */
+}
+
+.custom-comment-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.custom-comment-author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.custom-comment-body {
+    width: 100%;
+}
+
+.custom-comment-text {
+    font-size: 9px;
+   
+    color: #555;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: -20px;
+    display: flex;
+    
+    
+    
+}
+
+.custom-comment-time {
+    font-size: 12px;
+    color: #888;
+}
+
+.custom-load-more-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1890ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-load-more-btn:hover {
+    background-color: #40a9ff;
+}
+
+.custom-load-more-btn:focus {
+    outline: none;
+}
+/* sc-2e6f0be9-0 cTwgCR 내부의 댓글 섹션 스타일 */
+.custom-comment-section {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: auto;
+    overflow: visible;
+    padding-top: 9px;
+    padding-bottom: 0px;
+}
+
+
+
+.custom-comment-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+
+.custom-comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.custom-comment-divider {
+    border: 1px solid #e1e3e8;
+    margin: 0 -20px;
+}
+
+
+.custom-comment-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    margin-top: -25px;
+}
+
+.custom-comment-author-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.custom-comment-image-container {
+    width: 30px; /* 이미지 크기를 제한합니다. */
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.custom-comment-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%; /* 이미지를 원형으로 만듭니다. */
+}
+
+.custom-comment-author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.custom-comment-body {
+    width: 100%;
+}
+
+.custom-comment-text {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+}
+
+.custom-comment-time {
+    font-size: 10px;
+    color: #888;
+    margin-left: 240px;
+    
+    
+}
+
+.custom-load-more-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1890ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-load-more-btn:hover {
+    background-color: #40a9ff;
+}
+
+.custom-load-more-btn:focus {
+    outline: none;
+}
+
+
+.custom-comment-item {
+    width: 100%;
+    
+}
+
+
+.custom-nav-btn {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    padding: 8px 42px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#prevBtn {
+    background-color: #1890ff;
+}
+/* 댓글 컨테이너의 높이 확장 가능하도록 설정 */
+.sc-2e6f0be9-0.cTwgCR {
+    position: relative;
+    padding: 30px 24px;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    min-height: 200px; /* 최소 높이 설정 */
+    height: auto; /* 높이를 자동으로 설정하여 내용에 맞게 확장되도록 */
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* 내용이 잘리지 않고 확장될 수 있도록 설정 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 댓글 목록 컨테이너 설정 */
+.custom-comment-list-container {
+    width: 100%;
+    height: auto; /* 내용에 따라 높이 자동 조정 */
+    background-color: transparent;
+    overflow: visible; /* 스크롤바를 없애고 내용이 확장될 수 있도록 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* 내용이 늘어날 때 컨테이너도 함께 늘어나도록 */
+}
+
+/* 댓글 아이템 간의 여백 설정 */
+.custom-comment-item {
+    width: 100%;
+   
+    word-wrap: break-word; /* 긴 단어가 있을 경우 줄 바꿈 */
+}
+.custom-comment-navigation {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.custom-comment-text {
+    display: block;
+    width: 100%; /* 가로 길이를 부모 컨테이너에 맞춤 */
+    word-wrap: break-word; /* 긴 단어가 있을 경우 줄바꿈 */
+    word-break: break-all; /* 단어가 너무 길 경우 강제로 줄바꿈 */
+    white-space: normal; /* 텍스트가 자동으로 줄바꿈되도록 설정 */
+    line-height: 1.5; /* 텍스트 줄 간격을 조정하여 가독성 향상 */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    box-sizing: border-box; /* 패딩을 포함한 전체 크기 조절 */
+    margin-inline: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.page-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 10px;
+   
+}
+
+.custom-nav-btn {
+    background-color: #1890ff; /* 기본 버튼 색상 */
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.custom-nav-btn:disabled {
+    background-color: #ccc; /* 비활성화된 상태의 색상 */
+    cursor: not-allowed;
 }

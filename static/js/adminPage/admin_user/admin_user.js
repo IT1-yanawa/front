@@ -214,3 +214,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+// -------------------------------------------------------
+document.querySelectorAll(".pagination-page-link").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+        event.preventDefault(); // 기본 링크 동작을 막기
+
+        // 모든 페이지에서 active 클래스를 제거
+        document.querySelectorAll(".pagination-page").forEach(function (page) {
+            page.classList.remove("active");
+        });
+
+        // 클릭한 페이지에 active 클래스를 추가
+        this.parentElement.classList.add("active");
+    });
+});

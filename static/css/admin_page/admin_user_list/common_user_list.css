@@ -121,7 +121,7 @@ hr {
     flex-direction: row;
     align-items: center;
     margin-top: 4px;
-    padding-left: 52px;
+    padding-left: 40px;
     width: 100%;
     height: 18px;
     font-size: 12px;
@@ -233,7 +233,7 @@ hr {
     align-items: center;
     gap: 5px; /* 검색창과 버튼 간의 간격 */
     flex-wrap: nowrap;
-    width: 50%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
+    width: 400px; /* 검색창 width값 */
 }
 
 .UserFilter_searchInput {

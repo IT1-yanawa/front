@@ -2,9 +2,9 @@
     margin: 8px;
     font-size: 14px;
     color: #333;
-    background-color: #f8f8f8;
+    background-color: white;
     line-height: 1.42857143;
-    font-family: 'NanumSquareNeoLight'!important;
+   font-family: Pretendard;
 }
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
@@ -75,7 +75,7 @@ a {
     /* 기존 슬라이드의 총 길이를 감안하여 설정 */
     width: 5300px !important;/* 총 슬라이드 길이 */
     white-space: nowrap !important;
-    transition: transform 0.5s ease-in-out !important;
+  
 
 }
 
@@ -84,7 +84,7 @@ a {
     flex: 0 0 1060px !important;/* 슬라이드의 고정 너비 설정 */
     max-width: 1060px !important;
     height: auto !important;
-    transition: transform 0.5s ease-in-out !important;
+   
 }
 
 
@@ -174,7 +174,7 @@ a {
     height: 39px;
     display: flex;
     align-items: flex-start;
-    transition: color 0.2s ease;
+   
     position: relative;
 }
 
@@ -184,13 +184,13 @@ a {
 
 .CategoryList_CategoryItem__1j311:after {
     content: "";
-    width: calc(100% - 32px);
+    width: calc(100% - 15px);
     height: 2px;
     position: absolute;
     bottom: -1px;
     left: 0;
     background-color: transparent;
-    transition: all 0.1s ease-in-out;
+ 
 }
 
 .CategoryList_CategoryItem__1j311.CategoryList_active__rissX:after {
@@ -217,7 +217,7 @@ a {
     height: 40px;
     border-radius: 10px;
     background: hsla(225, 5%, 46%, 0.04);
-    transition: opacity 0.15s ease;
+   
     opacity: 0;
 }
 
@@ -239,7 +239,7 @@ a {
 
 .Card_Card__RK7xc {
     position: relative;
-    transition: all 0.1s ease-out;
+   
     width: calc(25% - 15px);
 }
 
@@ -250,8 +250,7 @@ a {
 .EventItem_EventItem__C_vQK img {
   
    
-    transition: transform .2s ease;
-  ;
+   
     will-change: auto;
 }
 
@@ -282,7 +281,6 @@ a {
     transform: rotate(180deg);
     opacity: 0;
  
-    transition: all .1s ease-out;
 }
 
 a {
@@ -398,10 +396,12 @@ html {
     left: 10px;   /* 첫 번째 이미지와 동일하게 왼쪽에 배치 */
     align-items: center;
     will-change: auto;
+    
 }
 
 .SliderContainer_pagination__inner__3dPMY li {
     margin-right: 5px;
+    margin-bottom: 13px;
 }
 
 .SliderContainer_pagination__inner__3dPMY button {
@@ -521,8 +521,8 @@ html {
 }
 
 .SliderContainer_pagination__inner__3dPMY button {
-    width: 8px; /* 점의 크기 조정 */
-    height: 8px;
+    width: 4px; /* 점의 크기 조정 */
+    height: 4px;
     background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
     border: none;
     border-radius: 50%;
@@ -643,8 +643,46 @@ ul {
     transition: opacity .2s ease;
     will-change: opacity;
 } .keen-slider__slide img {
-    background-color: #f8f8f8; /* 이미지 로드 전 배경색 */
+   
     object-fit: cover;
     width: 100%;
     height: auto;
+}
+.SliderContainer_pagination__inner__3dPMY button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.SliderContainer_pagination__inner__3dPMY button.active {
+    background-color: white;
+}
+
+.SliderContainer_pagination__inner__3dPMY button:hover {
+    transform: scale(1.3);
+}.CategoryList_CategoryItem__1j311:hover {
+   
+    color: rgba(0, 0, 0, 0.7); /* 텍스트 색상을 약간 더 어둡게 설정 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 부드러운 전환 효과 추가 */
+}
+
+.CategoryList_active__rissX {
+   
+    color: rgba(0, 0, 0, 0.9); /* 활성화된 버튼의 텍스트 색상 설정 */
+}
+.Thumbnail_Thumbnail__gTHAM {
+    overflow: hidden; /* 이미지가 컨테이너를 넘어서지 않도록 설정 */
+    position: relative;
+}
+
+.Thumbnail_Thumbnail__gTHAM img {
+    transition: transform 0.3s ease; /* 이미지 확대를 부드럽게 전환 */
+}
+
+.Thumbnail_Thumbnail__gTHAM:hover img {
+    transform: scale(1.1); /* 마우스를 올렸을 때 이미지를 1.1배 확대 */
 }

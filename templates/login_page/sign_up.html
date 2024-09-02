@@ -95,6 +95,7 @@
                             <form class="sign-up-form">
                                 <!-- 이메일(중복확인) -->
                                 <div>
+                                    <!-- 이메일-1 -->
                                     <div class="email">
                                         <div class="email-1">
                                             <div class="margin-bottom">
@@ -105,12 +106,45 @@
                                                 >
                                             </div>
                                             <input
-                                                id="email"
+                                                id="email-1"
                                                 type="text"
                                                 placeholder="이메일을 입력해주세요."
                                                 name="email"
                                                 autocomplete="off"
                                                 class="input-style"
+                                                value=""
+                                            />
+                                        </div>
+                                        <button
+                                            type="button"
+                                            id="duplicate-check-button"
+                                            class="duplicate-check-button"
+                                            disabled
+                                        >
+                                            <span
+                                                id="duplicate-check"
+                                                class="duplicate-check-span"
+                                                >중복 확인</span
+                                            >
+                                        </button>
+                                    </div>
+                                    <!-- 이메일-2 (오류 시: 오류 메시지) -->
+                                    <div class="email">
+                                        <div class="email-1">
+                                            <div class="margin-bottom">
+                                                <label
+                                                    for="email"
+                                                    class="label-style"
+                                                    >이메일</label
+                                                >
+                                            </div>
+                                            <input
+                                                id="email-2"
+                                                type="text"
+                                                placeholder="이메일을 입력해주세요."
+                                                name="email"
+                                                autocomplete="off"
+                                                class="error-style"
                                                 value=""
                                             />
                                         </div>
@@ -124,8 +158,50 @@
                                             >
                                         </button>
                                     </div>
+                                    <div class="email-error">
+                                        <p class="error-message">
+                                            올바른 이메일을 입력해주세요.
+                                        </p>
+                                    </div>
+                                    <!-- 이메일-3 (중복 확인 메시지) -->
+                                    <div class="email">
+                                        <div class="email-1">
+                                            <div class="margin-bottom">
+                                                <label
+                                                    for="email"
+                                                    class="label-style"
+                                                    >이메일</label
+                                                >
+                                            </div>
+                                            <input
+                                                id="email-3"
+                                                type="text"
+                                                placeholder="이메일을 입력해주세요."
+                                                name="email"
+                                                autocomplete="off"
+                                                class="error-style"
+                                                value=""
+                                            />
+                                        </div>
+                                        <button
+                                            type="button"
+                                            id="duplicate-check-button-3"
+                                            class="duplicate-check-button"
+                                        >
+                                            <span
+                                                id="duplicate-check-3"
+                                                class="duplicate-check-span"
+                                                >중복 확인</span
+                                            >
+                                        </button>
+                                    </div>
+                                    <div class="email-error">
+                                        <p class="error-message">
+                                            중복 확인 후 계속해주세요.
+                                        </p>
+                                    </div>
+                                    <!--  -->
                                 </div>
-                                <!-- 이름 -->
                                 <div class="name wrapper-8px">
                                     <div class="margin-bottom">
                                         <label
@@ -139,6 +215,7 @@
                                         placeholder="이름을 입력해주세요."
                                         name="username"
                                         autocomplete="off"
+                                        id="name-input"
                                         class="input-style"
                                         value=""
                                     />
@@ -688,12 +765,39 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- 인증번호 받기 -->
+                                        <div class="get-code-div">
+                                            <input
+                                                type="number"
+                                                placeholder="(예시)01013245768"
+                                                id="mobile-input"
+                                                name="moblie"
+                                                autocomplete="on"
+                                                pattern="[0-9]*"
+                                                class="input-style"
+                                                value=""
+                                            />
+                                            <button
+                                                type="button"
+                                                id="get-code-button"
+                                                class="get-code-button"
+                                                disabled
+                                            >
+                                                <span
+                                                    id="get-code-span"
+                                                    class="button-span"
+                                                    >인증번호 받기</span
+                                                >
+                                            </button>
+                                        </div>
+                                        <!-- 인증번호 받기-2 (올바르지 않게 입력 시 메시지) -->
                                         <div class="get-code-div">
                                             <input
                                                 type="number"
                                                 placeholder="(예시)01013245768"
                                                 name="moblie"
                                                 autocomplete="on"
+                                                pattern="[0-9]*"
                                                 class="input-style"
                                                 value=""
                                             />
@@ -707,6 +811,10 @@
                                                 >
                                             </button>
                                         </div>
+                                        <p class="error-message">
+                                            올바른 전화번호를 입력해주세요.
+                                        </p>
+                                        <!-- 인증번호 입력-1 -->
                                         <div class="get-code-div">
                                             <input
                                                 type="number"
@@ -717,6 +825,46 @@
                                                 class="input-style"
                                                 value=""
                                             />
+                                        </div>
+                                        <!-- 인증번호 입력-2 (입력칸 활성화) -->
+                                        <div class="get-code-div">
+                                            <input
+                                                type="number"
+                                                placeholder="인증번호를 입력해주세요."
+                                                name="authCode"
+                                                id="get-code-input"
+                                                autocomplete="on"
+                                                class="input-style"
+                                                value=""
+                                            />
+                                        </div>
+                                        <div class="request-code-div">
+                                            <p class="request-code-message">
+                                                인증번호가 요청되었습니다.
+                                            </p>
+                                            <p class="request-code-message">
+                                                유효시간 03:16
+                                            </p>
+                                        </div>
+                                        <!-- 인증번호 입력-3 (입력칸 활성화/인증 시간 만료) -->
+                                        <div class="get-code-div">
+                                            <input
+                                                type="number"
+                                                placeholder="인증번호를 입력해주세요."
+                                                name="authCode"
+                                                autocomplete="on"
+                                                class="input-style"
+                                                value=""
+                                            />
+                                        </div>
+                                        <div class="time-out-div">
+                                            <p class="time-out-message">
+                                                인증 시간이 만료되었습니다. 다시
+                                                시도해 주세요.
+                                            </p>
+                                            <p class="time-out-message">
+                                                유효시간 00:00
+                                            </p>
                                         </div>
                                         <div class="black-gap-4px"></div>
                                     </div>
@@ -730,24 +878,54 @@
                                             >비밀번호</label
                                         >
                                     </div>
+                                    <!-- 비밀번호-1 -->
                                     <div class="password-div">
                                         <input
                                             type="password"
                                             placeholder="비밀번호를 입력해주세요."
                                             name="password"
                                             autocomplete="on"
+                                            id="password-input"
                                             class="input-style"
                                             value=""
                                         />
                                     </div>
+                                    <!-- 비밀번호-2 (잘못 입력 시 - 메시지)-->
+                                    <div class="password-div">
+                                        <input
+                                            type="password"
+                                            placeholder="비밀번호를 입력해주세요."
+                                            name="password"
+                                            autocomplete="on"
+                                            class="error-style"
+                                            value=""
+                                        />
+                                    </div>
+                                    <p class="error-message">
+                                        올바르지 않은 비밀번호입니다.
+                                    </p>
+                                    <!-- 비밀번호 다시 입력-1 -->
                                     <input
                                         type="password"
                                         placeholder="비밀번호를 다시 한번 입력해주세요."
                                         name="passwordConfirm"
                                         autocomplete="on"
+                                        id="pw-onemore-input"
                                         class="input-style"
                                         value=""
                                     />
+                                    <!-- 비밀번호 다시 입력-2 (일치하지 않게 입력 시 - 메시지)-->
+                                    <input
+                                        type="password"
+                                        placeholder="비밀번호를 다시 한번 입력해주세요."
+                                        name="passwordConfirm"
+                                        autocomplete="on"
+                                        class="error-style"
+                                        value=""
+                                    />
+                                    <p class="error-message">
+                                        비밀번호가 서로 일치하지 않습니다.
+                                    </p>
                                     <p class="password-rules">
                                         영문 대소문자, 숫자, 특수문자를 3가지
                                         이상으로 조합해 8자 이상 16자 이하로
@@ -757,10 +935,7 @@
                                 <!-- 동의 -->
                                 <div class="agree-wrapper">
                                     <div class="agree-div">
-                                        <div
-                                            id="checkbox"
-                                            class="agree-checkbox on"
-                                        >
+                                        <div class="agree-checkbox on">
                                             <span class="check-icon">
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -773,10 +948,7 @@
                                                 </svg>
                                             </span>
                                         </div>
-                                        <div
-                                            id="checkbox"
-                                            class="agree-checkbox off"
-                                        ></div>
+                                        <div class="agree-checkbox off"></div>
                                         <input
                                             type="checkbox"
                                             name="is_agree_all"
@@ -791,10 +963,7 @@
                                     <hr class="line" />
                                     <div class="agree-div-five">
                                         <div class="agree-div">
-                                            <div
-                                                id="checkbox"
-                                                class="agree-checkbox on"
-                                            >
+                                            <div class="agree-checkbox on">
                                                 <span class="check-icon">
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -808,7 +977,6 @@
                                                 </span>
                                             </div>
                                             <div
-                                                id="checkbox"
                                                 class="agree-checkbox off"
                                             ></div>
                                             <input
@@ -818,15 +986,12 @@
                                             />
                                             <div class="agree-p-div">
                                                 <p class="agree-p">
-                                                    만 14세 이상입니다. (필수)
+                                                    만 18세 이상입니다. (필수)
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="agree-div">
-                                            <div
-                                                id="checkbox"
-                                                class="agree-checkbox on"
-                                            >
+                                            <div class="agree-checkbox on">
                                                 <span class="check-icon">
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -840,7 +1005,6 @@
                                                 </span>
                                             </div>
                                             <div
-                                                id="checkbox"
                                                 class="agree-checkbox off"
                                             ></div>
                                             <input
@@ -850,7 +1014,7 @@
                                             />
                                             <div class="agree-p-div">
                                                 <p class="agree-p">
-                                                    원티드 이용약관 동의 (필수)
+                                                    야나와 이용약관 동의 (필수)
                                                 </p>
                                             </div>
                                             <a href="">
@@ -869,10 +1033,7 @@
                                             </a>
                                         </div>
                                         <div class="agree-div">
-                                            <div
-                                                id="checkbox"
-                                                class="agree-checkbox on"
-                                            >
+                                            <div class="agree-checkbox on">
                                                 <span class="check-icon">
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -886,7 +1047,6 @@
                                                 </span>
                                             </div>
                                             <div
-                                                id="checkbox"
                                                 class="agree-checkbox off"
                                             ></div>
                                             <input
@@ -896,7 +1056,7 @@
                                             />
                                             <div class="agree-p-div">
                                                 <p class="agree-p">
-                                                    원티드 개인정보 수집 및 이용
+                                                    야나와 개인정보 수집 및 이용
                                                     동의 (필수)
                                                 </p>
                                             </div>
@@ -917,10 +1077,7 @@
                                         </div>
                                         <div class="agree-select-div">
                                             <div class="agree-div">
-                                                <div
-                                                    id="checkbox"
-                                                    class="agree-checkbox on"
-                                                >
+                                                <div class="agree-checkbox on">
                                                     <span class="check-icon">
                                                         <svg
                                                             viewBox="0 0 24 24"
@@ -934,7 +1091,6 @@
                                                     </span>
                                                 </div>
                                                 <div
-                                                    id="checkbox"
                                                     class="agree-checkbox off"
                                                 ></div>
                                                 <input
@@ -944,8 +1100,8 @@
                                                 />
                                                 <div class="agree-p-div">
                                                     <p class="agree-p">
-                                                        채용 소식, 커리어
-                                                        콘텐츠, 이벤트 등 원티드
+                                                        매칭 소식, 스포츠
+                                                        콘텐츠, 이벤트 등 야나와
                                                         맞춤 정보 받기
                                                     </p>
                                                 </div>
@@ -1051,10 +1207,7 @@
                                         </div>
                                         <div class="agree-select-div">
                                             <div class="agree-div">
-                                                <div
-                                                    id="checkbox"
-                                                    class="agree-checkbox on"
-                                                >
+                                                <div class="agree-checkbox on">
                                                     <span class="check-icon">
                                                         <svg
                                                             viewBox="0 0 24 24"
@@ -1068,7 +1221,6 @@
                                                     </span>
                                                 </div>
                                                 <div
-                                                    id="checkbox"
                                                     class="agree-checkbox off"
                                                 ></div>
                                                 <input
@@ -1189,6 +1341,7 @@
                                     <button
                                         type="submit"
                                         disabled
+                                        id="final-button"
                                         class="final-button"
                                     >
                                         <span class="button-span"

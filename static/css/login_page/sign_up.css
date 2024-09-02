@@ -279,6 +279,20 @@ a {
     font-weight: 400;
 }
 
+.error-style {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    padding: 0px 16px;
+    outline: none;
+    background-color: transparent;
+    color: rgb(23, 23, 25);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid rgb(255, 66, 66) !important;
+}
+
 input::placeholder {
     color: rgb(199 200 201);
 }
@@ -314,8 +328,45 @@ input::placeholder {
 .duplicate-check-button {
     border-radius: 10px;
     font-size: 16px;
+    border: none;
 }
 
+.duplicate-check-button:disabled span {
+    color: rgba(55, 56, 60, 0.16);
+}
+
+.duplicate-check-button >span {
+    display: inline-block;
+}
+
+#duplicate-check.active {
+    color: #0066ff;
+}
+
+.duplicate-check-span {
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.0145em;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#duplicate-check-3 {
+    color: #0066ff;
+}
+.email-error p {
+    margin-top: 8px;
+}
+
+.error-message {
+    color: rgb(255, 66, 66);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.0192em;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Pretendard-Regular";
+}
 /* 이름 */
 
 .wrapper-8px {
@@ -408,11 +459,14 @@ input::placeholder {
     border-radius: 10px;
 }
 
-.get-code-button:disabled span {
+.get-code-button:disabled  {
     color: rgba(55, 56, 60, 0.16);
 }
-.get-code-button span {
+.get-code-button.active {
     color: #0066ff;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 1px solid rgba(112, 115, 124, 0.22);
 }
 
 .get-code-button >span {
@@ -438,6 +492,45 @@ input::placeholder {
     display: flex; 
     flex-direction: row;
     gap: 4px;
+}
+
+/* 인증번호 입력-2 (입력칸 활성화) */
+.request-code-div {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.request-code-message {
+    color: rgb(138, 138, 138);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.0192em;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Pretendard-Regular";
+}
+
+
+/* 인증번호 입력-3 (입력칸 활성화/인증 시간 만료) */
+.time-out-div {
+    display: flex;
+    gap: 4px;
+    flex-direction: column; 
+}
+
+.time-out-message {
+    color: rgb(255, 66, 66);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.0192em;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Pretendard-Regular";
 }
 
 /* 비밀번호 */
@@ -675,7 +768,10 @@ input::placeholder {
     min-height: 48px;
     border-radius: 10px;
     font-size: 16px;
-    border: none;
+}
+
+#final-button.active {
+    color: #ffffff;
     cursor: pointer;
     background-color: #0066ff;
     border: none;

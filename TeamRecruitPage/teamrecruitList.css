@@ -594,7 +594,7 @@ ul {
   
     box-shadow: inset 0 0 0 1px hsla(225,5%,46%,.22);
 }.IconButton_IconButton__root__IJlt6 {
-    position: relative;
+   
  
     display: inline-flex;
     padding: 8px;
@@ -685,4 +685,331 @@ ul {
 
 .Thumbnail_Thumbnail__gTHAM:hover img {
     transform: scale(1.1); /* 마우스를 올렸을 때 이미지를 1.1배 확대 */
+}
+.Modal_Modal__root__gYQkO {
+    position: fixed;
+    z-index: 1400;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}.Modal_Modal__root__backdrop__mYQY1 {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}.FilterModal_FilterModal__um_c3 {
+    width: 480px;
+    height: 640px;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    position: relative;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 12px;
+}.Modal_Modal__root__body__o7bsn {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 4px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,.1);
+    padding: 16px 20px;
+}.FilterModal_FilterModal__Title__P2C5e {
+    height: 71px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}.Typography_Typography__weightBold__KkJEY {
+    font-weight: 600;
+}.Typography_Typography__headline1__oRteu {
+    font-size: 18px;
+    letter-spacing: -.002em;
+    line-height: 26px;
+}.Typography_Typography__root__RdAI1 {
+    margin: 0;
+}.FilterModal_FilterModal__CloseButton__zZ4FC {
+    position: absolute;
+    right: 22px;
+}.IconButton_IconButton__normal__Twwsf {
+    border: none;
+}.IconButton_IconButton__root__IJlt6 {
+  
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    overflow: hidden;
+}.IconButton_IconButton__label__o4AtY {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+}.SvgIcon_SvgIcon__root__OHiSO {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+}.FilterModal_FilterModal__Title__P2C5e svg {
+    color: #171717;
+    width: 24px;
+    height: 24px;
+}.SvgIcon_SvgIcon__root__svg__ohdSc {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: inherit;
+}.IconButton_IconButton__interaction__7RjPt {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #171719;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}.FilterModal_FilterModal__Content__iaAMS {
+    margin-right: 8px;
+}.FilterModal_FilterModal__Content__iaAMS {
+    padding: 19px 30px 14px;
+    overflow-y: auto;
+}.ModalContent_ModalContent__root__D6xF7 {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    overflow-y: auto;
+    padding: 8px 24px;
+}.FilterA_FilterA__Vtsi9 {
+    padding-bottom: 22px;
+    margin-top: 2px;
+}.Typography_Typography__weightBold__KkJEY {
+    font-weight: 600;
+}.Typography_Typography__body1__q3AOP {
+    font-size: 16px;
+    letter-spacing: .0057em;
+    line-height: 24px;
+}.Field_Field_body__OGFJI {
+    margin-top: 9px;
+}.ButtonGroup_ButtonGroup__GfGC7 {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 12px;
+    margin-top: 16px;
+}.ButtonGroup_ButtonGroup__button__BdCIk {
+    height: 36px;
+    min-width: 59px;
+    padding-inline: 16.5px;
+    line-height: 146.7%;
+    letter-spacing: .144px;
+}.Button_Button__containedSizeMedium__xBgIW, .Button_Button__outlinedSizeMedium__XNxma {
+    padding: 0 20px;
+    min-width: 64px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+}.Button_Button__outlinedPrimary__8mJWi, .Button_Button__outlined__0HnEd {
+    --button-color: #06f;
+    color: var(--button-color);
+    -webkit-box-shadow: 0 0 0 1px var(--button-color) inset;
+    box-shadow: 0 0 0 1px var(--button-color) inset;
+}.Button_Button__outlined__0HnEd {
+    background-color: #fff;
+}.Button_Button__root__m1NGq {
+    --button-color: #171719;
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: normal;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    white-space: nowrap;
+}.Button_Button__label__K0sBs {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+}.Button_Button__interaction__1LUyr {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: var(--button-color);
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}.ButtonGroup_ButtonGroup__button__BdCIk.ButtonGroup_assistive__5jaMi {
+    color: rgba(55,56,60,.61);
+}.Field_Field__l6ycy:not(:first-of-type) {
+    margin-top: 36px;
+}.FilterModal_FilterModal__Actions__kZrvg {
+    height: 108px;
+    position: relative;
+    padding-inline: 30px;
+    -webkit-column-gap: 11px;
+    -moz-column-gap: 11px;
+    column-gap: 11px;
+}.ModalActions_ModalActions__root__5Z8aC {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}.FilterModal_FilterModal__resetButton__mQuYT {
+    min-width: 48px;
+    padding: 0;
+}.Button_Button__containedSizeLarge__9ANbc, .Button_Button__outlinedSizeLarge__A_H8o {
+    padding: 0 28px;
+    min-width: 84px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+}.Button_Button__containedPrimary__kCB60, .Button_Button__contained__qyP2s {
+    color: #fff;
+    background-color: #06f;
+}.Button_Button__contained__qyP2s {
+    border: none;
+}.FilterModal_FilterModal__resetButton__mQuYT svg {
+    width: 24px;
+    height: 24px;
+}.FilterModal_FilterModal__confirmButton__kfpgE {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .09px;
+}.FilterModal_FilterModal__confirmButton__kfpgE {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .09px;
+}.IconButton_IconButton__interaction__7RjPt:hover {
+    opacity: .05;
+}.Button_Button__interaction__1LUyr:hover {
+    opacity: .05;
+}/* 기본 스크롤바 스타일 */
+.ModalContent_ModalContent__root__D6xF7.FilterModal_FilterModal__Content__iaAMS::-webkit-scrollbar {
+    width: 5px; /* 스크롤바의 너비 */
+    background-color: #f0f0f0; /* 스크롤바 배경색 */
+}
+
+/* 스크롤바 트랙(슬라이더가 움직이는 영역) */
+.ModalContent_ModalContent__root__D6xF7.FilterModal_FilterModal__Content__iaAMS::-webkit-scrollbar-track {
+    background-color: white; /* 트랙 배경색 */
+    border-radius: 10px; /* 트랙의 둥근 모서리 */
+}
+
+/* 스크롤바 슬라이더 */
+.ModalContent_ModalContent__root__D6xF7.FilterModal_FilterModal__Content__iaAMS::-webkit-scrollbar-thumb {
+    background-color: white; /* 슬라이더 색상 */
+    border-radius: 10px; /* 슬라이더 둥근 모서리 */
+    border: 3px solid #f0f0f0; /* 슬라이더와 트랙 사이의 간격 */
+}
+
+/* 스크롤바 슬라이더:hover 상태 */
+.ModalContent_ModalContent__root__D6xF7.FilterModal_FilterModal__Content__iaAMS::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 슬라이더 색상 (hover 시) */
+}
+
+/* 선택된 버튼의 스타일 */
+button.selected {
+    border: 0.01px;
+    border-color: #06f !important; /* 선택된 버튼의 파란색 테두리 */
+    color: #06f !important; /* 선택된 버튼의 텍스트 색상 */
+}
+
+/* 기존 버튼 스타일에 따른 선택 상태 초기화 */
+.Field_Field__l6ycy button {
+    border: 0.001px solid white; /* 기본 테두리 */
+    color: #333; /* 기본 텍스트 색상 */
+}.FilterMenu_FilterMenu__MlY9z .FilterMenu_filterCount__V32k4 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 100%;
+    background: #06f;
+    color: #fff;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 128%;
+    letter-spacing: .279px;
+    left: 1473px;
+    bottom: 32px;
+}
+.FilterMenu_filterCount__V32k4 {
+    display: none;
+
+}
+.EventItem_EventItem__Section__iN1_Y {
+    display: flex;
+}
+
+.hidden {
+    display: none !important;
 }

@@ -289,8 +289,6 @@ body {
     font-size: 14px;
     letter-spacing: .0096em;
     line-height: 22px;
-}.Typography_Typography__root__RdAI1 {
-    margin: 0;
 }.ResumeHeader_ResumeHeader__toolbar__otherBtns_download__dyz81 {
     background-color: #fff;
     width: 40px;
@@ -539,8 +537,6 @@ button {
     font-size: 15px;
     letter-spacing: .0096em;
     line-height: 22px;
-}.Typography_Typography__root__RdAI1 {
-    margin: 0;
 }.CareerConnect_CareerConnect__AddCareerBtn__rhL_h {
     color: #474747;
 }.CareerConnect_CareerConnect__AddCareerBtn__rhL_h>span>span {
@@ -607,7 +603,7 @@ button {
     border-radius: 0;
 }.ResumeSkillInput_root__action_wrapper__msg__fWMwJ {
     background: #f7fbff;
-    border: 1px solid #c3d2ff;
+   
     border-radius: 5px;
     padding: 5px 9px;
     margin: 30px 0;
@@ -817,6 +813,18 @@ button {
 #newTextArea textarea {
     width: 100%;
     height: 100px; /* 높이는 필요에 따라 조절 */
+    background-color: #f3f9fe;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+
+#newTextArea textarea {
+    width: 100%;
+    height: 100px;
     background-color: #f3f9fe;
     border: none;
     padding: 10px;

@@ -15,11 +15,11 @@
         />
         <link
             rel="stylesheet"
-            href="/static/css/admin_page/admin_service/main_service.css"
+            href="/static/css/admin_page/admin_service/sub_service.css"
         />
         <link
             rel="stylesheet"
-            href="/static/css/admin_page/admin_service/sub_placeRantal.css"
+            href="/static/css/admin_page/admin_service/main_service.css"
         />
     </head>
     <body>
@@ -463,6 +463,11 @@
                                     </div>
                                     <!-- Action Buttons -->
                                     <div class="action-buttons">
+                                        <input
+                                            type="text"
+                                            class="Filter_searchInput"
+                                            placeholder="검색어 입력"
+                                        />
                                         <button
                                             id="addServiceBtn"
                                             class="addServiceBtn"
@@ -481,55 +486,62 @@
                                     class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"
                                 />
                                 <div class="ServiceTable_container">
-                                    <div
-                                        class="ServiceTable_row ServiceTable_header"
-                                    >
+                                    <div class="header_wrapper">
                                         <div
-                                            class="ServiceTable_cell headerCell selectAllCell"
+                                            class="ServiceTable_row ServiceTable_header"
                                         >
-                                            <input
-                                                type="checkbox"
-                                                id="selectAll"
-                                            />
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            ID
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            작성자
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            등록일
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            장소명
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            위치
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            종목
-                                        </div>
-                                        <div
-                                            class="ServiceTable_cell headerCell"
-                                        >
-                                            Actions
+                                            <div
+                                                class="ServiceTable_cell headerCell selectAllCell"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    id="selectAll"
+                                                />
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                ID
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                작성자
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                등록일
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                장소명
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                이용자수
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                위치
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                종목
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                Actions
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <!-- Example row (Initial data) -->
+                                    <!-- 목록 리스트 -->
                                     <div class="ServiceTable_row_wrapper">
                                         <div class="ServiceTable_row">
                                             <div class="ServiceTable_cell">
@@ -538,48 +550,45 @@
                                                     class="userCheckbox"
                                                 />
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeRantal_ID"
-                                                    >1</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                1
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="user_name"
-                                                    >John Doe</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                John Doe
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="Join_Date"
-                                                    >2024-07-28</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-07-28
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <a
-                                                    class="PlaceRantalDetail"
-                                                    href="http://"
-                                                >
-                                                    서울어린이대공원 인조잔디
-                                                    축구장(
-                                                    <span class="hit_ctn"
-                                                        >345</span
-                                                    >
-                                                    )</a
-                                                >
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                서울어린이대공원 인조잔디 축구장
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeAddres"
-                                                    >서울 광진구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                34
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="sport_kind"
-                                                    >축구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <button class="editBtn">
-                                                    수정
-                                                </button>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                축구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -589,51 +598,47 @@
                                                     class="userCheckbox"
                                                 />
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeRantal_ID"
-                                                    >2</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                2
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="user_name"
-                                                    >존 도우</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                Doe John
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="Join_Date"
-                                                    >2024-07-30</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-07-29
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <a
-                                                    class="PlaceRantalDetail"
-                                                    href="http://"
-                                                >
-                                                    서울어린이대공원 인조잔디
-                                                    축구장(
-                                                    <span class="hit_ctn"
-                                                        >20</span
-                                                    >
-                                                    )</a
-                                                >
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                서울어린이대공원 인조잔디 축구장
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeAddres"
-                                                    >서울 광진구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                65
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="sport_kind"
-                                                    >축구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <button class="editBtn">
-                                                    수정
-                                                </button>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                축구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
                                             </div>
                                         </div>
-
                                         <div class="ServiceTable_row">
                                             <div class="ServiceTable_cell">
                                                 <input
@@ -641,51 +646,47 @@
                                                     class="userCheckbox"
                                                 />
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeRantal_ID"
-                                                    >3</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                3
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="user_name"
-                                                    >도우 존</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                존 도우
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="Join_Date"
-                                                    >2024-08-11</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-08-18
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <a
-                                                    class="PlaceRantalDetail"
-                                                    href="http://"
-                                                >
-                                                    서울어린이대공원 인조잔디
-                                                    축구장(
-                                                    <span class="hit_ctn"
-                                                        >35</span
-                                                    >
-                                                    )</a
-                                                >
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                서울어린이대공원 인조잔디 축구장
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeAddres"
-                                                    >서울 광진구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                55
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="sport_kind"
-                                                    >축구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <button class="editBtn">
-                                                    수정
-                                                </button>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                농구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
                                             </div>
                                         </div>
-
                                         <div class="ServiceTable_row">
                                             <div class="ServiceTable_cell">
                                                 <input
@@ -693,51 +694,47 @@
                                                     class="userCheckbox"
                                                 />
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeRantal_ID"
-                                                    >4</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                4
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="user_name"
-                                                    >123존</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                도우 존
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="Join_Date"
-                                                    >2024-08-20</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-08-14
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <a
-                                                    class="PlaceRantalDetail"
-                                                    href="http://"
-                                                >
-                                                    서울어린이대공원 인조잔디
-                                                    축구장(
-                                                    <span class="hit_ctn"
-                                                        >99</span
-                                                    >
-                                                    )</a
-                                                >
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                서울어린이대공원 인조잔디 축구장
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeAddres"
-                                                    >서울 광진구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                343
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="sport_kind"
-                                                    >축구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <button class="editBtn">
-                                                    수정
-                                                </button>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                축구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
                                             </div>
                                         </div>
-
                                         <div class="ServiceTable_row">
                                             <div class="ServiceTable_cell">
                                                 <input
@@ -745,54 +742,263 @@
                                                     class="userCheckbox"
                                                 />
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeRantal_ID"
-                                                    >5</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                5
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="user_name"
-                                                    >ab도우J</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                12피자 도우
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="Join_Date"
-                                                    >2024-07-28</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-07-14
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <a
-                                                    class="PlaceRantalDetail"
-                                                    href="http://"
-                                                >
-                                                    서울어린이대공원 인조잔디
-                                                    축구장(
-                                                    <span class="hit_ctn"
-                                                        >52</span
-                                                    >
-                                                    )</a
-                                                >
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                서울어린이대공원 인조잔디 축구장
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="placeAddres"
-                                                    >서울 광진구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                22
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <span class="sport_kind"
-                                                    >축구</span
-                                                >
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
                                             </div>
-                                            <div class="ServiceTable_cell">
-                                                <button class="editBtn">
-                                                    수정
-                                                </button>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                축구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
                                             </div>
                                         </div>
+                                        <div class="ServiceTable_row">
+                                            <div class="ServiceTable_cell">
+                                                <input
+                                                    type="checkbox"
+                                                    class="userCheckbox"
+                                                />
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                6
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                ab도우
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-08-02
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                서울어린이대공원 인조잔디 축구장
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                66
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                축구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
+                                            </div>
+                                        </div>
+                                        <div class="ServiceTable_row">
+                                            <div class="ServiceTable_cell">
+                                                <input
+                                                    type="checkbox"
+                                                    class="userCheckbox"
+                                                />
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell placeRantal_ID"
+                                            >
+                                                7
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                치즈 도우3
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell Join_Date"
+                                            >
+                                                2024-08-28
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell PlaceRantalDetail"
+                                            >
+                                                <a href="http://">
+                                                    서울어린이대공원 인조잔디
+                                                    축구장
+                                                </a>
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell hit-ctn"
+                                            >
+                                                99
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell placeAddres"
+                                            >
+                                                서울 광진구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell sport_kind"
+                                            >
+                                                축구
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">수정</button>
+                                            </div>
+                                        </div>
+                                        <!-- 목록 리스트 -->
                                     </div>
                                 </div>
                             </div>
+                            <nav class="pagination">
+                                <ul class="pagination-list">
+                                    <!-- 처음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-first">
+                                        <a
+                                            href="#"
+                                            class="pagination-first-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-first-icon"
+                                                aria-hidden="true"
+                                                >«</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 이전 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-prev">
+                                        <a
+                                            href="#"
+                                            class="pagination-prev-link"
+                                            rel="prev nofollow"
+                                        >
+                                            <span
+                                                class="pagination-prev-icon"
+                                                aria-hidden="true"
+                                                >‹</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 페이지 번호 버튼 -->
+                                    <li class="pagination-page active">
+                                        <a href="#" class="pagination-page-link"
+                                            >1</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >2</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >3</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >4</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >5</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >6</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >7</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >8</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >9</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >10</a
+                                        >
+                                    </li>
+                                    <!-- 다음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-next">
+                                        <a
+                                            href="#"
+                                            class="pagination-next-link"
+                                            rel="next nofollow"
+                                        >
+                                            <span
+                                                class="pagination-next-icon"
+                                                aria-hidden="true"
+                                                >›</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 마지막 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-last">
+                                        <a
+                                            href="#"
+                                            class="pagination-last-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-last-icon"
+                                                aria-hidden="true"
+                                                >»</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
+
                         <!-- 모달창 -->
                         <div id="editModal" class="modal">
                             <div class="modal-content">
@@ -843,4 +1049,5 @@
     </body>
     <script src="/static/js/adminPage/admin_page/admin.js"></script>
     <script src="/static/js/adminPage/admin_service/service_Main.js"></script>
+    <script src="/static/js/adminPage/admin_service/place_filter.js"></script>
 </html>

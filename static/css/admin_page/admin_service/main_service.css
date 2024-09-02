@@ -22,8 +22,22 @@
     font-display: swap
 }
 
+.ServiceLayout_container{
+    width: 1300px;
+}
+
 .Service_wrapper {
     padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_wrapper{
+    width: 1300px;
+}
+
+.ServiceTable_row_wrapper{
+    width: 1300px;
 }
 
 
@@ -45,13 +59,10 @@
 
 .ServiceTable_container {
     width: 100%;
-    min-width: 1000px;
     border: 1px solid #dee2e6;
     border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    border-collapse: collapse;
-    table-layout: fixed;
+    display: table;
+    table-layout: auto;
     text-align: center;
 }
 
@@ -62,9 +73,9 @@
 
 .ServiceTable_header {
     background-color: #f8f9fa;
-    text-align: center;
+    
     font-weight: bold;
-    border-bottom: 1px solid #dee2e6;
+    
 }
 
 .ServiceTable_cell {
@@ -92,55 +103,111 @@
     opacity: 0.8;
 }
 
-
-
 /* 각 열의 너비를 퍼센트로 설정 */
 .headerCell:nth-child(1),
 .ServiceTable_cell:nth-child(1) {
-    width: 5%; /* 체크박스 열 너비 */
+    width: 49px; /* 체크박스 열 너비 */
 }
 
 .headerCell:nth-child(2),
 .ServiceTable_cell:nth-child(2) {
-    width: 5%; /* ID 열 너비 */
+    width: 49px; /* ID 열 너비 */
 }
 
 .headerCell:nth-child(3),
 .ServiceTable_cell:nth-child(3) {
-    width: 15%; /* Name 열 너비 */
+    width: 190px; /* Name 열 너비 */
 }
 
 .headerCell:nth-child(4),
 .ServiceTable_cell:nth-child(4) {
-    width: 15%; /* Name 열 너비 */
+    width: 200px; /* Name 열 너비 */
 }
 
 .headerCell:nth-child(5),
 .ServiceTable_cell:nth-child(5) {
-    width: 30%; /* Email 열 너비 */
+    width: 330px; /* Email 열 너비 */
 }
 
 .headerCell:nth-child(6),
 .ServiceTable_cell:nth-child(6) {
-    width: 12%; /* Role 열 너비 */
+    width: 100px; /* Role 열 너비 */
 }
 
 .headerCell:nth-child(7),
 .ServiceTable_cell:nth-child(7) {
     
-    width: 12%; /* Role 열 너비 */
-    
-}
-
-.headerCell:nth-child(7){
+    width: 190px; /* Role 열 너비 */
     
 }
 
 .headerCell:nth-child(8),
 .ServiceTable_cell:nth-child(8) {
-    width: 10%; /* Role 열 너비 */
-    padding-right: 30px;
+    
+    width: 100px; /* Role 열 너비 */
+    
 }
 
+.headerCell:nth-child(9),
+.ServiceTable_cell:nth-child(9) {
+    width: 99px; /* Role 열 너비 */
+    
+}
 
+.pagination {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
 
+ul {
+    display: block;
+    list-style-type: disc;
+    height: 45px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    height: auto;
+}
+
+.pagination-first, .pagination-prev, .pagination-next, .pagination-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-list li {
+    margin: 0 2px;
+}
+
+.pagination-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px; /* 아이콘과 숫자 크기를 조절 */
+    text-decoration: none;
+    color: black; /* 필요에 따라 색상을 변경하세요 */
+    border: 1px solid #ccc; /* 필요에 따라 테두리 스타일을 변경하세요 */
+    border-radius: 3px; /* 필요에 따라 버튼 모양을 변경하세요 */
+}
+
+.pagination-list a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.pagination-list .active a {
+    background-color: #000000; /* 배경을 검정색으로 */
+    color: #ffffff; /* 글자를 하얀색으로 */
+}

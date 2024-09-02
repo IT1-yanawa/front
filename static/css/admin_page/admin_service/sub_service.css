@@ -126,3 +126,18 @@
 #saveChanges:hover {
     background-color: #0056b3;
 }
+
+.Filter_searchInput {
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    min-width: 0;
+    transition: border-color 0.3s;
+}
+
+.Filter_searchInput:focus {
+    border-color: #00c4c4;
+}

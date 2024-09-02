@@ -1431,9 +1431,24 @@
                             </p>
                             <div class="Field_Field_body__OGFJI">
                                 <div class="ButtonGroup_ButtonGroup__GfGC7">
+                                    <!-- <button
+                                        class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeMedium__XNxma ButtonGroup_ButtonGroup__button__BdCIk ButtonGroup_assistive__5jaMi"
+                                        value="all"
+                                    >
+                                        <span
+                                            class="Button_Button__label__K0sBs"
+                                        >
+                                            <span class="Button-text"
+                                                >전체</span
+                                            >
+                                        </span>
+                                        <span
+                                            class="Button_Button__interaction__1LUyr"
+                                        ></span>
+                                    </button> -->
                                     <button
                                         class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeMedium__XNxma ButtonGroup_ButtonGroup__button__BdCIk ButtonGroup_assistive__5jaMi"
-                                        value="tag.sirijeu"
+                                        value="soccer"
                                     >
                                         <span
                                             class="Button_Button__label__K0sBs"
@@ -1448,7 +1463,7 @@
                                     </button>
                                     <button
                                         class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeMedium__XNxma ButtonGroup_ButtonGroup__button__BdCIk ButtonGroup_assistive__5jaMi"
-                                        value="tag.cwieobyeongye"
+                                        value="basketball"
                                     >
                                         <span
                                             class="Button_Button__label__K0sBs"
@@ -1463,7 +1478,7 @@
                                     </button>
                                     <button
                                         class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeMedium__XNxma ButtonGroup_ButtonGroup__button__BdCIk ButtonGroup_assistive__5jaMi"
-                                        value="tag.caeyongibenteu"
+                                        value="badminton"
                                     >
                                         <span
                                             class="Button_Button__label__K0sBs"
@@ -1478,7 +1493,7 @@
                                     </button>
                                     <button
                                         class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeMedium__XNxma ButtonGroup_ButtonGroup__button__BdCIk ButtonGroup_assistive__5jaMi"
-                                        value="tag.caeyongibenteu"
+                                        value="baseball"
                                     >
                                         <span
                                             class="Button_Button__label__K0sBs"
@@ -1493,7 +1508,7 @@
                                     </button>
                                     <button
                                         class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeMedium__XNxma ButtonGroup_ButtonGroup__button__BdCIk ButtonGroup_assistive__5jaMi"
-                                        value="tag.caeyongibenteu"
+                                        value="footvolleyball"
                                     >
                                         <span
                                             class="Button_Button__label__K0sBs"
@@ -1838,40 +1853,6 @@
             document
                 .querySelector(".FilterModal_FilterModal__confirmButton__kfpgE")
                 .addEventListener("click", function () {
-                    const selectedSports = Array.from(
-                        document.querySelectorAll(
-                            ".ButtonGroup_ButtonGroup__button__BdCIk.selected"
-                        )
-                    ).map((button) =>
-                        button.querySelector(".Button-text").textContent.trim()
-                    );
-
-                    document
-                        .querySelectorAll(".Card_Card__RK7xc")
-                        .forEach((item) => {
-                            const itemTag = item
-                                .querySelector(
-                                    ".EventItem_EventItem__Tag__6tGwE"
-                                )
-                                .textContent.trim();
-                            if (
-                                selectedSports.length === 0 ||
-                                selectedSports.some((sport) =>
-                                    itemTag.includes(sport)
-                                )
-                            ) {
-                                item.style.display = "block";
-                            } else {
-                                item.style.display = "none";
-                            }
-                        });
-
-                    closeModal();
-                });
-
-            document
-                .querySelector(".FilterModal_FilterModal__confirmButton__kfpgE")
-                .addEventListener("click", function () {
                     var labelElement = document.querySelector(
                         ".FilterModal_FilterModal__confirmButton__kfpgE .Button_Button__label__K0sBs"
                     );
@@ -1997,6 +1978,57 @@
             document
                 .querySelector(".FilterModal_FilterModal__CloseButton__zZ4FC")
                 .addEventListener("click", closeModal);
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const confirmButtonLabel = document.querySelector(
+                ".FilterModal_FilterModal__confirmButton__kfpgE .Button_Button__label__K0sBs"
+            );
+            const confirmButton = document.querySelector(
+                ".FilterModal_FilterModal__confirmButton__kfpgE"
+            );
+
+            confirmButton.addEventListener("click", function () {
+                // 숫자가 없으면 전체 필터 초기화
+                const labelText = confirmButtonLabel
+                    ? confirmButtonLabel.textContent
+                    : "";
+                const filterCount = labelText.match(/\d+/)
+                    ? labelText.match(/\d+/)[0]
+                    : "0";
+
+                if (parseInt(filterCount) === 0) {
+                    // 전체 필터 초기화
+                    document
+                        .querySelectorAll(".Card_Card__RK7xc")
+                        .forEach((item) => {
+                            item.style.display = "block";
+                        });
+
+                    // 선택된 태그 초기화 (선택된 상태 해제)
+                    document
+                        .querySelectorAll(
+                            ".ButtonGroup_ButtonGroup__button__BdCIk.selected"
+                        )
+                        .forEach((button) => {
+                            button.classList.remove("selected");
+                        });
+
+                    // "적용하기" 버튼 텍스트 초기화
+                    confirmButtonLabel.textContent = "적용하기";
+                } else {
+                    // 선택된 필터가 있는 경우 필터 적용 로직을 여기에 추가할 수 있습니다.
+                }
+
+                // 모달을 닫음
+                closeModal();
+            });
+
+            function closeModal() {
+                const modalContainer =
+                    document.getElementById("modal-container");
+                modalContainer.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
         });
     </script>
 </html>

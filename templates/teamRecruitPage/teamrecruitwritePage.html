@@ -180,6 +180,11 @@
                                         class="CareerConnect_CareerConnect__urInH"
                                     >
                                         <!-- 경력 불러오기 버튼 -->
+                                        <input
+                                            type="file"
+                                            id="fileInput"
+                                            style="display: none"
+                                        />
                                         <button
                                             class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedPrimary__8mJWi Button_Button__outlinedSizeMedium__XNxma"
                                             id="loadCareerBtn"
@@ -253,7 +258,7 @@
                                                 class="Button_Button__interaction__1LUyr"
                                             ></span>
                                         </button>
-                                        <div id="newTextArea" class="">
+                                        <div id="newTextArea" class="hidden">
                                             <textarea
                                                 class="DynamicTextarea_Textarea__QcN8T"
                                                 style="width: 406%"
@@ -568,10 +573,7 @@
             .addEventListener("click", function () {
                 this.classList.toggle("active");
             });
-        function showTextarea() {
-            var textareaDiv = document.getElementById("newTextArea");
-            textareaDiv.style.display = "block";
-        }
+
         function showTextarea(button) {
             const parentDiv = button.parentNode; // 버튼의 부모 요소를 찾습니다.
             const textArea = parentDiv.querySelector("div.hidden"); // 숨겨진 텍스트 영역을 찾습니다.
@@ -614,5 +616,16 @@
                     textArea.classList.add("hidden");
                 }
             });
+
+        function toggleTextarea(id) {
+            const textArea = document.getElementById(id);
+            if (textArea) {
+                if (textArea.classList.contains("hidden")) {
+                    textArea.classList.remove("hidden");
+                } else {
+                    textArea.classList.add("hidden");
+                }
+            }
+        }
     </script>
 </html>

@@ -7,7 +7,8 @@
         
         <link rel="stylesheet" href="/static/css/admin_page/amdin_main/sub_main.css">
         <link rel="stylesheet" href="/static/css/admin_page/amdin_main/common_main.css" />
-        <link rel="stylesheet" href="/static/css/admin_page/admin_banner/banner.css">
+        <link rel="stylesheet" href="/static/css/admin_page/admin_post_list/common_post_list.css">
+        <link rel="stylesheet" href="/static/css/freewrite_page/freewrite.css">
     </head>
     <body>
         <noscript>#</noscript>
@@ -293,143 +294,145 @@
                         </div>
                     </div>
                     <div id="AppLayout_Contents" class="AppLayout_contents_mainContent">
-                        <section class="Page_container">
-                            <h2 class="Page_title">배너 관리</h2>
-                            <div class="Page_description">변경할 배너 이미지를 올려주세요.</div>
-                            <div class="BannerPage_content">
-                                <form action="">
-                                    <div class="StroyForm_content">
-                                        <section class="Section_container spacing-9">
-                                            <div style="max-width: 800px;">
-                                                <div class="Section_header">
-                                                    <h3 class="Section_title Section_isRequired">
-                                                        대표 이미지
-                                                        <span class="BlindText_textHidden">
-                                                            필수
-                                                        </span>
-                                                    </h3>
-                                                </div>
-                                                <div class="Section_description">
-                                                    <p class="spacing-4">
-                                                        야나와 메인 페이지에 노출할 배너 이미지를 등록해 주세요.
-                                                    </p>
-                                                    <div color="primary" class="MessageBox_messageBox MessageBox_primary MessageBox_vertical">
-                                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon MessageBox_icon" aria-hidden="true">
-                                                            <path fill="none" d="M0 0h40v40H0z">
-
-                                                            </path>
-                                                            <path d="M20 1a19 19 0 1 0 19 19A19.06 19.06 0 0 0 20 1zm1 28.6h-2v-13h2zm-1-15.84A1.8 1.8 0 1 1 21.8 12a1.8 1.8 0 0 1-1.8 1.76z">
-
-                                                            </path>
-                                                        </svg>
-                                                        <div class="MessageBox_content">
-                                                            <p class="MessageBox_title">
-                                                                배너 이미지 등록 가이드
-                                                            </p>
-                                                            <div class="MessageBox_description">
-                                                                <ul>
-                                                                    <li>10MB 이하의 JPG, JPEG, PNG 파일</li>
-                                                                    <li>해상도 1200x675 픽셀 이상</li>
-                                                                    <li>사진을 선택하면 이미지를 자르거나 회전할 수 있어요.</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="Section_content">
-                                                    <div class="spacing-5" label="대표 이미지">
-                                                        <div class="PopperRenew_container ImageFieldContent_popper">
-                                                            <div aria-describedby="Popper_30">
-                                                                <div class="ImageUploader_container StoryImageField_imageUploader">
-                                                                    <div class="ImageUploadButton_container">
-                                                                        <div class="ImageUploadButton_imageUploadContent">
-                                                                            <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon ImageUploadButton_cameraIcon" aria-hidden="true" style="width: 24px; height: 24px;">
-                                                                                <path d="M20.8 16.8a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0z">
-
-                                                                                </path>
-                                                                                <path d="M22.4 6.4L20 3.2h-8L9.6 6.4h-8v20.8h28.8V6.4zM16 23.2c-3.535 0-6.4-2.865-6.4-6.4s2.865-6.4 6.4-6.4 6.4 2.865 6.4 6.4-2.865 6.4-6.4 6.4z">
-
-                                                                                </path>
-                                                                            </svg>
-                                                                            <div class="ImageUploadButton_count">
-                                                                                <dl>
-                                                                                    <dt class="ImageUploadButton_blindText">업로드 된 이미지 수</dt>
-                                                                                    <dd>0</dd>
-                                                                                </dl>/<dl>
-                                                                                    <dt class="ImageUploadButton_blindText">업로드 가능한 최대 이미지 수</dt>
-                                                                                    <dd>6</dd>
-                                                                                </dl>
-                                                                            </div>
-                                                                        </div>
-                                                                        <label class="ImageUploadButton_uploadLabel" for="baseImage">
-                                                                            <span class="ImageUploadButton_blindText">
-                                                                                이미지 업로드하기
-                                                                            </span>
-                                                                        </label>
-                                                                        <input type="file" hidden="" id="baseImage" accept="image/jpeg, image/jpg, image/png" multiple>
-                                                                    </div>
-
-
-                                                                    <ul class="UploadedImageList_container" style="display: flex;">
-                                                                        <!-- <li class="UploadedImageList_listItem" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0"  draggable="false" style="">
-                                                                            <div class="UploadedImage_container" style="background-image: url(&quot;&quot;);">
-                                                                                <button class="UploadedImage_editButton" type="button" aria-label="이미지 편집하기">
-                                                                                    편집
-                                                                                </button>
-                                                                                <button class="UploadedImage_removeButton" aria-label="이미지 제거하기" type="button">
-                                                                                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true" style="width: 18px; height: 18px;">
-                                                                                        <path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z">
-
-                                                                                        </path>
-                                                                                    </svg>
-                                                                                </button>
-                                                                            </div>
-                                                                        </li> -->
-                                                                   
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Modal Structure -->
-                                                            <div id="imageEditModal" class="modal">
-                                                                <div class="modal-content">
-                                                                  <h4>이미지 편집</h4>
-                                                                  <div>
-                                                                      <img id="imageToEdit" src="" alt="Image to edit" style="max-width: 100%;">
-                                                                      <canvas id="cropCanvas" style="position: absolute; top: 0; left: 0;"></canvas>
-                                                                  </div>
-                                                                  <!-- Move modal-footer inside modal-content and below the image -->
-                                                                  <div class="modal-footer">
-                                                                    <div class="left-actions">
-                                                                        
-                                                                        <div role="button" tabindex="0" class="ImageEditor_tool ImageEditor_crop_1"></div>
-                                                                        <div role="button" tabindex="0" class="ImageEditor_tool ImageEditor_crop_2"></div>
-                                                                        
-                                                                      </div>
-                                                                    <div class="right-actions">
-                                                                      <button id="saveChanges">확인</button>
-                                                                      <button id="cancelEdit">취소</button>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div class="RecommendedPostsPage_container">
+                            <div class="RecommendedPostsPage-inner">
+                                <div class="Posts-list-container">
+                                    <div class="Posts-list-wrapper">
+                                        <div class="posts-list-header">
+                                            <div class="postList-title">
+                                                게시글 작성
                                             </div>
+                                            <!-- <div class="PostFilter_wrapper">
+                                                <input
+                                                    type="text"
+                                                    class="PostFilter_searchInput"
+                                                    placeholder="검색어 입력"
+                                                />
+                                                <button
+                                                    class="Button_button PostsFilter_filterButton PostsFilter_selected"
+                                                    type="button"
+                                                >
+                                                    <span>
+                                                        <span
+                                                            class="Button_children"
+                                                            >수정</span
+                                                        >
+                                                    </span>
+                                                </button>
+                                                <button
+                                                    class="Button_button PostsFilter_filterButton"
+                                                    type="button"
+                                                >
+                                                    <span>
+                                                        <span
+                                                            class="Button_children"
+                                                            >삭제</span
+                                                        >
+                                                    </span>
+                                                </button>
+                                            </div> -->
+                                        </div>
+                                        <hr
+                                            class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"
+                                        />
+                                        
+                                    </div>
+                                    <div class="wrap3" style="width: 83vw; max-width: none; box-shadow: none; margin-top: -40px; padding-left: 10px;">
+                                        
+                    
+                                        <section class="wrap4">
+                                            <form data-testid="CustomForm" class="content2">
+                                                <ul class="content3">
+                                                    <li class="content4">
+                                                        <div class="wrap5" style="width: 100%">
+                                                            <label for="title" class="content5" title="제목을 입력해주세요" style="display: block; width: 100%">
+                                                                제목 작성
+                                                                <span class="content6">*</span>
+                                                            </label>
+                                                            <div class="wrap6" style="width: 100%">
+                                                                <input placeholder="글의 제목을 작성해주세요" maxlength="45" id="content7" aria-required="true" class="content8" type="text" value="" style="width: 100%">
+                                                                <span class="content9" id="char-count" style="
+                                                                        position: absolute;
+                                                                        right: 10px;
+                                                                        top: 50%;
+                                                                        transform: translateY(-50%);
+                                                                    ">0/45</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="content10">
+                                                        <div class="wrap7" style="width: 100%">
+                                                            <label for="description" class="content11" title="내용 작성" style="display: block; width: 100%">
+                                                                내용 작성<span class="content12">*</span>
+                                                            </label>
+                                                            <div class="wrap8" style="width: 100%">
+                                                                <textarea placeholder="내용을 작성해주세요" id="content13" aria-required="true" class="content14" style="
+                                                                        width: 100%;
+                                                                        height: 150px;
+                                                                    "></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="content15">
+                                                        <div class="wrap9" style="width: 100%">
+                                                            <label for="file-upload" class="content16" style="display: block; width: 100%">
+                                                                파일 첨부
+                                                            </label>
+                                                            <div class="wrap10" style="
+                                                                    width: 100%;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                ">
+                                                                <input type="text" id="content17" class="content18" placeholder="첨부된 파일 경로" readonly="" style="
+                                                                        flex-grow: 1;
+                                                                        margin-right: 10px;
+                                                                    ">
+                                                                <label for="file-upload" class="content19" style="
+                                                                        display: inline-block;
+                                                                        cursor: pointer;
+                                                                    ">
+                                                                    + 파일 추가
+                                                                </label>
+                                                                <input type="file" id="file-upload" class="content20" style="display: none" onchange="document.getElementById('content17').value = this.value.split('\\').pop();">
+                                                            </div>
+                                                            <p class="content21" style="
+                                                                    font-size: 12px;
+                                                                    color: #999;
+                                                                    margin-top: 8px;
+                                                                ">
+                                                                * 파일은 복수로 첨부 가능하며, 최대
+                                                                100MB까지 업로드됩니다.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="wrap11" style="width: 100%; margin-top: 40px">
+                                                    <div class="wrap12" style="width: 100%">
+                                                        <button data-testid="Button" type="submit" color="primary" class="content22" style="
+                                                                width: 100%;
+                                                                max-width: 900px;
+                                                                background-color: #1890ff;
+                                                                color: #ffffff;
+                                                                border-radius: 8px;
+                                                                height: 48px;
+                                                                font-size: 16px;
+                                                                font-weight: bold;
+                                                            ">
+                                                            글 작성
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </section>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </section>
-
+                        </div>   
                     </div>
                 </div>
             
         </div>
     </body>
     <script src="/static/js/adminPage/admin_page/admin.js"></script>
-    <script src="/static/js/adminPage/admin_banner/admin_banner.js"></script>
-    
+    <script src="/static/js/freewrite_page/freewrite.js"></script>
 </html>

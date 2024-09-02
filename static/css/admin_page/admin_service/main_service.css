@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-style: normal;
+    src: url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Regular.subset.876e22b0.woff2) format("woff2"),url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Regular.subset.e17e49fe.woff) format("woff"),url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Regular.subset.9645d39e.otf) format("opentype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-style: normal;
+    src: url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Medium.subset.c6c0fe2b.woff2) format("woff2"),url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Medium.subset.2216ab02.woff) format("woff"),url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Medium.subset.11fc9454.otf) format("opentype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-style: normal;
+    src: url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Bold.subset.12541844.woff2) format("woff2"),url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Bold.subset.fd82943b.woff) format("woff"),url(https://static.wadiz.kr/studio/funding/static/media/Pretendard-Bold.subset.c817dbf1.otf) format("opentype");
+    font-display: swap
+}
+
+.Service_wrapper {
+    padding: 24px 16px;
+}
+
+
+.ServiceHeader_container .ServiceHeader_title {
+    line-height: 44px;
+    font-size: 36px;
+    margin: 0 0 16px;
+    font-weight: 700;
+}
+
+.ServiceHeader_container .ServiceHeader_description {
+    margin-bottom: 32px;
+    line-height: 24px;
+    color: #495057;
+    font-size: 17px;
+    margin: 0 0 32px;
+}
+
+
+.ServiceTable_container {
+    width: 100%;
+    min-width: 1000px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.ServiceTable_header, .ServiceTable_row{
+    display: table-row;
+    width: 100%; /* 행의 전체 너비를 100%로 설정 */
+}
+
+.ServiceTable_header {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.ServiceTable_cell {
+    display: table-cell;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle; /* 수직 가운데 정렬 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.editBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editBtn:hover {
+    opacity: 0.8;
+}
+
+
+
+/* 각 열의 너비를 퍼센트로 설정 */
+.headerCell:nth-child(1),
+.ServiceTable_cell:nth-child(1) {
+    width: 5%; /* 체크박스 열 너비 */
+}
+
+.headerCell:nth-child(2),
+.ServiceTable_cell:nth-child(2) {
+    width: 5%; /* ID 열 너비 */
+}
+
+.headerCell:nth-child(3),
+.ServiceTable_cell:nth-child(3) {
+    width: 15%; /* Name 열 너비 */
+}
+
+.headerCell:nth-child(4),
+.ServiceTable_cell:nth-child(4) {
+    width: 15%; /* Name 열 너비 */
+}
+
+.headerCell:nth-child(5),
+.ServiceTable_cell:nth-child(5) {
+    width: 30%; /* Email 열 너비 */
+}
+
+.headerCell:nth-child(6),
+.ServiceTable_cell:nth-child(6) {
+    width: 12%; /* Role 열 너비 */
+}
+
+.headerCell:nth-child(7),
+.ServiceTable_cell:nth-child(7) {
+    
+    width: 12%; /* Role 열 너비 */
+    
+}
+
+.headerCell:nth-child(7){
+    
+}
+
+.headerCell:nth-child(8),
+.ServiceTable_cell:nth-child(8) {
+    width: 10%; /* Role 열 너비 */
+    padding-right: 30px;
+}
+
+
+

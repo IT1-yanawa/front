@@ -823,3 +823,137 @@ img {
     justify-content: inherit;
     color: inherit;
 }
+.modal-div-sports {
+    position: absolute;
+    top: 56px;
+    right: inherit;
+    bottom: inherit;
+    left: 150;
+    display: none;
+}
+.modal-body-sports {
+    min-width: 330px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px 10px rgba(0, 0, 0, 0.06);
+    padding: 0;
+    background-color: #fff;
+}
+.modal-title-sports {
+    display: flex;
+    align-items: center;
+    padding: 22px 24px;
+    margin: 0;
+}
+.modal-title-h5-sports {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.012em;
+    line-height: 28px;
+    margin: 0;
+}
+.modal-title-sports > :last-child {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+.icon-button-cancel-sports {
+    border: none;
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon-button-cancel-label-sports {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    align-items: inherit;
+    color: inherit;
+}
+.SvgIcon-root-sports {
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+}
+.SvgIcon-path-sports {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    font-size: inherit;
+}
+.modal-content-sports {
+    display: flex;
+    height: 400px;
+    padding: 0;
+}
+.modal-content-sports > ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    padding: 0 8px;
+    overflow: scroll;
+    gap: 8px;
+}
+.sports {
+    display: block;
+}
+.modal-footer-sports {
+    border-top: 1px solid #f4f4f5;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.reset-button-sports {
+    min-width: 90px;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: black;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    cursor: pointer;
+    border: rgb(220, 220, 220) solid 1px;
+}
+.reset-button-label-sports {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+.apply-button-sports {
+    min-width: 90px;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #06f;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    cursor: pointer;
+}
+.apply-button-label-sports {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    color: inherit;
+}

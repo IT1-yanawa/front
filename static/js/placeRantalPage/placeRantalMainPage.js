@@ -165,7 +165,7 @@ buttons.forEach((button) => {
 });
 // -------------------------------------------------------
 
-// 초기화 버튼 가져오기
+// 지역 선택초기화 버튼 가져오기
 const resetButton = document.querySelector(".reset-button");
 
 // 초기화 버튼 클릭 이벤트
@@ -194,4 +194,55 @@ const applyButton = document.querySelector(".apply-button");
 // 모달창안 적용 버튼 누를시 지역선택 상세창 사라짐 (사라지게만함 적용은 안된거임)
 applyButton.addEventListener("click", () => {
     modalDiv.style.display = "none";
+});
+
+//-----------------------------------------------------------------------
+// 스포츠 선택 옆 버튼
+const selectSports = document.querySelector(".button-icon-right");
+
+// 모달창안에 x 버튼
+const cancelButtonSports = document.querySelector(".icon-button-cancel-sports");
+
+// 스포츠 선택 상세창
+const modalDivSports = document.querySelector(".modal-div-sports");
+
+// 스포츠 선택 옆 버튼 누를시 스포츠 선택 상세창 생김
+selectSports.addEventListener("click", () => {
+    modalDivSports.style.display = "block";
+});
+
+// 스포츠 선택 모달창안에 x 버튼 누를시 스포츠 선택 상세창 사라짐
+cancelButtonSports.addEventListener("click", () => {
+    modalDivSports.style.display = "none";
+});
+
+// --------------------------------------------------------------------
+
+// 스포츠 초기화 버튼 가져오기
+const resetButtonSports = document.querySelector(".reset-button-sports");
+
+// 스포츠 모달창가져오가
+const modalContentSports = document.querySelector(".modal-content-sports");
+
+// 초기화 버튼 클릭 이벤트
+resetButtonSports.addEventListener("click", () => {
+    // 스포츠 선택 들의 카테고리 요소 가져오기
+    const allButtons = modalContentSports.querySelectorAll(".category-item");
+    // 선택한 체크박스들 가져오기
+    const allpaths = modalContentSports.querySelectorAll("path");
+
+    allpaths.forEach((path) => {
+        // 체크된 클래스들 제거
+        path.classList.remove("check");
+        path.classList.add("no-check");
+    });
+});
+
+// ------------------------------------------------------------------------------
+// 스포츠 선택 적용하기 버튼 가져오기
+const applyButtonSports = document.querySelector(".apply-button-sports");
+
+// 모달창안 적용 버튼 누를시 지역선택 상세창 사라짐 (사라지게만함 적용은 안된거임)
+applyButtonSports.addEventListener("click", () => {
+    modalDivSports.style.display = "none";
 });

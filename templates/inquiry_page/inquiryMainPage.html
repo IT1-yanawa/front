@@ -52,6 +52,7 @@
                                     type="text"
                                     name="email"
                                     placeholder="가입하신 이메일 주소를 기입해주세요. (비회원은 수신 가능한 이메일)"
+                                    id="email-input"
                                 />
                                 <div class="error">
                                     <input
@@ -59,12 +60,39 @@
                                         name="email"
                                         placeholder="가입하신 이메일 주소를 기입해주세요. (비회원은 수신 가능한 이메일)"
                                         class="input-error"
+                                        id="email-input-error"
                                     />
                                     <div class="input-explain">
                                         <div class="input-explain-error">
                                             형식에 맞게 입력해주세요.
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="inquiry-type">
+                                <label for="inquiry-type" class="essential"
+                                    >문의 유형</label
+                                >
+                                <div class="form-control-input-content">
+                                    <select name="times" class="form-input">
+                                        <option value="" disabled selected>
+                                            문의 유형 선택
+                                        </option>
+                                        <option value="건의사항">
+                                            건의사항
+                                        </option>
+                                        <option value="결제관련">
+                                            결제관련
+                                        </option>
+                                        <option value="환불">환불</option>
+                                        <option value=" 서비스">서비스</option>
+                                        <option value="신고">신고</option>
+                                        <option value="기타">기타</option>
+                                        <!-- 추가옵션 여기에 -->
+                                    </select>
+                                </div>
+                                <div class="option-explain-error">
+                                    문의 유형을 선택해주세요.
                                 </div>
                             </div>
                             <div class="form-field request-subject">
@@ -75,6 +103,7 @@
                                     type="text"
                                     name="subjet"
                                     placeholder="문의 내용에 해당하는 키워드를 입력하시면 도움말 문서가 자동 검색됩니다."
+                                    id="subject-input"
                                 />
                                 <div class="error">
                                     <input
@@ -82,6 +111,7 @@
                                         name="subjet"
                                         placeholder="문의 내용에 해당하는 키워드를 입력하시면 도움말 문서가 자동 검색됩니다."
                                         class="input-error"
+                                        id="subject-input-error"
                                     />
                                     <div class="input-explain">
                                         <div class="input-explain-error">
@@ -159,7 +189,9 @@
                                     *위 동의는 거부할 수 있으나, 거부 시 해당
                                     문의를 처리할 수 없습니다.
                                 </p>
-                                <label for="check-agree" class="essential"
+                                <label
+                                    for="check-agree"
+                                    class="essential check-agree-label"
                                     >동의합니다.</label
                                 >
                                 <input type="checkbox" />

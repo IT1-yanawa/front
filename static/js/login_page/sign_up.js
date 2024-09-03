@@ -1,262 +1,728 @@
-// const customInfo = document.querySelector("input[name=is_accept_event_all]");
-// const emailNotification = document.querySelector(
-//     "input[name=accept_marketing_email]"
-// );
-// const appPushNotification = document.querySelector(
-//     "input[name=accept_marketing_push]"
-// );
-// const smsNotification = document.querySelector(
-//     "input[name=accept_marketing_sms]"
-// );
+const state = {
+    agree: [],
+};
 
-// console.log(customInfo);
-// console.log(emailNotification);
-// console.log(appPushNotification);
-// console.log(smsNotification);
+NodeList.prototype.slice = Array.prototype.slice;
 
-// function updateCustomInfo() {
-//     if (
-//         emailNotification.checked ||
-//         appPushNotification.checked ||
-//         smsNotification.checked
-//     ) {
-//         customInfo.checked = true;
-//         alert("들어옴 on");
-//     } else {
-//         customInfo.checked = false;
-//         alert("들어옴 off");
-//     }
-// }
+const requiredInput1 = document.querySelector("input[name=is_above_14]");
+const requiredInput2 = document.querySelector(
+    "input[name=is_terms_conditions]"
+);
+const requiredInput3 = document.querySelector(
+    "input[name=is_collect_information]"
+);
+const selectInput1 = document.querySelector("input[name=is_accept_event_all]");
+const emailInput1 = document.querySelector(
+    "input[name=accept_marketing_email]"
+);
+const pushInput1 = document.querySelector("input[name=accept_marketing_push]");
+const smsInput1 = document.querySelector("input[name=accept_marketing_sms]");
+const selectInput2 = document.querySelector(
+    "input[name=is_accept_recruit_all]"
+);
+const emailInput2 = document.querySelector("input[name=accept_recruit_email]");
+const pushInput2 = document.querySelector("input[name=accept_recruit_push]");
+const smsInput2 = document.querySelector("input[name=accept_recruit_sms]");
 
-// function updateSubItems() {
-//     if (customInfo.checked) {
-//         emailNotification.checked = true;
-//         appPushNotification.checked = true;
-//         smsNotification.checked = true;
-//         alert("들어옴 on");
-//     } else {
-//         emailNotification.checked = false;
-//         appPushNotification.checked = false;
-//         smsNotification.checked = false;
-//         alert("들어옴 off");
-//     }
-// }
+// 전체동의 포함 네모체크박스 6개
+const agreeCheckboxes = document.getElementsByClassName("agree-checkbox");
+const fiveAgreeCheckboxes = [...agreeCheckboxes].slice(1); // 네모체크박스 5개
 
-// customInfo.addEventListener("change", () => {
-//     updateSubItems();
-// });
+const AllagreeCheckbox = [...agreeCheckboxes].slice(0, 1);
 
-// [emailNotification, appPushNotification, smsNotification].forEach((el) => {
-//     el.addEventListener("change", () => {
-//         updateCustomInfo();
-//     });
-// });
+// 체크표시 6개 (선택 동의 하위목록 6개)
+const checkIconSvgs = document.getElementsByClassName("check-icon-svg");
+const sixCheckIconSvgs = [...checkIconSvgs]; // 체크표시 6개 복사본
 
-// 전체 동의 - input
+const ThreeCheckIconSvgs1 = sixCheckIconSvgs.slice(0, 3); // 선택동의1 하위목록 체크표시 3개
+const ThreeCheckIconSvgs2 = sixCheckIconSvgs.slice(3, 6); // 선택동의2 하위목록 체크표시 3개
+
+// 전체 체크 이벤트
+// 1. 전체 동의(전체 체크)
 const isAgreeAll = document.querySelector("input[name=is_agree_all]");
-// 필수 동의(3개) - input
+
+const allCheckInputs = document.querySelectorAll("input[type=checkbox]"); // 12개 체크항목(전체 포함)
+const checkInputs = allCheckInputs.slice(1); // 11개 체크항목
+const checkIconInputs1 = allCheckInputs.slice(5, 8); // 선택동의1 하위체크항목
+const checkIconInputs2 = allCheckInputs.slice(9, 12); // 선택동의2 하위체크항목
+
+isAgreeAll.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        checkInputs.forEach((item, index) => {
+            state.agree = [...state.agree, item.value];
+            item.checked = true; // checkInputs(11개 체크항목) 모두 체크
+        });
+    } else {
+        checkInputs.forEach((item, index) => {
+            state.agree = [];
+            item.checked = false; // checkInputs 모두 체크 해제
+        });
+    }
+
+    if (e.target.checked) {
+        //전체 동의 체크 시
+        fiveAgreeCheckboxes.forEach((item, index) => {
+            //5개 네모체크박스 스타일 적용(on)
+            item.classList.remove("off");
+            item.classList.add("on");
+        });
+    } else {
+        //전체 동의 체크 해제 시
+        fiveAgreeCheckboxes.forEach((item, index) => {
+            //5개 네모체크박스 스타일 적용 해제(off)
+            item.classList.remove("on");
+            item.classList.add("off");
+        });
+    }
+
+    if (e.target.checked) {
+        //전체 동의 체크 시
+        sixCheckIconSvgs.forEach((item, index) => {
+            //6개 체크표시 스타일 적용(on)
+            item.classList.remove("off");
+            item.classList.add("on");
+        });
+    } else {
+        //전체 동의 체크 해제 시
+        sixCheckIconSvgs.forEach((item, index) => {
+            //6개 체크표시 스타일 적용 해제(off)
+            item.classList.remove("on");
+            item.classList.add("off");
+        });
+    }
+
+    if (e.target.checked) {
+        AllagreeCheckbox[0].classList.remove("off");
+        AllagreeCheckbox[0].classList.add("on");
+    } else {
+        AllagreeCheckbox[0].classList.remove("on");
+        AllagreeCheckbox[0].classList.add("off");
+    }
+});
+
+// 개별 체크 이벤트
+checkInputs.forEach((item, index) => {
+    item.addEventListener("change", (e) => {
+        if (e.target.checked) {
+            state.agree = [...state.agree, e.target.value];
+        } else {
+            //선택 해제 항목만 제외하고 나머지 배열 재구성 => 즉, 삭제
+            //filter 함수 사용
+            state.agree = state.agree.filter((value) => value !== item.value);
+        }
+        //개별 선택 11개 배열이 차면 전체 체크박스 체크
+        if (state.agree.length == 11) {
+            isAgreeAll.checked = true;
+        } else {
+            // 11개 미만이면 전체 체크 해제
+            isAgreeAll.checked = false;
+        }
+
+        // index < 5; //네모체크박스
+        // 5 <= index < 11; //체크표시
+
+        // 필수 동의, 선택 동의 - 네모체크표시
+        if (requiredInput1.checked) {
+            fiveAgreeCheckboxes[0].classList.remove("off");
+            fiveAgreeCheckboxes[0].classList.add("on");
+        } else {
+            fiveAgreeCheckboxes[0].classList.remove("on");
+            fiveAgreeCheckboxes[0].classList.add("off");
+        }
+
+        if (requiredInput2.checked) {
+            fiveAgreeCheckboxes[1].classList.remove("off");
+            fiveAgreeCheckboxes[1].classList.add("on");
+        } else {
+            fiveAgreeCheckboxes[1].classList.remove("on");
+            fiveAgreeCheckboxes[1].classList.add("off");
+        }
+
+        if (requiredInput3.checked) {
+            fiveAgreeCheckboxes[2].classList.remove("off");
+            fiveAgreeCheckboxes[2].classList.add("on");
+        } else {
+            fiveAgreeCheckboxes[2].classList.remove("on");
+            fiveAgreeCheckboxes[2].classList.add("off");
+        }
+
+        if (selectInput1.checked) {
+            fiveAgreeCheckboxes[3].classList.remove("off");
+            fiveAgreeCheckboxes[3].classList.add("on");
+        } else {
+            fiveAgreeCheckboxes[3].classList.remove("on");
+            fiveAgreeCheckboxes[3].classList.add("off");
+        }
+
+        if (selectInput2.checked) {
+            fiveAgreeCheckboxes[4].classList.remove("off");
+            fiveAgreeCheckboxes[4].classList.add("on");
+        } else {
+            fiveAgreeCheckboxes[4].classList.remove("on");
+            fiveAgreeCheckboxes[4].classList.add("off");
+        }
+
+        // 선택 동의1 하위 목록 - 체크표시
+        if (emailInput1.checked) {
+            sixCheckIconSvgs[0].classList.remove("off");
+            sixCheckIconSvgs[0].classList.add("on");
+        } else {
+            sixCheckIconSvgs[0].classList.remove("on");
+            sixCheckIconSvgs[0].classList.add("off");
+        }
+        if (pushInput1.checked) {
+            sixCheckIconSvgs[1].classList.remove("off");
+            sixCheckIconSvgs[1].classList.add("on");
+        } else {
+            sixCheckIconSvgs[1].classList.remove("on");
+            sixCheckIconSvgs[1].classList.add("off");
+        }
+        if (smsInput1.checked) {
+            sixCheckIconSvgs[2].classList.remove("off");
+            sixCheckIconSvgs[2].classList.add("on");
+        } else {
+            sixCheckIconSvgs[2].classList.remove("on");
+            sixCheckIconSvgs[2].classList.add("off");
+        }
+        // 선택 동의2 하위 목록 - 체크표시
+        if (emailInput2.checked) {
+            sixCheckIconSvgs[3].classList.remove("off");
+            sixCheckIconSvgs[3].classList.add("on");
+        } else {
+            sixCheckIconSvgs[3].classList.remove("on");
+            sixCheckIconSvgs[3].classList.add("off");
+        }
+        if (pushInput2.checked) {
+            sixCheckIconSvgs[4].classList.remove("off");
+            sixCheckIconSvgs[4].classList.add("on");
+        } else {
+            sixCheckIconSvgs[4].classList.remove("on");
+            sixCheckIconSvgs[4].classList.add("off");
+        }
+        if (smsInput2.checked) {
+            sixCheckIconSvgs[5].classList.remove("off");
+            sixCheckIconSvgs[5].classList.add("on");
+        } else {
+            sixCheckIconSvgs[5].classList.remove("on");
+            sixCheckIconSvgs[5].classList.add("off");
+        }
+
+        // 전체 동의 - 네모체크박스
+        if (state.agree.length == 11) {
+            AllagreeCheckbox[0].classList.remove("off");
+            AllagreeCheckbox[0].classList.add("on");
+        } else {
+            AllagreeCheckbox[0].classList.remove("on");
+            AllagreeCheckbox[0].classList.add("off");
+        }
+    });
+});
+
+// 선택 동의1 체크 이벤트
+selectInput1.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            emailInput1.checked == false &&
+            pushInput1.checked == false &&
+            smsInput1.checked == false
+        ) {
+            emailInput1.checked = true;
+            state.agree = [...state.agree, emailInput1.value];
+            pushInput1.checked = true;
+            state.agree = [...state.agree, pushInput1.value];
+            smsInput1.checked = true;
+            state.agree = [...state.agree, smsInput1.value];
+            if (
+                emailInput1.checked == true &&
+                pushInput1.checked == true &&
+                smsInput1.checked == true
+            ) {
+                ThreeCheckIconSvgs1.forEach((icon) => {
+                    icon.classList.remove("off");
+                    icon.classList.add("on");
+                });
+            }
+        }
+    } else {
+        // 개별체크에서 삭제
+        if (
+            emailInput1.checked == false &&
+            pushInput1.checked == false &&
+            smsInput1.checked == true
+        ) {
+            smsInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput1.value
+            );
+            if (smsInput1.checked == false) {
+                ThreeCheckIconSvgs1[2].classList.remove("on");
+                ThreeCheckIconSvgs1[2].classList.add("off");
+            }
+        } else if (
+            emailInput1.checked == false &&
+            pushInput1.checked == true &&
+            smsInput1.checked == false
+        ) {
+            pushInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput1.value
+            );
+            if (pushInput1.checked == false) {
+                ThreeCheckIconSvgs1[1].classList.remove("on");
+                ThreeCheckIconSvgs1[1].classList.add("off");
+            }
+        } else if (
+            emailInput1.checked == true &&
+            pushInput1.checked == false &&
+            smsInput1.checked == false
+        ) {
+            emailInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput1.value
+            );
+            if (emailInput1.checked == false) {
+                ThreeCheckIconSvgs1[0].classList.remove("on");
+                ThreeCheckIconSvgs1[0].classList.add("off");
+            }
+        } else if (
+            emailInput1.checked == false &&
+            pushInput1.checked == true &&
+            smsInput1.checked == true
+        ) {
+            pushInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput1.value
+            );
+            smsInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput1.value
+            );
+            if (pushInput1.checked == false && smsInput1.checked == false) {
+                ThreeCheckIconSvgs1[1].classList.remove("on");
+                ThreeCheckIconSvgs1[1].classList.add("off");
+                ThreeCheckIconSvgs1[2].classList.remove("on");
+                ThreeCheckIconSvgs1[2].classList.add("off");
+            }
+        } else if (
+            emailInput1.checked == true &&
+            pushInput1.checked == false &&
+            smsInput1.checked == true
+        ) {
+            emailInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput1.value
+            );
+            smsInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput1.value
+            );
+            if (emailInput1.checked == false && smsInput1.checked == false) {
+                ThreeCheckIconSvgs1[0].classList.remove("on");
+                ThreeCheckIconSvgs1[0].classList.add("off");
+                ThreeCheckIconSvgs1[2].classList.remove("on");
+                ThreeCheckIconSvgs1[2].classList.add("off");
+            }
+        } else if (
+            emailInput1.checked == true &&
+            pushInput1.checked == true &&
+            smsInput1.checked == false
+        ) {
+            emailInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput1.value
+            );
+            pushInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput1.value
+            );
+            if (emailInput1.checked == false && pushInput1.checked == false) {
+                ThreeCheckIconSvgs1[0].classList.remove("on");
+                ThreeCheckIconSvgs1[0].classList.add("off");
+                ThreeCheckIconSvgs1[1].classList.remove("on");
+                ThreeCheckIconSvgs1[1].classList.add("off");
+            }
+        } else if (
+            emailInput1.checked == true &&
+            pushInput1.checked == true &&
+            smsInput1.checked == true
+        ) {
+            emailInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput1.value
+            );
+            pushInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput1.value
+            );
+            smsInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput1.value
+            );
+            if (
+                emailInput1.checked == false &&
+                pushInput1.checked == false &&
+                smsInput1.checked == false
+            ) {
+                ThreeCheckIconSvgs1.forEach((icon) => {
+                    icon.classList.remove("on");
+                    icon.classList.add("off");
+                });
+            }
+        }
+    }
+    console.log(state.agree);
+});
+
+emailInput1.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            selectInput1.checked == false &&
+            pushInput1.checked == false &&
+            smsInput1.checked == false
+        ) {
+            selectInput1.checked = true;
+            state.agree = [...state.agree, selectInput1.value];
+            if (selectInput1.checked) {
+                fiveAgreeCheckboxes[3].classList.remove("off");
+                fiveAgreeCheckboxes[3].classList.add("on");
+            }
+        }
+    } else {
+        if (
+            selectInput1.checked == true &&
+            pushInput1.checked == false &&
+            smsInput1.checked == false
+        ) {
+            selectInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== selectInput1.value
+            );
+            if (selectInput1.checked == false) {
+                fiveAgreeCheckboxes[3].classList.remove("on");
+                fiveAgreeCheckboxes[3].classList.add("off");
+            }
+        }
+    }
+});
+pushInput1.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            selectInput1.checked == false &&
+            emailInput1.checked == false &&
+            smsInput1.checked == false
+        ) {
+            selectInput1.checked = true;
+            state.agree = [...state.agree, selectInput1.value];
+            if (selectInput1.checked) {
+                fiveAgreeCheckboxes[3].classList.remove("off");
+                fiveAgreeCheckboxes[3].classList.add("on");
+            }
+        }
+    } else {
+        if (
+            selectInput1.checked == true &&
+            emailInput1.checked == false &&
+            smsInput1.checked == false
+        ) {
+            selectInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== selectInput1.value
+            );
+            if (selectInput1.checked == false) {
+                fiveAgreeCheckboxes[3].classList.remove("on");
+                fiveAgreeCheckboxes[3].classList.add("off");
+            }
+        }
+    }
+});
+
+smsInput1.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            selectInput1.checked == false &&
+            emailInput1.checked == false &&
+            pushInput1.checked == false
+        ) {
+            selectInput1.checked = true;
+            state.agree = [...state.agree, selectInput1.value];
+            if (selectInput1.checked) {
+                fiveAgreeCheckboxes[3].classList.remove("off");
+                fiveAgreeCheckboxes[3].classList.add("on");
+            }
+        }
+    } else {
+        if (
+            selectInput1.checked == true &&
+            emailInput1.checked == false &&
+            pushInput1.checked == false
+        ) {
+            selectInput1.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== selectInput1.value
+            );
+            if (selectInput1.checked == false) {
+                fiveAgreeCheckboxes[3].classList.remove("on");
+                fiveAgreeCheckboxes[3].classList.add("off");
+            }
+        }
+    }
+});
+
+// 선택 동의2 체크 이벤트
+selectInput2.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            emailInput2.checked == false &&
+            pushInput2.checked == false &&
+            smsInput2.checked == false
+        ) {
+            emailInput2.checked = true;
+            state.agree = [...state.agree, emailInput2.value];
+            pushInput2.checked = true;
+            state.agree = [...state.agree, pushInput2.value];
+            smsInput2.checked = true;
+            state.agree = [...state.agree, smsInput2.value];
+            if (
+                emailInput2.checked == true &&
+                pushInput2.checked == true &&
+                smsInput2.checked == true
+            ) {
+                ThreeCheckIconSvgs2.forEach((icon) => {
+                    icon.classList.remove("off");
+                    icon.classList.add("on");
+                });
+            }
+        }
+    } else {
+        // 개별체크에서 삭제
+        if (
+            emailInput2.checked == false &&
+            pushInput2.checked == false &&
+            smsInput2.checked == true
+        ) {
+            smsInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput2.value
+            );
+            if (smsInput2.checked == false) {
+                ThreeCheckIconSvgs2[2].classList.remove("on");
+                ThreeCheckIconSvgs2[2].classList.add("off");
+            }
+        } else if (
+            emailInput2.checked == false &&
+            pushInput2.checked == true &&
+            smsInput2.checked == false
+        ) {
+            pushInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput2.value
+            );
+            if (pushInput2.checked == false) {
+                ThreeCheckIconSvgs2[1].classList.remove("on");
+                ThreeCheckIconSvgs2[1].classList.add("off");
+            }
+        } else if (
+            emailInput2.checked == true &&
+            pushInput2.checked == false &&
+            smsInput2.checked == false
+        ) {
+            emailInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput2.value
+            );
+            if (emailInput2.checked == false) {
+                ThreeCheckIconSvgs2[0].classList.remove("on");
+                ThreeCheckIconSvgs2[0].classList.add("off");
+            }
+        } else if (
+            emailInput2.checked == false &&
+            pushInput2.checked == true &&
+            smsInput2.checked == true
+        ) {
+            pushInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput2.value
+            );
+            smsInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput2.value
+            );
+            if (pushInput2.checked == false && smsInput2.checked == false) {
+                ThreeCheckIconSvgs2[1].classList.remove("on");
+                ThreeCheckIconSvgs2[1].classList.add("off");
+                ThreeCheckIconSvgs2[2].classList.remove("on");
+                ThreeCheckIconSvgs2[2].classList.add("off");
+            }
+        } else if (
+            emailInput2.checked == true &&
+            pushInput2.checked == false &&
+            smsInput2.checked == true
+        ) {
+            emailInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput2.value
+            );
+            smsInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput2.value
+            );
+            if (emailInput2.checked == false && smsInput2.checked == false) {
+                ThreeCheckIconSvgs2[0].classList.remove("on");
+                ThreeCheckIconSvgs2[0].classList.add("off");
+                ThreeCheckIconSvgs2[2].classList.remove("on");
+                ThreeCheckIconSvgs2[2].classList.add("off");
+            }
+        } else if (
+            emailInput2.checked == true &&
+            pushInput2.checked == true &&
+            smsInput2.checked == false
+        ) {
+            emailInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput2.value
+            );
+            pushInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput2.value
+            );
+            if (emailInput2.checked == false && pushInput2.checked == false) {
+                ThreeCheckIconSvgs2[0].classList.remove("on");
+                ThreeCheckIconSvgs2[0].classList.add("off");
+                ThreeCheckIconSvgs2[1].classList.remove("on");
+                ThreeCheckIconSvgs2[1].classList.add("off");
+            }
+        } else if (
+            emailInput2.checked == true &&
+            pushInput2.checked == true &&
+            smsInput2.checked == true
+        ) {
+            emailInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== emailInput2.value
+            );
+            pushInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== pushInput2.value
+            );
+            smsInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== smsInput2.value
+            );
+            if (
+                emailInput2.checked == false &&
+                pushInput2.checked == false &&
+                smsInput2.checked == false
+            ) {
+                ThreeCheckIconSvgs2.forEach((icon) => {
+                    icon.classList.remove("on");
+                    icon.classList.add("off");
+                });
+            }
+        }
+    }
+    console.log(state.agree);
+});
+
+emailInput2.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            selectInput2.checked == false &&
+            pushInput2.checked == false &&
+            smsInput2.checked == false
+        ) {
+            selectInput2.checked = true;
+            state.agree = [...state.agree, selectInput2.value];
+            if (selectInput2.checked) {
+                fiveAgreeCheckboxes[4].classList.remove("off");
+                fiveAgreeCheckboxes[4].classList.add("on");
+            }
+        }
+    } //
+    else {
+        if (
+            selectInput2.checked == true &&
+            pushInput2.checked == false &&
+            smsInput2.checked == false
+        ) {
+            selectInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== selectInput2.value
+            );
+            if (selectInput2.checked == false) {
+                fiveAgreeCheckboxes[4].classList.remove("on");
+                fiveAgreeCheckboxes[4].classList.add("off");
+            }
+        }
+    }
+});
+pushInput2.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            selectInput2.checked == false &&
+            emailInput2.checked == false &&
+            smsInput2.checked == false
+        ) {
+            selectInput2.checked = true;
+            state.agree = [...state.agree, selectInput2.value];
+            if (selectInput2.checked) {
+                fiveAgreeCheckboxes[4].classList.remove("off");
+                fiveAgreeCheckboxes[4].classList.add("on");
+            }
+        }
+    } else {
+        if (
+            selectInput2.checked == true &&
+            emailInput2.checked == false &&
+            smsInput2.checked == false
+        ) {
+            selectInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== selectInput2.value
+            );
+            if (selectInput2.checked == false) {
+                fiveAgreeCheckboxes[4].classList.remove("on");
+                fiveAgreeCheckboxes[4].classList.add("off");
+            }
+        }
+    }
+});
+
+smsInput2.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (
+            selectInput2.checked == false &&
+            emailInput2.checked == false &&
+            pushInput2.checked == false
+        ) {
+            selectInput2.checked = true;
+            state.agree = [...state.agree, selectInput2.value];
+            if (selectInput2.checked) {
+                fiveAgreeCheckboxes[4].classList.remove("off");
+                fiveAgreeCheckboxes[4].classList.add("on");
+            }
+        }
+    } else {
+        if (
+            selectInput2.checked == true &&
+            emailInput2.checked == false &&
+            pushInput2.checked == false
+        ) {
+            selectInput2.checked = false;
+            state.agree = state.agree.filter(
+                (value) => value !== selectInput2.value
+            );
+            if (selectInput2.checked == false) {
+                fiveAgreeCheckboxes[4].classList.remove("on");
+                fiveAgreeCheckboxes[4].classList.add("off");
+            }
+        }
+    }
+});
+
 const requiredCheckboxes = document.querySelectorAll(
     ".agree-div-five .agree-div .input-style-agree"
 );
-// 필수 동의, 선택 동의 - input
-const agreeDivCheckboxes = document.querySelectorAll(".input-style-agree");
-// 필수 동의, 선택 동의 - div - on
-const agreeCheckboxOns = document.querySelectorAll(".agree-checkbox.on");
-// 필수 동의, 선택 동의 - div - off
-const agreeCheckboxOffs = document.querySelectorAll(".agree-checkbox.off");
-// 모든 동의 - input
-const Checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-// 선택 동의 1번째 - input
-const isAcceptEventAll = document.querySelector(
-    "input[name=is_accept_event_all]"
-);
-// 선택 동의 2번째 - input
-const isAcceptRecruitAll = document.querySelector(
-    "input[name=is_accept_recruit_all]"
-);
-// 선택 동의(2개)의 각 하위 체크 - input
-const agreeCheckIcons = document.querySelectorAll(".input-style-check-icon");
-// 하위 체크 - svg - on
-const checkIconSvgOns = document.querySelectorAll(".check-icon-svg.on");
-// 하위 체크 - svg - off
-const checkIconSvgOffs = document.querySelectorAll(".check-icon-svg.off");
-
-// 선택 동의(2개)의 각 하위 체크 - input -> Array 배열로 복사
-const agreeCheckIconsArray = [...agreeCheckIcons];
-// 하위체크 중 1~3번
-const firstCheckIcons = agreeCheckIconsArray.slice(0, 3);
-// 하위체크 중 4~6번
-const lastCheckIcons = agreeCheckIconsArray.slice(3, 6);
-
-// SVG 1~3번 / 4~6번 나눈 것
-const checkIconSvgOnsArray = [...checkIconSvgOns];
-const firstCheckIconSvgOns = checkIconSvgOnsArray.slice(0, 3);
-const lastCheckIconSvgOns = checkIconSvgOnsArray.slice(3, 6);
-
-const checkIconSvgOffsArray = [...checkIconSvgOffs];
-const firstCheckIconSvgOffs = checkIconSvgOffsArray.slice(0, 3);
-const lastCheckIconSvgOffs = checkIconSvgOffsArray.slice(3, 6);
-
-// agreeDivCheckboxes가 NodeList 또는 HTMLCollection일 경우 배열로 변환
-const agreeDivCheckboxesArray = [...agreeDivCheckboxes];
-const CheckboxesArray = [...Checkboxes];
-
-// 첫 번째 요소를 제외한 배열을 만듭니다.
-const filteredCheckboxes = agreeDivCheckboxesArray.slice(1);
-const filteredAllCheckboxes = CheckboxesArray.slice(1);
-// console.log(filteredAllCheckboxes);
-
-// 전체 동의 체크 시, 필수 3개.선택 2개. 각 선택 하위 목록들(각 3개) 체크
-isAgreeAll.addEventListener("change", (e) => {
-    if (e.target.checked) {
-        for (i = 0; i < 6; i++) {
-            agreeCheckboxOns[i].style.display = "block";
-            agreeCheckboxOffs[i].style.display = "none";
-            checkIconSvgOns[i].style.display = "block";
-            checkIconSvgOffs[i].style.display = "none";
-        }
-    } else {
-        for (i = 0; i < 6; i++) {
-            agreeCheckboxOns[i].style.display = "none";
-            agreeCheckboxOffs[i].style.display = "block";
-            checkIconSvgOffs[i].style.display = "block";
-            checkIconSvgOns[i].style.display = "none";
-        }
-    }
-});
-
-// 필수 동의, 선택 동의 체크 중 한개라도 체크 해제 시, 전체 동의 체크 해제
-filteredCheckboxes.forEach((filteredCheckbox, i) => {
-    filteredCheckbox.addEventListener("change", (e) => {
-        const originalIndex = i + 1;
-        if (e.target.checked) {
-            filteredCheckboxes[i].checked = true;
-            agreeCheckboxOns[originalIndex].style.display = "block";
-            agreeCheckboxOffs[originalIndex].style.display = "none";
-        } else {
-            filteredCheckboxes[i].checked = false;
-            agreeCheckboxOns[originalIndex].style.display = "none";
-            agreeCheckboxOffs[originalIndex].style.display = "block";
-        }
-
-        isAgreeAll.checked = filteredAllCheckboxes.every(
-            (checkbox) => checkbox.checked
-        );
-
-        if (isAgreeAll.checked) {
-            agreeCheckboxOns[0].style.display = "block";
-            agreeCheckboxOffs[0].style.display = "none";
-        } else {
-            agreeCheckboxOns[0].style.display = "none";
-            agreeCheckboxOffs[0].style.display = "block";
-        }
-    });
-});
-
-// 각 선택 하위 목록들(각 3개) 체크 중 한개라도 체크 해제 시, 전체 동의 체크 해제
-agreeCheckIconsArray.forEach((agreeCheckIcon) => {
-    agreeCheckIcon.addEventListener("change", (e) => {
-        if (!e.target.checked) {
-            isAgreeAll.checked = false;
-            agreeCheckboxOns[0].style.display = "none";
-            agreeCheckboxOffs[0].style.display = "block";
-        }
-    });
-});
-
-// 첫번째 선택 동의
-isAcceptEventAll.addEventListener("change", (e) => {
-    if (e.target.checked) {
-        firstCheckIconSvgOns.forEach((firstCheckIconSvgOn, i) => {
-            firstCheckIcons[i].checked = true;
-            firstCheckIconSvgOn.style.display = "block";
-            firstCheckIconSvgOffs[i].style.display = "none";
-        });
-    } else {
-        firstCheckIconSvgOffs.forEach((firstCheckIconSvgOff, i) => {
-            firstCheckIcons[i].checked = false;
-            firstCheckIconSvgOns[i].style.display = "none";
-            firstCheckIconSvgOff.style.display = "block";
-        });
-    }
-});
-
-// 첫번째 선택 동의의 하위 체크 목록들
-firstCheckIcons.forEach((firstCheckIcon, i) => {
-    firstCheckIcon.addEventListener("change", (e) => {
-        if (e.target.checked) {
-            isAcceptEventAll.checked = true;
-            firstCheckIconSvgOns[i].style.display = "block";
-            firstCheckIconSvgOffs[i].style.display = "none";
-        } else {
-            firstCheckIconSvgOns[i].style.display = "none";
-            firstCheckIconSvgOffs[i].style.display = "block";
-        }
-
-        // 부모 체크박스 상태를 직접 업데이트
-        const allUnchecked = firstCheckIcons.every(
-            (checkbox) => !checkbox.checked
-        );
-
-        if (allUnchecked) {
-            isAcceptEventAll.checked = false;
-            agreeCheckboxOns[4].style.display = "none";
-            agreeCheckboxOffs[4].style.display = "block";
-        } else {
-            isAcceptEventAll.checked = true;
-            agreeCheckboxOns[4].style.display = "block";
-            agreeCheckboxOffs[4].style.display = "none";
-        }
-    });
-});
-
-// 두 번째 선택 동의
-isAcceptRecruitAll.addEventListener("change", (e) => {
-    if (e.target.checked) {
-        lastCheckIconSvgOns.forEach((lastCheckIconSvgOn, i) => {
-            lastCheckIcons[i].checked = true;
-            lastCheckIconSvgOn.style.display = "block";
-            lastCheckIconSvgOffs[i].style.display = "none";
-        });
-    } else {
-        lastCheckIconSvgOffs.forEach((lastCheckIconSvgOff, i) => {
-            lastCheckIcons[i].checked = false;
-            lastCheckIconSvgOns[i].style.display = "none";
-            lastCheckIconSvgOff.style.display = "block";
-        });
-    }
-});
-
-// 두번째 선택 동의의 하위 체크 목록들
-lastCheckIcons.forEach((lastCheckIcon, i) => {
-    lastCheckIcon.addEventListener("change", (e) => {
-        if (e.target.checked) {
-            isAcceptRecruitAll.checked = true;
-            lastCheckIconSvgOns[i].style.display = "block";
-            lastCheckIconSvgOffs[i].style.display = "none";
-        } else {
-            lastCheckIconSvgOns[i].style.display = "none";
-            lastCheckIconSvgOffs[i].style.display = "block";
-        }
-
-        const allUnchecked = lastCheckIcons.every(
-            (checkbox) => !checkbox.checked
-        );
-
-        if (allUnchecked) {
-            isAcceptRecruitAll.checked = false;
-            agreeCheckboxOns[5].style.display = "none";
-            agreeCheckboxOffs[5].style.display = "block";
-        } else {
-            isAcceptRecruitAll.checked = true;
-            agreeCheckboxOns[5].style.display = "block";
-            agreeCheckboxOffs[5].style.display = "none";
-        }
-    });
-});
-
-// ******************
 const emailInput = document.getElementById("email-1");
 const duplicateCheck = document.getElementById("duplicate-check");
 const duplicateCheckButton = document.getElementById("duplicate-check-button");
@@ -318,10 +784,7 @@ const finalButton = document.getElementById("final-button");
             nameInput.value.trim() !== "" &&
             getCodeInput.value.trim() !== "" &&
             passwordInput.value.trim() !== "" &&
-            pwOnemoreInput.value.trim() !== "" &&
-            requiredCheckboxes[0].checked &&
-            requiredCheckboxes[1].checked &&
-            requiredCheckboxes[2].checked
+            pwOnemoreInput.value.trim() !== ""
         ) {
             finalButton.classList.add("active");
             finalButton.disabled = false; // 버튼 활성화
@@ -337,30 +800,4 @@ const finalButton = document.getElementById("final-button");
     getCodeInput.addEventListener("input", updateCodeState);
     passwordInput.addEventListener("input", updateCodeState);
     pwOnemoreInput.addEventListener("input", updateCodeState);
-    requiredCheckboxes[0].addEventListener("input", updateCodeState);
-    requiredCheckboxes[1].addEventListener("input", updateCodeState);
-    requiredCheckboxes[2].addEventListener("input", updateCodeState);
 })();
-
-// // **로그인 버튼 활성화 기능**
-// (function () {
-//     // 입력 필드의 값을 확인하고 버튼 활성화 여부를 결정하는 함수
-//     function updateButtonState() {
-//         if (
-//             emailInput1.value.trim() !== "" &&
-//             passwordInput.value.trim() !== ""
-//         ) {
-//             // 이메일과 비밀번호가 모두 입력된 경우
-//             loginButton.classList.add("active");
-//             loginButton.disabled = false; // 버튼 활성화
-//         } else {
-//             // 이메일 또는 비밀번호가 비어있는 경우
-//             loginButton.classList.remove("active");
-//             loginButton.disabled = true; // 버튼 비활성화
-//         }
-//     }
-
-//     // 입력 필드의 변화가 있을 때마다 버튼 상태 업데이트
-//     emailInput1.addEventListener("input", updateButtonState);
-//     passwordInput.addEventListener("input", updateButtonState);
-// })();

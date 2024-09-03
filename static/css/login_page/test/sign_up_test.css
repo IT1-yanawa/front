@@ -594,7 +594,7 @@ input::placeholder {
     justify-content: inherit; 
 }
 
-.input-agree {
+.input-style-agree {
     opacity: 0;
     width: calc(100% - 90px);
     height: 100%;

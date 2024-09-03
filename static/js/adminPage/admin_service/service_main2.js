@@ -4,6 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerCheckbox = document.getElementById("selectAll"); // 헤더 체크박스
     const rowCheckboxes = document.querySelectorAll(".userCheckbox"); // 목록의 체크박스들
 
+    // 요소가 존재하는지 확인 후 이벤트 리스너 추가
+    if (addServiceBtn) {
+        addServiceBtn.addEventListener("click", function () {
+            addTemporaryClass(addServiceBtn);
+        });
+    }
+
+    if (deleteSelectedBtn) {
+        deleteSelectedBtn.addEventListener("click", function () {
+            addTemporaryClass(deleteSelectedBtn);
+        });
+    }
+
     // 클릭 시 색상 변경 기능
     function addTemporaryClass(element) {
         element.classList.add("clicked");
@@ -11,14 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.remove("clicked");
         }, 700); // 0.7초 후에 원래 색으로 돌아옴
     }
-
-    addServiceBtn.addEventListener("click", function () {
-        addTemporaryClass(addServiceBtn);
-    });
-
-    deleteSelectedBtn.addEventListener("click", function () {
-        addTemporaryClass(deleteSelectedBtn);
-    });
 
     // 모든 체크박스를 제어하는 함수
     function toggleAllCheckboxes(isChecked) {
@@ -28,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 헤더 체크박스를 클릭하면 모든 체크박스의 상태를 변경
-    headerCheckbox.addEventListener("change", function () {
-        toggleAllCheckboxes(this.checked);
-    });
+    if (headerCheckbox) {
+        headerCheckbox.addEventListener("change", function () {
+            toggleAllCheckboxes(this.checked);
+        });
+    }
 
     // 각 목록의 체크박스를 클릭하면, 하나라도 체크가 해제되면 헤더 체크박스를 해제
     rowCheckboxes.forEach((checkbox) => {
@@ -48,32 +55,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 선택된 목록 삭제 기능
-    deleteSelectedBtn.addEventListener("click", function () {
-        const checkedRows = Array.from(rowCheckboxes).filter(
-            (checkbox) => checkbox.checked
-        );
+    if (deleteSelectedBtn) {
+        deleteSelectedBtn.addEventListener("click", function () {
+            const checkedRows = Array.from(rowCheckboxes).filter(
+                (checkbox) => checkbox.checked
+            );
 
-        if (checkedRows.length > 0) {
-            // 체크된 행들을 삭제
-            checkedRows.forEach((checkbox) => {
-                const row = checkbox.closest(".ServiceTable_row");
-                row.remove();
-            });
+            if (checkedRows.length > 0) {
+                // 체크된 행들을 삭제
+                checkedRows.forEach((checkbox) => {
+                    const row = checkbox.closest(".ServiceTable_row");
+                    if (row) {
+                        row.remove();
+                    }
+                });
 
-            // 모든 체크박스가 해제되었으므로, 헤더 체크박스도 해제
-            headerCheckbox.checked = false;
-        }
-    });
+                // 모든 체크박스가 해제되었으므로, 헤더 체크박스도 해제
+                headerCheckbox.checked = false;
+            }
+        });
+    }
 
     // 검색 기능 추가
     const searchInput = document.querySelector(".Filter_searchInput");
 
-    searchInput.addEventListener("keyup", function (event) {
-        if (event.key === "Enter") {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-            filterTableBySearchTerm(searchTerm);
-        }
-    });
+    if (searchInput) {
+        searchInput.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                const searchTerm = searchInput.value.trim().toLowerCase();
+                filterTableBySearchTerm(searchTerm);
+            }
+        });
+    }
 
     function filterTableBySearchTerm(searchTerm) {
         const rows = document.querySelectorAll(".ServiceTable_row");

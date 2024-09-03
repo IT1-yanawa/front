@@ -222,8 +222,8 @@
                                     <a class="MenuItems_submenu" href=""
                                         >게시글 작성</a
                                     >
-                                    <!-- <a class="MenuItems_submenu" href="">게시판 수정</a>
-                                    <a class="MenuItems_submenu" href="">댓글 수정</a> -->
+                                    <!-- <a class="MenuItems_submenu" href="">게시판 답변</a>
+                                    <a class="MenuItems_submenu" href="">댓글 답변</a> -->
                                 </div>
 
                                 <!-- 대카테고리 -->
@@ -438,6 +438,7 @@
                                         >
                                             문의사항 이동
                                         </button> -->
+                                        
                                         <button
                                             id="deleteSelectedBtn"
                                             class="deleteSelectedBtn"
@@ -556,7 +557,7 @@
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -606,7 +607,7 @@
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -656,7 +657,7 @@
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -706,7 +707,7 @@
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -756,7 +757,7 @@
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -806,7 +807,7 @@
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         
@@ -932,29 +933,41 @@
 <div id="editModal" class="modal">
     <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
         <span class="close-button">&times;</span>
-        <h2>게시글 수정</h2>
+        <h2>문의 답변</h2>
         <form id="editForm">
-            <label for="editPostTitle">게시글 제목:</label>
-            <input type="text" id="editPostTitle" name="editPostTitle" readonly />
+            <div style="display: flex; gap: 10px;">
+                <label for="inquiryType">문의 유형:</label>
+                <input type="text" id="inquiryType" name="inquiryType" readonly style="flex: 1;" />
 
-            <label for="editPostContent">게시글 내용:</label>
-            <textarea id="editPostContent" name="editPostContent" style="width: 100%; height: 200px;"></textarea>
-
-            <div id="imageContainer" style="margin-top: 20px;">
-                <!-- 첨부된 이미지가 여기에 표시됨 -->
+                <label for="inquiryTitle">문의 제목:</label>
+                <input type="text" id="inquiryTitle" name="inquiryTitle" readonly style="flex: 2;" />
             </div>
 
-            <label for="editPostContent">게시글 내용:</label>
-            <textarea id="editPostContent" name="editPostContent" style="width: 100%; height: 200px;"></textarea>
+            <label for="inquiryContent" style="margin-top: 20px;">문의 내용:</label>
+            <textarea id="inquiryContent" name="inquiryContent" readonly style="width: 100%; height: 150px;"></textarea>
+
+            <div id="attachmentContainer" style="margin-top: 20px;">
+                <h3>첨부파일</h3>
+                <!-- 첨부된 이미지, 영상 등이 여기에 표시됨 -->
+            </div>
+
+            <label for="answerCategory" style="margin-top: 20px;">답변 선택:</label>
+            <select id="answerCategory" name="answerCategory" style="width: 100%; margin-bottom: 10px;">
+                <option value="">카테고리를 선택하세요</option>
+                <option value="환불 진행 중입니다.">환불 진행 중입니다.</option>
+                <option value="결제 확인되었습니다.">결제 확인되었습니다.</option>
+                <option value="서비스 개선을 위해 노력하겠습니다.">서비스 개선을 위해 노력하겠습니다.</option>
+            </select>
+
+            <label for="answerContent">답변 내용:</label>
+            <textarea id="answerContent" name="answerContent" style="width: 100%; height: 150px;"></textarea>
 
             <button type="button" id="saveChanges" style="margin-top: 20px;">저장</button>
         </form>
-
-        
-        
     </div>
 </div>
 <!-- 여기까지 모달창 -->
+
 
 
 
@@ -973,6 +986,6 @@
         </div>
     </body>
     <script src="/static/js/adminPage/admin_page/admin.js"></script>
-    <script src="/static/js/adminPage/admin_service/service_Main.js"></script>
-    <script src="/static/js/adminPage/admin_post/postList_filter.js"></script>
+    <script src="/static/js/adminPage/admin_service/service_main2.js"></script>
+    <script src="/static/js/adminPage/admin_service/inquiry_filter.js"></script>
 </html>

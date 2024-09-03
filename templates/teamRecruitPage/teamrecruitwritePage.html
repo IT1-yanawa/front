@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.3/dist/web/static/pretendard-dynamic-subset.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/static/css/teamrecruit_page/teamrecruitwritePage.css"
+        />
+        <link rel="icon" href="/static/images/match_page/yanawalogo.png" />
+        <title>팀 등록 페이지</title>
+    </head>
+    <body>
+        <div id="match-page">
+            <header></header>
+            <div></div>
+            <main class="register-main">
+                <div class="register-con">
+                    <div class="register-title">
+                        <h2>팀 등록</h2>
+                        <div class="register-title-con">
+                            정보를 입력 후 원하는 팀원을 구해보세요
+                        </div>
+                    </div>
+                    <div class="form-warp">
+                        <div id="form-1">
+                            <form class="registe-form">
+                                <div class="register-form-con">
+                                    <header class="register-form-header">
+                                        <ul>
+                                            <div class="register-form-header-1">
+                                                <span>1</span>
+                                                <h2>팀장 기본 정보</h2>
+                                            </div>
+                                            <li>
+                                                <span
+                                                    id="span-2"
+                                                    class="span-step"
+                                                >
+                                                    <span class="span-step-1"
+                                                        >등록 상세 정보</span
+                                                    >
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span
+                                                    id="span-3"
+                                                    class="span-step"
+                                                >
+                                                    <span class="span-step-1"
+                                                        >추가 사항</span
+                                                    >
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="buttton-div">
+                                            <button
+                                                class="next-button-1"
+                                                type="button"
+                                            >
+                                                <span class="button-span"
+                                                    >다음 단계</span
+                                                >
+                                                <span></span>
+                                            </button>
+                                        </div>
+                                    </header>
+                                    <div class="register-form-main">
+                                        <div class="register-form-main-title">
+                                            기본 정보를 입력해 주세요.
+                                        </div>
+                                        <p
+                                            class="register-form-main-title-con"
+                                            style="padding-top: 10px"
+                                        >
+                                            • 등록하신 정보는 팀원 구하기 이외의
+                                            용도로는 활용되지 않습니다.
+                                        </p>
+                                        <ul>
+                                            <li class="이름">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="name"
+                                                                    class="label-name required"
+                                                                >
+                                                                    이름
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="이름을 입력해 주세요."
+                                                                            type="text"
+                                                                            class="form-input"
+                                                                        />
+                                                                        <input
+                                                                            placeholder="이름을 입력해 주세요."
+                                                                            type="text"
+                                                                            class="form-input input-error"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    style="
+                                                                        display: flex;
+                                                                        flex-wrap: nowrap;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="input-explain"
+                                                                    >
+                                                                        <div
+                                                                            class="input-explain-error"
+                                                                        >
+                                                                            이름을
+                                                                            입력해
+                                                                            주세요.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="이메일">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="email"
+                                                                    class="label-name required"
+                                                                >
+                                                                    이메일
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="이메일을 입력해 주세요."
+                                                                            type="text"
+                                                                            class="form-input"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-success"
+                                                                                >
+                                                                                    *
+                                                                                    매칭,
+                                                                                    관련
+                                                                                    안내가
+                                                                                    해당
+                                                                                    메일로
+                                                                                    전달되오니
+                                                                                    사용
+                                                                                    중인
+                                                                                    메일을
+                                                                                    기재해주세요.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input
+                                                                            placeholder="이메일을 입력해 주세요."
+                                                                            type="text"
+                                                                            class="form-input input-error"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    style="
+                                                                        display: flex;
+                                                                        flex-wrap: nowrap;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="input-explain"
+                                                                    >
+                                                                        <div
+                                                                            class="input-explain-error"
+                                                                        >
+                                                                            *
+                                                                            매칭,
+                                                                            관련
+                                                                            안내가
+                                                                            해당
+                                                                            메일로
+                                                                            전달되오니
+                                                                            사용
+                                                                            중인
+                                                                            메일을
+                                                                            기재해주세요.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li class="연락처 right">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="number"
+                                                                    class="label-name required"
+                                                                >
+                                                                    연락처
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="ex) 010-1234-5678"
+                                                                            type="text"
+                                                                            class="form-input"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-success"
+                                                                                >
+                                                                                    *
+                                                                                    매칭,
+                                                                                    관련
+                                                                                    안내가
+                                                                                    해당
+                                                                                    연락처로
+                                                                                    전달되오니
+                                                                                    사용
+                                                                                    중인
+                                                                                    연락처를
+                                                                                    기재해주세요.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input
+                                                                            placeholder="ex) 010-1234-5678"
+                                                                            type="text"
+                                                                            class="form-input input-error"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    style="
+                                                                        display: flex;
+                                                                        flex-wrap: nowrap;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="input-explain"
+                                                                    >
+                                                                        <div
+                                                                            class="input-explain-error"
+                                                                        >
+                                                                            *
+                                                                            매칭,
+                                                                            관련
+                                                                            안내가
+                                                                            해당
+                                                                            연락처로
+                                                                            전달되오니
+                                                                            사용
+                                                                            중인
+                                                                            연락처를
+                                                                            기재해주세요.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="left">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="sports"
+                                                                    class="label-name required"
+                                                                >
+                                                                    스포츠종목
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <select
+                                                                            name="sports"
+                                                                            class="form-input"
+                                                                        >
+                                                                            <option
+                                                                                value=""
+                                                                                disabled
+                                                                                selected
+                                                                            >
+                                                                                매칭
+                                                                                종목
+                                                                                선택
+                                                                            </option>
+                                                                            <option
+                                                                                value="축구"
+                                                                            >
+                                                                                축구
+                                                                            </option>
+                                                                            <option
+                                                                                value="농구"
+                                                                            >
+                                                                                농구
+                                                                            </option>
+                                                                            <option
+                                                                                value="야구"
+                                                                            >
+                                                                                야구
+                                                                            </option>
+                                                                            <option
+                                                                                value="배드민턴"
+                                                                            >
+                                                                                배드민턴
+                                                                            </option>
+                                                                            <option
+                                                                                value="족구"
+                                                                            >
+                                                                                족구
+                                                                            </option>
+                                                                            <!-- 추가옵션 여기에 -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    style="
+                                                                        display: flex;
+                                                                        flex-wrap: nowrap;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="input-explain"
+                                                                    >
+                                                                        <div
+                                                                            class="input-explain-error"
+                                                                        >
+                                                                            *
+                                                                            하나
+                                                                            이상의
+                                                                            종목을
+                                                                            선택해주세요.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li class="팀명 right">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="team"
+                                                                    class="label-name required"
+                                                                >
+                                                                    팀명
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="ex) 전북현대모터스"
+                                                                            type="text"
+                                                                            class="form-input"
+                                                                        />
+                                                                        <input
+                                                                            placeholder="ex) 전북현대모터스"
+                                                                            type="text"
+                                                                            class="form-input input-error"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-error"
+                                                                                >
+                                                                                    *
+                                                                                    순서에
+                                                                                    맞게
+                                                                                    입력해주세요
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="left"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="form-2">
+                            <form class="registe-form">
+                                <div class="register-form-con">
+                                    <header class="register-form-header">
+                                        <ul>
+                                            <li>
+                                                <span
+                                                    id="span-1"
+                                                    class="span-step"
+                                                >
+                                                    <span class="span-step-1"
+                                                        >팀장 기본 정보</span
+                                                    >
+                                                </span>
+                                            </li>
+                                            <div class="register-form-header-1">
+                                                <span>2</span>
+                                                <h2>등록 상세 정보</h2>
+                                            </div>
+                                            <li>
+                                                <span
+                                                    id="span-3"
+                                                    class="span-step"
+                                                >
+                                                    <span class="span-step-1"
+                                                        >추가 사항</span
+                                                    >
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="buttton-div">
+                                            <button
+                                                class="before-button-1"
+                                                type="button"
+                                            >
+                                                <span class="button-span"
+                                                    >이전 단계</span
+                                                >
+                                                <span></span>
+                                            </button>
+                                            <button
+                                                class="next-button-2"
+                                                type="button"
+                                            >
+                                                <span class="button-span"
+                                                    >다음 단계</span
+                                                >
+                                                <span></span>
+                                            </button>
+                                        </div>
+                                    </header>
+                                    <div class="register-form-main">
+                                        <div class="register-form-main-title">
+                                            상세 정보를 입력해 주세요.
+                                        </div>
+                                        <div class="main-tip">
+                                            <div class="tip-title">
+                                                <span class="icon">TIP!</span>
+                                                팀 정보가 상세할수록, 팀에 맞는
+                                                팀원을 찾을 확률이 높아집니다.
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li class="장소 left">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="place"
+                                                                    class="label-name required"
+                                                                >
+                                                                    매칭
+                                                                    등록지역
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <select
+                                                                            name="place"
+                                                                            class="form-input"
+                                                                        >
+                                                                            <option
+                                                                                value=""
+                                                                                disabled
+                                                                                selected
+                                                                            >
+                                                                                매칭
+                                                                                지역
+                                                                                선택
+                                                                            </option>
+                                                                            <option
+                                                                                value="서울특별시"
+                                                                            >
+                                                                                서울특별시
+                                                                            </option>
+                                                                            <option
+                                                                                value="부산광역시"
+                                                                            >
+                                                                                부산광역시
+                                                                            </option>
+                                                                            <option
+                                                                                value="대구광역시"
+                                                                            >
+                                                                                대구광역시
+                                                                            </option>
+                                                                            <option
+                                                                                value="인천광역시"
+                                                                            >
+                                                                                인천광역시
+                                                                            </option>
+                                                                            <option
+                                                                                value="광주광역시"
+                                                                            >
+                                                                                광주광역시
+                                                                            </option>
+                                                                            <option
+                                                                                value="대전광역시"
+                                                                            >
+                                                                                대전광역시
+                                                                            </option>
+                                                                            <option
+                                                                                value="울산광역시"
+                                                                            >
+                                                                                울산광역시
+                                                                            </option>
+                                                                            <option
+                                                                                value="세종특별자치시"
+                                                                            >
+                                                                                세종특별자치시
+                                                                            </option>
+                                                                            <option
+                                                                                value="경기도"
+                                                                            >
+                                                                                경기도
+                                                                            </option>
+                                                                            <option
+                                                                                value="강원특별자치도"
+                                                                            >
+                                                                                강원특별자치도
+                                                                            </option>
+                                                                            <option
+                                                                                value="충청북도"
+                                                                            >
+                                                                                충청북도
+                                                                            </option>
+                                                                            <option
+                                                                                value="충청남도"
+                                                                            >
+                                                                                충청남도
+                                                                            </option>
+                                                                            <option
+                                                                                value="전북특별자치도"
+                                                                            >
+                                                                                전북특별자치도
+                                                                            </option>
+                                                                            <option
+                                                                                value="전라남도"
+                                                                            >
+                                                                                전라남도
+                                                                            </option>
+                                                                            <option
+                                                                                value="경상북도"
+                                                                            >
+                                                                                경상북도
+                                                                            </option>
+                                                                            <option
+                                                                                value="경상남도"
+                                                                            >
+                                                                                경상남도
+                                                                            </option>
+                                                                            <option
+                                                                                value="제주특별자치도"
+                                                                            >
+                                                                                제주특별자치도
+                                                                            </option>
+
+                                                                            <!-- 추가옵션 여기에 -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="장소상세 right">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left place-con"
+                                                            >
+                                                                <label
+                                                                    for="place-detail"
+                                                                    class="label-name required"
+                                                                >
+                                                                    상세지역/장소명
+                                                                </label>
+                                                                <div
+                                                                    class="buttton-div"
+                                                                >
+                                                                    <button
+                                                                        class="place-buttton"
+                                                                        type="button"
+                                                                    >
+                                                                        <span
+                                                                            class="button-span"
+                                                                        >
+                                                                            장소
+                                                                            조회
+                                                                        </span>
+                                                                        <span></span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="ex) 동작구/노들나루공원 축구장"
+                                                                            type="text"
+                                                                            class="form-input"
+                                                                        />
+                                                                        <input
+                                                                            placeholder="ex) 동작구/노들나루공원 축구장"
+                                                                            type="text"
+                                                                            class="form-input input-error"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-error"
+                                                                                >
+                                                                                    *
+                                                                                    형식에
+                                                                                    맞게
+                                                                                    입력해주세요
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li class="등록시간 left">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left"
+                                                            >
+                                                                <label
+                                                                    for="time"
+                                                                    class="label-name required"
+                                                                >
+                                                                    팀 활동시간
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="ex) 오후7시 ~ 오후 9시"
+                                                                            type="text"
+                                                                            class="form-input"
+                                                                        />
+                                                                        <input
+                                                                            placeholder="ex) 오후 7시 ~ 오후 9시"
+                                                                            type="text"
+                                                                            class="form-input input-error"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-error"
+                                                                                >
+                                                                                    *
+                                                                                    형식에
+                                                                                    맞게
+                                                                                    입력해주세요
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="회비 right">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left date-con"
+                                                            >
+                                                                <label
+                                                                    for="date"
+                                                                    class="label-name required"
+                                                                >
+                                                                    나이대
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <input
+                                                                            placeholder="ex) 20대~30대"
+                                                                            type="text"
+                                                                            class="form-input date-img"
+                                                                        />
+
+                                                                        <input
+                                                                            placeholder="ex) 20대~30대"
+                                                                            type="text"
+                                                                            class="form-input date-img input-error"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-error"
+                                                                                >
+                                                                                    *
+                                                                                    원하는
+                                                                                    나이대를
+                                                                                    입력해주세요
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="form-3">
+                            <form class="registe-form">
+                                <div class="register-form-con">
+                                    <header class="register-form-header">
+                                        <ul>
+                                            <li>
+                                                <span
+                                                    id="span-1"
+                                                    class="span-step"
+                                                >
+                                                    <span class="span-step-1"
+                                                        >팀장 기본 정보</span
+                                                    >
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span
+                                                    id="span-4"
+                                                    class="span-step"
+                                                >
+                                                    <span class="span-step-1"
+                                                        >등록 상세 정보</span
+                                                    >
+                                                </span>
+                                            </li>
+                                            <div class="register-form-header-1">
+                                                <span>3</span>
+                                                <h2>추가 사항</h2>
+                                            </div>
+                                        </ul>
+                                        <div class="buttton-div">
+                                            <button
+                                                class="before-button-2"
+                                                type="button"
+                                            >
+                                                <span class="button-span"
+                                                    >이전 단계</span
+                                                >
+                                                <span></span>
+                                            </button>
+                                            <button
+                                                class="finish-button"
+                                                type="submit"
+                                            >
+                                                <span class="button-span"
+                                                    >등록완료</span
+                                                >
+                                                <span></span>
+                                            </button>
+                                        </div>
+                                    </header>
+                                    <div class="register-form-main">
+                                        <div class="register-form-main-title">
+                                            팀장의 상세정보, 원하는 팀원의
+                                            유형을 적어주세요.
+                                        </div>
+                                        <div class="main-tip">
+                                            <div class="tip-title">
+                                                <span class="icon">TIP!</span>
+                                                자세히 적으실수록, 더 잘 맞는
+                                                팀원을 구하실 수 있습니다.
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li class="추가사항 left">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left date-con"
+                                                            >
+                                                                <label
+                                                                    for="date"
+                                                                    class="label-name"
+                                                                >
+                                                                    추가사항
+                                                                    작성
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <span
+                                                                            class="input-textarea"
+                                                                            style="
+                                                                                width: 220%;
+                                                                            "
+                                                                        >
+                                                                            <textarea
+                                                                                id="textarea"
+                                                                                class="textarea"
+                                                                                placeholder="ex) &#13;&#10;-회비&#13;&#10;-원하는 유형의 팀원(포지션, 성격 등등)&#13;&#10;-팀장의 경력 및 스킬"
+                                                                            ></textarea>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="input-explain"
+                                                            >
+                                                                <div
+                                                                    class="input-explain div-text"
+                                                                >
+                                                                    * 입력할
+                                                                    사항이
+                                                                    없으면
+                                                                    입력하지
+                                                                    않아도
+                                                                    됩니다
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            <li class="right">
+                                                <li class="content15" style="
+                                                margin-top: 28px;
+                                            ">
+                                                    <div class="wrap9" style="width: 100%">
+                                                        <label for="file-upload" class="content16" style="display: block; width: 100%">
+                                                            파일 첨부
+                                                        </label>
+                                                        <div class="wrap10" style="
+                                                                width: 100%;
+                                                                display: flex;
+                                                                align-items: center;
+                                                            ">
+                                                            <input type="text" id="content17" class="content18" placeholder="첨부된 파일 경로" readonly="" style="
+                                                                    flex-grow: 1;
+                                                                    margin-right: 10px;
+                                                                ">
+                                                            <label for="file-upload" class="content19" style="
+                                                                    display: inline-block;
+                                                                    cursor: pointer;
+                                                                ">
+                                                                + 파일 추가
+                                                            </label>
+                                                            <input type="file" id="file-upload" class="content20" style="display: none" onchange="document.getElementById('content17').value = this.value.split('\\').pop();">
+                                                        </div>
+                                                        <p class="content21" style="
+                                                                font-size: 12px;
+                                                                color: #999;
+                                                                margin-top: 8px;
+                                                            ">
+                                                            * 파일은 복수로 첨부 가능하며, 최대
+                                                            100MB까지 업로드됩니다.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script src="/static/js/teamrecruit_page/teamrecruitwritePage.js"></script>
+</html>

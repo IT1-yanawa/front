@@ -584,10 +584,6 @@ input::placeholder {
     border: none; 
 }
 
-.agree-checkbox.off {
-    background-color: transparent; /* 체크되지 않은 배경 색상 */
-}
-
 .check-icon {
     display: flex;
     align-items: inherit;
@@ -675,7 +671,7 @@ input::placeholder {
     gap: 8px;
 }
 
-.agree-select-1 {
+.agree-select-1, .agree-select-2 {
     display: flex;
     margin-left: 28px;
 }
@@ -712,10 +708,6 @@ input::placeholder {
     display: inline-block;
     fill: currentColor;
     flex-shrink: 0;
-}
-
-.check-icon-svg.off path{
-    fill: rgba(55, 56, 60, 0.28);
 }
 
 .check-icon-svg.on path{

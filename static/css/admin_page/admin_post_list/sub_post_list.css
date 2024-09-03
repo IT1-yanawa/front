@@ -1,422 +1,170 @@
-* {
-    font-weight: 400;
-    font-size: 14px;
+.Allselect_Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-div.dabate-type-list, div.dabate-type-list div, .user-nick-wrap,.user-nick-wrap div,
-.list-util-area, .list-util-area div{
-    box-sizing: border-box;
+.SettingsToggle_toggle .SettingToggle_input {
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
 }
 
-.dabate-type-list table, #contentArea #container #content .sub-content-wrap .list-board-wrap .dabate-type-list table{
-    table-layout: fixed;
+.SettingsToggle_toggle {
+    display: flex;
+    margin-right: 16px;
 }
 
-.dabate-type-list table thead tr th {
-    
-    text-align: center;
-    font-weight: 700;
-    color: #6b6b6b;
-    font-size: 12px;
-    padding: 8px 0 7px;
-}
-
-.dabate-type-list table thead tr th span {
+.SettingsToggle_toggle .SettingToggle_switch {
     display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.dabate-type-list table tbody {
-    
-    box-shadow: 0 0 0 1px #505050;
-    border-radius: 10px;
-}
-
-.dabate-type-list table tbody td {
-    padding: 9px 0;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.dabate-type-list table tbody td {
-    padding: 6px 0;
-}
-
-.dabate-type-list table tbody tr:not(:first-child) {
-    border-top: 1px solid #505050;
-}
-
-.num.tp1 {
-    background-color: white !important;
-    color: black !important;
-}
-
-.dabate-type-list table tbody td .num {
-    display: inline-block;
-    font-size: 12px;
-    min-width: 25px;
-    height: 25px;
-    vertical-align: top;
-    text-align: center;
-    line-height: 23px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    padding: 0 4px;
-}
-
-.dabate-type-list table tbody td .num.tp1 {
-    border: 1px solid #aaa;
-    background-color: none;
-    color: black;
-}
-
-#contentArea #container #content .sub-content-wrap .list-board-wrap .dabate-type-list table tbody td .label {
-    display: inline-block;
-    width: 71px;
-    font-size: 12px;
-    height: 20px;
-    line-height: 20px;
-    border: 1px solid #525252;
-    background-color: #181818;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.dabate-type-list table tbody td .label.tp1 {
-    color: black;
-}
-
-.dabate-type-list table tbody td .label {
-    line-height: 1;
-    height: auto;
-    padding: 5px 0 4px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: inherit;
-}
-
-h1, h2, h3, ul, p {
-    margin: 0;
-    font-weight: 400;
-}
-
-.dabate-type-list table tbody td .tit {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.user-nick-wrap {
-    overflow: visible !important;
+    top: 0px;
     position: relative;
+    opacity: 1;
+    border: solid 2px rgba(0, 0, 0, .06);
+    border-radius: 16px;
+    background-color: #f5f7fa;
     cursor: pointer;
+    width: 24px;
+    height: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.dabate-type-list table tbody td .nick {
-    color: black;
-    font-size: 14px;
-    display: inline-block;
-    width: 113px;
-    position: relative;
-    vertical-align: middle;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0 3px;
+.SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active {
+    border-color: #00c4c4;
+    background-color: #00c4c4;
 }
 
-.user-nick-wrap .user-nick-text {
-    overflow: hidden;
-    width: 100%;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.dabate-type-list table tbody td .nick img {
-    position: relative;
-    top: 0;
-    margin-right: 3px;
-}
-
-.dabate-type-list table tbody td .count {
-    color: black;
-    font-size: 12px;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.dabate-type-list table tbody td .date {
-    color: black;
-    font-size: 12px;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.list-util-area {
-    position: relative;
-}
-
-.list-util-area .paging-box {
-    padding-top: 16px;
-}
-
-.list-util-area .paging-box .float-center {
-    text-align: center;
-    font-size: 0;
-}
-
-a {
-    text-decoration: none !important;
-}
-
-a, button {
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-}
-
-.list-util-area .paging-box .float-center .page-jump {
-    color: black;
-    font-size: 12px;
-    position: relative;
-    /* display: none; */
-}
-
-.paging-box .float-center .page-jump.active {
-    display: inline-block;
-}
-
-.list-util-area .paging-box .float-center .page-jump.prev {
-    margin-right: 8px;
-    padding-left: 11px;
-}
-
-.list-util-area .paging-box .float-center .page-jump.next {
-    margin-left: 8px;
-    padding-right: 11px;
-}
-
-ol, ul {
-    margin-bottom: 0;
-}
-
-.list-util-area .paging-box .float-center ul {
-    font-size: 0;
-    /* border: 1px solid #525252; */
-    display: inline-block;
-}
-
-.list-util-area .paging-box .float-center ul li {
-    display: inline-block;
-    /* border-left: 1px solid #525252; */
-}
-
-.list-util-area .paging-box .float-center ul li:first-child {
-    border-left: 0;
-}
-
-.list-util-area .paging-box .float-center ul li a {
-    display: inline-block;
-    height: 27px;
-    line-height: 30px;
-    font-size: 12px;
-    color: black;
-    padding: 0 8px;
-}
-
-.list-util-area .srch-box {
-    width: 408px;
-    margin: 16px auto 0;
-    border: 1px solid #525252;
-    border-radius: 5px;
-}
-
-.list-util-area .srch-box .srch-sel-area {
-    width: 105px;
-    position: relative;
-    float: left;
-    z-index: 99999;
-}
-
-.list-util-area .srch-box .srch-sel-area {
-    z-index: 9;
-}
-
-.custom-new-select-wrap {
-    position: relative;
-}
-
-.custom-new-select {
-    display: inline-block;
-    width: 100%;
-    background-color: gainsboro ;
-    height: 30px;
-    line-height: 28px;
-    padding-left: 12px;
-    border: 1px solid #525252;
-    box-sizing: border-box;
-    position: relative;
-    font-size: 12px;
-    color: black;
-    padding-right: 20px;
-}
-
-.srch-sel-area .custom-new-select-wrap .custom-new-select {
-    border-left: 0;
-    border-top: 0;
-    border-bottom: 0;
-}
-
-.list-util-area .srch-box .srch-sel-area .custom-new-select-wrap .custom-new-select {
-    border-radius: 5px 0 0 5px;
-}
-
-.custom-new-select option {
-    line-height: 2;
-}
-
-.list-util-area .srch-box .srch-input-area {
-    float: left;
-    width: 299px;
-    padding-right: 70px;
-    position: relative;
-    box-sizing: border-box;
-}
-
-input {
-    background: transparent;
-    border: none;
-    outline-width: 0;
-}
-
-.list-util-area .srch-box .srch-input-area input {
-    
-    width: 100%;
-    padding-left: 12px;
-    height: 28px;
-    font-size: 12px;
-    font-weight: 700;
-    color: black;
-    box-sizing: border-box;
-    margin-top: 1px;
-}
-
-button, .srch-input-area button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.list-util-area .srch-box:after {
-    display: block;
+.SettingsToggle_toggle .SettingToggle_switch:after {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    transition: .3s all;
+    border-radius: 12px;
+    box-shadow: 0 6px 6px -1px rgba(10, 22, 70, .1), 0 0 5px rgba(10, 22, 70, .06);
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
     content: "";
-    clear: both;
 }
 
-.list-util-area .srch-box .srch-input-area .srch-bt {
-    position: absolute;
-    display: inline-block;
-    right: 0;
-    top: 0;
-    width: 54px;
-    height: 30px;
+.SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active:after {
+    left: 9px; /* 가상 요소가 오른쪽으로 이동 */
+}
+
+.Allselect_Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* 필요시 % 값을 더 늘려주세요 */
+}
+
+.Allselect_Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* 필요시 % 값을 더 늘려주세요 */
+}
+
+.SettingsToggle_toggle .SettingToggle_switch_all {
+    top: 0px;
+}
+
+input, textarea {
+    background: none;
+}
+
+.SortFilterOptions {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.sort-filter-option {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sort-filter-option.selected {
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pagination {
+    margin: auto;
     text-align: center;
-    line-height: 29px;
-    border-left: 1px solid #525252;
 }
 
-.list-util-area .sort-area {
-    position: absolute;
-    left: 5%;
-    top: 16px;
-    
+.pagination-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    height: auto;
 }
 
-.list-util-area .write-bt {
-    position: absolute;
-    right: 0;
-    top: 16px;
-    display: inline-block;
-    border: 1px solid #ff9400;
-    border-radius: 5px;
-    background-color: #181818;
+.pagination-list li {
+    margin: 0 2px;
+}
+
+.pagination-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
     text-align: center;
-    width: 74px;
-    height: 30px;
-    line-height: 28px;
-    box-sizing: border-box;
+    font-size: 14px; /* 아이콘과 숫자 크기를 조절 */
+    text-decoration: none;
+    color: black; /* 필요에 따라 색상을 변경하세요 */
+    border: 1px solid #ccc; /* 필요에 따라 테두리 스타일을 변경하세요 */
+    border-radius: 3px; /* 필요에 따라 버튼 모양을 변경하세요 */
 }
 
-.list-util-area .write-bt span {
-    color: #e3e3e3;
-    font-size: 12px;
-    position: relative;
-    padding-left: 19px;
+.pagination-list a:hover {
+    background-color: #f0f0f0; /* 마우스를 올렸을 때 배경색 */
 }
 
-.list-util-area .write-bt span {
-    color: #fff !important;
+.pagination-first-icon,
+.pagination-prev-icon,
+.pagination-next-icon,
+.pagination-last-icon {
+    font-size: 14px; /* 아이콘 크기를 숫자와 일치하도록 조절 */
+    height: 20px;
 }
 
-.list-util-area .write-btn {
-    position: absolute;
-    right: 7%;
-    top: 16px;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: orange;
-    text-align: center;
-    width: 74px;
-    height: 30px;
-    line-height: 28px;
-    box-sizing: border-box;
-}
-
-.paging-box {
-    margin-top: 20px;
-    text-align: center;
+.pagination-first,
+.pagination-prev,
+.pagination-next,
+.pagination-last {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.float-center ul {
-    border: 1px solid #525252;  /* 경계선 추가 */
-    display: inline-block;
-    padding: 0; /* 경계선이 잘리지 않도록 패딩 제거 */
-    margin: 0;
+/* 현재 페이지를 나타내는 버튼의 스타일 */
+.pagination-list .active a {
+    background-color: #000000; /* 배경을 검정색으로 */
+    color: #ffffff; /* 글자를 하얀색으로 */
 }
 
-.float-center ul li {
-    display: inline-block;
-    border-left: 1px solid #525252; /* 경계선 추가 */
+/* 마우스를 올렸을 때 배경색을 검정색으로 설정 */
+.pagination-list a:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
-.float-center ul li:first-child {
-    border-left: 0; /* 첫 번째 요소는 왼쪽 경계선 제거 */
+.row {
+    justify-content: flex-start;
+    margin-left: -10px;
 }
 
-.float-center ul li a {
-    display: inline-block;
-    height: 27px;
-    line-height: 27px; /* 텍스트 가운데 정렬 */
-    font-size: 12px;
-    color: black;
-    padding: 0 8px;
+.section_container{
+    justify-content: flex-start;
 }
-
-.srch-box {
-    margin-top: 40px; /* 검색 상자와 페이지네이션 사이의 간격 확보 */
-}
-
-
-/* * {
-    -webkit-tap-highlight-color: transparent;
-} */

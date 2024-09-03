@@ -41,10 +41,10 @@ width: 100%;
     line-height: 1.5;
 }
 
-.UserFilter_wrapper .UsersFilter_selected {
-    background-color: #212529;
+/* .UserFilter_wrapper .UsersFilter_selected {
+    background-color: #00c4c4;
     color: #fff;
-}
+} */
 
 .Users-list-container {
     padding-top: 16px;
@@ -121,7 +121,7 @@ hr {
     flex-direction: row;
     align-items: center;
     margin-top: 4px;
-    padding-left: 52px;
+    padding-left: 40px;
     width: 100%;
     height: 18px;
     font-size: 12px;
@@ -215,4 +215,53 @@ hr {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
+}
+
+.users-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.userList-title {
+    margin-right: auto;
+}
+
+.UserFilter_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 검색창과 버튼 간의 간격 */
+    flex-wrap: nowrap;
+    width: 400px; /* 검색창 width값 */
+}
+
+.UserFilter_searchInput {
+    flex-grow: 1; /* 남는 공간을 검색창이 차지하도록 설정 */
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    min-width: 0; /* 검색창이 너무 좁아지지 않도록 최소 너비 설정 */
+    transition: border-color 0.3s;
+}
+
+.UserFilter_searchInput:focus {
+    border-color: #00c4c4;
+}
+
+.UsersFilter_filterButton {
+    white-space: nowrap; /* 버튼 텍스트가 한 줄에 표시되도록 설정 */
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #f5f7fa; /* 배경색 조정 */
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.UsersFilter_filterButton:hover {
+    background-color: #e2e8f0; /* 버튼에 호버 효과 추가 */
 }

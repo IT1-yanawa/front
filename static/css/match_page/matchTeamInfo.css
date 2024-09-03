@@ -770,3 +770,65 @@ img {
 .side-match-btn.complete {
     pointer-events: none;
 }
+.team-detail-layout .sider-0 {
+    width: 39%;
+    margin-left: 2%;
+}
+.sider-section-team-info {
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    text-align: left;
+    height: 100%;
+}
+.sider-section-team-info .wrapper-div {
+    margin-bottom: 30px;
+}
+.team-info-img {
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+    height: 36px;
+    margin-top: 25px;
+}
+.team-leader {
+    position: relative;
+    width: 40px;
+    margin-right: 40px;
+}
+.avatar-leader {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
+}
+.avatar-leader-image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.leader-icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    transform: translate(-3px, -17px);
+}
+.team-member {
+    position: relative;
+    width: 40px;
+    margin-right: 3px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.avatar-member {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
+}
+.avatar-member-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}

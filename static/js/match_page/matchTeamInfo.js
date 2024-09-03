@@ -60,3 +60,11 @@ applyCompleteButton.addEventListener("click", () => {
     sideDiv2.style.display = "none";
     sideDiv3.style.display = "block";
 });
+
+// 팀 정보보기 버튼
+const teamInfoButton = document.querySelector(".team-ifo-btn");
+
+// 버튼 누를시 팀 정보 상세페이지로 이동 (추후에 변동)
+teamInfoButton.addEventListener("click", () => {
+    alert("팀정보를 불러옵니다.");
+});

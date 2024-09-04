@@ -485,7 +485,7 @@ img, video {
         display: -ms-flexbox;
         display: flex;
         padding-top: 72px;
-        height: 100%;
+        height: 100vh;
     }
 /* } */
 

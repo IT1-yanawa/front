@@ -239,6 +239,7 @@ resetButtonSports.addEventListener("click", () => {
 });
 
 // ------------------------------------------------------------------------------
+
 // 스포츠 선택 적용하기 버튼 가져오기
 const applyButtonSports = document.querySelector(".apply-button-sports");
 
@@ -246,25 +247,57 @@ const applyButtonSports = document.querySelector(".apply-button-sports");
 applyButtonSports.addEventListener("click", () => {
     modalDivSports.style.display = "none";
 });
-// ------------------------------------------------------------------------------
 
+// --------------------------------------------------------------------------
 // 장소 사진 div 가져오기
-const placePhoto = document.querySelector(".place-card-thumb");
+const placePhotos = document.querySelectorAll(".place-card-thumb");
 
-// 장소 다음버튼 가져오기
-const nextBtn = document.querySelector(".next-btn");
+// 장소 다음버튼과 이전버튼 가져오기
+const nextBtns = document.querySelectorAll(".next-btn");
+const beforeBtns = document.querySelectorAll(".before-btn");
 
-// 장소 이전버튼 가져오기
-const beforeBtn = document.querySelector(".before-btn");
+// 각각의 place-card-thumb에 대해 이벤트 리스너 추가
+placePhotos.forEach((placePhoto, index) => {
+    const nextBtn = nextBtns[index];
+    const beforeBtn = beforeBtns[index];
 
-// 사진에 마우스 댔을때 버튼들 생기게하기
-placePhoto.addEventListener("mouseover", () => {
-    nextBtn.style.display = "block";
-    beforeBtn.style.display = "block";
-});
+    // 사진에 마우스 댔을때 버튼들 생기게하기
+    placePhoto.addEventListener("mouseover", () => {
+        nextBtn.style.display = "block";
+        beforeBtn.style.display = "block";
+    });
 
-// 사진에 마우스 땠을때 버튼들 사라지게 하기
-placePhoto.addEventListener("mouseout", () => {
-    nextBtn.style.display = "none";
-    beforeBtn.style.display = "none";
+    // 사진에 마우스 땠을때 버튼들 사라지게 하기
+    placePhoto.addEventListener("mouseout", () => {
+        nextBtn.style.display = "none";
+        beforeBtn.style.display = "none";
+    });
+
+    // 이미지 전환을 위한 코드
+    const images = placePhoto.querySelectorAll(".place-img img");
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove("active");
+            if (i === index) {
+                img.classList.add("active");
+            }
+        });
+    }
+
+    // 다음버튼 클릭시 다음사진으로 이동
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    // 이전버튼 클릭시 이전사진으로 이동
+    beforeBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    // 초기 이미지 표시
+    showImage(currentIndex);
 });

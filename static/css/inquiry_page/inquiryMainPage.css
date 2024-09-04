@@ -37,7 +37,7 @@ section.breadcrumb {
     padding-left: 0px;
 }
 .container {
-    width: 1170px;
+    width: 720px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -49,7 +49,7 @@ section.breadcrumb {
     position: relative;
 }
 ol.breadcrumbs {
-    padding: 15px 5px;
+    padding: 15px 0px;
 }
 body ol {
     list-style-type: none;
@@ -71,6 +71,7 @@ body a {
 .breadcrumbs > li a {
     color: #757575;
 }
+
 .breadcrumb-container-search {
     padding-left: 0px;
     padding-right: 0px;
@@ -135,10 +136,10 @@ label.essential::after {
     margin-bottom: 15px;
     min-height: 35px;
     border-radius: 3px;
-    padding: 0 10px;
+    padding-left: 10px;
 }
 input[type="text"] {
-    width: 100%;
+    width: 728px;
 }
 #description {
     min-height: 120px;
@@ -164,6 +165,9 @@ textarea {
     overflow: hidden;
     position: relative;
     text-align: center;
+}
+.form-field.form-file {
+    margin-right: -22px;
 }
 .upload-file input[type="file"] {
     opacity: 0;
@@ -288,19 +292,6 @@ input[type="submit"] {
     margin-top: 10px;
     font-size: 12px;
     color: rgb(254, 65, 92);
-}
-/* 변경사항 */
-#email-input {
-    width: 400px;
-}
-#email-input-error {
-    width: 400px;
-}
-#subject-input {
-    width: 450px;
-}
-#subject-input-error {
-    width: 450px;
 }
 .request-subject {
     width: 100%;

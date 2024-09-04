@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const editModal = document.getElementById("editModal");
+    const modalOverlay = document.createElement("div");
+    modalOverlay.className = "modal-overlay";
+    document.body.appendChild(modalOverlay); // 오버레이 요소 추가
     const closeButton = document.querySelector(".close-button");
     const saveChangesBtn = document.getElementById("saveChanges");
-    const sortFilterOptions = document.querySelectorAll(".sort-filter-option");
     let currentEditRow = null;
 
     // 모집상태에 따른 색상 적용
@@ -32,7 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 모달 열기
     function openModal(row) {
         currentEditRow = row;
+
+        // 모달창과 오버레이 표시
         editModal.style.display = "block";
+        modalOverlay.style.display = "block";
+        document.body.style.overflow = "hidden"; // 모달창이 열리면 스크롤 막기
 
         // 모달창에 현재 행의 데이터 채우기
         document.getElementById("editUserName").value = row
@@ -41,8 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("editJoinDate").value = row
             .querySelector(".Join_Date")
             .textContent.trim();
-        document.getElementById("editRecruitTitle").value = row
-            .querySelector(".recruit_title")
+        document.getElementById("editDeadline").value = row
+            .querySelector(".recruit_deadline")
+            .textContent.trim();
+        document.getElementById("editDescription").value = row
+            .querySelector(".recruit_description")
             .textContent.trim();
         document.getElementById("editRecruitStatus").value = row
             .querySelector(".recruit_status")
@@ -53,19 +62,22 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("editSportKind").value = row
             .querySelector(".sport_kind")
             .textContent.trim();
+
+        // 지원자 목록 표시 (예시)
+        const applicantList = row
+            .querySelector(".applicant_list")
+            .textContent.trim();
+        renderApplicantList(applicantList);
     }
 
     // 모달 닫기
     function closeModal() {
         editModal.style.display = "none";
+        modalOverlay.style.display = "none"; // 오버레이 숨김
+        document.body.style.overflow = "auto"; // 모달창이 닫히면 스크롤 다시 활성화
     }
 
     closeButton.addEventListener("click", closeModal);
-    window.addEventListener("click", function (event) {
-        if (event.target === editModal) {
-            closeModal();
-        }
-    });
 
     // 수정 버튼 클릭 시 모달 열기
     function addEditButtonListeners() {
@@ -76,6 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+    // 변경 사항 저장
+    saveChangesBtn.addEventListener("click", function () {
+        // 임시로 저장 (서버와 연결 후, 이 부분에 실제 저장 로직 추가)
+        alert("변경 사항이 저장되었습니다.");
+        closeModal();
+    });
 
     addEditButtonListeners(); // 초기 로드 시 이벤트 리스너 추가
 
@@ -86,8 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("editUserName").value;
             currentEditRow.querySelector(".Join_Date").textContent =
                 document.getElementById("editJoinDate").value;
-            currentEditRow.querySelector(".recruit_title").textContent =
-                document.getElementById("editRecruitTitle").value;
+            currentEditRow.querySelector(".recruit_deadline").textContent =
+                document.getElementById("editDeadline").value;
+            currentEditRow.querySelector(".recruit_description").textContent =
+                document.getElementById("editDescription").value;
             currentEditRow.querySelector(".recruit_status").textContent =
                 document.getElementById("editRecruitStatus").value;
             currentEditRow.querySelector(".recruit_target").textContent =
@@ -95,100 +115,86 @@ document.addEventListener("DOMContentLoaded", () => {
             currentEditRow.querySelector(".sport_kind").textContent =
                 document.getElementById("editSportKind").value;
 
-            applyRecruitStatusColors(); // 수정 후 색상 적용
-            closeModal(); // 수정 후 모달 닫기
+            // applyRecruitStatusColors(); // 수정 후 색상 적용
+            // alert("저장되었습니다."); // 저장 완료 메시지
+            // closeModal(); // 수정 후 모달 닫기
         }
     });
 
-    // 정렬 및 필터 기능 추가
-    let sortDirection = {
-        등록일: "desc",
-        모집대상: null,
-        모집상태: null,
-    };
+    // 지원자 목록 렌더링 함수
+    function renderApplicantList(applicantList) {
+        const applicantContainer = document.getElementById("editApplicantList");
+        applicantContainer.innerHTML = ""; // 기존 지원자 목록 초기화
 
-    function sortTableByDate(index, key) {
-        const rows = Array.from(
-            document.querySelectorAll(
-                ".ServiceTable_row_wrapper .ServiceTable_row"
-            )
-        );
-        rows.forEach((row) => (row.style.display = "")); // 모든 행을 다시 표시
-        rows.sort((a, b) => {
-            const dateA = new Date(
-                a
-                    .querySelector(`.ServiceTable_cell:nth-child(${index})`)
-                    .textContent.trim()
-            );
-            const dateB = new Date(
-                b
-                    .querySelector(`.ServiceTable_cell:nth-child(${index})`)
-                    .textContent.trim()
-            );
+        // 예시 지원자 데이터 처리
+        const applicants = applicantList.split(","); // 쉼표로 구분된 지원자 목록
+        applicants.forEach((applicant) => {
+            const applicantElement = document.createElement("div");
+            applicantElement.style.display = "flex";
+            applicantElement.style.justifyContent = "space-between";
+            applicantElement.style.marginBottom = "5px";
+            applicantElement.style.borderBottom = "1px solid #999";
+            applicantElement.style.paddingBottom = "5px";
 
-            if (sortDirection[key] === "desc") {
-                return dateB - dateA;
-            } else {
-                return dateA - dateB;
-            }
+            const nameElement = document.createElement("span");
+            nameElement.textContent = applicant.trim();
+
+            const buttonContainer = document.createElement("div");
+            const acceptButton = document.createElement("button");
+            acceptButton.textContent = "수락";
+            acceptButton.style.marginRight = "5px";
+            acceptButton.style.backgroundColor = "#007bff";
+            acceptButton.style.color = "white";
+            acceptButton.style.border = "none";
+            acceptButton.style.borderRadius = "4px";
+            acceptButton.style.padding = "4px 8px";
+            acceptButton.style.cursor = "pointer";
+            acceptButton.addEventListener("mouseenter", () => {
+                acceptButton.style.opacity = "0.8";
+            });
+            acceptButton.addEventListener("mouseleave", () => {
+                acceptButton.style.opacity = "1";
+            });
+
+            const rejectButton = document.createElement("button");
+            rejectButton.textContent = "거절";
+            rejectButton.style.backgroundColor = "#007bff";
+            rejectButton.style.color = "white";
+            rejectButton.style.border = "none";
+            rejectButton.style.borderRadius = "4px";
+            rejectButton.style.padding = "4px 8px";
+            rejectButton.style.cursor = "pointer";
+            rejectButton.addEventListener("mouseenter", () => {
+                rejectButton.style.opacity = "0.8";
+            });
+            rejectButton.addEventListener("mouseleave", () => {
+                rejectButton.style.opacity = "1";
+            });
+
+            buttonContainer.appendChild(acceptButton);
+            buttonContainer.appendChild(rejectButton);
+
+            applicantElement.appendChild(nameElement);
+            applicantElement.appendChild(buttonContainer);
+
+            applicantContainer.appendChild(applicantElement);
         });
-
-        const container = document.querySelector(".ServiceTable_row_wrapper");
-        rows.forEach((row) => container.appendChild(row));
-
-        // 방향 토글
-        sortDirection[key] = sortDirection[key] === "desc" ? "asc" : "desc";
-
-        applyRecruitStatusColors(); // 정렬 후 색상 적용
-        addEditButtonListeners(); // 정렬 후 다시 이벤트 리스너 추가
     }
 
-    function filterByRecruitTarget(target) {
-        const rows = document.querySelectorAll(
-            ".ServiceTable_row_wrapper .ServiceTable_row"
-        );
-        rows.forEach((row) => {
-            const targetCell = row
-                .querySelector(".recruit_target")
-                .textContent.trim();
-            if (targetCell === target) {
-                row.style.display = "";
-            } else {
-                row.style.display = "none";
-            }
-        });
-
-        applyRecruitStatusColors(); // 필터 후 색상 적용
-        addEditButtonListeners(); // 필터 후 다시 이벤트 리스너 추가
-    }
-
-    function filterByRecruitStatus(status) {
-        const rows = document.querySelectorAll(
-            ".ServiceTable_row_wrapper .ServiceTable_row"
-        );
-        rows.forEach((row) => {
-            const statusCell = row
-                .querySelector(".recruit_status")
-                .textContent.trim();
-            if (statusCell === status) {
-                row.style.display = "";
-            } else {
-                row.style.display = "none";
-            }
-        });
-
-        applyRecruitStatusColors(); // 필터 후 색상 적용
-        addEditButtonListeners(); // 필터 후 다시 이벤트 리스너 추가
-    }
+    // 필터 옵션 관련 기능
+    const sortFilterOptions = document.querySelectorAll(".sort-filter-option");
 
     sortFilterOptions.forEach((option) => {
         option.addEventListener("click", () => {
-            // selected 클래스 추가/제거
+            // 기존의 'selected' 클래스 제거
             document
                 .querySelector(".sort-filter-option.selected")
-                .classList.remove("selected");
+                ?.classList.remove("selected");
+
+            // 클릭된 옵션에 'selected' 클래스 추가
             option.classList.add("selected");
 
+            // 정렬 및 필터링 작업
             if (option.textContent.includes("등록일")) {
                 sortDirection["모집대상"] = null;
                 sortDirection["모집상태"] = null;

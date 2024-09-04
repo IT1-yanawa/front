@@ -1,38 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const editModal = document.getElementById("editModal");
+    const modalOverlay = document.createElement("div");
+    modalOverlay.className = "modal-overlay";
+    document.body.appendChild(modalOverlay); // 오버레이 추가
+
     const closeButton = document.querySelector(".close-button");
     const saveChangesBtn = document.getElementById("saveChanges");
-    const sortFilterOptions = document.querySelectorAll(".sort-filter-option");
     let currentEditRow = null;
-
-    // 회원 상태에 따른 색상 적용
-    function applyUserStatusColors() {
-        document.querySelectorAll(".ServiceTable_row").forEach((row) => {
-            const statusCell = row.querySelector(".user_status");
-            if (statusCell) {
-                const statusText = statusCell.textContent.trim();
-
-                switch (statusText) {
-                    case "활동중":
-                        statusCell.style.color = "green";
-                        break;
-                    case "탈퇴함":
-                        statusCell.style.color = "red";
-                        break;
-                    default:
-                        statusCell.style.color = "black"; // 기본 색상
-                        break;
-                }
-            }
-        });
-    }
-
-    applyUserStatusColors(); // 페이지 로드 시 색상 적용
 
     // 모달 열기
     function openModal(row) {
         currentEditRow = row;
         editModal.style.display = "block";
+        modalOverlay.style.display = "block";
+        document.body.style.overflow = "hidden"; // 모달창이 열리면 스크롤 막기
 
         // 모달창에 현재 행의 데이터 채우기
         document.getElementById("editUserName").value = row
@@ -58,14 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // 모달 닫기
     function closeModal() {
         editModal.style.display = "none";
+        modalOverlay.style.display = "none"; // 오버레이 숨김
+        document.body.style.overflow = "auto"; // 모달창이 닫히면 스크롤 다시 활성화
     }
 
     closeButton.addEventListener("click", closeModal);
-    window.addEventListener("click", function (event) {
-        if (event.target === editModal) {
-            closeModal();
-        }
-    });
+    modalOverlay.addEventListener("click", closeModal); // 오버레이 클릭 시 모달 닫기
 
     // 수정 버튼 클릭 시 모달 열기
     function addEditButtonListeners() {
@@ -95,23 +74,21 @@ document.addEventListener("DOMContentLoaded", () => {
             currentEditRow.querySelector(".user_status").textContent =
                 document.getElementById("editStatus").value;
 
-            applyUserStatusColors(); // 수정 후 색상 적용
             closeModal(); // 수정 후 모달 닫기
         }
     });
 
-    // 선택된 필터 옵션에 'selected' 클래스 추가
+    const sortFilterOptions = document.querySelectorAll(".sort-filter-option");
+
     sortFilterOptions.forEach((option) => {
-        option.addEventListener("click", function () {
-            // 이전에 선택된 옵션에서 'selected' 클래스 제거
+        option.addEventListener("click", () => {
+            // 기존의 'selected' 클래스 제거
             document
                 .querySelector(".sort-filter-option.selected")
-                .classList.remove("selected");
+                ?.classList.remove("selected");
 
             // 클릭된 옵션에 'selected' 클래스 추가
-            this.classList.add("selected");
-
-            // 여기에 필터링 또는 정렬에 대한 추가 코드를 넣을 수 있습니다.
+            option.classList.add("selected");
         });
     });
 });

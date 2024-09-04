@@ -222,8 +222,8 @@
                                     <a class="MenuItems_submenu" href=""
                                         >게시글 작성</a
                                     >
-                                    <!-- <a class="MenuItems_submenu" href="">게시판 수정</a>
-                                    <a class="MenuItems_submenu" href="">댓글 수정</a> -->
+                                    <!-- <a class="MenuItems_submenu" href="">게시판 답변</a>
+                                    <a class="MenuItems_submenu" href="">댓글 답변</a> -->
                                 </div>
 
                                 <!-- 대카테고리 -->
@@ -371,7 +371,7 @@
                                         >경기 매칭 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
-                                        >팀/팀원 모집 게시판</a
+                                        >모아모아 모집 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
                                         >장소 대여 게시판</a
@@ -390,9 +390,9 @@
                         <div class="Service_wrapper">
                             <!-- body_header -->
                             <div class="ServiceHeader_container">
-                                <h2 class="ServiceHeader_title">회원 관리</h2>
+                                <h2 class="ServiceHeader_title">문의사항 관리</h2>
                                 <p class="ServiceHeader_description">
-                                    회원 목록을 조회합니다.
+                                    문의사항 목록을 조회합니다.
                                 </p>
                             </div>
                             <hr
@@ -404,14 +404,25 @@
                                     <div class="SortFilterOptions">
                                         <span
                                             class="sort-filter-option selected"
-                                            >가입일 순</span
+                                            >작성일 순</span
                                         >/
                                         <span class="sort-filter-option"
-                                            >이름 순</span
+                                            >환불</span
                                         >/
                                         <span class="sort-filter-option"
-                                            >활동 상태</span
-                                        >
+                                            >결제관련</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >건의사항</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >서비스</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >신고</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >기타</span>
                                         
                                     </div>
                                     <!-- Action Buttons -->
@@ -421,17 +432,18 @@
                                             class="Filter_searchInput"
                                             placeholder="검색어 입력"
                                         />
-                                        <button
+                                        <!-- <button
                                             id="addServiceBtn"
                                             class="addServiceBtn"
                                         >
-                                            회원 추가
-                                        </button>
+                                            문의사항 이동
+                                        </button> -->
+                                        
                                         <button
                                             id="deleteSelectedBtn"
                                             class="deleteSelectedBtn"
                                         >
-                                            회원 탈퇴
+                                            문의사항 삭제
                                         </button>
                                     </div>
                                 </div>
@@ -460,33 +472,33 @@
                                             <div
                                                 class="ServiceTable_cell headerCell"
                                             >
-                                                이름
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell headerCell"
-                                            >
-                                                가입일
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell headerCell"
-                                            >
                                                 이메일
                                             </div>
                                             <div
                                                 class="ServiceTable_cell headerCell"
                                             >
-                                                닉네임
+                                                작성일
                                             </div>
                                             <div
                                                 class="ServiceTable_cell headerCell"
                                             >
-                                                나이
+                                                문의사항 제목
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                작성자
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell headerCell"
+                                            >
+                                                첨부파일
                                             </div>
                                             <div
                                                 class="ServiceTable_cell headerCell"
                                                 
                                             >
-                                                상태
+                                                유형
                                             </div>
                                             <div
                                                 class="ServiceTable_cell headerCell"
@@ -506,10 +518,25 @@
                                                 />
                                             </div>
                                             <div
-                                                class="ServiceTable_cell ID"
+                                                class="ServiceTable_cell inquiry_ID"
                                                 
                                             >
                                                 1
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_email"
+                                            >
+                                                John123@gmail.com
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell Join_date"
+                                            >
+                                                2024-08-20
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_title"
+                                            >
+                                                환불요청합니다.
                                             </div>
                                             <div
                                                 class="ServiceTable_cell user_name"
@@ -517,35 +544,20 @@
                                                 John Doe
                                             </div>
                                             <div
-                                                class="ServiceTable_cell Join_date"
+                                                class="ServiceTable_cell attachment"
                                             >
-                                                2024-08-25
+                                                2
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_email"
-                                            >
-                                                John123@google.com
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_nickname"
-                                            >
-                                                치즈도우
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_age "
-                                            >
-                                                22
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_status"
+                                                class="ServiceTable_cell inquiry_kind"
                                                 
                                             >
-                                                활동중
+                                                환불
                                             </div>
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -556,65 +568,15 @@
                                                 />
                                             </div>
                                             <div
-                                                class="ServiceTable_cell ID"
+                                                class="ServiceTable_cell inquiry_ID"
                                                 
                                             >
                                                 2
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_name"
-                                            >
-                                                도우너
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell Join_date"
-                                            >
-                                                2024-08-19
-                                            </div>
-                                            <div
                                                 class="ServiceTable_cell user_email"
                                             >
-                                                Doew77@google.com
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_nickname"
-                                            >
-                                                깐따삐야
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_age "
-                                            >
-                                                33
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_status"
-                                                
-                                            >
-                                                활동중
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell editBtn"
-                                            >
-                                                <button class="">수정</button>
-                                            </div>
-                                        </div>
-                                        <div class="ServiceTable_row">
-                                            <div class="ServiceTable_cell">
-                                                <input
-                                                    type="checkbox"
-                                                    class="userCheckbox"
-                                                />
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell ID"
-                                                
-                                            >
-                                                3
-                                            </div>
-                                            <div
-                                                class="ServiceTable_cell user_name"
-                                            >
-                                                존 도우
+                                                todo567@gmail.com
                                             </div>
                                             <div
                                                 class="ServiceTable_cell Join_date"
@@ -622,30 +584,30 @@
                                                 2024-08-22
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_email"
+                                                class="ServiceTable_cell inquiry_title"
                                             >
-                                                John369@google.com
+                                                이런 것좀 추가해주세요.
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_nickname"
+                                                class="ServiceTable_cell user_name"
                                             >
-                                                치자피즈
+                                                도우너
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_age "
+                                                class="ServiceTable_cell attachment"
                                             >
-                                                25
+                                                1
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_status"
+                                                class="ServiceTable_cell inquiry_kind"
                                                 
                                             >
-                                                탈퇴함
+                                                건의사항
                                             </div>
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         <div class="ServiceTable_row">
@@ -656,15 +618,65 @@
                                                 />
                                             </div>
                                             <div
-                                                class="ServiceTable_cell ID"
+                                                class="ServiceTable_cell inquiry_ID"
+                                                
+                                            >
+                                                3
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_email"
+                                            >
+                                                hoy1m@gmail.com
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell Join_date"
+                                            >
+                                                2024-08-24
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_title"
+                                            >
+                                                매칭에서 이런 것좀 고쳐주세요.
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                둘리
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell attachment"
+                                            >
+                                                0
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_kind"
+                                                
+                                            >
+                                                서비스
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">답변</button>
+                                            </div>
+                                        </div>
+                                        <div class="ServiceTable_row">
+                                            <div class="ServiceTable_cell">
+                                                <input
+                                                    type="checkbox"
+                                                    class="userCheckbox"
+                                                />
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_ID"
                                                 
                                             >
                                                 4
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_name"
+                                                class="ServiceTable_cell user_email"
                                             >
-                                                최대환
+                                                dollchou@gmail.com
                                             </div>
                                             <div
                                                 class="ServiceTable_cell Join_date"
@@ -672,34 +684,134 @@
                                                 2024-08-25
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_email"
+                                                class="ServiceTable_cell inquiry_title"
                                             >
-                                                tioaz7107@google.com
+                                                이사람 신고합니다.
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_nickname"
+                                                class="ServiceTable_cell user_name"
                                             >
-                                                냉동닭
+                                                또치
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_age "
+                                                class="ServiceTable_cell attachment"
                                             >
-                                                27
+                                                6
                                             </div>
                                             <div
-                                                class="ServiceTable_cell user_status"
+                                                class="ServiceTable_cell inquiry_kind"
                                                 
                                             >
-                                                활동중
+                                                신고
                                             </div>
                                             <div
                                                 class="ServiceTable_cell editBtn"
                                             >
-                                                <button class="">수정</button>
+                                                <button class="">답변</button>
+                                            </div>
+                                        </div>
+                                        <div class="ServiceTable_row">
+                                            <div class="ServiceTable_cell">
+                                                <input
+                                                    type="checkbox"
+                                                    class="userCheckbox"
+                                                />
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_ID"
+                                                
+                                            >
+                                                5
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_email"
+                                            >
+                                                Jk777@gmail.com
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell Join_date"
+                                            >
+                                                2024-08-28
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_title"
+                                            >
+                                                궁금한게 있는데요.
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                하와와
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell attachment"
+                                            >
+                                                2
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_kind"
+                                                
+                                            >
+                                                기타
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">답변</button>
+                                            </div>
+                                        </div>
+                                        <div class="ServiceTable_row">
+                                            <div class="ServiceTable_cell">
+                                                <input
+                                                    type="checkbox"
+                                                    class="userCheckbox"
+                                                />
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_ID"
+                                                
+                                            >
+                                                6
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_email"
+                                            >
+                                                god999@gmail.com
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell Join_date"
+                                            >
+                                                2024-08-29
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_title"
+                                            >
+                                                무통장입금 관련 문의드립니다.
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell user_name"
+                                            >
+                                                vd최강지존bv
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell attachment"
+                                            >
+                                                2
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell inquiry_kind"
+                                                
+                                            >
+                                                결제관련
+                                            </div>
+                                            <div
+                                                class="ServiceTable_cell editBtn"
+                                            >
+                                                <button class="">답변</button>
                                             </div>
                                         </div>
                                         
-
+                                        
                                         <!-- 목록 리스트 -->
                                     </div>
                                 </div>
@@ -818,74 +930,58 @@
                         </div>
 
                     <!-- 모달창 -->
-                    <div id="editModal" class="modal">
-                        <div class="modal-content" style=" margin: auto; padding: 20px; box-sizing: border-box;">
-                            <span class="close-button" style="float: right; cursor: pointer;">&times;</span>
-                            <h2 style="text-align: center;">회원 정보 수정</h2>
-                            <form id="editForm" style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
-                                <div style="flex-grow: 1;">
-                                    <label for="editUserName">이름:</label>
-                                    <input
-                                        type="text"
-                                        id="editUserName"
-                                        name="editUserName"
-                                        readonly
-                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
-                                    />
-                                    <label for="editJoinDate">가입일:</label>
-                                    <input
-                                        type="date"
-                                        id="editJoinDate"
-                                        name="editJoinDate"
-                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
-                                    />
-                                    <label for="editEmail">이메일:</label>
-                                    <input
-                                        type="email"
-                                        id="editEmail"
-                                        name="editEmail"
-                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
-                                    />
-                                    <label for="editNickname">닉네임:</label>
-                                    <input
-                                        type="text"
-                                        id="editNickname"
-                                        name="editNickname"
-                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
-                                    />
-                                    <label for="editAge">나이:</label>
-                                    <input
-                                        type="number"
-                                        id="editAge"
-                                        name="editAge"
-                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
-                                    />
-                                    <label for="editStatus">상태:</label>
-                                    <select
-                                        id="editStatus"
-                                        name="editStatus"
-                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
-                                    >
-                                        <option value="활동중">활동중</option>
-                                        <option value="탈퇴함">탈퇴함</option>
-                                    </select>
+                    <div id="editModal" class="modal" style="padding: 20px;">
+                        <span class="close-button">&times;</span>
+                        <h2 style="text-align: center;">문의 답변</h2>
+                        <form id="editForm">
+                            <!-- 문의 유형 및 제목 -->
+                            <div style="margin-bottom: 20px;">
+                                <label for="inquiryType" style="font-weight: bold;">문의 유형:</label>
+                                <input type="text" id="inquiryType" name="inquiryType" readonly style="width: 100%; padding: 8px; margin-bottom: 10px; font-size: 16px; border: 1px solid #999;" />
+                    
+                                <label for="inquiryTitle" style="font-weight: bold;">문의 제목:</label>
+                                <input type="text" id="inquiryTitle" name="inquiryTitle" readonly style="width: 100%; padding: 8px; font-size: 16px; border: 1px solid #999;" />
+                            </div>
+                    
+                            <!-- 문의 내용 -->
+                            <div style="margin-bottom: 20px;">
+                                <label for="inquiryContent" style="font-weight: bold;">문의 내용:</label>
+                                <textarea id="inquiryContent" name="inquiryContent" readonly style="width: 100%; height: 500px; padding: 8px; font-size: 16px; border: 1px solid #999;"></textarea>
+                            </div>
+                    
+                            <!-- 첨부파일 -->
+                            <div id="attachmentContainer" style="margin-bottom: 20px;">
+                                <h3 style="font-weight: bold;">첨부파일</h3>
+                                <div style="display: flex; flex-wrap: wrap; gap: 10px; border: 1px solid #999;">
+                                    <!-- 첨부된 이미지, 영상 등이 여기에 표시됨 -->
+                                    <!-- 이미지, 동영상 렌더링은 JS에서 처리 -->
                                 </div>
-                                <button
-                                    type="button"
-                                    id="saveChanges"
-                                    style="width: 100%; padding: 12px; background-color: #1890ff; color: white; font-size: 16px; border: none; cursor: pointer; margin-top: 170px;"
-                                >
-                                    저장
-                                </button>
-                            </form>
-                        </div>
+                                <p style="font-size: 12px; color: #999;">* 이미지는 20% 크기로 가로 배치되며, 너비를 넘으면 줄바꿈됩니다.</p>
+                            </div>
+                    
+                            <!-- 답변 선택 및 내용 -->
+                            <div style="margin-bottom: 20px;">
+                                <label for="answerCategory" style="font-weight: bold;">답변 선택:</label>
+                                <select id="answerCategory" name="answerCategory" style="width: 100%; padding: 8px; margin-bottom: 10px; font-size: 16px; border: 1px solid #999;">
+                                    <option value="">카테고리를 선택하세요</option>
+                                    <option value="환불 진행 중입니다.">환불 진행 중입니다.</option>
+                                    <option value="결제 확인되었습니다.">결제 확인되었습니다.</option>
+                                    <option value="서비스 개선을 위해 노력하겠습니다.">서비스 개선을 위해 노력하겠습니다.</option>
+                                </select>
+                            </div>
+                    
+                            <div style="margin-bottom: 20px;">
+                                <label for="answerContent" style="font-weight: bold;">답변 내용:</label>
+                                <textarea id="answerContent" name="answerContent" style="width: 100%; height: 150px; padding: 8px; font-size: 16px; border: 1px solid #999;"></textarea>
+                            </div>
+                    
+                            <!-- 저장 버튼 -->
+                            <button type="submit" id="saveChanges" style="width: 100%; padding: 12px; background-color: #1890ff; color: white; font-size: 16px;">저장</button>
+                        </form>
                     </div>
+                    
+                    
                     <!-- 여기까지 모달창 -->
-
-
-
-
-
 
 
                     </div>
@@ -894,6 +990,6 @@
         </div>
     </body>
     <script src="/static/js/adminPage/admin_page/admin.js"></script>
-    <script src="/static/js/adminPage/admin_service/service_Main.js"></script>
-    <script src="/static/js/adminPage/admin_user/userList.js"></script>
+    <script src="/static/js/adminPage/admin_service/service_main2.js"></script>
+    <script src="/static/js/adminPage/admin_service/inquiry_filter.js"></script>
 </html>

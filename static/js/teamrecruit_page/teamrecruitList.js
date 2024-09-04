@@ -341,3 +341,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+// 남은 시간을 계산하고 표시하는 함수
+function updateRemainingTime() {
+    // 종료일을 지정 (예: 2024년 9월 10일 23:59:59로 설정)
+    const endDate = new Date("2024-09-10T23:59:59");
+
+    // 현재 시간
+    const now = new Date();
+
+    // 종료일까지 남은 시간을 밀리초 단위로 계산
+    const timeDifference = endDate - now;
+
+    // 시간이 이미 지나면 타이머를 멈추고 종료 메시지 표시
+    if (timeDifference <= 0) {
+        document.getElementById("remainingtime").textContent =
+            "남은 시간: 종료됨";
+        clearInterval(timer); // 타이머 멈춤
+        return;
+    }
+
+    // 남은 시간에서 일, 시간, 분, 초 계산
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // 남은 일수 계산
+    const hours = Math.floor(
+        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    ); // 남은 시간 계산
+    const minutes = Math.floor(
+        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+    ); // 남은 분 계산
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000); // 남은 초 계산
+
+    // '남은 시간' 요소에 일, 시간, 분, 초 표시
+    document.getElementById(
+        "remainingtime"
+    ).textContent = `남은 시간: ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+}
+
+// 매 1초마다 남은 시간을 업데이트
+const timer = setInterval(updateRemainingTime, 1000);
+
+// 페이지 로드 후 즉시 남은 시간 계산 및 표시
+updateRemainingTime();

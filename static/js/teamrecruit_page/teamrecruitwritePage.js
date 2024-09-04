@@ -51,3 +51,34 @@ beforeButton2.addEventListener("click", () => {
 finishButton.addEventListener("click", () => {
     alert("매칭 등록 완료!!");
 });
+// 선택한 종목들을 추적하여 표시하는 함수
+function updateSelectedSports() {
+    // 모든 체크박스 요소 선택
+    const checkboxes = document.querySelectorAll(
+        'input[type="checkbox"]:checked'
+    );
+
+    // 체크된 종목들을 배열로 추출
+    const selectedOptions = Array.from(checkboxes).map(
+        (checkbox) => checkbox.value
+    );
+
+    // 선택된 종목들을 표시할 요소
+    const displayElement = document.getElementById("selectedSportsDisplay");
+
+    if (selectedOptions.length > 0) {
+        displayElement.textContent = `선택된 종목: ${selectedOptions.join(
+            ", "
+        )}`;
+    } else {
+        displayElement.textContent = "선택된 종목이 없습니다.";
+    }
+}
+
+// 모든 체크박스에 변경 이벤트 리스너 추가
+document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.addEventListener("change", updateSelectedSports);
+});
+
+// 페이지 로드 후 초기 상태로 호출
+updateSelectedSports();

@@ -3,75 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="/static/css/my_page/myPage_my information.css"
+        />
         <title>Document</title>
     </head>
-    <style>
-        /* 모달 기본 스타일 */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(
-                0,
-                0,
-                0,
-                0.4
-            ); /* 배경을 반투명하게 만듭니다. */
-        }
 
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 30%;
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .cancel-button,
-        .save-button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .cancel-button {
-            background-color: #ccc;
-            color: #333;
-        }
-
-        .save-button {
-            background-color: #007bff;
-            color: #fff;
-        }
-    </style>
     <body>
         <!DOCTYPE html>
         <html lang="en">
@@ -308,7 +246,7 @@
                                                         <h4
                                                             class="Typography_Typography__root__RdAI1 Typography_Typography__heading1__N9Asv Typography_Typography__weightBold__KkJEY Typography_Typography__noWrap___pb0d Typography_Typography__alignLeft__AQANH ProfileViewHeaderAvatar_ProfileViewHeaderAvatar__info__title__NWzRD"
                                                         >
-                                                            이름
+                                                            박명수
                                                         </h4>
                                                         <p
                                                             class="Typography_Typography__root__RdAI1 Typography_Typography__body2-reading__8RggS Typography_Typography__weightMedium__GXnOM ProfileViewHeaderAvatar_ProfileViewHeaderAvatar__info__subText__Pht6n"
@@ -943,7 +881,7 @@
                                     </section>
 
                                     <article class="css-1h00d6f">
-                                        <form>
+                                        <div>
                                             <span
                                                 class="Typography_Typography__root__RdAI1 Typography_Typography__label2__svmAA Typography_Typography__weightMedium__GXnOM Typography_Typography__displayBlock__A3AK8 ListItem_ListItem__label__0m2Cd"
                                                 >한 줄 소개</span
@@ -979,10 +917,11 @@
                                                             class="Grid_Grid__item__4GoIZ Grid_Grid__align-items_flex-start__nEOiH ProfileEditDescription_ProfileEditDescription__actions__buttons__OS5HV"
                                                         >
                                                             <button
+                                                                id="cancelButton"
+                                                                type="button"
                                                                 class="Button_Button__root__m1NGq Button_Button__outlined__0HnEd Button_Button__outlinedAssistive__JKDyz Button_Button__outlinedSizeSmall__PllaZ"
                                                             >
                                                                 <span
-                                                                    type="button"
                                                                     class="Button_Button__label__K0sBs"
                                                                     >취소</span
                                                                 >
@@ -991,10 +930,11 @@
                                                                 ></span>
                                                             </button>
                                                             <button
+                                                                id="saveButton"
+                                                                type="button"
                                                                 class="Button_Button__root__m1NGq Button_Button__contained__qyP2s Button_Button__containedPrimary__kCB60 Button_Button__containedSizeSmall__Dlwlt"
                                                             >
                                                                 <span
-                                                                    type="button"
                                                                     class="Button_Button__label__K0sBs"
                                                                     >저장</span
                                                                 >
@@ -1008,11 +948,10 @@
                                             </li>
 
                                             <button
+                                                type="button"
                                                 class="ListItem_ListItem__root__4HTKO ListItem_ListItem__divider__KWrpp ListItem_ListItem__button__cVygs ProfileEditDescription_ProfileEditDescription__listItem__VoPor"
                                             >
-                                                <div
-                                                    class="ListItemText_ListItemText__root__j76to"
-                                                >
+                                                <div class="introduce">
                                                     <p
                                                         class="Typography_Typography__root__RdAI1 Typography_Typography__body1__q3AOP Typography_Typography__weightMedium__GXnOM Typography_Typography__displayBlock__A3AK8 ProfileEditDescription_ProfileEditDescription__placeholder__MTsgA"
                                                     >
@@ -1037,8 +976,9 @@
                                                     </span>
                                                 </div>
                                             </button>
-                                        </form>
-                                        <form>
+                                        </div>
+
+                                        <div>
                                             <span
                                                 class="Typography_Typography__root__RdAI1 Typography_Typography__label2__svmAA Typography_Typography__weightMedium__GXnOM Typography_Typography__displayBlock__A3AK8 ListItem_ListItem__label__0m2Cd"
                                                 >선호하는 종목</span
@@ -1086,9 +1026,9 @@
                                                                 ></span>
                                                             </button>
                                                             <button
+                                                                type="button"
                                                                 class="Button_Button__root__m1NGq Button_Button__contained__qyP2s Button_Button__containedPrimary__kCB60 Button_Button__containedSizeSmall__Dlwlt"
                                                             >
-                                                                type="button"
                                                                 <span
                                                                     class="Button_Button__label__K0sBs"
                                                                     >저장</span
@@ -1132,8 +1072,8 @@
                                                     </span>
                                                 </div>
                                             </button>
-                                        </form>
-                                        <form>
+                                        </div>
+                                        <div>
                                             <span
                                                 class="Typography_Typography__root__RdAI1 Typography_Typography__label2__svmAA Typography_Typography__weightMedium__GXnOM Typography_Typography__displayBlock__A3AK8 ListItem_ListItem__label__0m2Cd"
                                                 >선호하는 포지션</span
@@ -1227,8 +1167,8 @@
                                                     </span>
                                                 </div>
                                             </button>
-                                        </form>
-                                        <form>
+                                        </div>
+                                        <div>
                                             <span
                                                 class="Typography_Typography__root__RdAI1 Typography_Typography__label2__svmAA Typography_Typography__weightMedium__GXnOM Typography_Typography__displayBlock__A3AK8 ListItem_ListItem__label__0m2Cd"
                                                 >운동 경력</span
@@ -1321,7 +1261,7 @@
                                                     </span>
                                                 </div>
                                             </button>
-                                        </form>
+                                        </div>
                                     </article>
                                 </div>
                             </div>
@@ -1334,43 +1274,121 @@
                     </div>
                 </div>
             </body>
-            <script src="/static/js/my_page/myPage_imformation.js"></script>
+            <script>
+                document
+                    .querySelector(
+                        ".ProfileViewHeaderActions_ProfileViewHeaderActions__btnSetting__eb6gX"
+                    )
+                    .addEventListener("click", function () {
+                        document.getElementById("profile-view").style.display =
+                            "none";
+                        document.getElementById("profile-edit").style.display =
+                            "block";
+                    });
+
+                document
+                    .querySelectorAll(
+                        ".ProfileEditDescription_ProfileEditDescription__actions__buttons__OS5HV button"
+                    )
+                    .forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            document.getElementById(
+                                "profile-view"
+                            ).style.display = "block";
+                            document.getElementById(
+                                "profile-edit"
+                            ).style.display = "none";
+                        });
+                    });
+                // ===========================================================================
+                // 프로필 사진 업로드 기능
+                document
+                    .getElementById("openFilePicker")
+                    .addEventListener("click", function () {
+                        document.getElementById("fileInput").click();
+                    });
+
+                // ===============================================================4-
+
+                // 첫 번째 모달 관련 요소
+                const openModalBtn = document.getElementById("openModal2");
+                const modal = document.getElementById("myModal");
+                const closeModalBtn = document.getElementById("closeModal");
+
+                // 첫 번째 모달의 취소 및 저장 버튼 가져오기 (모달 내부 범위로 한정)
+                const cancelButton = modal.querySelector(".css-6ty6h4"); // 첫 번째 모달의 취소 버튼
+                const saveButton = modal.querySelector(".css-typupr"); // 첫 번째 모달의 저장 버튼
+
+                // 첫 번째 모달 열기
+                openModalBtn.addEventListener("click", function () {
+                    modal.style.display = "block";
+                    console.log("모달이 열렸습니다.");
+                });
+
+                // 첫 번째 모달 닫기 (닫기 버튼)
+                closeModalBtn.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    console.log("모달이 닫혔습니다.");
+                });
+
+                // 첫 번째 모달의 취소 버튼 클릭 시 모달 닫기
+                cancelButton.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    console.log("취소 버튼이 눌려 모달이 닫혔습니다.");
+                });
+
+                // 첫 번째 모달의 저장 버튼 클릭 시 모달 닫기
+                saveButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    modal.style.display = "none";
+                    console.log("저장 버튼이 눌려 모달이 닫혔습니다.");
+                });
+
+                // 두 번째 모달 관련 요소
+                const openModalBtn2 =
+                    document.getElementById("poneNumbermodal");
+                const modal2 = document.getElementById("myModal2");
+                const closeModalBtn2 = document.getElementById("closeModal2");
+
+                // 두 번째 모달의 취소 및 저장 버튼 가져오기 (모달 내부 범위로 한정)
+                const cancelButton3 = modal2.querySelector(".css-6ty6h4"); // 두 번째 모달의 취소 버튼
+                const saveButton3 = modal2.querySelector(".css-typupr"); // 두 번째 모달의 저장 버튼
+
+                // 두 번째 모달 열기
+                openModalBtn2.addEventListener("click", function () {
+                    modal2.style.display = "block";
+                    console.log("두 번째 모달이 열렸습니다.");
+                });
+
+                // 두 번째 모달 닫기 (닫기 버튼)
+                closeModalBtn2.addEventListener("click", function () {
+                    modal2.style.display = "none";
+                    console.log("두 번째 모달이 닫혔습니다.");
+                });
+
+                // 두 번째 모달 외부 클릭 시 모달 닫기
+                window.addEventListener("click", function (event) {
+                    if (event.target === modal2) {
+                        modal2.style.display = "none";
+                        console.log("두 번째 모달 외부 클릭으로 닫혔습니다.");
+                    }
+                });
+
+                // 두 번째 모달의 취소 버튼 클릭 시 모달 닫기
+                cancelButton3.addEventListener("click", function () {
+                    modal2.style.display = "none";
+                    console.log("취소 버튼이 눌려 두 번째 모달이 닫혔습니다.");
+                });
+
+                // 두 번째 모달의 저장 버튼 클릭 시 모달 닫기
+                saveButton3.addEventListener("click", function (event) {
+                    event.preventDefault(); // 페이지 초기화 방지
+                    modal2.style.display = "none";
+                    console.log("저장 버튼이 눌려 두 번째 모달이 닫혔습니다.");
+                });
+
+                // =====================================================
+            </script>
         </html>
     </body>
-    <script>
-        // 두 요소를 변수로 저장
-        // 두 요소를 변수로 저장
-        const liElement = document.querySelector(
-            'li[data-attribute-id="profileEdit__selfDescription_click"]'
-        );
-        const buttonElement = document.querySelector(
-            'button[data-attribute-id="profileEdit__selfDescription_click"]'
-        );
-
-        // 초기 상태 설정
-        liElement.style.display = "none"; // li 요소를 숨김
-
-        // 버튼 클릭 시 li 요소를 보이고, 버튼을 숨기도록 설정
-        buttonElement.addEventListener("click", function (event) {
-            event.preventDefault(); // 기본 동작 방지 (특히 form 내에서)
-            liElement.style.display = "flex"; // li 요소를 보임
-            buttonElement.style.display = "none"; // 버튼을 숨김
-        });
-
-        // 취소 또는 저장 버튼 클릭 시 다시 버튼을 보이고, li 요소를 숨기도록 설정
-        const cancelButton = liElement.querySelector(
-            '.Button_Button__label__K0sBs:contains("취소")'
-        );
-        const saveButton = liElement.querySelector(
-            '.Button_Button__label__K0sBs:contains("저장")'
-        );
-
-        [cancelButton, saveButton].forEach((btn) => {
-            btn.parentElement.addEventListener("click", function (event) {
-                event.preventDefault(); // 기본 동작 방지
-                liElement.style.display = "none"; // li 요소를 숨김
-                buttonElement.style.display = "flex"; // 버튼을 보임
-            });
-        });
-    </script>
 </html>

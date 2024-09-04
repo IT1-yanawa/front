@@ -25,44 +25,73 @@ document
         document.getElementById("fileInput").click();
     });
 // ===========================================================================
-// 이름 모달
+// 첫 번째 모달 관련 요소
 const openModalBtn = document.getElementById("openModal2");
 const modal = document.getElementById("myModal");
 const closeModalBtn = document.getElementById("closeModal");
 
+// 첫 번째 모달의 취소 및 저장 버튼 가져오기 (모달 내부 범위로 한정)
+const cancelButton = modal.querySelector(".css-6ty6h4"); // 첫 번째 모달의 취소 버튼
+const saveButton = modal.querySelector(".css-typupr"); // 첫 번째 모달의 저장 버튼
+
+// 첫 번째 모달 열기
 openModalBtn.addEventListener("click", function () {
     modal.style.display = "block";
 });
 
+// 첫 번째 모달 닫기 (닫기 버튼)
 closeModalBtn.addEventListener("click", function () {
     modal.style.display = "none";
 });
 
-window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
+// 첫 번째 모달의 취소 버튼 클릭 시 모달 닫기
+cancelButton.addEventListener("click", function () {
+    modal.style.display = "none";
 });
-// ======================================================================
-// 전화번호 모달
 
+// 첫 번째 모달의 저장 버튼 클릭 시 모달 닫기
+saveButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    modal.style.display = "none";
+});
+
+// 두 번째 모달 관련 요소
 const openModalBtn2 = document.getElementById("poneNumbermodal");
 const modal2 = document.getElementById("myModal2");
 const closeModalBtn2 = document.getElementById("closeModal2");
 
+// 두 번째 모달의 취소 및 저장 버튼 가져오기 (모달 내부 범위로 한정)
+const cancelButton3 = modal2.querySelector(".css-6ty6h4"); // 두 번째 모달의 취소 버튼
+const saveButton3 = modal2.querySelector(".css-typupr"); // 두 번째 모달의 저장 버튼
+
+// 두 번째 모달 열기
 openModalBtn2.addEventListener("click", function () {
     modal2.style.display = "block";
 });
 
+// 두 번째 모달 닫기 (닫기 버튼)
 closeModalBtn2.addEventListener("click", function () {
     modal2.style.display = "none";
 });
 
+// 두 번째 모달 외부 클릭 시 모달 닫기
 window.addEventListener("click", function (event) {
     if (event.target === modal2) {
         modal2.style.display = "none";
     }
 });
+
+// 두 번째 모달의 취소 버튼 클릭 시 모달 닫기
+cancelButton3.addEventListener("click", function () {
+    modal2.style.display = "none";
+});
+
+// 두 번째 모달의 저장 버튼 클릭 시 모달 닫기
+saveButton3.addEventListener("click", function (event) {
+    event.preventDefault(); // 페이지 초기화 방지
+    modal2.style.display = "none";
+});
+
 // =====================================================================
 // 한 줄 소개
 const button = document.querySelector(
@@ -90,7 +119,7 @@ document.addEventListener("click", function () {
     button.style.display = "block";
 });
 
-// =================================================================
+// // =================================================================
 // 선호하는 종목
 const button1 = document.querySelector(
     ".ListItem_ListItem__root__4HTKO.ListItem_ListItem__divider__KWrpp.ListItem_ListItem__button__cVygs.ProfileEditDescription_ProfileEditDescription__listItem__VoPor1"
@@ -116,7 +145,7 @@ document.addEventListener("click", function () {
     liElement1.style.display = "none";
     button1.style.display = "block";
 });
-// ================================================================
+// // ================================================================
 // 선호하는 포지션
 const button2 = document.querySelector(
     ".ListItem_ListItem__root__4HTKO.ListItem_ListItem__divider__KWrpp.ListItem_ListItem__button__cVygs.ProfileEditDescription_ProfileEditDescription__listItem__VoPor2"

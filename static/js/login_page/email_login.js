@@ -1,6 +1,6 @@
 const emailInput1 = document.getElementById("email-1");
 const passwordInput = document.getElementById("password");
-const loginButton = document.getElementById("loginButton");
+const loginButton = document.getElementById("final-button");
 const togglePassword = document.getElementById("togglePassword");
 const eyeIcon = document.getElementById("eye-icon");
 const eyeSlashIcon = document.getElementById("eye-slash-icon");

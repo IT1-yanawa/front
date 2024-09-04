@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>동의 체크박스 예제</title>
+        <style>
+            .agree-wrapper {
+                font-family: "Pretendard-Regular";
+            }
+
+            .agree-div {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                position: relative;
+                min-height: 25px;
+                width: 100%;
+            }
+
+            .check-icon-1 {
+                user-select: none;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                fill: currentColor;
+                flex-shrink: 0;
+                font-size: inherit;
+            }
+
+            .agree-checkbox {
+                width: 18px;
+                height: 18px;
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 3px;
+                border: 1.5px solid rgba(112, 115, 124, 0.22);
+                margin-top: 2px;
+            }
+
+            .agree-checkbox.on {
+                background-color: #0066ff;
+                border: none;
+            }
+
+            .agree-checkbox.off {
+                background-color: transparent; /* 체크되지 않은 배경 색상 */
+            }
+
+            .input-agree {
+                opacity: 0;
+                width: calc(100% - 90px);
+                height: 100%;
+                position: absolute;
+                cursor: pointer;
+            }
+
+            .agree-title-div-1 {
+                display: flex;
+                flex: 1;
+            }
+
+            .agree-wrapper p {
+                font-size: 15px;
+            }
+
+            .agree-title-p {
+                color: #171719;
+                font-weight: 600;
+                text-align: left;
+                letter-spacing: 0.0096em;
+                line-height: 22px;
+                margin: 0px 0px 0px 8px;
+                word-break: keep-all;
+            }
+
+            .agree-div-five {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .agree-p-div {
+                display: flex;
+                flex: 1;
+            }
+
+            .agree-p {
+                color: rgba(55, 56, 60, 0.61);
+                font-weight: 400;
+                text-align: left;
+                letter-spacing: 0.0096em;
+                line-height: 22px;
+                margin: 0px 0px 0px 8px;
+                word-break: keep-all;
+            }
+
+            .agree-select-div {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .agree-select {
+                display: flex;
+                margin-left: 28px;
+            }
+
+            .agree-select-label {
+                height: 22px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 18px;
+                cursor: pointer;
+            }
+
+            .agree-select-label input[type="checkbox"] {
+                display: none;
+            }
+
+            .check-icon {
+                display: flex;
+                align-items: inherit;
+                justify-content: inherit;
+            }
+
+            .agree-select-label svg {
+                color: #888;
+                margin-right: 6px;
+                font-size: 20px;
+            }
+
+            .check-icon-svg {
+                user-select: none;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                fill: currentColor;
+                flex-shrink: 0;
+            }
+
+            .check-icon-svg.off path {
+                fill: rgba(55, 56, 60, 0.28);
+            }
+
+            .check-icon-svg.on path {
+                fill: #0066ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="agree-wrapper">
+            <div class="agree-div">
+                <div class="agree-checkbox check-icon-svg off">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" class="check-icon-1">
+                            <path
+                                fill="#ffffff"
+                                d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                            ></path>
+                        </svg>
+                    </span>
+                </div>
+                <input
+                    type="checkbox"
+                    name="is_agree_all"
+                    class="input-agree input-agree-all"
+                    value="전체 동의"
+                />
+                <div class="agree-title-div-1">
+                    <p class="agree-title-p">전체 동의</p>
+                </div>
+            </div>
+            <hr class="line" />
+            <div class="agree-div-five">
+                <div class="agree-div">
+                    <div class="agree-checkbox check-icon-svg off">
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" class="check-icon-1">
+                                <path
+                                    fill="#ffffff"
+                                    d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                ></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <input
+                        type="checkbox"
+                        name="is_above_14"
+                        class="input-agree input-checkbox input-required"
+                        value="만 18세 이상입니다. (필수)"
+                    />
+                    <div class="agree-p-div">
+                        <p class="agree-p">만 18세 이상입니다. (필수)</p>
+                    </div>
+                </div>
+                <div class="agree-div">
+                    <div class="agree-checkbox check-icon-svg off">
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" class="check-icon-1">
+                                <path
+                                    fill="#ffffff"
+                                    d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                ></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <input
+                        type="checkbox"
+                        name="is_terms_conditions"
+                        class="input-agree input-checkbox input-required"
+                        value="야나와 이용약관 동의 (필수)"
+                    />
+                    <div class="agree-p-div">
+                        <p class="agree-p">야나와 이용약관 동의 (필수)</p>
+                    </div>
+                    <a href="">
+                        <span class="agree-arrow">
+                            <svg
+                                viewBox="0 0 12 24"
+                                color="rgba(55, 56, 60, 0.28)"
+                                class="agree-arrow-svg"
+                            >
+                                <path
+                                    fill="rgba(55, 56, 60, 0.28)"
+                                    d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z"
+                                ></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="agree-div">
+                    <div class="agree-checkbox check-icon-svg off">
+                        <span class="check-icon">
+                            <svg viewBox="0 0 24 24" class="check-icon-1">
+                                <path
+                                    fill="#ffffff"
+                                    d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                ></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <input
+                        type="checkbox"
+                        name="is_collect_information"
+                        class="input-agree input-required"
+                        value="야나와 개인정보 수집 및 이용 동의 (필수)"
+                    />
+                    <div class="agree-p-div">
+                        <p class="agree-p">
+                            야나와 개인정보 수집 및 이용 동의 (필수)
+                        </p>
+                    </div>
+                    <a href="">
+                        <span class="agree-arrow">
+                            <svg
+                                viewBox="0 0 12 24"
+                                color="rgba(55, 56, 60, 0.28)"
+                                class="agree-arrow-svg"
+                            >
+                                <path
+                                    fill="rgba(55, 56, 60, 0.28)"
+                                    d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z"
+                                ></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="agree-select-div">
+                    <div class="agree-div">
+                        <div class="agree-checkbox check-icon-svg off">
+                            <span class="check-icon">
+                                <svg viewBox="0 0 24 24" class="check-icon-1">
+                                    <path
+                                        fill="#ffffff"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <input
+                            type="checkbox"
+                            name="is_accept_event_all"
+                            class="input-agree input-checkbox input-agree-choice-1"
+                            value="매칭 소식, 스포츠 콘텐츠, 이벤트 등 야나와 맞춤
+                            정보 받기"
+                        />
+                        <div class="agree-p-div">
+                            <p class="agree-p">
+                                매칭 소식, 스포츠 콘텐츠, 이벤트 등 야나와 맞춤
+                                정보 받기
+                            </p>
+                        </div>
+                    </div>
+                    <div class="agree-select agree-select-1">
+                        <label class="agree-select-label">
+                            <input
+                                name="accept_marketing_email"
+                                type="checkbox"
+                                class="input-check-icon input-agree"
+                                value="1-이메일"
+                            />
+                            <span class="check-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="check-icon-svg off"
+                                >
+                                    <path
+                                        fill="rgba(55, 56, 60, 0.28)"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                            <p class="select-p">이메일</p>
+                        </label>
+                        <label class="agree-select-label">
+                            <input
+                                name="accept_marketing_push"
+                                type="checkbox"
+                                class="input-check-icon input-agree"
+                                value="1-앱 푸시"
+                            />
+                            <span class="check-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="check-icon-svg off"
+                                >
+                                    <path
+                                        fill="rgba(55, 56, 60, 0.28)"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                            <p class="select-p">앱 푸시</p>
+                        </label>
+                        <label class="agree-select-label">
+                            <input
+                                name="accept_marketing_sms"
+                                type="checkbox"
+                                class="input-check-icon input-agree"
+                                value="1-문자 메시지"
+                            />
+                            <span class="check-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="check-icon-svg off"
+                                >
+                                    <path
+                                        fill="rgba(55, 56, 60, 0.28)"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                            <p class="select-p">문자 메시지</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="agree-select-div">
+                    <div class="agree-div">
+                        <div class="agree-checkbox check-icon-svg off">
+                            <span class="check-icon">
+                                <svg viewBox="0 0 24 24" class="check-icon-1">
+                                    <path
+                                        fill="#ffffff"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <input
+                            type="checkbox"
+                            name="is_accept_recruit_all"
+                            class="input-agree input-checkbox input-agree-choice-2"
+                            value="맞춤 추천 포지션 정보 받기"
+                        />
+                        <div class="agree-p-div">
+                            <p class="agree-p">맞춤 추천 포지션 정보 받기</p>
+                        </div>
+                    </div>
+                    <div class="agree-select agree-select-2">
+                        <label class="agree-select-label">
+                            <input
+                                name="accept_recruit_email"
+                                type="checkbox"
+                                class="input-check-icon input-agree input-agree"
+                                value="2-이메일"
+                            />
+                            <span class="check-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="check-icon-svg off"
+                                >
+                                    <path
+                                        fill="rgba(55, 56, 60, 0.28)"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                            <p class="select-p">이메일</p>
+                        </label>
+                        <label class="agree-select-label">
+                            <input
+                                name="accept_recruit_push"
+                                type="checkbox"
+                                class="input-check-icon input-agree"
+                                value="2-앱 푸시"
+                            />
+                            <span class="check-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="check-icon-svg off"
+                                >
+                                    <path
+                                        fill="rgba(55, 56, 60, 0.28)"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                            <p class="select-p">앱 푸시</p>
+                        </label>
+                        <label class="agree-select-label">
+                            <input
+                                name="accept_recruit_sms"
+                                type="checkbox"
+                                class="input-check-icon input-agree"
+                                value="2-문자 메시지"
+                            />
+                            <span class="check-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="check-icon-svg off"
+                                >
+                                    <path
+                                        fill="rgba(55, 56, 60, 0.28)"
+                                        d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                            <p class="select-p">문자 메시지</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const checkboxes = document.querySelectorAll(
+                "input[type=checkbox].input-agree"
+            );
+            const checkAll = document.querySelector(
+                "input[type=checkbox].input-agree-all"
+            );
+            const inputChecks = document.querySelectorAll(
+                "input[type=checkbox].input-checkbox"
+            );
+            const checks = document.querySelectorAll(
+                "input[type=checkbox].input-required"
+            );
+
+            const choice1CheckAll = document.querySelector(
+                "input[type=checkbox].input-agree-choice-1"
+            );
+            const choice2CheckAll = document.querySelector(
+                "input[type=checkbox].input-agree-choice-2"
+            );
+            const choice1Checks = document.querySelectorAll(
+                "div.agree-select-1 input[type=checkbox]"
+            );
+            const choice2Checks = document.querySelectorAll(
+                "div.agree-select-2 input[type=checkbox]"
+            );
+            const checkIcons = document.querySelectorAll(".check-icon-svg");
+
+            checkAll.addEventListener("click", (e) => {
+                checkboxes.forEach((checkbox, i) => {
+                    checkbox.checked = checkAll.checked;
+                    if (checkIcons[i].classList.contains("off")) {
+                        checkIcons[i].classList.remove("off");
+                        checkIcons[i].classList.add("on");
+                    } else {
+                        checkIcons[i].classList.remove("on");
+                        checkIcons[i].classList.add("off");
+                    }
+                });
+            });
+
+            inputChecks.forEach((inputCheck, i) => {
+                inputCheck.addEventListener((e) => {
+                    e.target.checked = !e.target.checked;
+                });
+            });
+        </script>
+    </body>
+</html>

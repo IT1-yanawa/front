@@ -246,3 +246,25 @@ const applyButtonSports = document.querySelector(".apply-button-sports");
 applyButtonSports.addEventListener("click", () => {
     modalDivSports.style.display = "none";
 });
+// ------------------------------------------------------------------------------
+
+// 장소 사진 div 가져오기
+const placePhoto = document.querySelector(".place-card-thumb");
+
+// 장소 다음버튼 가져오기
+const nextBtn = document.querySelector(".next-btn");
+
+// 장소 이전버튼 가져오기
+const beforeBtn = document.querySelector(".before-btn");
+
+// 사진에 마우스 댔을때 버튼들 생기게하기
+placePhoto.addEventListener("mouseover", () => {
+    nextBtn.style.display = "block";
+    beforeBtn.style.display = "block";
+});
+
+// 사진에 마우스 땠을때 버튼들 사라지게 하기
+placePhoto.addEventListener("mouseout", () => {
+    nextBtn.style.display = "none";
+    beforeBtn.style.display = "none";
+});

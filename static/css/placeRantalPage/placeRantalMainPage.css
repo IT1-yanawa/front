@@ -145,12 +145,12 @@ button {
     height: 100%;
 }
 .place-list-filter {
-    padding-top: 45px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
     position: sticky;
     top: 60px;
     left: 0;
-    background: #fff;
+    background: #f0fff0;
     z-index: 2;
 }
 .filter {
@@ -299,7 +299,6 @@ ul {
 }
 hr {
     display: block;
-    margin-top: 3em;
     margin-bottom: 0.5em;
     margin-left: 250px;
     margin-right: 250px;
@@ -311,7 +310,7 @@ hr {
     max-width: 1400px;
     width: 90%;
     position: relative;
-    margin: 90px auto;
+    margin: 50px auto;
 }
 .popular-place-header {
     position: relative;
@@ -332,7 +331,7 @@ hr {
     width: 24%;
     list-style: none;
     vertical-align: top;
-    padding: 20px 8px;
+    padding: 10px 8px;
 }
 .place-card {
     display: inline-block;
@@ -357,6 +356,38 @@ a {
     background-size: cover;
     background-position: 50%;
     border-radius: 12px;
+}
+/* 배너 버튼 */
+.place-card-thumb .banner-btn .next-btn {
+    position: absolute;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    transform: translate(225px, 72px);
+    display: none;
+}
+.place-card-thumb .banner-btn .before-btn {
+    position: absolute;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    transform: translate(5px, 72px);
+    display: none;
+}
+/* 포인트, 돈 들어가는 부분 */
+.place-card-thumb .point img {
+    position: absolute;
+    z-index: 2;
+    width: 52px;
+    height: 52px;
+    transform: translateX(-2px);
+}
+.place-card-thumb .money img {
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    transform: translate(22px, -15px);
 }
 .place-card-thumb::before {
     content: "";
@@ -400,6 +431,18 @@ img {
     letter-spacing: 0.0057em;
     line-height: 24px;
 }
+/* 별점 자리들어가는 곳 */
+.place-scope {
+    float: right;
+    font-size: 14px;
+    position: relative;
+}
+.scope-img {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    transform: translate(-24px);
+}
 .place-card-content {
     color: rgba(55, 56, 60, 0.61);
     margin-top: 4px;
@@ -408,9 +451,16 @@ img {
     letter-spacing: 0.0194em;
     line-height: 18px;
 }
+.place-price {
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.place-price-detail {
+    font-size: 16px;
+    font-weight: 800;
+}
 .hr {
-    display: block;
-    margin-top: 3em;
     margin-bottom: 0.5em;
     margin-left: 0px;
     margin-right: 0px;
@@ -418,7 +468,7 @@ img {
     border-width: 1px;
 }
 .etc-place {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .etc-place-header {
     position: relative;

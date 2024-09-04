@@ -71,35 +71,6 @@ body a {
 .breadcrumbs > li a {
     color: #757575;
 }
-
-.breadcrumb-container-search {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.search input[type="search"] {
-    background-color: #fff;
-    border: 1px solid #ececec;
-    border-radius: 5px;
-    height: 50px;
-    padding: 10px 55px 10px 15px;
-    width: 300px;
-}
-.search input[type="submit"] {
-    border: medium none;
-    height: 48px;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    padding: 0 15px;
-    border-radius: 25px;
-    color: transparent;
-    background: url("https://help.wanted.co.kr/hc/theming_assets/01HZKQVZVNBMNBBS4HSJ0QHYZB");
-    background-size: 50px;
-    background-repeat: no-repeat;
-    display: block;
-    background-position: -15px 15px;
-    cursor: pointer;
-}
 .new-req-page {
     padding-right: 0px;
 }

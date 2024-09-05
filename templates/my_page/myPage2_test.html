@@ -17,7 +17,7 @@
                             <ul class="profile-menu-list">
                                 <li class="profile-menu-item">
                                     <a
-                                        class="profile-link profile-button"
+                                        class="profile-button profile-activelink profile-link"
                                         href=""
                                     >
                                         <span class="profile-link-text">
@@ -109,7 +109,7 @@
                                     </a>
                                 </li>
                                 <li class="profile-menu-item">
-                                    <hr class="menu-divider" />
+                                    <hr class="menu-divider profile-line" />
                                 </li>
                                 <li class="profile-menu-item">
                                     <button class="profile-link profile-button">
@@ -134,20 +134,18 @@
                     <!-- 프로필 보기 -->
                     <div
                         id="profile-view"
-                        class="grid-item grid-center grid-start grid-xs-12 grid-md-6"
+                        class="grid-item grid-start grid-xs-12 grid-md-6"
                     >
-                        <div
-                            class="grid-container grid-column profile-view-root"
-                        >
+                        <div class="grid-container nowrap grid-column">
                             <section class="grid-item grid-start">
                                 <div
-                                    class="grid-container grid-start profile-header-root"
+                                    class="grid-container grid-start profile-view-root profile-header-root profile-header-4p"
                                 >
                                     <div
                                         class="grid-item grid-start grid-stretch"
                                     >
                                         <div
-                                            class="grid-container grid-center profile-avatar-root"
+                                            class="grid-container align-cente profile-avatar-root"
                                         >
                                             <div class="grid-item grid-start">
                                                 <div
@@ -181,9 +179,11 @@
                             </section>
 
                             <div
-                                class="grid-container grid-center profile-follow-info"
+                                class="grid-container align-center profile-follow-info"
                             >
-                                <button class="btn-text btn-large profile-btn">
+                                <button
+                                    class="btn-text btn-large profile-btn btn-assistive-Op"
+                                >
                                     <span class="btn-label">
                                         <span class="label-medium profile-label"
                                             >가입된 팀
@@ -193,7 +193,7 @@
                                     <span class="profile-interaction"></span>
                                 </button>
                                 <span class="icon-divider">
-                                    <svg class="icon">
+                                    <svg class="icon" viewBox="0 0 24 24">
                                         <path
                                             fill-rule="evenodd"
                                             clip-rule="evenodd"
@@ -201,7 +201,9 @@
                                         ></path>
                                     </svg>
                                 </span>
-                                <button class="btn-text btn-large profile-btn">
+                                <button
+                                    class="btn-text btn-large profile-btn btn-assistive-Op"
+                                >
                                     <span class="btn-label">
                                         <span class="label-medium profile-label"
                                             >가입 팀원수
@@ -212,19 +214,27 @@
                                 </button>
                                 <hr class="divider-vertical" />
                                 <a
-                                    class="btn-text btn-large profile-btn"
+                                    class="btn-text btn-large profile-btn btn-assistive-Op"
                                     href=""
                                 >
                                     <span class="btn-label">
                                         <span class="label-medium profile-label"
-                                            >포인트 <strong>0p</strong>
-                                            <span class="icon-right">
-                                                <svg class="icon">
-                                                    <path
-                                                        d="M7.5812 3.08022C7.07352 3.58791 7.07352 4.41102 7.5812 4.9187L14.662 11.9995L7.5812 19.0802C7.07352 19.5879 7.07352 20.411 7.5812 20.9187C8.08888 21.4264 8.912 21.4264 9.41968 20.9187L17.4197 12.9187C17.9274 12.411 17.9274 11.5879 17.4197 11.0802L9.41968 3.08022C8.912 2.57254 8.08888 2.57254 7.5812 3.08022Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
+                                            >포인트
+                                            <strong
+                                                >0p
+                                                <span
+                                                    class="icon-right profile-chevron-right"
+                                                >
+                                                    <svg
+                                                        class="icon"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path
+                                                            d="M7.5812 3.08022C7.07352 3.58791 7.07352 4.41102 7.5812 4.9187L14.662 11.9995L7.5812 19.0802C7.07352 19.5879 7.07352 20.411 7.5812 20.9187C8.08888 21.4264 8.912 21.4264 9.41968 20.9187L17.4197 12.9187C17.9274 12.411 17.9274 11.5879 17.4197 11.0802L9.41968 3.08022C8.912 2.57254 8.08888 2.57254 7.5812 3.08022Z"
+                                                        ></path>
+                                                    </svg>
+                                                </span>
+                                            </strong>
                                         </span>
                                     </span>
                                     <span class="profile-interaction"></span>
@@ -232,26 +242,26 @@
                             </div>
 
                             <section
-                                class="grid-item grid-start profile-divider-section"
-                            >
-                                <hr class="divider-alt" />
-                            </section>
-                            <section class="grid-item align-start"></section>
+                                class="grid-item grid-start align-center profile-divider-section"
+                            ></section>
+
                             <div
-                                class="grid-container grid-center profile-settings-actions"
+                                class="grid-container profile-settings-actions"
                             >
                                 <button
-                                    class="btn-outlined btn-medium btn-assistive profile-settings-btn"
+                                    class="btn-outlined btn-medium btn-assistive btn-assistive profile-settings-btn"
                                 >
                                     <span class="btn-label">설정</span>
                                     <span class="profile-interaction"></span>
                                 </button>
                             </div>
-
+                            <section class="profile-side">
+                                <hr class="divider" />
+                            </section>
                             <section class="grid-item grid-start">
-                                <ul class="career-list-root">
+                                <ul class="list-root profile-education-list">
                                     <div
-                                        class="grid-container grid-between grid-center"
+                                        class="grid-container grid-between align-center"
                                     >
                                         <div
                                             class="grid-item grid-start subheader-title"
@@ -260,17 +270,6 @@
                                         </div>
                                         <div class="grid-item grid-start">
                                             <a class="icon-btn normal" href="">
-                                                <span class="icon-label">
-                                                    <span class="icon">
-                                                        <svg class="icon">
-                                                            <path
-                                                                fill-rule="evenodd"
-                                                                clip-rule="evenodd"
-                                                                d="M18.6706 2.60764C18.289 2.48365 17.8779 2.48365 17.4963 2.60764C17.2241 2.69607 17.0138 2.84649 16.8437 2.99091C16.6877 3.12334 16.5165 3.2945 16.3367 3.47434L16.3157 3.49541L3.1001 16.711V20.9004H7.28956L20.5051 7.68487L20.5262 7.66383C20.706 7.48401 20.8772 7.31288 21.0096 7.15687C21.154 6.98676 21.3045 6.77639 21.3929 6.50423C21.5169 6.12263 21.5169 5.71157 21.3929 5.32997C21.3045 5.05781 21.154 4.84745 21.0096 4.67733C20.8772 4.52133 20.706 4.35021 20.5262 4.1704L19.8302 3.47437C19.6503 3.29452 19.4792 3.12335 19.3232 2.99091C19.1531 2.84649 18.9427 2.69607 18.6706 2.60764ZM18.0127 4.34393C18.0518 4.30487 18.1151 4.30487 18.1541 4.34393L19.6566 5.84638C19.6956 5.88543 19.6956 5.94875 19.6566 5.9878L6.54396 19.1004H4.90009V17.4565L18.0127 4.34393Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                </span>
                                                 <span
                                                     class="profile-interaction"
                                                 ></span>
@@ -318,7 +317,7 @@
                         style="display: none"
                     >
                         <div
-                            class="grid-container grid-column profile-edit-root"
+                            class="grid-container grid-column profile-edit-root .profile-view-root"
                         >
                             <section
                                 class="grid-item grid-start profile-breadcrumb"
@@ -401,11 +400,11 @@
                                     </div>
 
                                     <div
-                                        class="grid-item grid-start grid-stretch profile-header"
+                                        class="grid-item grid-start grid-stretch profile-header-root"
                                     >
                                         <span
-                                            class="profile-subtext main-layout-space list-item-label"
-                                            >이름</span
+                                            class="profile-subtext main-layout-space list-item-label label-medium2"
+                                            >닉네임</span
                                         >
                                         <button
                                             class="list-item-btn"
@@ -429,6 +428,26 @@
                                                         ></path>
                                                     </svg>
                                                 </span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="grid-item grid-start grid-stretch profile-header-root"
+                                    >
+                                        <span
+                                            class="profile-subtext main-layout-space list-item-label label-medium2"
+                                            >이메일</span
+                                        >
+                                        <button
+                                            class="list-item-btn"
+                                            id="openModal2"
+                                        >
+                                            <div class="list-item-text">
+                                                <p
+                                                    class="typography-body1 profile-name list-item-label"
+                                                >
+                                                    parksu@naver.com
+                                                </p>
                                             </div>
                                         </button>
                                     </div>
@@ -479,13 +498,13 @@
                                                             class="modal-void"
                                                         ></div>
                                                         <p class="modal-title">
-                                                            이름변경
+                                                            닉네임 변경
                                                         </p>
                                                     </div>
                                                     <div class="modal-input">
                                                         <input
                                                             type="text"
-                                                            placeholder="이름을 입력해주세요."
+                                                            placeholder="닉네임을 입력해주세요."
                                                             class="input-text"
                                                         />
                                                     </div>
@@ -538,11 +557,1097 @@
                                                             class="modal-input-wrapper"
                                                         >
                                                             <div
+                                                                class="btn-primary"
+                                                            >
+                                                                <select
+                                                                    class="country-selec"
+                                                                >
+                                                                    <option
+                                                                        value=""
+                                                                        disabled=""
+                                                                    >
+                                                                        선택하기
+                                                                    </option>
+                                                                    <option
+                                                                        value="KR"
+                                                                    >
+                                                                        South
+                                                                        Korea
+                                                                        +82
+                                                                    </option>
+                                                                    <option
+                                                                        value="JP"
+                                                                    >
+                                                                        Japan
+                                                                        +81
+                                                                    </option>
+                                                                    <option
+                                                                        value="TW"
+                                                                    >
+                                                                        Taiwan
+                                                                        +886
+                                                                    </option>
+                                                                    <option
+                                                                        value="HK"
+                                                                    >
+                                                                        Hong
+                                                                        Kong
+                                                                        +852
+                                                                    </option>
+                                                                    <option
+                                                                        value="SG"
+                                                                    >
+                                                                        Singapore
+                                                                        +65
+                                                                    </option>
+                                                                    <option
+                                                                        value="AF"
+                                                                    >
+                                                                        Afghanistan
+                                                                        +93
+                                                                    </option>
+                                                                    <option
+                                                                        value="AL"
+                                                                    >
+                                                                        Albania
+                                                                        +355
+                                                                    </option>
+                                                                    <option
+                                                                        value="DZ"
+                                                                    >
+                                                                        Algeria
+                                                                        +213
+                                                                    </option>
+                                                                    <option
+                                                                        value="AO"
+                                                                    >
+                                                                        Angola
+                                                                        +244
+                                                                    </option>
+                                                                    <option
+                                                                        value="AR"
+                                                                    >
+                                                                        Argentina
+                                                                        +54
+                                                                    </option>
+                                                                    <option
+                                                                        value="AM"
+                                                                    >
+                                                                        Armenia
+                                                                        +374
+                                                                    </option>
+                                                                    <option
+                                                                        value="AW"
+                                                                    >
+                                                                        Aruba
+                                                                        +297
+                                                                    </option>
+                                                                    <option
+                                                                        value="AU"
+                                                                    >
+                                                                        Australia
+                                                                        +61
+                                                                    </option>
+                                                                    <option
+                                                                        value="AT"
+                                                                    >
+                                                                        Austria
+                                                                        +43
+                                                                    </option>
+                                                                    <option
+                                                                        value="AZ"
+                                                                    >
+                                                                        Azerbaijan
+                                                                        +994
+                                                                    </option>
+                                                                    <option
+                                                                        value="BH"
+                                                                    >
+                                                                        Bahrain
+                                                                        +973
+                                                                    </option>
+                                                                    <option
+                                                                        value="BD"
+                                                                    >
+                                                                        Bangladesh
+                                                                        +880
+                                                                    </option>
+                                                                    <option
+                                                                        value="BY"
+                                                                    >
+                                                                        Belarus
+                                                                        +375
+                                                                    </option>
+                                                                    <option
+                                                                        value="BE"
+                                                                    >
+                                                                        Belgium
+                                                                        +32
+                                                                    </option>
+                                                                    <option
+                                                                        value="BZ"
+                                                                    >
+                                                                        Belize
+                                                                        +501
+                                                                    </option>
+                                                                    <option
+                                                                        value="BJ"
+                                                                    >
+                                                                        Benin
+                                                                        +229
+                                                                    </option>
+                                                                    <option
+                                                                        value="BT"
+                                                                    >
+                                                                        Bhutan
+                                                                        +975
+                                                                    </option>
+                                                                    <option
+                                                                        value="BO"
+                                                                    >
+                                                                        Bolivia
+                                                                        +591
+                                                                    </option>
+                                                                    <option
+                                                                        value="BW"
+                                                                    >
+                                                                        Botswana
+                                                                        +267
+                                                                    </option>
+                                                                    <option
+                                                                        value="BR"
+                                                                    >
+                                                                        Brazil
+                                                                        +55
+                                                                    </option>
+                                                                    <option
+                                                                        value="BN"
+                                                                    >
+                                                                        Brunei
+                                                                        +673
+                                                                    </option>
+                                                                    <option
+                                                                        value="BG"
+                                                                    >
+                                                                        Bulgaria
+                                                                        +359
+                                                                    </option>
+                                                                    <option
+                                                                        value="BF"
+                                                                    >
+                                                                        Burkina
+                                                                        Faso
+                                                                        +226
+                                                                    </option>
+                                                                    <option
+                                                                        value="KH"
+                                                                    >
+                                                                        Cambodia
+                                                                        +855
+                                                                    </option>
+                                                                    <option
+                                                                        value="CM"
+                                                                    >
+                                                                        Cameroon
+                                                                        +237
+                                                                    </option>
+                                                                    <option
+                                                                        value="CA"
+                                                                    >
+                                                                        Canada
+                                                                        +1
+                                                                    </option>
+                                                                    <option
+                                                                        value="CL"
+                                                                    >
+                                                                        Chile
+                                                                        +56
+                                                                    </option>
+                                                                    <option
+                                                                        value="CN"
+                                                                    >
+                                                                        China
+                                                                        +86
+                                                                    </option>
+                                                                    <option
+                                                                        value="CX"
+                                                                    >
+                                                                        Christmas
+                                                                        Island
+                                                                        +61
+                                                                    </option>
+                                                                    <option
+                                                                        value="CC"
+                                                                    >
+                                                                        Cocos
+                                                                        Islands
+                                                                        +61
+                                                                    </option>
+                                                                    <option
+                                                                        value="CO"
+                                                                    >
+                                                                        Colombia
+                                                                        +57
+                                                                    </option>
+                                                                    <option
+                                                                        value="KM"
+                                                                    >
+                                                                        Comoros
+                                                                        +269
+                                                                    </option>
+                                                                    <option
+                                                                        value="CR"
+                                                                    >
+                                                                        Costa
+                                                                        Rica
+                                                                        +506
+                                                                    </option>
+                                                                    <option
+                                                                        value="HR"
+                                                                    >
+                                                                        Croatia
+                                                                        +385
+                                                                    </option>
+                                                                    <option
+                                                                        value="CU"
+                                                                    >
+                                                                        Cuba +53
+                                                                    </option>
+                                                                    <option
+                                                                        value="CW"
+                                                                    >
+                                                                        Curacao
+                                                                        +599
+                                                                    </option>
+                                                                    <option
+                                                                        value="CY"
+                                                                    >
+                                                                        Cyprus
+                                                                        +357
+                                                                    </option>
+                                                                    <option
+                                                                        value="CZ"
+                                                                    >
+                                                                        Czech
+                                                                        Republic
+                                                                        +420
+                                                                    </option>
+                                                                    <option
+                                                                        value="DK"
+                                                                    >
+                                                                        Denmark
+                                                                        +45
+                                                                    </option>
+                                                                    <option
+                                                                        value="DJ"
+                                                                    >
+                                                                        Djibouti
+                                                                        +253
+                                                                    </option>
+                                                                    <option
+                                                                        value="EC"
+                                                                    >
+                                                                        Ecuador
+                                                                        +593
+                                                                    </option>
+                                                                    <option
+                                                                        value="EG"
+                                                                    >
+                                                                        Egypt
+                                                                        +20
+                                                                    </option>
+                                                                    <option
+                                                                        value="SV"
+                                                                    >
+                                                                        El
+                                                                        Salvador
+                                                                        +503
+                                                                    </option>
+                                                                    <option
+                                                                        value="GQ"
+                                                                    >
+                                                                        Equatorial
+                                                                        Guinea
+                                                                        +240
+                                                                    </option>
+                                                                    <option
+                                                                        value="EE"
+                                                                    >
+                                                                        Estonia
+                                                                        +372
+                                                                    </option>
+                                                                    <option
+                                                                        value="ET"
+                                                                    >
+                                                                        Ethiopia
+                                                                        +251
+                                                                    </option>
+                                                                    <option
+                                                                        value="FO"
+                                                                    >
+                                                                        Faroe
+                                                                        Islands
+                                                                        +298
+                                                                    </option>
+                                                                    <option
+                                                                        value="FJ"
+                                                                    >
+                                                                        Fiji
+                                                                        +679
+                                                                    </option>
+                                                                    <option
+                                                                        value="FI"
+                                                                    >
+                                                                        Finland
+                                                                        +358
+                                                                    </option>
+                                                                    <option
+                                                                        value="FR"
+                                                                    >
+                                                                        France
+                                                                        +33
+                                                                    </option>
+                                                                    <option
+                                                                        value="PF"
+                                                                    >
+                                                                        French
+                                                                        Polynesia
+                                                                        +689
+                                                                    </option>
+                                                                    <option
+                                                                        value="GM"
+                                                                    >
+                                                                        Gambia
+                                                                        +220
+                                                                    </option>
+                                                                    <option
+                                                                        value="GE"
+                                                                    >
+                                                                        Georgia
+                                                                        +995
+                                                                    </option>
+                                                                    <option
+                                                                        value="DE"
+                                                                    >
+                                                                        Germany
+                                                                        +49
+                                                                    </option>
+                                                                    <option
+                                                                        value="GH"
+                                                                    >
+                                                                        Ghana
+                                                                        +233
+                                                                    </option>
+                                                                    <option
+                                                                        value="GR"
+                                                                    >
+                                                                        Greece
+                                                                        +30
+                                                                    </option>
+                                                                    <option
+                                                                        value="GL"
+                                                                    >
+                                                                        Greenland
+                                                                        +299
+                                                                    </option>
+                                                                    <option
+                                                                        value="GT"
+                                                                    >
+                                                                        Guatemala
+                                                                        +502
+                                                                    </option>
+                                                                    <option
+                                                                        value="GN"
+                                                                    >
+                                                                        Guinea
+                                                                        +224
+                                                                    </option>
+                                                                    <option
+                                                                        value="GY"
+                                                                    >
+                                                                        Guyana
+                                                                        +592
+                                                                    </option>
+                                                                    <option
+                                                                        value="HT"
+                                                                    >
+                                                                        Haiti
+                                                                        +509
+                                                                    </option>
+                                                                    <option
+                                                                        value="HN"
+                                                                    >
+                                                                        Honduras
+                                                                        +504
+                                                                    </option>
+                                                                    <option
+                                                                        value="HU"
+                                                                    >
+                                                                        Hungary
+                                                                        +36
+                                                                    </option>
+                                                                    <option
+                                                                        value="IS"
+                                                                    >
+                                                                        Iceland
+                                                                        +354
+                                                                    </option>
+                                                                    <option
+                                                                        value="IN"
+                                                                    >
+                                                                        India
+                                                                        +91
+                                                                    </option>
+                                                                    <option
+                                                                        value="ID"
+                                                                    >
+                                                                        Indonesia
+                                                                        +62
+                                                                    </option>
+                                                                    <option
+                                                                        value="IR"
+                                                                    >
+                                                                        Iran +98
+                                                                    </option>
+                                                                    <option
+                                                                        value="IQ"
+                                                                    >
+                                                                        Iraq
+                                                                        +964
+                                                                    </option>
+                                                                    <option
+                                                                        value="IE"
+                                                                    >
+                                                                        Ireland
+                                                                        +353
+                                                                    </option>
+                                                                    <option
+                                                                        value="IL"
+                                                                    >
+                                                                        Israel
+                                                                        +972
+                                                                    </option>
+                                                                    <option
+                                                                        value="IT"
+                                                                    >
+                                                                        Italy
+                                                                        +39
+                                                                    </option>
+                                                                    <option
+                                                                        value="JO"
+                                                                    >
+                                                                        Jordan
+                                                                        +962
+                                                                    </option>
+                                                                    <option
+                                                                        value="KZ"
+                                                                    >
+                                                                        Kazakhstan
+                                                                        +7
+                                                                    </option>
+                                                                    <option
+                                                                        value="KE"
+                                                                    >
+                                                                        Kenya
+                                                                        +254
+                                                                    </option>
+                                                                    <option
+                                                                        value="XK"
+                                                                    >
+                                                                        Kosovo
+                                                                        +383
+                                                                    </option>
+                                                                    <option
+                                                                        value="KW"
+                                                                    >
+                                                                        Kuwait
+                                                                        +965
+                                                                    </option>
+                                                                    <option
+                                                                        value="KG"
+                                                                    >
+                                                                        Kyrgyzstan
+                                                                        +996
+                                                                    </option>
+                                                                    <option
+                                                                        value="LA"
+                                                                    >
+                                                                        Laos
+                                                                        +856
+                                                                    </option>
+                                                                    <option
+                                                                        value="LV"
+                                                                    >
+                                                                        Latvia
+                                                                        +371
+                                                                    </option>
+                                                                    <option
+                                                                        value="LB"
+                                                                    >
+                                                                        Lebanon
+                                                                        +961
+                                                                    </option>
+                                                                    <option
+                                                                        value="LY"
+                                                                    >
+                                                                        Libya
+                                                                        +218
+                                                                    </option>
+                                                                    <option
+                                                                        value="LI"
+                                                                    >
+                                                                        Liechtenstein
+                                                                        +423
+                                                                    </option>
+                                                                    <option
+                                                                        value="LT"
+                                                                    >
+                                                                        Lithuania
+                                                                        +370
+                                                                    </option>
+                                                                    <option
+                                                                        value="LU"
+                                                                    >
+                                                                        Luxembourg
+                                                                        +352
+                                                                    </option>
+                                                                    <option
+                                                                        value="MO"
+                                                                    >
+                                                                        Macau
+                                                                        +853
+                                                                    </option>
+                                                                    <option
+                                                                        value="MK"
+                                                                    >
+                                                                        Macedonia
+                                                                        +389
+                                                                    </option>
+                                                                    <option
+                                                                        value="MG"
+                                                                    >
+                                                                        Madagascar
+                                                                        +261
+                                                                    </option>
+                                                                    <option
+                                                                        value="MW"
+                                                                    >
+                                                                        Malawi
+                                                                        +265
+                                                                    </option>
+                                                                    <option
+                                                                        value="MY"
+                                                                    >
+                                                                        Malaysia
+                                                                        +60
+                                                                    </option>
+                                                                    <option
+                                                                        value="MV"
+                                                                    >
+                                                                        Maldives
+                                                                        +960
+                                                                    </option>
+                                                                    <option
+                                                                        value="ML"
+                                                                    >
+                                                                        Mali
+                                                                        +223
+                                                                    </option>
+                                                                    <option
+                                                                        value="MT"
+                                                                    >
+                                                                        Malta
+                                                                        +356
+                                                                    </option>
+                                                                    <option
+                                                                        value="MH"
+                                                                    >
+                                                                        Marshall
+                                                                        Islands
+                                                                        +692
+                                                                    </option>
+                                                                    <option
+                                                                        value="MR"
+                                                                    >
+                                                                        Mauritania
+                                                                        +222
+                                                                    </option>
+                                                                    <option
+                                                                        value="MU"
+                                                                    >
+                                                                        Mauritius
+                                                                        +230
+                                                                    </option>
+                                                                    <option
+                                                                        value="MX"
+                                                                    >
+                                                                        Mexico
+                                                                        +52
+                                                                    </option>
+                                                                    <option
+                                                                        value="MD"
+                                                                    >
+                                                                        Moldova
+                                                                        +373
+                                                                    </option>
+                                                                    <option
+                                                                        value="MN"
+                                                                    >
+                                                                        Mongolia
+                                                                        +976
+                                                                    </option>
+                                                                    <option
+                                                                        value="ME"
+                                                                    >
+                                                                        Montenegro
+                                                                        +382
+                                                                    </option>
+                                                                    <option
+                                                                        value="MA"
+                                                                    >
+                                                                        Morocco
+                                                                        +212
+                                                                    </option>
+                                                                    <option
+                                                                        value="MZ"
+                                                                    >
+                                                                        Mozambique
+                                                                        +258
+                                                                    </option>
+                                                                    <option
+                                                                        value="MM"
+                                                                    >
+                                                                        Myanmar
+                                                                        +95
+                                                                    </option>
+                                                                    <option
+                                                                        value="NA"
+                                                                    >
+                                                                        Namibia
+                                                                        +264
+                                                                    </option>
+                                                                    <option
+                                                                        value="NP"
+                                                                    >
+                                                                        Nepal
+                                                                        +977
+                                                                    </option>
+                                                                    <option
+                                                                        value="NL"
+                                                                    >
+                                                                        Netherlands
+                                                                        +31
+                                                                    </option>
+                                                                    <option
+                                                                        value="NC"
+                                                                    >
+                                                                        New
+                                                                        Caledonia
+                                                                        +687
+                                                                    </option>
+                                                                    <option
+                                                                        value="NZ"
+                                                                    >
+                                                                        New
+                                                                        Zealand
+                                                                        +64
+                                                                    </option>
+                                                                    <option
+                                                                        value="NI"
+                                                                    >
+                                                                        Nicaragua
+                                                                        +505
+                                                                    </option>
+                                                                    <option
+                                                                        value="NE"
+                                                                    >
+                                                                        Niger
+                                                                        +227
+                                                                    </option>
+                                                                    <option
+                                                                        value="NG"
+                                                                    >
+                                                                        Nigeria
+                                                                        +234
+                                                                    </option>
+                                                                    <option
+                                                                        value="NO"
+                                                                    >
+                                                                        Norway
+                                                                        +47
+                                                                    </option>
+                                                                    <option
+                                                                        value="OM"
+                                                                    >
+                                                                        Oman
+                                                                        +968
+                                                                    </option>
+                                                                    <option
+                                                                        value="PK"
+                                                                    >
+                                                                        Pakistan
+                                                                        +92
+                                                                    </option>
+                                                                    <option
+                                                                        value="PW"
+                                                                    >
+                                                                        Palau
+                                                                        +680
+                                                                    </option>
+                                                                    <option
+                                                                        value="PS"
+                                                                    >
+                                                                        Palestine
+                                                                        +970
+                                                                    </option>
+                                                                    <option
+                                                                        value="PA"
+                                                                    >
+                                                                        Panama
+                                                                        +507
+                                                                    </option>
+                                                                    <option
+                                                                        value="PG"
+                                                                    >
+                                                                        Papua
+                                                                        New
+                                                                        Guinea
+                                                                        +675
+                                                                    </option>
+                                                                    <option
+                                                                        value="PY"
+                                                                    >
+                                                                        Paraguay
+                                                                        +595
+                                                                    </option>
+                                                                    <option
+                                                                        value="PE"
+                                                                    >
+                                                                        Peru +51
+                                                                    </option>
+                                                                    <option
+                                                                        value="PH"
+                                                                    >
+                                                                        Philippines
+                                                                        +63
+                                                                    </option>
+                                                                    <option
+                                                                        value="PL"
+                                                                    >
+                                                                        Poland
+                                                                        +48
+                                                                    </option>
+                                                                    <option
+                                                                        value="PT"
+                                                                    >
+                                                                        Portugal
+                                                                        +351
+                                                                    </option>
+                                                                    <option
+                                                                        value="QA"
+                                                                    >
+                                                                        Qatar
+                                                                        +974
+                                                                    </option>
+                                                                    <option
+                                                                        value="RE"
+                                                                    >
+                                                                        Reunion
+                                                                        +262
+                                                                    </option>
+                                                                    <option
+                                                                        value="RO"
+                                                                    >
+                                                                        Romania
+                                                                        +40
+                                                                    </option>
+                                                                    <option
+                                                                        value="RU"
+                                                                    >
+                                                                        Russia
+                                                                        +7
+                                                                    </option>
+                                                                    <option
+                                                                        value="RW"
+                                                                    >
+                                                                        Rwanda
+                                                                        +250
+                                                                    </option>
+                                                                    <option
+                                                                        value="WS"
+                                                                    >
+                                                                        Samoa
+                                                                        +685
+                                                                    </option>
+                                                                    <option
+                                                                        value="SA"
+                                                                    >
+                                                                        Saudi
+                                                                        Arabia
+                                                                        +966
+                                                                    </option>
+                                                                    <option
+                                                                        value="SN"
+                                                                    >
+                                                                        Senegal
+                                                                        +221
+                                                                    </option>
+                                                                    <option
+                                                                        value="RS"
+                                                                    >
+                                                                        Serbia
+                                                                        +381
+                                                                    </option>
+                                                                    <option
+                                                                        value="SC"
+                                                                    >
+                                                                        Seychelles
+                                                                        +248
+                                                                    </option>
+                                                                    <option
+                                                                        value="SL"
+                                                                    >
+                                                                        Sierra
+                                                                        Leone
+                                                                        +232
+                                                                    </option>
+                                                                    <option
+                                                                        value="SK"
+                                                                    >
+                                                                        Slovakia
+                                                                        +421
+                                                                    </option>
+                                                                    <option
+                                                                        value="SI"
+                                                                    >
+                                                                        Slovenia
+                                                                        +386
+                                                                    </option>
+                                                                    <option
+                                                                        value="SB"
+                                                                    >
+                                                                        Solomon
+                                                                        Islands
+                                                                        +677
+                                                                    </option>
+                                                                    <option
+                                                                        value="SO"
+                                                                    >
+                                                                        Somalia
+                                                                        +252
+                                                                    </option>
+                                                                    <option
+                                                                        value="ZA"
+                                                                    >
+                                                                        South
+                                                                        Africa
+                                                                        +27
+                                                                    </option>
+                                                                    <option
+                                                                        value="SS"
+                                                                    >
+                                                                        South
+                                                                        Sudan
+                                                                        +211
+                                                                    </option>
+                                                                    <option
+                                                                        value="ES"
+                                                                    >
+                                                                        Spain
+                                                                        +34
+                                                                    </option>
+                                                                    <option
+                                                                        value="LK"
+                                                                    >
+                                                                        Sri
+                                                                        Lanka
+                                                                        +94
+                                                                    </option>
+                                                                    <option
+                                                                        value="SD"
+                                                                    >
+                                                                        Sudan
+                                                                        +249
+                                                                    </option>
+                                                                    <option
+                                                                        value="SR"
+                                                                    >
+                                                                        Suriname
+                                                                        +597
+                                                                    </option>
+                                                                    <option
+                                                                        value="SE"
+                                                                    >
+                                                                        Sweden
+                                                                        +46
+                                                                    </option>
+                                                                    <option
+                                                                        value="CH"
+                                                                    >
+                                                                        Switzerland
+                                                                        +41
+                                                                    </option>
+                                                                    <option
+                                                                        value="SY"
+                                                                    >
+                                                                        Syria
+                                                                        +963
+                                                                    </option>
+                                                                    <option
+                                                                        value="TJ"
+                                                                    >
+                                                                        Tajikistan
+                                                                        +992
+                                                                    </option>
+                                                                    <option
+                                                                        value="TZ"
+                                                                    >
+                                                                        Tanzania
+                                                                        +255
+                                                                    </option>
+                                                                    <option
+                                                                        value="TH"
+                                                                    >
+                                                                        Thailand
+                                                                        +66
+                                                                    </option>
+                                                                    <option
+                                                                        value="TG"
+                                                                    >
+                                                                        Togo
+                                                                        +228
+                                                                    </option>
+                                                                    <option
+                                                                        value="TO"
+                                                                    >
+                                                                        Tonga
+                                                                        +676
+                                                                    </option>
+                                                                    <option
+                                                                        value="TN"
+                                                                    >
+                                                                        Tunisia
+                                                                        +216
+                                                                    </option>
+                                                                    <option
+                                                                        value="TR"
+                                                                    >
+                                                                        Turkey
+                                                                        +90
+                                                                    </option>
+                                                                    <option
+                                                                        value="TM"
+                                                                    >
+                                                                        Turkmenistan
+                                                                        +993
+                                                                    </option>
+                                                                    <option
+                                                                        value="UG"
+                                                                    >
+                                                                        Uganda
+                                                                        +256
+                                                                    </option>
+                                                                    <option
+                                                                        value="UA"
+                                                                    >
+                                                                        Ukraine
+                                                                        +380
+                                                                    </option>
+                                                                    <option
+                                                                        value="AE"
+                                                                    >
+                                                                        United
+                                                                        Arab
+                                                                        Emirates
+                                                                        +971
+                                                                    </option>
+                                                                    <option
+                                                                        value="GB"
+                                                                    >
+                                                                        United
+                                                                        Kingdom
+                                                                        +44
+                                                                    </option>
+                                                                    <option
+                                                                        value="US"
+                                                                    >
+                                                                        United
+                                                                        States
+                                                                        +1
+                                                                    </option>
+                                                                    <option
+                                                                        value="UY"
+                                                                    >
+                                                                        Uruguay
+                                                                        +598
+                                                                    </option>
+                                                                    <option
+                                                                        value="UZ"
+                                                                    >
+                                                                        Uzbekistan
+                                                                        +998
+                                                                    </option>
+                                                                    <option
+                                                                        value="VU"
+                                                                    >
+                                                                        Vanuatu
+                                                                        +678
+                                                                    </option>
+                                                                    <option
+                                                                        value="VE"
+                                                                    >
+                                                                        Venezuela
+                                                                        +58
+                                                                    </option>
+                                                                    <option
+                                                                        value="VN"
+                                                                    >
+                                                                        Vietnam
+                                                                        +84
+                                                                    </option>
+                                                                    <option
+                                                                        value="YE"
+                                                                    >
+                                                                        Yemen
+                                                                        +967
+                                                                    </option>
+                                                                    <option
+                                                                        value="ZM"
+                                                                    >
+                                                                        Zambia
+                                                                        +260
+                                                                    </option>
+                                                                    <option
+                                                                        value="ZW"
+                                                                    >
+                                                                        Zimbabwe
+                                                                        +263
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <div
+                                                                class="dropdown-icon-container"
+                                                            >
+                                                                <span
+                                                                    class="dropdown-icon"
+                                                                >
+                                                                    <svg
+                                                                        viewBox="0 0 24 24"
+                                                                        class="dropdown-icon-svg"
+                                                                    >
+                                                                        <path
+                                                                            fill="rgba(55, 56, 60, 0.61)"
+                                                                            d="M3.08071 7.58071C3.58839 7.07303 4.41151 7.07303 4.91919 7.58071L12 14.6615L19.0807 7.58071C19.5884 7.07303 20.4115 7.07303 20.9192 7.58071C21.4269 8.08839 21.4269 8.91151 20.9192 9.41919L12.9192 17.4192C12.4115 17.9269 11.5884 17.9269 11.0807 17.4192L3.08071 9.41919C2.57303 8.91151 2.57303 8.08839 3.08071 7.58071Z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+
+                                                            <div
                                                                 class="modal-input-field"
                                                             >
                                                                 <input
                                                                     type="number"
-                                                                    pattern="[0-9]*"
                                                                     placeholder="예)01013245768"
                                                                     class="modal-input-number"
                                                                 />
@@ -552,11 +1657,56 @@
                                                                 >
                                                                     <span
                                                                         class="modal-btn-text"
-                                                                        >번호
-                                                                        변경</span
+                                                                        >번호변경
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <div
+                                                                class="modal-input-field"
+                                                            >
+                                                                <input
+                                                                    type="number"
+                                                                    pattern="[0-9]*"
+                                                                    placeholder="인증번호를 입력해주세요."
+                                                                    class="modal-input-number"
+                                                                />
+                                                            </div>
+                                                            <div
+                                                                class="modal-input-field"
+                                                            >
+                                                                <input
+                                                                    type="number"
+                                                                    placeholder="예)01013245768"
+                                                                    class="modal-input-number"
+                                                                />
+                                                                <button
+                                                                    type="button"
+                                                                    class="modal-btn-change"
+                                                                >
+                                                                    <span
+                                                                        class="modal-btn-text"
+                                                                        >번호받기</span
                                                                     >
                                                                 </button>
                                                             </div>
+                                                            <p
+                                                                class="modal-btn-text-correctly1"
+                                                            >
+                                                                현재 등록된
+                                                                전화번호와
+                                                                동일한
+                                                                번호입니다. 다른
+                                                                전화번호를
+                                                                입력해주세요.
+                                                            </p>
+                                                            <p
+                                                                class="modal-btn-text-correctly2"
+                                                            >
+                                                                올바른
+                                                                전화번호를
+                                                                입력해주세요.
+                                                            </p>
+
                                                             <div
                                                                 class="modal-input-field"
                                                             >
@@ -693,7 +1843,7 @@
                                                     class="grid-item grid-start"
                                                 >
                                                     <span
-                                                        class="list-item-label"
+                                                        class="list-item-label action-empty text-medium"
                                                         >0 / 150</span
                                                     >
                                                 </div>
@@ -725,96 +1875,14 @@
                                         </div>
                                     </li>
                                 </form>
-                                <form>
-                                    <span
-                                        class="profile-label list-item-label profile-name"
-                                        >선호 하는 종목</span
-                                    >
-                                    <button
-                                        id="editIntroBtn2"
-                                        class="list-item-btn profile-edit-desc"
-                                    >
-                                        <div class="list-item-text">
-                                            <p
-                                                class="list-item-label profile-name typography-body1"
-                                            >
-                                                선호하는 종목을 입력해주세요
-                                            </p>
-                                        </div>
-                                        <div class="list-item-icon">
-                                            <span class="icon-img">
-                                                <svg
-                                                    class="icon-svg"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path
-                                                        d="M8.86407 4.86346C8.5126 5.21493 8.5126 5.78478 8.86407 6.13625L14.7277 11.9999L8.86407 17.8635C8.5126 18.2149 8.5126 18.7848 8.86407 19.1362C9.21554 19.4877 9.78539 19.4877 10.1369 19.1362L16.6369 12.6362C16.9883 12.2848 16.9883 11.7149 16.6369 11.3635L10.1369 4.86346C9.78539 4.51199 9.21554 4.51199 8.86407 4.86346Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </button>
 
-                                    <li
-                                        class="list-item-btn profile-edit-desc"
-                                        style="display: none"
-                                    >
-                                        <div class="grid-container grid-column">
-                                            <div
-                                                id="introForm2"
-                                                class="grid-item grid-start"
-                                            >
-                                                <textarea
-                                                    class="input-textarea"
-                                                    name="description"
-                                                    placeholder="선호하는 종목을 입력해주세요."
-                                                ></textarea>
-                                            </div>
-                                            <div
-                                                class="grid-container grid-between grid-center profile-edit-actions grid-item"
-                                            >
-                                                <div
-                                                    class="grid-item grid-start"
-                                                >
-                                                    <span
-                                                        class="list-item-label"
-                                                        >0 / 50</span
-                                                    >
-                                                </div>
-                                                <div
-                                                    class="grid-item grid-start profile-edit-buttons"
-                                                >
-                                                    <button
-                                                        class="btn-outlined outlined btn-assistive btn-sub"
-                                                    >
-                                                        <span class="icon-label"
-                                                            >취소</span
-                                                        >
-                                                        <span
-                                                            class="profile-interaction"
-                                                        ></span>
-                                                    </button>
-                                                    <button
-                                                        class="btn-small btn-sub"
-                                                    >
-                                                        <span class="icon-label"
-                                                            >저장</span
-                                                        >
-                                                        <span
-                                                            class="profile-interaction"
-                                                        ></span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </form>
                                 <form>
                                     <span
                                         class="profile-label list-item-label profile-name"
                                         >선호하는 포지션</span
                                     >
                                     <button
+                                        id="editIntroBtn2"
                                         class="list-item-btn profile-edit-desc"
                                     >
                                         <div class="list-item-text">
@@ -842,7 +1910,10 @@
                                         class="list-item-btn profile-edit-desc"
                                         style="display: none"
                                     >
-                                        <div class="grid-container grid-column">
+                                        <div
+                                            id="introForm2"
+                                            class="grid-container grid-column"
+                                        >
                                             <div class="grid-item grid-start">
                                                 <textarea
                                                     class="input-textarea"
@@ -857,7 +1928,7 @@
                                                     class="grid-item grid-start"
                                                 >
                                                     <span
-                                                        class="list-item-label"
+                                                        class="list-item-label action-empty text-medium"
                                                         >0 / 50</span
                                                     >
                                                 </div>
@@ -865,6 +1936,7 @@
                                                     class="grid-item grid-start profile-edit-buttons"
                                                 >
                                                     <button
+                                                        id="cancelBtn2"
                                                         class="btn-outlined outlined btn-assistive btn-sub"
                                                     >
                                                         <span class="icon-label"
@@ -875,6 +1947,7 @@
                                                         ></span>
                                                     </button>
                                                     <button
+                                                        id="saveBtn2"
                                                         class="btn-small btn-sub"
                                                     >
                                                         <span class="icon-label"
@@ -895,6 +1968,7 @@
                                         >운동 경력</span
                                     >
                                     <button
+                                        id="editIntroBtn3"
                                         class="list-item-btn profile-edit-desc"
                                     >
                                         <div class="list-item-text">
@@ -922,7 +1996,10 @@
                                         class="list-item-btn profile-edit-desc"
                                         style="display: none"
                                     >
-                                        <div class="grid-container grid-column">
+                                        <div
+                                            id="introForm3"
+                                            class="grid-container grid-column"
+                                        >
                                             <div class="grid-item grid-start">
                                                 <textarea
                                                     class="input-textarea"
@@ -937,14 +2014,15 @@
                                                     class="grid-item grid-start"
                                                 >
                                                     <span
-                                                        class="list-item-label"
-                                                        >0 / 150</span
+                                                        class="list-item-label action-empty text-medium"
+                                                        >0 / 50</span
                                                     >
                                                 </div>
                                                 <div
                                                     class="grid-item grid-start profile-edit-buttons"
                                                 >
                                                     <button
+                                                        id="cancelBtn3"
                                                         class="btn-outlined outlined btn-assistive btn-sub"
                                                     >
                                                         <span class="icon-label"
@@ -955,6 +2033,7 @@
                                                         ></span>
                                                     </button>
                                                     <button
+                                                        id="saveBtn3"
                                                         class="btn-small btn-sub"
                                                     >
                                                         <span class="icon-label"

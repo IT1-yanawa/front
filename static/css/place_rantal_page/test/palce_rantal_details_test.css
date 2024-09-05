@@ -1,0 +1,874 @@
+@font-face {
+    font-family: "Pretendard-Black";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-Black.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-Bold";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-Bold.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-ExtraBold";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-ExtraBold.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-ExtraLight";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-ExtraLight.woff2") format(woff2); 
+}
+
+@font-face {
+    font-family: "Pretendard-Light";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-Light.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-Medium";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-Medium.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-Regular.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-SemiBold";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-SemiBold.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "Pretendard-Thin";
+    src: url("/fonts/Pretendard-1.3.9/web/static/woff2/Pretendard-Thin.woff2") format(woff2);
+}
+
+@font-face {
+    font-family: "PretendardVariable";
+    src: url("/fonts/Pretendard-1.3.9/web/variable/woff2/PretendardVariable.woff2") format(woff2);
+}
+
+
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.42857143;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a, button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+/*  */
+.Padding_padding__K8mPM {
+    height: 60px;
+}
+
+/* main */
+.JobDetail_jobDetail__ZmIBu {
+    background-color: #fff;
+}
+
+/* main > div */
+.JobDetail_contentWrapper__E1lNI {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 0 80px;
+}
+
+/* main > div > header */
+.JobImage_JobImage__h6jaJ {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* main > div > header > button */
+.JobImage_JobImage__arrow__right__kkE03 {
+    right: 10px;
+}
+
+.JobImage_JobImage__arrow__xVacl {
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid hsla(225, 5%, 46%, .22);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* main > div > header > button > span */
+.SvgIcon_SvgIcon__root__OHiSO {
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+/* main > div > header > button > span > svg */
+.JobImage_JobImage__arrow__right__kkE03 svg {
+    display: block;
+    transform: rotate(180deg);
+}
+
+.SvgIcon_SvgIcon__root__svg__ohdSc {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    flex-shrink: 0;
+    font-size: inherit;
+} 
+
+/* main > div > header > div1 */
+.JobImage_JobImage__slider__lrAnZ {
+    position: relative;
+}
+
+/* main > div > header > div1 > div1*/
+.SliderContainer_container__Wt515 {
+    position: relative;
+}
+
+/* /////확인하기////// */
+.keen-slider:not([data-keen-slider-disabled]) {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    touch-action: pan-y;
+    user-select: none;
+    width: 100%;
+}
+
+/* ?? */
+element.style {
+    transform: translate3d(0px, 0px, 0px);
+    min-width: 463px;
+    max-width: 463px;
+}
+
+/* /////확인하기////// */
+.keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.JobImage_JobImage__slider__item__2qksl, .JobImage_JobImage__slider__item__xl__okOOT {
+    padding-bottom: 25%;
+}
+
+.JobImage_JobImage__slider__item__2qksl>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center center;
+    outline: 1px solid hsla(225, 5%, 46%, .08);
+    outline-offset: -1px;
+}
+
+/* main > div > header > div1 > div2*/
+.JobImage_JobImage__slider__count__GCRT4 {
+    display: none;
+}
+
+.JobImage_JobImage__slider__count__GCRT4 {
+    width: 48px;
+    height: 26px;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    border-radius: 6px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .32), rgba(0, 0, 0, .32));
+}
+
+.Typography_Typography__weightBold__KkJEY {
+    font-weight: 600;
+}
+
+.Typography_Typography__label2__svmAA {
+    font-size: 13px;
+    letter-spacing: .0194em;
+    line-height: 18px;
+}
+
+.Typography_Typography__root__RdAI1 {
+    margin: 0;
+}
+
+/* main > div > header > div2 */
+.JobImage_JobImage__Group__nsx3G {
+    display: none;
+}
+
+.JobImage_JobImage__Group__nsx3G {
+    height: 56px;
+    position: absolute;
+    padding: 2px 8px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* main > div > header > div2 > button */
+.wds-uo5vw3 {
+    position: relative;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    color: #171719;
+    border: none;
+    box-shadow: none;
+}
+
+.wds-uo5vw3 svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.wds-1ue5q2r {
+    color: #fff;
+}
+
+/* .wds-uo5vw3 > [wds-component="with-interaction"] {
+    transform: translate(-50%, -50%) scale(0.95);
+} */
+
+.wds-gfazqs {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    box-sizing: content-box;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: var(--palette-label-normal);
+    will-change: opacity, transform;
+    transition: opacity 0.15s, transform 0.15s;
+    transform-origin: center center;
+    left: 50%;
+    top: 50%;
+    /*  */
+    transform: translate(-50%, -50%);
+    /*  */
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+}
+
+/* main > div > header > div2 > div */
+/* ?? */
+element.style {
+    font-size: 24px;
+}
+
+.IconButton_IconButton__normal__Twwsf {
+    border: none;
+}
+
+.IconButton_IconButton__root__IJlt6 {
+    position: relative;
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 50%;
+    /* font-size: 24px; */
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.IconButton_IconButton__label__o4AtY {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+.wds-16qv2i2 {
+    color: rgb(255, 255, 255);
+}
+
+.IconButton_IconButton__interaction__7RjPt {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #171719;
+    transition: opacity .2s ease;
+    will-change: opacity;
+}
+
+/* main > div > div */
+.JobDetail_relativeWrapper__OVfsu {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+
+/* main > div > div > section */
+.JobContent_JobContent__qan7s {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* main > div > div > section > header */
+.JobHeader_JobHeader__InX6I {
+    margin: 26px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.JobHeader_JobHeader__Tools__80TiC {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.JobHeader_JobHeader__Tools__Company__Link__zAvYv {
+    display: inline;
+    color: #171719;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.JobHeader_dot__QYDh4 {
+    font-size: 20px;
+    margin: 0 6px;
+    position: relative;
+}
+
+.JobHeader_JobHeader__Tools__Company__Info__yT4OD {
+    color: rgba(46, 47, 51, .88);
+    word-break: keep-all;
+}
+
+.Typography_Typography__weightMedium__GXnOM {
+    font-weight: 500;
+}
+
+.Typography_Typography__body2__5Mmhi {
+    font-size: 15px;
+    letter-spacing: .0096em;
+    line-height: 22px;
+}
+
+.JobHeader_dot__QYDh4 {
+    font-size: 20px;
+    margin: 0 6px;
+    position: relative;
+}
+
+.JobHeader_JobHeader__PositionName__kfauc {
+    word-break: break-all;
+    color: #000;
+}
+
+.Typography_Typography__display1__weightBold__Kcrek, .Typography_Typography__display2__weightBold__rh2RV, .Typography_Typography__title1__weightBold__VE6AD, .Typography_Typography__title2__weightBold__RpDK_, .Typography_Typography__title3__weightBold__xwZk7 {
+    font-weight: 700;
+}
+
+.Typography_Typography__title2__pzaQs {
+    margin-top: 3px;
+    font-size: 28px;
+    letter-spacing: -.0236em;
+    line-height: 38px;
+}
+
+/* main > div > div > section > article */
+hr.JobHighlight_JobHighlight__divider__zM9Oy {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: hsla(225, 5%, 46%, .08);
+}
+
+.Divider_Divider__root__vpedr {
+    height: 1px;
+    margin: 0;
+    border: none;
+}
+
+.JobHighlight_JobHighlight__B7peQ>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.JobHighlightItem_JobHighlightItem__APend {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.JobHighlightItem_JobHighlightItem__title__A_fpu {
+    width: 106px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #171719;
+    flex-shrink: 0;
+}
+
+.JobHighlightItem_JobHighlightItem__title__A_fpu>img {
+    width: 28px;
+    height: 28px;
+}
+
+.JobHighlightItem_JobHighlightItem__text__xdF9K {
+    word-break: keep-all;
+    color: rgba(46, 47, 51, .88);
+}
+
+/* main > div > div > section > section */
+.JobContent_descriptionWrapper__2JNh_ {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* main > div > div > section > section > article1 */
+.JobDescription_JobDescription__dq8G5 {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.JobDescription_JobDescription__title__yGmDq {
+    color: #000;
+}
+
+.Typography_Typography__heading1__N9Asv {
+    font-size: 22px;
+    letter-spacing: -.0194em;
+    line-height: 30px;
+}
+
+.JobDescription_JobDescription__paragraph__wrapper__G4CNd {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #171719;
+}
+
+.Typography_Typography__weightRegular__jzmck {
+    font-weight: 400;
+}
+
+.Typography_Typography__body1-reading__3pEGb {
+    font-size: 16px;
+    letter-spacing: .0057em;
+    line-height: 26px;
+}
+
+.JobDescription_JobDescription__paragraph__Lhegj {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #171719;
+}
+
+.Typography_Typography__headline1__oRteu {
+    font-size: 18px;
+    letter-spacing: -.002em;
+    line-height: 26px;
+}
+
+.JobDescription_JobDescription__paragraph__Lhegj>p {
+    word-wrap: break-word;
+}
+
+/* main > div > div > section > section > article3 */
+.JobDueTime_JobDueTime__3yzxa {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.JobDueTime_JobDueTime__3yzxa>h2 {
+    color: #000;
+}
+
+/* main > div > div > section > section > div */
+.JobContent_descriptionWrapper__intersection__E4DdO {
+    margin-top: -50px;
+}
+
+/* main > div > div > section > section > article4 */
+.JobWorkPlace_JobWorkPlace__Q6Gml {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.JobWorkPlace_JobWorkPlace__Q6Gml>h2 {
+    color: #000;
+}
+
+.JobWorkPlace_JobWorkPlace__map__PITax {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid hsla(225, 5%, 46%, .16);
+}
+
+/* ?? */
+element.style {
+    position: relative;
+    overflow: hidden;
+    background: rgb(248, 249, 250);
+}
+
+.NaverMap_NaverMap__9AcHd {
+    display: block;
+    width: 100%;
+    height: 256px;
+}
+
+.JobWorkPlace_JobWorkPlace__map__location____MvP {
+    padding: 20px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* main > div > div > aside > sider-1*/
+.JobDetail_relativeWrapper__OVfsu .sider-1 {
+    height: 100%;
+    position: sticky;
+    top: 70px;
+    right: 0;
+    padding-top: 32px;
+    width: 380px;
+}
+
+.sider-section {
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    text-align: left;
+    height: 100%;
+}
+.wrapper-div {
+    padding: auto 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 219px;
+    justify-content: space-between;
+}
+
+.side-btn-area {
+    padding-top: 20px;
+}
+.side-btn-area button {
+    padding: 0px;
+    cursor: pointer;
+}
+
+.side-match-btn {
+    border: none;
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #06f;
+    color: white;
+}
+
+.span-text {
+    font-weight: 600;
+}
+
+.span-span {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    inset: 0px;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.2s;
+    will-change: opacity;
+    cursor: inherit;
+    background-color: rgb(23, 23, 23);
+}
+
+.side-match-btn span {
+    color: inherit;
+}
+
+/* main > div > div > aside > sider-2 */
+/* 장소 신청하기 버튼 눌렀을 때 나오는 div */
+.JobDetail_relativeWrapper__OVfsu .sider-2 {
+    height: 100%;
+    position: sticky;
+    top: 70px;
+    right: 0;
+    padding-top: 32px;
+    width: 380px;
+}
+
+.sider-2 {
+    display: none;
+}
+
+.apply-section {
+    border: 1px solid rgb(235 236 236 / 89%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1px;
+    text-align: left;
+    height: 100%;
+}
+
+.apply-title {
+    background-color: white;
+}
+
+.apply-container {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(242, 244, 247);
+    position: relative;
+    padding: 28px 24px !important;
+}
+
+.apply-close-btn {
+    position: absolute;
+    right: 7%;
+    top: 27px;
+}
+
+.apply-form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+}
+
+.apply-form .apply-wrapper {
+    padding: 40px 24px 30px;
+}
+
+.apply-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 219px;
+    justify-content: space-between;
+}
+
+.apply-item {
+    padding-bottom: 40px;
+}
+
+.item-wrapper {
+    position: relative;
+}
+
+.item-container {
+    margin-bottom: 0px !important;
+}
+
+.form-item {
+    position: relative;
+    padding-bottom: 0px;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    vertical-align: top;
+}
+
+.form-item-label {
+    padding-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgb(51, 51, 51);
+}
+
+.form-item-label > label {
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    height: fit-content !important;
+    font-size: 16px !important;
+}
+
+.form-item-label label .essential {
+    color: rgb(255, 77, 79);
+    font-size: 14px;
+}
+
+.form-item-control {
+    width: 100%;
+}
+
+.form-item-control-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-item-control-input-content {
+    flex: auto;
+}
+
+.item-input {
+    border: 1px solid rgb(225, 227, 232);
+    box-shadow: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 11px;
+    list-style: none;
+    line-height: 1.5714285714285714;
+}
+
+.form-item-explain {
+    color: rgb(151, 157, 164);
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.item-input.input-error {
+    border: 1px solid red;
+}
+
+.explain-error {
+    color: red;
+}
+
+.choice-radio-group {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 15px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    display: inline-block; 
+}
+
+.radio-wrapper {
+    color: rgb(151, 157, 164);
+    line-height: 0;
+    margin-inline-end: 8px;
+    cursor: pointer;
+}
+
+.form-item-control-input-content {
+    flex: auto;
+}
+
+.item-input.addcontent-input {
+    height: 120px;
+    padding: 10px 10px;
+    resize: none;
+    line-height: 20px;
+    font-size: 13px !important;
+}
+
+.apply-complete-btn {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: none;
+    background-color: #06f;;
+    color: white !important;
+}
+
+.apply-span {
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+/* main > div > div > aside > sider-3 */
+/* 장소 신청 완료 시 나오는 div */
+.JobDetail_relativeWrapper__OVfsu .sider-3 {
+    height: 100%;
+    position: sticky;
+    top: 70px;
+    right: 0;
+    padding-top: 32px;
+    width: 380px;
+}
+
+.sider-3 {
+    display: none;
+}
+
+.side-match-btn.complete {
+    pointer-events: none;
+}
+

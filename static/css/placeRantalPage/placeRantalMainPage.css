@@ -332,6 +332,7 @@ hr {
     list-style: none;
     vertical-align: top;
     padding: 10px 8px;
+    margin-right: 11px;
 }
 .place-card {
     display: inline-block;
@@ -348,70 +349,127 @@ a {
     text-decoration: inherit;
     cursor: pointer;
 }
+/* 버튼 누를시 슬라이드형태로 이미지 전환부분 */
 .place-card-thumb {
+    width: 320px;
+    height: 200px;
     position: relative;
-    margin-bottom: 12px;
-    overflow: hidden;
-    padding-bottom: 67%;
-    background-size: cover;
-    background-position: 50%;
+    margin-bottom: 5px;
     border-radius: 12px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+.place-card-thumb .place-img {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.place-card-thumb .place-img img {
+    width: 320px;
+    height: 200px;
+    flex-shrink: 0;
+}
+.banner-btn {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.next-btn,
+.before-btn {
+    cursor: pointer;
 }
 /* 화면작아지면 next버튼 사라짐,, */
 /* 이동 버튼 */
 .place-card-thumb .next-btn img {
     position: absolute;
-    width: 20%;
-    height: 50px;
-    transform: translate(260px, 90px);
+    width: 40px;
+    height: 40px;
+    transform: translate(273px, -14px);
     cursor: pointer;
+    opacity: 0.8;
+}
+.place-card-thumb .next-btn {
+    display: none;
 }
 .place-card-thumb .before-btn img {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    transform: translate(5px, 90px);
+    width: 40px;
+    height: 40px;
+    transform: translate(-313px, -14px);
     cursor: pointer;
+    opacity: 0.8;
 }
-/* 버튼 눌렀을때 화면이동부분 */
-.place-card-thumb .place-img img {
+.place-card-thumb .before-btn {
     display: none;
-    transition: opacity 0.5s ease-in-out;
 }
-
-.place-img img.active {
-    display: block;
-}
-/* 포인트, 돈 , 핫라벨 들어가는 부분 */
+/* 포인트, 돈 ,new, hot 들어가는 부분 */
 .place-card-thumb .point img {
     position: absolute;
     z-index: 1;
-    width: 52px;
-    height: 52px;
-    transform: translateX(-2px);
+    width: 28px;
+    height: 28px;
+    transform: translateX(3px);
 }
 .place-card-thumb .money img {
     position: absolute;
     z-index: 1;
-    width: 80px;
-    height: 80px;
-    transform: translate(22px, -16px);
+    width: 30px;
+    height: 30px;
+    transform: translate(31px, -1px);
 }
-.hot-label img {
-    position: absolute;
-    z-index: 1;
-    width: 65px;
-    height: 65px;
-    transform: translate(284px, -267px);
-}
-.place-card-thumb img {
+.color-icon {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100%;
+    row-gap: 6px;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+.color-icon span {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.icon-hot {
     position: absolute;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-    max-width: 330px;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: red;
+    z-index: 1;
+    transform: translate(-50px, 9px);
+}
+.icon-new {
+    position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    z-index: 1;
+    transform: translate(0px, 9px);
+}
+/* 대여가능 장소에 new 버튼 */
+.place-card-etc .icon-new {
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    margin-right: 4px;
+    z-index: 1;
 }
 img {
     vertical-align: middle;
@@ -483,6 +541,7 @@ img {
     list-style: none;
     vertical-align: top;
     padding: 20px 8px;
+    margin-right: 11px;
 }
 .place-card-etc {
     display: inline-block;
@@ -1012,4 +1071,21 @@ img {
     align-items: inherit;
     justify-content: inherit;
     color: inherit;
+}
+/* 등록하기 이미지 */
+.place-register {
+    z-index: 5;
+    transform: translateX(1430px);
+    position: fixed;
+}
+.register-img img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.register-img-title {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 600;
 }

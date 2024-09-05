@@ -262,7 +262,7 @@ let count3 = 0;
 let arrowCheck3 = true;
 
 function moveSlide3(offset) {
-    const bannerWidth = cardBanners3[0].offsetWidth + 20;
+    const bannerWidth = cardBanners3[0].offsetWidth + 5;
     count3 += offset;
 
     if (count3 < 0) {
@@ -298,7 +298,7 @@ arrows3.forEach((arrow3) => {
 
         setTimeout(() => {
             arrowCheck3 = true;
-        }, 500);
+        }, 400);
     });
 });
 
@@ -313,7 +313,7 @@ let count4 = 0;
 let arrowCheck4 = true;
 
 function moveSlide4(offset) {
-    const bannerWidth = cardBanners4[0].offsetWidth + 20;
+    const bannerWidth = cardBanners4[0].offsetWidth + 5;
     count4 += offset;
 
     if (count4 < 0) {
@@ -349,6 +349,60 @@ arrows4.forEach((arrow4) => {
 
         setTimeout(() => {
             arrowCheck4 = true;
-        }, 500);
+        }, 400);
     });
 });
+// const cardBannerContainer4 = document.querySelector(
+//     ".main_section_banner_5_banner_1"
+// );
+// const cardBanners4 = document.querySelectorAll(".main_section_section_5_img");
+// const arrows4 = document.querySelectorAll(".button_left4, .button_right4");
+// let count4 = 0;
+// let arrowCheck4 = true;
+
+// function moveSlide4(offset) {
+//     const bannerWidth = cardBanners4[0].offsetWidth + 20;
+//     count4 += offset;
+
+//     if (count4 < 0) {
+//         count4 = 0;
+//         return;
+//     } else if (count4 >= cardBanners4.length - 3) {
+//         count4 = cardBanners4.length - 3;
+//         return;
+//     }
+
+//     // 슬라이드를 즉시 이동
+//     cardBannerContainer4.style.transition = `transform 0s`;
+//     cardBannerContainer4.style.transform = `translateX(-${
+//         bannerWidth * count4
+//     }px)`;
+
+//     // 약간의 지연 시간을 주어 "뚝뚝" 넘어가는 느낌을 줌
+//     setTimeout(() => {
+//         cardBannerContainer4.style.transition = `transform 0s`; // 애니메이션 없이 이동
+//     }, 100); // 지연 시간을 조절 가능 (ms 단위)
+// }
+
+// arrows4.forEach((arrow4) => {
+//     arrow4.addEventListener("click", (e) => {
+//         if (!arrowCheck4) return;
+//         arrowCheck4 = false;
+
+//         let arrowType = e.target
+//             .closest("button")
+//             .classList.contains("button_left4")
+//             ? "left"
+//             : "right";
+
+//         if (arrowType === "left") {
+//             moveSlide4(-1);
+//         } else {
+//             moveSlide4(1);
+//         }
+
+//         setTimeout(() => {
+//             arrowCheck4 = true;
+//         }, 500);
+//     });
+// });

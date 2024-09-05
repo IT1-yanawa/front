@@ -29,15 +29,6 @@
                         </li>
                     </ol>
                 </div>
-                <div
-                    class="col breadcrumb-container-search"
-                    style="float: right"
-                >
-                    <form class="search">
-                        <input type="search" name="query" placeholder="검색" />
-                        <input type="submit" name="commit" />
-                    </form>
-                </div>
             </div>
             <div class="container new-req-page">
                 <section class="form-column">
@@ -65,6 +56,32 @@
                                             형식에 맞게 입력해주세요.
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="inquiry-type">
+                                <label for="inquiry-type" class="essential"
+                                    >문의 유형</label
+                                >
+                                <div class="form-control-input-content">
+                                    <select name="times" class="form-input">
+                                        <option value="" disabled selected>
+                                            문의 유형 선택
+                                        </option>
+                                        <option value="건의사항">
+                                            건의사항
+                                        </option>
+                                        <option value="결제관련">
+                                            결제관련
+                                        </option>
+                                        <option value="환불">환불</option>
+                                        <option value=" 서비스">서비스</option>
+                                        <option value="신고">신고</option>
+                                        <option value="기타">기타</option>
+                                        <!-- 추가옵션 여기에 -->
+                                    </select>
+                                </div>
+                                <div class="option-explain-error">
+                                    문의 유형을 선택해주세요.
                                 </div>
                             </div>
                             <div class="form-field request-subject">
@@ -121,7 +138,7 @@
                                     placeholder="&ldquo; - &rdquo; 없이 번호만 입력"
                                 />
                             </div>
-                            <div class="form-field">
+                            <div class="form-field form-file">
                                 <label for="file">첨부 파일</label>
                                 <div class="upload-file">
                                     <input
@@ -159,7 +176,9 @@
                                     *위 동의는 거부할 수 있으나, 거부 시 해당
                                     문의를 처리할 수 없습니다.
                                 </p>
-                                <label for="check-agree" class="essential"
+                                <label
+                                    for="check-agree"
+                                    class="essential check-agree-label"
                                     >동의합니다.</label
                                 >
                                 <input type="checkbox" />

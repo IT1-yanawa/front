@@ -145,12 +145,12 @@ button {
     height: 100%;
 }
 .place-list-filter {
-    padding-top: 45px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
     position: sticky;
     top: 60px;
     left: 0;
-    background: #fff;
+    background: #f0fff0;
     z-index: 2;
 }
 .filter {
@@ -299,7 +299,6 @@ ul {
 }
 hr {
     display: block;
-    margin-top: 3em;
     margin-bottom: 0.5em;
     margin-left: 250px;
     margin-right: 250px;
@@ -311,7 +310,7 @@ hr {
     max-width: 1400px;
     width: 90%;
     position: relative;
-    margin: 90px auto;
+    margin: 50px auto;
 }
 .popular-place-header {
     position: relative;
@@ -332,7 +331,8 @@ hr {
     width: 24%;
     list-style: none;
     vertical-align: top;
-    padding: 20px 8px;
+    padding: 10px 8px;
+    margin-right: 11px;
 }
 .place-card {
     display: inline-block;
@@ -349,56 +349,150 @@ a {
     text-decoration: inherit;
     cursor: pointer;
 }
+/* 버튼 누를시 슬라이드형태로 이미지 전환부분 */
 .place-card-thumb {
+    width: 320px;
+    height: 200px;
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    margin-left: 0px;
     overflow: hidden;
-    padding-bottom: 67%;
-    background-size: cover;
-    background-position: 50%;
-    border-radius: 12px;
 }
-.place-card-thumb::before {
-    content: "";
-    width: 100%;
-    height: 100%;
+.place-card-thumb .place-img {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.place-card-thumb .place-img img {
+    width: 320px;
+    height: 200px;
+    flex-shrink: 0;
+}
+.banner-btn {
     position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 12px;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.next-btn,
+.before-btn {
+    cursor: pointer;
+}
+/* 화면작아지면 next버튼 사라짐,, */
+/* 이동 버튼 */
+.place-card-thumb .next-btn img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(273px, -14px);
+    cursor: pointer;
+    opacity: 0.8;
+}
+.place-card-thumb .next-btn {
+    display: none;
+}
+.place-card-thumb .before-btn img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-313px, -14px);
+    cursor: pointer;
+    opacity: 0.8;
+}
+.place-card-thumb .before-btn {
+    display: none;
+}
+/* 포인트, 돈 ,new, hot 들어가는 부분 */
+.place-card-thumb .point img {
+    position: absolute;
     z-index: 1;
-    box-sizing: border-box;
-    outline: 1px solid rgba(23, 23, 25, 0.05);
-    outline-offset: -1px;
+    width: 28px;
+    height: 28px;
+    transform: translateX(3px);
 }
-.place-card-thumb img {
-    width: 100%;
-    height: 100%;
+.place-card-thumb .money img {
     position: absolute;
-    left: 0;
-    top: 0;
-    object-fit: cover;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    transform: translate(31px, -1px);
+}
+.color-icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 6px;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+.color-icon span {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.icon-hot {
+    position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: red;
+    z-index: 1;
+    transform: translate(-50px, 9px);
+}
+.icon-new {
+    position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    z-index: 1;
+    transform: translate(0px, 9px);
+}
+/* 대여가능 장소에 new 버튼 */
+.place-card-etc .icon-new {
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    margin-right: 4px;
+    z-index: 1;
 }
 img {
     vertical-align: middle;
 }
-.place-card-thumb::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 52px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.35));
-}
+
 .place-card-title {
     margin-bottom: 4px;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 0.0057em;
     line-height: 24px;
+}
+/* 별점 자리들어가는 곳 */
+.place-scope {
+    float: right;
+    font-size: 14px;
+    position: relative;
+}
+.scope-img {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    transform: translate(-24px);
 }
 .place-card-content {
     color: rgba(55, 56, 60, 0.61);
@@ -408,9 +502,16 @@ img {
     letter-spacing: 0.0194em;
     line-height: 18px;
 }
+.place-price {
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.place-price-detail {
+    font-size: 16px;
+    font-weight: 800;
+}
 .hr {
-    display: block;
-    margin-top: 3em;
     margin-bottom: 0.5em;
     margin-left: 0px;
     margin-right: 0px;
@@ -418,7 +519,7 @@ img {
     border-width: 1px;
 }
 .etc-place {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .etc-place-header {
     position: relative;
@@ -440,6 +541,7 @@ img {
     list-style: none;
     vertical-align: top;
     padding: 20px 8px;
+    margin-right: 11px;
 }
 .place-card-etc {
     display: inline-block;
@@ -513,6 +615,7 @@ img {
     bottom: inherit;
     left: 0;
     display: none;
+    z-index: 5;
 }
 .modal-body {
     min-width: 670px;
@@ -570,6 +673,17 @@ img {
 }
 /* x 버튼에 마우스 가져다대면 나타나는 배경 */
 .icon-button-cancel:hover .icon-button-cancel-interaction {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    border-radius: 20px;
+}
+.icon-button-cancel-sports:hover .icon-button-cancel-interaction {
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -830,6 +944,7 @@ img {
     bottom: inherit;
     left: 150;
     display: none;
+    z-index: 5;
 }
 .modal-body-sports {
     min-width: 330px;
@@ -956,4 +1071,21 @@ img {
     align-items: inherit;
     justify-content: inherit;
     color: inherit;
+}
+/* 등록하기 이미지 */
+.place-register {
+    z-index: 5;
+    transform: translateX(1430px);
+    position: fixed;
+}
+.register-img img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.register-img-title {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 600;
 }

@@ -239,6 +239,7 @@ resetButtonSports.addEventListener("click", () => {
 });
 
 // ------------------------------------------------------------------------------
+
 // 스포츠 선택 적용하기 버튼 가져오기
 const applyButtonSports = document.querySelector(".apply-button-sports");
 
@@ -246,3 +247,64 @@ const applyButtonSports = document.querySelector(".apply-button-sports");
 applyButtonSports.addEventListener("click", () => {
     modalDivSports.style.display = "none";
 });
+
+// --------------------------------------------------------------------------
+
+// 장소 사진 모두 담고있는 div 가져오기
+const placeImgContainers = document.querySelectorAll(".place-img");
+
+// 다음버튼
+const nextBtns = document.querySelectorAll(".next-btn");
+
+// 이전버튼
+const beforeBtns = document.querySelectorAll(".before-btn");
+
+// 안에 사진들 가져오기
+placeImgContainers.forEach((placeImgContainer, index) => {
+    const images = placeImgContainer.querySelectorAll("img");
+    let currentIndex = 0;
+
+    // 이미지의 개수
+    const totalImages = images.length;
+
+    // 다음버튼 누를시 이벤트
+    nextBtns[index].addEventListener("click", () => {
+        if (currentIndex < totalImages - 1) {
+            currentIndex++;
+        } else {
+            // 마지막 이미지에서 다시 처음으로
+            currentIndex = 0;
+        }
+        updateSlide(placeImgContainer, currentIndex);
+    });
+
+    // 이전버튼 누를시 이벤트
+    beforeBtns[index].addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            // 처음에서 마지막으로
+            currentIndex = totalImages - 1;
+        }
+        updateSlide(placeImgContainer, currentIndex);
+    });
+
+    // 마우스가 슬라이드 위에 있을 때만 해당 슬라이드의 버튼 표시
+    placeImgContainer.parentElement.addEventListener("mouseover", () => {
+        nextBtns[index].style.display = "block";
+        beforeBtns[index].style.display = "block";
+    });
+
+    // 마우스가 슬라이드 밖으로 나가면 해당 슬라이드의 버튼 숨기기
+    placeImgContainer.parentElement.addEventListener("mouseout", () => {
+        nextBtns[index].style.display = "none";
+        beforeBtns[index].style.display = "none";
+    });
+});
+
+function updateSlide(container, index) {
+    // 이미지 너비가 320임
+    const offset = -index * 320;
+    // 너비 만큼 x축방향으로 이동
+    container.style.transform = `translateX(${offset}px)`;
+}

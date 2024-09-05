@@ -64,6 +64,7 @@ body {
     color: #333;
     background-color: #f8f8f8;
     line-height: 1.42857143;
+    font-family: "PretendardVariable";
 }
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
@@ -109,7 +110,7 @@ a {
 /* main > div */
 .JobDetail_contentWrapper__E1lNI {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1060px;
     margin: 0 auto;
     padding: 32px 0 80px;
 }
@@ -420,6 +421,11 @@ element.style {
     position: relative;
 }
 
+.place-name-div {
+    display: flex;
+    gap: 13px;
+}
+
 .JobHeader_JobHeader__PositionName__kfauc {
     word-break: break-all;
     color: #000;
@@ -436,8 +442,26 @@ element.style {
     line-height: 38px;
 }
 
+.money-icon {
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+    gap: 6px;
+    color: #171719;
+    flex-shrink: 0; 
+}
+
+.money-icon>img {
+    width: 30px;
+    height: 30px;
+}
+
+.money-text {
+    color: #3e3c3cf8;
+}
 /* main > div > div > section > article */
 hr.JobHighlight_JobHighlight__divider__zM9Oy {
+    width: 650px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: hsla(225, 5%, 46%, .08);
@@ -449,31 +473,68 @@ hr.JobHighlight_JobHighlight__divider__zM9Oy {
     border: none;
 }
 
+article .place-information {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+
+.place-information-li {
+    display: flex;
+    gap: 10px;
+    background-color: #e1e1e147;
+    border-radius: 6px;
+    padding: 7px 15px;
+    line-height: 20px;
+}
+
+.place-information-li >p {
+    font-size: 14px;
+    color: #605f5f8e;
+    font-family: "Pretendard-Bold";
+}
+
+p.text-black {
+    font-size: 16px;
+    display: block;
+    color: #3a3a3af0;
+}
+
+article div.JobHighlight_JobHighlight__B7peQ {
+    margin-bottom: 30px;
+    display: flex;
+}
+
 .JobHighlight_JobHighlight__B7peQ>ul {
+    padding-top: 10px;
+    width: 230px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 7px;
 }
 
 .JobHighlightItem_JobHighlightItem__APend {
+    padding-top: 10px;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
 .JobHighlightItem_JobHighlightItem__title__A_fpu {
-    width: 106px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
     color: #171719;
     flex-shrink: 0;
 }
 
 .JobHighlightItem_JobHighlightItem__title__A_fpu>img {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
 }
+
 
 .JobHighlightItem_JobHighlightItem__text__xdF9K {
     word-break: keep-all;
@@ -567,6 +628,7 @@ hr.JobHighlight_JobHighlight__divider__zM9Oy {
 }
 
 .JobWorkPlace_JobWorkPlace__map__PITax {
+    width: 600px;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid hsla(225, 5%, 46%, .16);
@@ -595,10 +657,10 @@ element.style {
 .JobDetail_relativeWrapper__OVfsu .sider-1 {
     height: 100%;
     position: sticky;
-    top: 70px;
+    top: 50px;
     right: 0;
     padding-top: 32px;
-    width: 380px;
+    width: 600px;
 }
 
 .sider-section {
@@ -611,12 +673,12 @@ element.style {
     padding: auto 24px;
     display: flex;
     flex-direction: column;
-    min-height: 219px;
     justify-content: space-between;
 }
 
 .side-btn-area {
     padding-top: 20px;
+    padding-bottom: 30px;
 }
 .side-btn-area button {
     padding: 0px;
@@ -661,11 +723,8 @@ element.style {
 /* 장소 신청하기 버튼 눌렀을 때 나오는 div */
 .JobDetail_relativeWrapper__OVfsu .sider-2 {
     height: 100%;
-    position: sticky;
-    top: 70px;
-    right: 0;
-    padding-top: 32px;
-    width: 380px;
+    padding-top: 36px;
+    width: 600px;
 }
 
 .sider-2 {
@@ -781,6 +840,10 @@ element.style {
     flex: auto;
 }
 
+.application-text {
+    width: 330px;
+}
+
 .item-input {
     border: 1px solid rgb(225, 227, 232);
     box-shadow: none;
@@ -858,10 +921,10 @@ element.style {
 .JobDetail_relativeWrapper__OVfsu .sider-3 {
     height: 100%;
     position: sticky;
-    top: 70px;
+    top: 10px;
     right: 0;
     padding-top: 32px;
-    width: 380px;
+    width: 600px;
 }
 
 .sider-3 {
@@ -871,4 +934,172 @@ element.style {
 .side-match-btn.complete {
     pointer-events: none;
 }
+
+/* 신청 안내 */
+.application-guide {
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    background-color:hsla(225, 5%, 46%, 0.04);
+    border-radius: 12px;
+    padding: 16px 20px 0;
+}
+
+/* 장소 추천 */
+.place-recommendation {
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 70px;
+    right: 0;
+    padding-top: 32px;
+    width: 380px;
+}
+
+ul.place-recommendation {
+    list-style: none;
+}
+
+.popular-place-detail {
+    display: inline-block;
+    width: 100%;
+    list-style: none;
+    vertical-align: top;
+    padding: 25px 22px 15px 22px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: hsla(225, 5%, 46%, 0.049);
+}
+
+.place-card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.place-card-thumb {
+    width: 100%;
+    height: 225px;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.place-card-thumb .point img {
+    position: absolute;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    transform: translateX(3px);
+}
+
+.place-card-thumb .money img {
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    transform: translate(31px, -1px);
+}
+
+.color-icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 6px;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.color-icon span {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.icon-hot {
+    position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: red;
+    z-index: 1;
+    transform: translate(-50px, 9px);
+}
+
+.icon-new {
+    position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    z-index: 1;
+    transform: translate(0px, 9px);
+}
+
+.place-card-thumb .place-img img {
+    width: 100%;
+    height: 225px;
+    flex-shrink: 0;
+}
+
+.place-recommendation-text {
+}
+
+.place-card a {
+    appearance: none;
+    outline: none;
+}
+
+.place-card-title {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.0057em;
+    line-height: 24px;
+}
+
+.place-scope {
+    float: right;
+    font-size: 14px;
+    position: relative;
+}
+
+.scope-img {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    transform: translate(-24px);
+}
+
+.place-card-content {
+    color: rgba(55, 56, 60, 0.61);
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.0194em;
+    line-height: 18px;
+}
+
+.place-price {
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.place-price-detail {
+    font-size: 16px;
+    font-weight: 800;
+}
+
 

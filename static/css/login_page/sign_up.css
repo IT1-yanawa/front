@@ -339,7 +339,11 @@ input::placeholder {
     display: inline-block;
 }
 
-#duplicate-check.active {
+#duplicate-check-email.active {
+    color: #0066ff;
+}
+
+#duplicate-check-nickname.active {
     color: #0066ff;
 }
 
@@ -351,12 +355,14 @@ input::placeholder {
     line-height: 14px;
 }
 
-#duplicate-check-3 {
+.duplicate-check-blue {
     color: #0066ff;
 }
-.email-error p {
+.error p {
     margin-top: 8px;
 }
+
+/* email-error */
 
 .error-message {
     color: rgb(255, 66, 66);

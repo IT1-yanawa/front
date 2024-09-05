@@ -250,64 +250,61 @@ applyButtonSports.addEventListener("click", () => {
 
 // --------------------------------------------------------------------------
 
-// 장소 사진 div 가져오기
-const placePhotos = document.querySelectorAll(".place-card-thumb");
+// 장소 사진 모두 담고있는 div 가져오기
+const placeImgContainers = document.querySelectorAll(".place-img");
 
-// 장소 다음버튼과 이전버튼 가져오기
+// 다음버튼
 const nextBtns = document.querySelectorAll(".next-btn");
+
+// 이전버튼
 const beforeBtns = document.querySelectorAll(".before-btn");
 
-// 각각의 place-card-thumb에 대해 이벤트 리스너 추가
-placePhotos.forEach((placePhoto, index) => {
-    const nextBtn = nextBtns[index];
-    const beforeBtn = beforeBtns[index];
-
-    // 사진에 마우스 댔을때 버튼들 생기게하기
-    placePhoto.addEventListener("mouseover", () => {
-        nextBtn.style.display = "block";
-        beforeBtn.style.display = "block";
-    });
-
-    // 사진에 마우스 땠을때 버튼들 사라지게 하기
-    placePhoto.addEventListener("mouseout", () => {
-        nextBtn.style.display = "none";
-        beforeBtn.style.display = "none";
-    });
-
-    // 이미지 전환을 위한 코드
-    const images = placePhoto.querySelectorAll(".place-img img");
+// 안에 사진들 가져오기
+placeImgContainers.forEach((placeImgContainer, index) => {
+    const images = placeImgContainer.querySelectorAll("img");
     let currentIndex = 0;
 
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.remove("active");
-            if (i === index) {
-                img.classList.add("active");
-            }
-        });
-    }
+    // 이미지의 개수
+    const totalImages = images.length;
 
-    // 다음버튼 클릭시 다음사진으로 이동
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
+    // 다음버튼 누를시 이벤트
+    nextBtns[index].addEventListener("click", () => {
+        if (currentIndex < totalImages - 1) {
+            currentIndex++;
+        } else {
+            // 마지막 이미지에서 다시 처음으로
+            currentIndex = 0;
+        }
+        updateSlide(placeImgContainer, currentIndex);
     });
 
-    // 이전버튼 클릭시 이전사진으로 이동
-    beforeBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
+    // 이전버튼 누를시 이벤트
+    beforeBtns[index].addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            // 처음에서 마지막으로
+            currentIndex = totalImages - 1;
+        }
+        updateSlide(placeImgContainer, currentIndex);
     });
 
-    // 초기 이미지 표시
-    showImage(currentIndex);
+    // 마우스가 슬라이드 위에 있을 때만 해당 슬라이드의 버튼 표시
+    placeImgContainer.parentElement.addEventListener("mouseover", () => {
+        nextBtns[index].style.display = "block";
+        beforeBtns[index].style.display = "block";
+    });
+
+    // 마우스가 슬라이드 밖으로 나가면 해당 슬라이드의 버튼 숨기기
+    placeImgContainer.parentElement.addEventListener("mouseout", () => {
+        nextBtns[index].style.display = "none";
+        beforeBtns[index].style.display = "none";
+    });
 });
 
-// --------------------------------------------------------------------------
-// 내 장소 등록하기 div 가져오기
-const placeRegister = document.querySelector(".place-register");
-
-// 이미지 클릭했을때 이미지
-placeRegister.addEventListener("click", () => {
-    alert("장소 등록 페이지로 이동!!");
-});
+function updateSlide(container, index) {
+    // 이미지 너비가 320임
+    const offset = -index * 320;
+    // 너비 만큼 x축방향으로 이동
+    container.style.transform = `translateX(${offset}px)`;
+}

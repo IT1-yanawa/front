@@ -332,6 +332,7 @@ hr {
     list-style: none;
     vertical-align: top;
     padding: 10px 8px;
+    margin-right: 11px;
 }
 .place-card {
     display: inline-block;
@@ -348,38 +349,59 @@ a {
     text-decoration: inherit;
     cursor: pointer;
 }
+/* 버튼 누를시 슬라이드형태로 이미지 전환부분 */
 .place-card-thumb {
+    width: 320px;
+    height: 200px;
     position: relative;
-    margin-bottom: 12px;
-    overflow: hidden;
-    padding-bottom: 67%;
-    background-size: cover;
-    background-position: 50%;
+    margin-bottom: 5px;
     border-radius: 12px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+.place-card-thumb .place-img {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.place-card-thumb .place-img img {
+    width: 320px;
+    height: 200px;
+    flex-shrink: 0;
+}
+.banner-btn {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.next-btn,
+.before-btn {
+    cursor: pointer;
 }
 /* 화면작아지면 next버튼 사라짐,, */
 /* 이동 버튼 */
 .place-card-thumb .next-btn img {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    transform: translate(260px, 90px);
+    width: 40px;
+    height: 40px;
+    transform: translate(273px, -14px);
     cursor: pointer;
+    opacity: 0.8;
+}
+.place-card-thumb .next-btn {
+    display: none;
 }
 .place-card-thumb .before-btn img {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    transform: translate(5px, 90px);
+    width: 40px;
+    height: 40px;
+    transform: translate(-313px, -14px);
     cursor: pointer;
+    opacity: 0.8;
 }
-/* 버튼 눌렀을때 화면이동부분 */
-.place-card-thumb .place-img img {
-    position: absolute;
+.place-card-thumb .before-btn {
     display: none;
-}
-.place-img img.active {
-    display: flex;
 }
 /* 포인트, 돈 ,new, hot 들어가는 부분 */
 .place-card-thumb .point img {
@@ -448,15 +470,6 @@ a {
     background-color: rgb(97, 180, 255);
     margin-right: 4px;
     z-index: 1;
-}
-.place-card-thumb img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-    max-width: 330px;
 }
 img {
     vertical-align: middle;
@@ -528,6 +541,7 @@ img {
     list-style: none;
     vertical-align: top;
     padding: 20px 8px;
+    margin-right: 11px;
 }
 .place-card-etc {
     display: inline-block;

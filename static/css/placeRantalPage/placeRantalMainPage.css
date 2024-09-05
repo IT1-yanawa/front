@@ -361,7 +361,7 @@ a {
 /* 이동 버튼 */
 .place-card-thumb .next-btn img {
     position: absolute;
-    width: 20%;
+    width: 50px;
     height: 50px;
     transform: translate(260px, 90px);
     cursor: pointer;
@@ -375,34 +375,79 @@ a {
 }
 /* 버튼 눌렀을때 화면이동부분 */
 .place-card-thumb .place-img img {
+    position: absolute;
     display: none;
-    transition: opacity 0.5s ease-in-out;
 }
-
 .place-img img.active {
-    display: block;
+    display: flex;
 }
-/* 포인트, 돈 , 핫라벨 들어가는 부분 */
+/* 포인트, 돈 ,new, hot 들어가는 부분 */
 .place-card-thumb .point img {
     position: absolute;
     z-index: 1;
-    width: 52px;
-    height: 52px;
-    transform: translateX(-2px);
+    width: 28px;
+    height: 28px;
+    transform: translateX(3px);
 }
 .place-card-thumb .money img {
     position: absolute;
     z-index: 1;
-    width: 80px;
-    height: 80px;
-    transform: translate(22px, -16px);
+    width: 30px;
+    height: 30px;
+    transform: translate(31px, -1px);
 }
-.hot-label img {
+.color-icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 6px;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+.color-icon span {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.icon-hot {
     position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: red;
     z-index: 1;
-    width: 65px;
-    height: 65px;
-    transform: translate(284px, -267px);
+    transform: translate(-50px, 9px);
+}
+.icon-new {
+    position: absolute;
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    z-index: 1;
+    transform: translate(0px, 9px);
+}
+/* 대여가능 장소에 new 버튼 */
+.place-card-etc .icon-new {
+    min-width: max-content;
+    height: fit-content;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: white;
+    background-color: rgb(97, 180, 255);
+    margin-right: 4px;
+    z-index: 1;
 }
 .place-card-thumb img {
     width: 100%;
@@ -1012,4 +1057,21 @@ img {
     align-items: inherit;
     justify-content: inherit;
     color: inherit;
+}
+/* 등록하기 이미지 */
+.place-register {
+    z-index: 5;
+    transform: translateX(1430px);
+    position: fixed;
+}
+.register-img img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.register-img-title {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 600;
 }

@@ -249,6 +249,7 @@ applyButtonSports.addEventListener("click", () => {
 });
 
 // --------------------------------------------------------------------------
+
 // 장소 사진 div 가져오기
 const placePhotos = document.querySelectorAll(".place-card-thumb");
 
@@ -300,4 +301,13 @@ placePhotos.forEach((placePhoto, index) => {
 
     // 초기 이미지 표시
     showImage(currentIndex);
+});
+
+// --------------------------------------------------------------------------
+// 내 장소 등록하기 div 가져오기
+const placeRegister = document.querySelector(".place-register");
+
+// 이미지 클릭했을때 이미지
+placeRegister.addEventListener("click", () => {
+    alert("장소 등록 페이지로 이동!!");
 });

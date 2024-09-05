@@ -165,11 +165,11 @@
                                 </a>
                                 <!-- 중카테고리 -->
                                 <div class="MenuItems_submenuContainer">
-                                    <a class="MenuItems_submenu" href=""
+                                    <!-- <a class="MenuItems_submenu" href=""
                                         >문의 답변</a
-                                    >
+                                    > -->
                                     <a class="MenuItems_submenu" href=""
-                                        >공지사항 작성</a
+                                        >공지 사항</a
                                     >
                                 </div>
 
@@ -369,7 +369,7 @@
                                         >경기 매칭 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
-                                        >팀/팀원 모집 게시판</a
+                                        >모아모아 모집 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
                                         >장소 대여 게시판</a
@@ -806,49 +806,182 @@
                         </div>
 
                         <!-- 모달창 -->
-                        <div id="editModal" class="modal">
-                            <div class="modal-content">
-                                <span class="close-button">&times;</span>
-                                <h2>경기 매칭 수정</h2>
-                                <form id="editForm">
-                                    <label for="editHomeTeamName"
+                        <div id="editModal" class="modal" style="padding: 20px">
+                            <span class="close-button">&times;</span>
+                            <h2 style="text-align: center">경기 매칭 수정</h2>
+                            <form id="editForm">
+                                <!-- 등록팀 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="editHomeTeamName"
+                                        style="font-weight: bold"
                                         >등록팀:</label
                                     >
                                     <input
                                         type="text"
                                         id="editHomeTeamName"
                                         name="editHomeTeamName"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
-                                    <label for="editJoinDate">등록일:</label>
+                                </div>
+
+                                <!-- 등록일 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="editJoinDate"
+                                        style="font-weight: bold"
+                                        >등록일:</label
+                                    >
                                     <input
                                         type="date"
                                         id="editJoinDate"
                                         name="editJoinDate"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
-                                    <label for="editDueDate">예정일:</label>
+                                </div>
+
+                                <!-- 예정일 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="editDueDate"
+                                        style="font-weight: bold"
+                                        >예정일:</label
+                                    >
                                     <input
                                         type="date"
                                         id="editDueDate"
                                         name="editDueDate"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
-                                    <label for="editAwayTeam">신청팀:</label>
+                                </div>
+
+                                <!-- 매칭 상태 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="editMatchStatus"
+                                        style="font-weight: bold"
+                                        >매칭 상태:</label
+                                    >
+                                    <select
+                                        id="editMatchStatus"
+                                        name="editMatchStatus"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
+                                    >
+                                        <option value="매칭중">매칭중</option>
+                                        <option value="매칭됨">매칭됨</option>
+                                        <option value="경기종료">
+                                            경기종료
+                                        </option>
+                                        <option value="경기취소">
+                                            경기취소
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <!-- 신청팀 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="editAwayTeam"
+                                        style="font-weight: bold"
+                                        >신청팀:</label
+                                    >
                                     <input
                                         type="text"
                                         id="editAwayTeam"
                                         name="editAwayTeam"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
-                                    <label for="editSportKind">종목:</label>
-                                    <input
-                                        type="text"
+                                </div>
+
+                                <!-- 종목 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="editSportKind"
+                                        style="font-weight: bold"
+                                        >종목:</label
+                                    >
+                                    <select
                                         id="editSportKind"
                                         name="editSportKind"
-                                    />
-                                    <button type="button" id="saveChanges">
-                                        저장
-                                    </button>
-                                </form>
-                            </div>
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            border: 1px solid #999;
+                                        "
+                                    >
+                                        <option value="축구">축구</option>
+                                        <option value="농구">농구</option>
+                                        <option value="야구">야구</option>
+                                        <option value="족구">족구</option>
+                                        <option value="배드민턴">
+                                            배드민턴
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <!-- 경기 주요사항 -->
+                                <div style="margin-bottom: 20px">
+                                    <label
+                                        for="gameDetails"
+                                        style="font-weight: bold"
+                                        >경기 주요사항:</label
+                                    >
+                                    <textarea
+                                        id="gameDetails"
+                                        name="gameDetails"
+                                        style="
+                                            width: 100%;
+                                            height: 150px;
+                                            padding: 8px;
+                                            font-size: 16px;
+                                            border: 1px solid #999;
+                                        "
+                                        placeholder="경기 주요사항을 입력하세요."
+                                    ></textarea>
+                                </div>
+
+                                <!-- 저장 버튼 -->
+                                <button
+                                    type="submit"
+                                    id="saveChanges"
+                                    style="
+                                        width: 100%;
+                                        padding: 12px;
+                                        background-color: #1890ff;
+                                        color: white;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    저장
+                                </button>
+                            </form>
                         </div>
+
                         <!-- 여기까지 모달창 -->
                     </div>
                 </div>

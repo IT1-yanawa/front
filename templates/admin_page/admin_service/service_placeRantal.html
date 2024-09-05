@@ -165,11 +165,11 @@
                                 </a>
                                 <!-- 중카테고리 -->
                                 <div class="MenuItems_submenuContainer">
-                                    <a class="MenuItems_submenu" href=""
+                                    <!-- <a class="MenuItems_submenu" href=""
                                         >문의 답변</a
-                                    >
+                                    > -->
                                     <a class="MenuItems_submenu" href=""
-                                        >공지사항 작성</a
+                                        >공지 사항</a
                                     >
                                 </div>
 
@@ -369,7 +369,7 @@
                                         >경기 매칭 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
-                                        >팀/팀원 모집 게시판</a
+                                        >모아모아 모집 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
                                         >장소 대여 게시판</a
@@ -952,6 +952,7 @@
                         </div>
 
                         <!-- 모달창 -->
+                        <!-- 모달창 -->
                         <div id="editModal" class="modal">
                             <div class="modal-content">
                                 <span class="close-button">&times;</span>
@@ -962,37 +963,121 @@
                                         type="text"
                                         id="editUserName"
                                         name="editUserName"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
                                     <label for="editJoinDate">등록일:</label>
                                     <input
                                         type="date"
                                         id="editJoinDate"
                                         name="editJoinDate"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
                                     <label for="editPlaceName">장소 명:</label>
                                     <input
                                         type="text"
                                         id="editPlaceName"
                                         name="editPlaceName"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
+                                    <label for="editDescription">소개글:</label>
+                                    <textarea
+                                        id="editDescription"
+                                        name="editDescription"
+                                        style="
+                                            width: 100%;
+                                            height: 100px;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                            font-size: 16px;
+                                        "
+                                    >
+                                    </textarea>
+
+                                    <label for="editMedia"
+                                        >첨부된 이미지/동영상:</label
+                                    >
+                                    <div
+                                        id="editMedia"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                        "
+                                    >
+                                        <!-- 이미지/동영상 출력 영역 -->
+                                    </div>
+
                                     <label for="editPlaceAddress">위치:</label>
                                     <input
                                         type="text"
                                         id="editPlaceAddress"
                                         name="editPlaceAddress"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
                                     <label for="editSportKind">종목:</label>
-                                    <input
-                                        type="text"
+                                    <select
                                         id="editSportKind"
                                         name="editSportKind"
-                                    />
-                                    <button type="button" id="saveChanges">
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
+                                    >
+                                        <option value="축구">축구</option>
+                                        <option value="농구">농구</option>
+                                        <option value="야구">야구</option>
+                                        <option value="족구">족구</option>
+                                        <option value="배드민턴">
+                                            배드민턴
+                                        </option>
+                                    </select>
+
+                                    <button
+                                        type="button"
+                                        id="saveChanges"
+                                        style="
+                                            width: 100%;
+                                            padding: 12px;
+                                            background-color: #1890ff;
+                                            color: white;
+                                            font-size: 16px;
+                                            border: none;
+                                            cursor: pointer;
+                                        "
+                                    >
                                         저장
                                     </button>
                                 </form>
                             </div>
                         </div>
+
                         <!-- 여기까지 모달창 -->
                     </div>
                 </div>

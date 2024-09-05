@@ -165,11 +165,11 @@
                                 </a>
                                 <!-- 중카테고리 -->
                                 <div class="MenuItems_submenuContainer">
-                                    <a class="MenuItems_submenu" href=""
+                                    <!-- <a class="MenuItems_submenu" href=""
                                         >문의 답변</a
-                                    >
+                                    > -->
                                     <a class="MenuItems_submenu" href=""
-                                        >공지사항 작성</a
+                                        >공지 사항</a
                                     >
                                 </div>
 
@@ -371,7 +371,7 @@
                                         >경기 매칭 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
-                                        >팀/팀원 모집 게시판</a
+                                        >모아모아 모집 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
                                         >장소 대여 게시판</a
@@ -723,8 +723,9 @@
                                             </div>
                                             <div
                                                 class="ServiceTable_cell post_title"
-                                            >
-                                                로또 3등 당첨됨
+                                            >   
+                                                로또 3등 당첨됨 asdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                            
                                             </div>
                                             <div
                                                 class="ServiceTable_cell hit_ctn"
@@ -869,43 +870,56 @@
                         </div>
 
                     <!-- 모달창 -->
-<div id="editModal" class="modal">
-    <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
-        <span class="close-button">&times;</span>
-        <h2>게시글 수정</h2>
-        <form id="editForm">
-            <label for="editPostTitle">게시글 제목:</label>
-            <input type="text" id="editPostTitle" name="editPostTitle" readonly />
-
-            <label for="editPostContent">게시글 내용:</label>
-            <textarea id="editPostContent" name="editPostContent" style="width: 100%; height: 200px;"></textarea>
-
-            <div id="imageContainer" style="margin-top: 20px;">
-                <!-- 첨부된 이미지가 여기에 표시됨 -->
-            </div>
-
-            <button type="button" id="saveChanges" style="margin-top: 20px;">저장</button>
-        </form>
-
-        <h3 style="margin-top: 30px;">댓글 목록</h3>
-        <ul id="commentList" style="list-style-type: none; padding: 0; min-height: 200px; overflow-y: auto;">
-            <!-- 댓글이 동적으로 추가될 부분 -->
-        </ul>
-    </div>
-</div>
-<!-- 여기까지 모달창 -->
-
-
-
-
-
-
-
-
-
-
-
-
+                    <div id="editModal" class="modal">
+                        <div class="modal-content" style="max-height: 80vh; overflow-y: auto; display: flex; flex-direction: column;">
+                            <span class="close-button" style="align-self: flex-end;">&times;</span>
+                            <h2 style="text-align: center;">게시글 수정</h2>
+                            <form id="editForm" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div style="flex-grow: 1; overflow-y: auto; margin-bottom: 20px;">
+                                    <label for="editPostTitle">게시글 제목:</label>
+                                    <input
+                                        type="text"
+                                        id="editPostTitle"
+                                        name="editPostTitle"
+                                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #999;"
+                                    />
+                                
+                                    <label for="editPostContent">게시글 내용:</label>
+                                    <textarea
+                                        id="editPostContent"
+                                        name="editPostContent"
+                                        style="width: 100%; height: 200px; padding: 8px; margin-bottom: 10px; border: 1px solid #999;"
+                                    ></textarea>
+                                
+                                    <label for="editFiles">첨부파일:</label>
+                                    <input
+                                        type="file"
+                                        id="editFiles"
+                                        name="editFiles"
+                                        accept="image/*, video/*"
+                                        multiple
+                                        style="width: 100%; padding: 8px; margin-bottom: 10px;"
+                                    />
+                                
+                                    <!-- 첨부된 이미지/동영상 미리보기 -->
+                                    <div id="filePreviewContainer" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+                                
+                                    <h3 style="margin-top: 30px;">댓글 목록</h3>
+                                    <ul id="commentList" style="list-style-type: none; padding: 0; min-height: 200px; overflow-y: auto; max-height: 300px;"></ul>
+                                </div>
+                            
+                                <!-- 저장 버튼은 맨 아래에 배치 -->
+                                <button
+                                    type="button"
+                                    id="saveChanges"
+                                    style="width: 100%; padding: 12px; background-color: #1890ff; color: white; font-size: 16px; border: none; cursor: pointer;"
+                                >
+                                    저장
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 여기까지 모달창 -->
                     </div>
                 </div>
             </div>

@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <style>
+            .remove-member:hover {
+                opacity: 0.8;
+            }
+        </style>
 
         <link
             rel="stylesheet"
@@ -165,11 +170,11 @@
                                 </a>
                                 <!-- 중카테고리 -->
                                 <div class="MenuItems_submenuContainer">
-                                    <a class="MenuItems_submenu" href=""
+                                    <!-- <a class="MenuItems_submenu" href=""
                                         >문의 답변</a
-                                    >
+                                    > -->
                                     <a class="MenuItems_submenu" href=""
-                                        >공지사항 작성</a
+                                        >공지 사항</a
                                     >
                                 </div>
 
@@ -369,7 +374,7 @@
                                         >경기 매칭 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
-                                        >팀/팀원 모집 게시판</a
+                                        >모아모아 모집 게시판</a
                                     >
                                     <a class="MenuItems_submenu" href=""
                                         >장소 대여 게시판</a
@@ -806,10 +811,11 @@
                         </div>
 
                         <!-- 모달창 -->
+                        <!-- 모달창 -->
                         <div id="editModal" class="modal">
                             <div class="modal-content">
                                 <span class="close-button">&times;</span>
-                                <h2>팀 정보 수정</h2>
+                                <h2 style="text-align: center">팀 정보 수정</h2>
                                 <form id="editForm">
                                     <label for="editTeamLeader">팀장:</label>
                                     <input
@@ -817,45 +823,181 @@
                                         id="editTeamLeader"
                                         name="editTeamLeader"
                                         readonly
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
                                     <label for="editJoinDate">등록일:</label>
                                     <input
                                         type="date"
                                         id="editJoinDate"
                                         name="editJoinDate"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
                                     <label for="editTeamName">팀명:</label>
                                     <input
                                         type="text"
                                         id="editTeamName"
                                         name="editTeamName"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
-                                    <label for="editMatchRecord"
-                                        >경기기록:</label
+
+                                    <label for="editTeamDescription"
+                                        >팀 소개:</label
+                                    >
+                                    <textarea
+                                        id="editTeamDescription"
+                                        name="editTeamDescription"
+                                        style="
+                                            width: 100%;
+                                            height: 300px;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
+                                    >
+                                    </textarea>
+
+                                    <label for="editActivityLocation"
+                                        >활동 위치:</label
                                     >
                                     <input
                                         type="text"
-                                        id="editMatchRecord"
-                                        name="editMatchRecord"
+                                        id="editActivityLocation"
+                                        name="editActivityLocation"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
                                     <label for="editMembers">인원:</label>
                                     <input
                                         type="text"
                                         id="editMembers"
                                         name="editMembers"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 10px;
+                                            border: 1px solid #999;
+                                        "
                                     />
+
+                                    <label for="editMemberList"
+                                        >팀원 목록:</label
+                                    >
+                                    <div
+                                        id="editMemberList"
+                                        style="
+                                            width: 100%;
+                                            margin-bottom: 30px;
+                                            border: 1px solid #999;
+                                            padding: 10px;
+                                        "
+                                    >
+                                        <!-- 팀원 목록 예시 -->
+                                        <div
+                                            style="
+                                                display: flex;
+                                                justify-content: space-between;
+                                                margin-bottom: 5px;
+                                                border-bottom: 1px solid #999;
+                                                padding-bottom: 5px;
+                                            "
+                                        >
+                                            <span>팀원 1</span>
+                                            <button
+                                                type="button"
+                                                class="remove-member"
+                                                style="
+                                                    background-color: #007bff;
+                                                    color: white;
+                                                    border: none;
+                                                    border-radius: 4px;
+                                                    padding: 4px 8px;
+                                                    cursor: pointer;
+                                                "
+                                            >
+                                                탈퇴하기
+                                            </button>
+                                        </div>
+                                        <div
+                                            style="
+                                                display: flex;
+                                                justify-content: space-between;
+                                                margin-bottom: 5px;
+                                                border-bottom: 1px solid #999;
+                                                padding-bottom: 5px;
+                                            "
+                                        >
+                                            <span>팀원 2</span>
+                                            <button
+                                                type="button"
+                                                class="remove-member"
+                                                style="
+                                                    background-color: #007bff;
+                                                    color: white;
+                                                    border: none;
+                                                    border-radius: 4px;
+                                                    padding: 4px 8px;
+                                                    cursor: pointer;
+                                                "
+                                            >
+                                                탈퇴하기
+                                            </button>
+                                        </div>
+                                    </div>
+
                                     <label for="editPurpose">목적:</label>
                                     <input
                                         type="text"
                                         id="editPurpose"
                                         name="editPurpose"
+                                        style="
+                                            width: 100%;
+                                            padding: 8px;
+                                            margin-bottom: 30px;
+                                            border: 1px solid #999;
+                                        "
                                     />
-                                    <button type="button" id="saveChanges">
+
+                                    <button
+                                        type="button"
+                                        id="saveChanges"
+                                        style="
+                                            width: 100%;
+                                            padding: 12px;
+                                            background-color: #1890ff;
+                                            color: white;
+                                            font-size: 16px;
+                                            border: none;
+                                            cursor: pointer;
+                                        "
+                                    >
                                         저장
                                     </button>
                                 </form>
                             </div>
                         </div>
+
                         <!-- 여기까지 모달창 -->
                     </div>
                 </div>

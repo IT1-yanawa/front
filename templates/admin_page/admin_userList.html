@@ -165,11 +165,11 @@
                                 </a>
                                 <!-- 중카테고리 -->
                                 <div class="MenuItems_submenuContainer">
-                                    <a class="MenuItems_submenu" href=""
+                                    <!-- <a class="MenuItems_submenu" href=""
                                         >문의 답변</a
-                                    >
+                                    > -->
                                     <a class="MenuItems_submenu" href=""
-                                        >공지사항 작성</a
+                                        >공지 사항</a
                                     >
                                 </div>
 
@@ -222,8 +222,7 @@
                                     <a class="MenuItems_submenu" href=""
                                         >게시글 작성</a
                                     >
-                                    <!-- <a class="MenuItems_submenu" href="">게시판 수정</a>
-                                    <a class="MenuItems_submenu" href="">댓글 수정</a> -->
+                                    
                                 </div>
 
                                 <!-- 대카테고리 -->
@@ -817,58 +816,70 @@
                             </nav>
                         </div>
 
-                      <!-- 모달창 -->
-<div id="editModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>회원 정보 수정</h2>
-        <form id="editForm">
-            <label for="editUserName">이름:</label>
-            <input
-                type="text"
-                id="editUserName"
-                name="editUserName"
-                readonly
-            />
-            <label for="editJoinDate">가입일:</label>
-            <input
-                type="date"
-                id="editJoinDate"
-                name="editJoinDate"
-            />
-            <label for="editEmail">이메일:</label>
-            <input
-                type="email"
-                id="editEmail"
-                name="editEmail"
-            />
-            <label for="editNickname">닉네임:</label>
-            <input
-                type="text"
-                id="editNickname"
-                name="editNickname"
-            />
-            <label for="editAge">나이:</label>
-            <input
-                type="number"
-                id="editAge"
-                name="editAge"
-            />
-            <label for="editStatus">상태:</label>
-            <select
-                id="editStatus"
-                name="editStatus"
-            >
-                <option value="활동중">활동중</option>
-                <option value="탈퇴함">탈퇴함</option>
-            </select>
-            <button type="button" id="saveChanges">
-                저장
-            </button>
-        </form>
-    </div>
-</div>
-<!-- 여기까지 모달창 -->
+                    <!-- 모달창 -->
+                    <div id="editModal" class="modal">
+                        <div class="modal-content" style=" margin: auto; padding: 20px; box-sizing: border-box;">
+                            <span class="close-button" style="float: right; cursor: pointer;">&times;</span>
+                            <h2 style="text-align: center;">회원 정보 수정</h2>
+                            <form id="editForm" style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+                                <div style="flex-grow: 1;">
+                                    <label for="editUserName">이름:</label>
+                                    <input
+                                        type="text"
+                                        id="editUserName"
+                                        name="editUserName"
+                                        readonly
+                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
+                                    />
+                                    <label for="editJoinDate">가입일:</label>
+                                    <input
+                                        type="date"
+                                        id="editJoinDate"
+                                        name="editJoinDate"
+                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
+                                    />
+                                    <label for="editEmail">이메일:</label>
+                                    <input
+                                        type="email"
+                                        id="editEmail"
+                                        name="editEmail"
+                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
+                                    />
+                                    <label for="editNickname">닉네임:</label>
+                                    <input
+                                        type="text"
+                                        id="editNickname"
+                                        name="editNickname"
+                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
+                                    />
+                                    <label for="editAge">나이:</label>
+                                    <input
+                                        type="number"
+                                        id="editAge"
+                                        name="editAge"
+                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
+                                    />
+                                    <label for="editStatus">상태:</label>
+                                    <select
+                                        id="editStatus"
+                                        name="editStatus"
+                                        style="width: 100%; padding: 8px; border: 1px solid #999;"
+                                    >
+                                        <option value="활동중">활동중</option>
+                                        <option value="탈퇴함">탈퇴함</option>
+                                    </select>
+                                </div>
+                                <button
+                                    type="button"
+                                    id="saveChanges"
+                                    style="width: 100%; padding: 12px; background-color: #1890ff; color: white; font-size: 16px; border: none; cursor: pointer; margin-top: 170px;"
+                                >
+                                    저장
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 여기까지 모달창 -->
 
 
 

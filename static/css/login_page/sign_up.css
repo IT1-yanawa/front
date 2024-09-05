@@ -362,7 +362,6 @@ input::placeholder {
     margin-top: 8px;
 }
 
-/* email-error */
 
 .error-message {
     color: rgb(255, 66, 66);
@@ -371,7 +370,21 @@ input::placeholder {
     letter-spacing: 0.0192em;
     font-size: 13px;
     line-height: 18px;
-    font-family: "Pretendard-Regular";
+    font-family: "Pretendard-Medium";
+}
+
+.available p {
+    margin-top: 8px;
+}
+
+.available-message {
+    color: rgb(0, 191, 64);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.0192em;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Pretendard-Medium";
 }
 /* 이름 */
 
@@ -516,7 +529,7 @@ input::placeholder {
     line-height: 18px;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: "Pretendard-Regular";
+    font-family: "Pretendard-Medium";
 }
 
 
@@ -536,7 +549,7 @@ input::placeholder {
     line-height: 18px;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: "Pretendard-Regular";
+    font-family: "Pretendard-Medium";
 }
 
 /* 비밀번호 */

@@ -794,59 +794,7 @@ ol, ul {
         margin-left: 5px;
         color: rgba(55, 56, 60, .28);
     }
- 
-    
-    
-    /* 슬라이드 전체 */
-    /* .main_section_article_1_banner_1{
-        position: relative
-        } */
-        /* kenn-slider__slide_1{
-            min-width: 1400px;
-            max-width: 1400px;
-            transform: translate3d(
-                -11200px,
-                0px,
-                0px
-            );
-        } */
-        /* .keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
-            min-height: 100%;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-        .keen-slider:not([data-keen-slider-disabled]) {
-            -webkit-touch-callout: none;
-            -webkit-tap-highlight-color: transparent;
-            -ms-flex-line-pack: start;
-            align-content: flex-start;
-            display: -ms-flexbox;
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            -ms-touch-action: pan-y;
-            touch-action: pan-y;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -khtml-user-select: none;
-            width: 100%;
-            } */
-            
-/*  .main__section_banner_BannerItem {
-                    position: relative;
-                } */
-          
-                /* .main__section_banner_BannerItem_overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 50%;
-                    height: 100%;
-                } */
-          
+
           
     
 

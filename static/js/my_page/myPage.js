@@ -132,31 +132,74 @@ saveBtn.addEventListener("click", function (event) {
     profileView.style.display = "none"; // profile-view 화면 숨기기
 });
 // =====================================================================================
+// 선호하는 포지션
 // 요소 선택
 const editIntroBtn2 = document.getElementById("editIntroBtn2");
 const introForm2 = document.getElementById("introForm2");
-const cancelBtn2 = introForm.querySelector(".btn-outlined");
-const saveBtn2 = introForm.querySelector(".btn-small");
+const cancelBtn2 = document.getElementById("cancelBtn2");
+const saveBtn2 = document.getElementById("saveBtn2");
 
-editIntroBtn2.addEventListener("click", function () {
-    console.log("한 줄 소개 버튼 클릭");
-    introForm.parentElement.style.display = "block"; // 입력 폼을 보이게 설정
+// "선호하는 포지션을 입력해주세요" 버튼 클릭 시 입력 폼 보이기
+editIntroBtn2.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm2.closest("li").style.display = "block"; // li 폼 보이기
 });
 
 // 취소 버튼 클릭 시 입력 폼 숨기기
 cancelBtn2.addEventListener("click", function (event) {
-    event.preventDefault(); // 기본 동작 방지 (새로고침 방지)
-    console.log("취소 버튼 클릭");
-    introForm.parentElement.style.display = "none"; // 입력 폼 숨기기
+    event.preventDefault(); // 기본 동작 방지
+    introForm2.closest("li").style.display = "none"; // 입력 폼 숨기기
     profileEdit.style.display = "block"; // profile-edit 화면 유지
     profileView.style.display = "none"; // profile-view 화면 숨기기
 });
 
-// 저장 버튼 클릭 시 입력 폼 숨기기 및 화면 전환
+// 저장 버튼 클릭 시 입력 폼 숨기기
 saveBtn2.addEventListener("click", function (event) {
-    event.preventDefault(); // 기본 동작 방지 (새로고침 방지)
-    console.log("저장 버튼 클릭");
-    introForm.parentElement.style.display = "none"; // 입력 폼 숨기기
+    event.preventDefault(); // 기본 동작 방지
+    introForm2.closest("li").style.display = "none"; // 입력 폼 숨기기
     profileEdit.style.display = "block"; // profile-edit 화면 유지
     profileView.style.display = "none"; // profile-view 화면 숨기기
 });
+
+// =====================================================================================
+// 운동 경력
+const editIntroBtn3 = document.getElementById("editIntroBtn3");
+const introForm3 = document.getElementById("introForm3");
+const cancelBtn3 = document.getElementById("cancelBtn3");
+const saveBtn3 = document.getElementById("saveBtn3");
+
+// "선호하는 포지션을 입력해주세요" 버튼 클릭 시 입력 폼 보이기
+editIntroBtn3.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm3.closest("li").style.display = "block"; // li 폼 보이기
+});
+
+// 취소 버튼 클릭 시 입력 폼 숨기기
+cancelBtn3.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm3.closest("li").style.display = "none"; // 입력 폼 숨기기
+    profileEdit.style.display = "block"; // profile-edit 화면 유지
+    profileView.style.display = "none"; // profile-view 화면 숨기기
+});
+
+// 저장 버튼 클릭 시 입력 폼 숨기기
+saveBtn3.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm3.closest("li").style.display = "none"; // 입력 폼 숨기기
+    profileEdit.style.display = "block"; // profile-edit 화면 유지
+    profileView.style.display = "none"; // profile-view 화면 숨기기
+});
+// =====================================================================================
+// 중복 확인 버튼 활성화 로직
+// const nicknameInput1 = document.getElementById("nickname-input-1");
+// const checkDuplicateButton1 = document.getElementById(
+//     "check-duplicate-button-1"
+// );
+
+// nicknameInput1.addEventListener("input", function () {
+//     if (nicknameInput1.value.length > 0) {
+//         checkDuplicateButton1.disabled = false; // 입력 시 버튼 활성화
+//     } else {
+//         checkDuplicateButton1.disabled = true; // 입력 없을 시 버튼 비활성화
+//     }
+// });

@@ -49,5 +49,5 @@ beforeButton2.addEventListener("click", () => {
 });
 // 등록완료 버튼 누를시 alert로 알림뜸
 finishButton.addEventListener("click", () => {
-    alert("매칭 등록 완료!!");
+    alert("대여 장소 등록 완료!!");
 });

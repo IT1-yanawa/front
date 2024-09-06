@@ -487,3 +487,84 @@ option[disabled][selected] {
 #form-3 {
     display: none;
 }
+.form-field.form-file {
+    margin-right: -22px;
+}
+.form-field {
+    margin-top: 17px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.upload-file {
+    background: #fff;
+    border: 2px dashed #ddd;
+    font-size: 12px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.upload-pool {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.upload-file input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+.form-field input {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    min-height: 35px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.img-center {
+    transform: translateY(10px);
+}
+.upload-file span {
+    color: #d1d1d1;
+    display: inline-block;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+body a {
+    outline: 0;
+    text-decoration: none;
+    color: rgba(51, 122, 183, 1);
+    font-size: 15px;
+}
+.upload-item {
+    border-radius: 3px;
+    clear: left;
+    float: left;
+    font-size: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.register-form-main ul.upload-pool {
+    margin-top: 10px;
+    margin-right: 0px;
+    flex-direction: column;
+}
+.upload-pool {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}

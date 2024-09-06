@@ -431,72 +431,6 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <ul>
-                                            <li class="팀명 right">
-                                                <div class="register-info">
-                                                    <div
-                                                        class="register-info-1"
-                                                    >
-                                                        <div
-                                                            class="register-info-row"
-                                                        >
-                                                            <div
-                                                                class="register-info-col form-labal left"
-                                                            >
-                                                                <label
-                                                                    for="team"
-                                                                    class="label-name required"
-                                                                >
-                                                                    팀명/팀장명
-                                                                </label>
-                                                            </div>
-                                                            <div
-                                                                class="register-info-col form-control"
-                                                            >
-                                                                <div
-                                                                    class="form-control-input"
-                                                                >
-                                                                    <div
-                                                                        class="form-control-input-content"
-                                                                    >
-                                                                        <input
-                                                                            placeholder="ex) 신림드래곤즈/용호중"
-                                                                            type="text"
-                                                                            class="form-input"
-                                                                        />
-                                                                        <input
-                                                                            placeholder="ex) 신림드래곤즈/용호중"
-                                                                            type="text"
-                                                                            class="form-input input-error"
-                                                                        />
-                                                                        <div
-                                                                            style="
-                                                                                display: flex;
-                                                                                flex-wrap: nowrap;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="input-explain"
-                                                                            >
-                                                                                <div
-                                                                                    class="input-explain-error"
-                                                                                >
-                                                                                    *
-                                                                                    순서에
-                                                                                    맞게
-                                                                                    입력해주세요
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="left"></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </form>
@@ -730,12 +664,12 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 송파구/우리집 앞마당"
+                                                                            placeholder="ex) 송파구 올림픽로 123 /우리집 픗살장"
                                                                             type="text"
                                                                             class="form-input"
                                                                         />
                                                                         <input
-                                                                            placeholder="ex) 송파구/우리집 앞마당"
+                                                                            placeholder="ex) 송파구 올림픽로 123 /우리집 픗살장"
                                                                             type="text"
                                                                             class="form-input input-error"
                                                                         />
@@ -874,22 +808,6 @@
                                                                     장소대여
                                                                     가능날짜
                                                                 </label>
-                                                                <div
-                                                                    class="buttton-div"
-                                                                >
-                                                                    <button
-                                                                        class="date-buttton"
-                                                                        type="button"
-                                                                    >
-                                                                        <span
-                                                                            class="button-span"
-                                                                        >
-                                                                            오늘로
-                                                                            지정
-                                                                        </span>
-                                                                        <span></span>
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                             <div
                                                                 class="register-info-col form-control"
@@ -901,15 +819,15 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 2024-08-14"
+                                                                            placeholder="ex) 2024/08-14 ~ 09-14"
                                                                             type="text"
-                                                                            class="form-input date-img"
+                                                                            class="form-input date-img date-number"
                                                                         />
 
                                                                         <input
-                                                                            placeholder="날짜선택"
+                                                                            placeholder="ex) 2024/08-14 ~ 09-14"
                                                                             type="text"
-                                                                            class="form-input date-img input-error"
+                                                                            class="form-input date-img date-number input-error"
                                                                         />
                                                                         <div
                                                                             style="
@@ -924,9 +842,38 @@
                                                                                     class="input-explain-error"
                                                                                 >
                                                                                     *
-                                                                                    장소대여
-                                                                                    가능한
-                                                                                    날을
+                                                                                    형식에
+                                                                                    맞게
+                                                                                    입력해주세요
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input
+                                                                            placeholder="대여가능 요일 입력 )  월, 화"
+                                                                            type="text"
+                                                                            class="form-input date-img date-week"
+                                                                        />
+
+                                                                        <input
+                                                                            placeholder="대여가능 요일 입력 )  월, 화"
+                                                                            type="text"
+                                                                            class="form-input date-img input-error date-week"
+                                                                        />
+                                                                        <div
+                                                                            style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                class="input-explain"
+                                                                            >
+                                                                                <div
+                                                                                    class="input-explain-error"
+                                                                                >
+                                                                                    *
+                                                                                    형식에
+                                                                                    맞게
                                                                                     입력해주세요
                                                                                 </div>
                                                                             </div>
@@ -1003,9 +950,10 @@
                                         <div class="main-tip">
                                             <div class="tip-title">
                                                 <span class="icon">TIP!</span>
-                                                장소 상세정보/이용 규칙 등을
-                                                입력하시면 상대팀과 경기할때
-                                                원활한 경기가 될 수 있습니다
+                                                장소 상세정보/이용 규칙, 구비된
+                                                정보를 입력하시면 대여하는
+                                                인원들이 원활하게 이용할 수
+                                                있습니다.
                                             </div>
                                         </div>
                                         <ul>
@@ -1067,7 +1015,64 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="right"></li>
+                                            <li class="구비된 정보 right">
+                                                <div class="register-info">
+                                                    <div
+                                                        class="register-info-1"
+                                                    >
+                                                        <div
+                                                            class="register-info-row"
+                                                        >
+                                                            <div
+                                                                class="register-info-col form-labal left date-con"
+                                                            >
+                                                                <label
+                                                                    for="date"
+                                                                    class="label-name"
+                                                                >
+                                                                    대여장소에
+                                                                    구비된 정보
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <span
+                                                                            class="input-textarea"
+                                                                        >
+                                                                            <textarea
+                                                                                id="textarea"
+                                                                                class="textarea equipped"
+                                                                                placeholder="ex)&#13;&#10; - 장소에 기본적으로 있는 것들 (주차장, 샤워장)&#13;&#10; - 대여 해주는 것들(공, 팀조끼)&#13;&#10; - 기타 구비된 것들(구급상자)"
+                                                                            ></textarea>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="input-explain"
+                                                            >
+                                                                <div
+                                                                    class="input-explain div-text"
+                                                                >
+                                                                    * 입력할
+                                                                    사항이
+                                                                    없으면
+                                                                    입력하지
+                                                                    않아도
+                                                                    됩니다
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

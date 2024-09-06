@@ -127,8 +127,18 @@ inputchecks11.forEach((inputCheck) => {
 });
 
 const emailInput = document.getElementById("email-1");
-const duplicateCheck = document.getElementById("duplicate-check");
-const duplicateCheckButton = document.getElementById("duplicate-check-button");
+const duplicateCheckEmail = document.getElementById("duplicate-check-email");
+const duplicateCheckButtonEmail = document.getElementById(
+    "duplicate-check-button-email"
+);
+
+const nicknameInput = document.getElementById("nickname-1");
+const duplicateCheckNickname = document.getElementById(
+    "duplicate-check-nickname"
+);
+const duplicateCheckButtonNickname = document.getElementById(
+    "duplicate-check-button-nickname"
+);
 
 const mobileInput = document.getElementById("mobile-input");
 const getCodeSpan = document.getElementById("get-code-span");
@@ -146,19 +156,40 @@ const finalButton = document.getElementById("final-button");
     function updateDuplicateState() {
         if (emailInput.value.trim() !== "") {
             // 이메일 입력된 경우
-            duplicateCheck.classList.add("active");
-            duplicateCheck.disabled = false; // 버튼 활성화
-            duplicateCheckButton.style.cursor = "pointer";
+            duplicateCheckEmail.classList.add("active");
+            duplicateCheckEmail.disabled = false; // 버튼 활성화
+            duplicateCheckButtonEmail.style.cursor = "pointer";
         } else {
             // 이메일 비어있는 경우
-            duplicateCheck.classList.remove("active");
-            duplicateCheck.disabled = true; // 버튼 비활성화
-            duplicateCheckButton.style.cursor = "default";
+            duplicateCheckEmail.classList.remove("active");
+            duplicateCheckEmail.disabled = true; // 버튼 비활성화
+            duplicateCheckButtonEmail.style.cursor = "default";
         }
     }
 
     // 입력 필드의 변화가 있을 때마다 버튼 상태 업데이트
     emailInput.addEventListener("input", updateDuplicateState);
+})();
+
+// **닉네임 중복 확인 버튼 활성화 기능**
+(function () {
+    // 입력 필드의 값을 확인하고 버튼 활성화 여부를 결정하는 함수
+    function updateDuplicateState() {
+        if (nicknameInput.value.trim() !== "") {
+            // 닉네임 입력된 경우
+            duplicateCheckNickname.classList.add("active");
+            duplicateCheckNickname.disabled = false; // 버튼 활성화
+            duplicateCheckButtonNickname.style.cursor = "pointer";
+        } else {
+            // 닉네임 비어있는 경우
+            duplicateCheckNickname.classList.remove("active");
+            duplicateCheckNickname.disabled = true; // 버튼 비활성화
+            duplicateCheckButtonNickname.style.cursor = "default";
+        }
+    }
+
+    // 입력 필드의 변화가 있을 때마다 버튼 상태 업데이트
+    nicknameInput.addEventListener("input", updateDuplicateState);
 })();
 
 // **인증번호 받기 버튼 활성화 기능**
@@ -185,6 +216,7 @@ const finalButton = document.getElementById("final-button");
         if (
             emailInput.value.trim() !== "" &&
             nameInput.value.trim() !== "" &&
+            nicknameInput.value.trim() !== "" &&
             getCodeInput.value.trim() !== "" &&
             passwordInput.value.trim() !== "" &&
             pwOnemoreInput.value.trim() !== "" &&
@@ -203,6 +235,7 @@ const finalButton = document.getElementById("final-button");
     // 입력 필드의 변화가 있을 때마다 버튼 상태 업데이트
     emailInput.addEventListener("input", updateCodeState);
     nameInput.addEventListener("input", updateCodeState);
+    nicknameInput.addEventListener("input", updateCodeState);
     getCodeInput.addEventListener("input", updateCodeState);
     passwordInput.addEventListener("input", updateCodeState);
     pwOnemoreInput.addEventListener("input", updateCodeState);

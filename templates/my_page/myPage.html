@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/static/css/my_page/myPage_test.css" />
-        <title>Document</title>
+        <link rel="stylesheet" href="/static/css/my_page/myPage.css" />
+        <title>야나와 마이페이지</title>
     </head>
     <body>
         <div class="profile-container">
@@ -484,6 +484,26 @@
                                             </div>
                                         </button>
                                     </div>
+                                    <div
+                                        class="grid-item grid-start grid-stretch profile-header-root"
+                                    >
+                                        <span
+                                            class="profile-subtext main-layout-space list-item-label label-medium2"
+                                            >생년월일</span
+                                        >
+                                        <button
+                                            class="list-item-btn"
+                                            id="openModal2"
+                                        >
+                                            <div class="list-item-text">
+                                                <p
+                                                    class="typography-body1 profile-name list-item-label"
+                                                >
+                                                    2024년 09월 05일
+                                                </p>
+                                            </div>
+                                        </button>
+                                    </div>
 
                                     <!-- 모달 구조 -->
                                     <div id="myModal" class="modal">
@@ -501,18 +521,95 @@
                                                             닉네임 변경
                                                         </p>
                                                     </div>
+
+                                                    <!-- 첫 번째 닉네임 입력 필드 -->
                                                     <div class="modal-input">
                                                         <input
                                                             type="text"
                                                             placeholder="닉네임을 입력해주세요."
-                                                            class="input-text"
+                                                            class="input-text-nickname"
+                                                            id="nickname-input-1"
                                                         />
+                                                        <button
+                                                            type="button"
+                                                            class="btn-check"
+                                                            id="check-duplicate-button-1"
+                                                        >
+                                                            <span
+                                                                class="duplicate-check-span duplicate-check-blue"
+                                                                >중복 확인</span
+                                                            >
+                                                        </button>
                                                     </div>
 
+                                                    <!-- 두 번째 닉네임 입력 필드 -->
+                                                    <div class="modal-input">
+                                                        <input
+                                                            type="text"
+                                                            placeholder="닉네임을 입력해주세요."
+                                                            class="input-text-nickname"
+                                                            id="nickname-input-2"
+                                                        />
+                                                        <button
+                                                            type="button"
+                                                            class="btn-check"
+                                                            id="check-duplicate-button-2"
+                                                        >
+                                                            <span
+                                                                class="duplicate-check-span duplicate-check-blue"
+                                                                >중복 확인</span
+                                                            >
+                                                        </button>
+                                                    </div>
+                                                    <!-- 두 번째 닉네임 중복 확인 결과 메시지 -->
+                                                    <div
+                                                        id="nickname-message-2"
+                                                        class="nickname-status-message"
+                                                    >
+                                                        <p
+                                                            class="available-message1"
+                                                        >
+                                                            중복된 닉네임입니다.
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="modal-input">
+                                                        <input
+                                                            type="text"
+                                                            placeholder="닉네임을 입력해주세요."
+                                                            class="input-text-nickname"
+                                                            id="nickname-input-3"
+                                                        />
+                                                        <button
+                                                            type="button"
+                                                            class="btn-check"
+                                                            id="check-duplicate-button-3"
+                                                        >
+                                                            <span
+                                                                class="duplicate-check-span"
+                                                                >중복 확인</span
+                                                            >
+                                                        </button>
+                                                    </div>
+
+                                                    <div
+                                                        id="nickname-message-3"
+                                                        class="nickname-status-message"
+                                                    >
+                                                        <p
+                                                            class="available-message2"
+                                                        >
+                                                            사용이 가능한
+                                                            닉네임입니다.
+                                                        </p>
+                                                    </div>
+
+                                                    <!-- 취소 및 저장 버튼 -->
                                                     <div class="modal-actions">
                                                         <button
                                                             type="button"
                                                             class="btn-cancel"
+                                                            id="cancel-button"
                                                         >
                                                             <span class="text1"
                                                                 >취소</span
@@ -521,6 +618,7 @@
                                                         <button
                                                             type="submit"
                                                             class="btn-save"
+                                                            id="save-button"
                                                         >
                                                             <span class="text2"
                                                                 >저장</span
@@ -1689,16 +1787,7 @@
                                                                     >
                                                                 </button>
                                                             </div>
-                                                            <p
-                                                                class="modal-btn-text-correctly1"
-                                                            >
-                                                                현재 등록된
-                                                                전화번호와
-                                                                동일한
-                                                                번호입니다. 다른
-                                                                전화번호를
-                                                                입력해주세요.
-                                                            </p>
+
                                                             <p
                                                                 class="modal-btn-text-correctly2"
                                                             >
@@ -2057,5 +2146,5 @@
         </div>
     </body>
 
-    <script src="/static/js/my_page/myPage_test2.js"></script>
+    <script src="/static/js/my_page/myPage.js"></script>
 </html>

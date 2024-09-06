@@ -189,3 +189,17 @@ saveBtn3.addEventListener("click", function (event) {
     profileEdit.style.display = "block"; // profile-edit 화면 유지
     profileView.style.display = "none"; // profile-view 화면 숨기기
 });
+// =====================================================================================
+// 중복 확인 버튼 활성화 로직
+// const nicknameInput1 = document.getElementById("nickname-input-1");
+// const checkDuplicateButton1 = document.getElementById(
+//     "check-duplicate-button-1"
+// );
+
+// nicknameInput1.addEventListener("input", function () {
+//     if (nicknameInput1.value.length > 0) {
+//         checkDuplicateButton1.disabled = false; // 입력 시 버튼 활성화
+//     } else {
+//         checkDuplicateButton1.disabled = true; // 입력 없을 시 버튼 비활성화
+//     }
+// });

@@ -171,6 +171,9 @@ const labelContainers = document.querySelectorAll(".label-container");
 // 세 번째 label-container가 스포츠 종목을 위한 것
 const sportSelect = labelContainers[2]; // 세 번째 요소
 
+// "전체"가 표시되는 요소 선택
+const selectedValueElement = document.querySelector("#sportsall");
+
 // 스포츠 종목 선택 박스에 대한 이벤트 리스너
 sportSelect.addEventListener("click", function () {
     // 현재 sportSelect와 연결된 combobox-option-list만 열리도록 설정
@@ -179,27 +182,39 @@ sportSelect.addEventListener("click", function () {
         sportOptionList.style.display === "block" ? "none" : "block";
 });
 
+// 선택된 항목을 추적할 변수
+let selectedItem = null;
+
 // 스포츠 종목 리스트의 각 항목에 대한 이벤트 리스너
 const sportItems =
     sportSelect.nextElementSibling.querySelectorAll(".con-area li");
 sportItems.forEach(function (item) {
     item.addEventListener("click", function () {
-        item.classList.toggle("selected");
-
-        // 선택된 항목에 이미지 표시 및 제거
-        if (item.classList.contains("selected")) {
-            const img = document.createElement("img");
-            img.src =
-                "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMiAxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIgMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDogIzMzNjZmZn0KCS5zdDB7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7fQoJLnN0MXtmaWx0ZXI6dXJsKCNBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcik7fQoJLnN0MntmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNGRkZGRkY7fQoJLnN0M3ttYXNrOnVybCgjbWFzay0yXzFfKTt9Cjwvc3R5bGU+CjxnIGlkPSJfeDJEX2ljb24iPgoJPGcgaWQ9Ikljb24tX3gyRl8tRml0LV94MkZfLXNlbGVjdGVkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgMi4wMDAwMDApIj4KCQk8ZyBpZD0iaWNvbl9zZWxlY3RlZCI+CgkJCTxwYXRoIGlkPSJwYXRoLTFfMV8iIGNsYXNzPSJzdDAiIGQ9Ik01LDhDNC43LDgsNC41LDcuOSw0LjMsNy43bC00LTMuOWMtMC40LTAuNC0wLjQtMSwwLTEuNGMwLjQtMC40LDEtMC40LDEuNCwwTDUsNS42bDUuMy01LjMKCQkJCWMwLjQtMC40LDEtMC40LDEuNCwwYzAuNCwwLjQsMC40LDEsMCwxLjRsLTYsNkM1LjUsNy45LDUuMiw4LDUsOCIvPgoJCTwvZz4KCQk8ZGVmcz4KCQkJPGZpbHRlciBpZD0iQWRvYmVfT3BhY2l0eU1hc2tGaWx0ZXIiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CgkJCQk8ZmVDb2xvck1hdHJpeCAgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjEgMCAwIDAgMCAgMCAxIDAgMCAwICAwIDAgMSAwIDAgIDAgMCAwIDEgMCIvPgoJCQk8L2ZpbHRlcj4KCQk8L2RlZnM+CgkJPG1hc2sgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9Im1hc2stMl8xXyI+CgkJCTxnIGNsYXNzPSJzdDEiPgoJCQkJPHBhdGggaWQ9InBhdGgtMV8yXyIgY2xhc3M9InN0MiIgZD0iTTUsOEM0LjcsOCw0LjUsNy45LDQuMyw3LjdsLTQtMy45Yy0wLjQtMC40LTAuNC0xLDAtMS40YzAuNC0wLjQsMS0wLjQsMS40LDBMNSw1LjZsNS4zLTUuMwoJCQkJCWMwLjQtMC40LDEtMC40LDEuNCwwYzAuNCwwLjQsMC40LDEsMCwxLjRsLTYsNkM1LjUsNy45LDUuMiw4LDUsOCIvPgoJCQk8L2c+CgkJPC9tYXNrPgoJCTxnIGlkPSJHcm91cCIgY2xhc3M9InN0MyI+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo="; // 체크 아이콘 이미지
-            img.width = 12;
-            img.height = 12;
-            item.appendChild(img);
-        } else {
-            const img = item.querySelector("img");
+        // 이전에 선택된 항목이 있다면 선택 해제
+        if (selectedItem) {
+            selectedItem.classList.remove("selected");
+            const img = selectedItem.querySelector("img");
             if (img) {
                 img.remove();
             }
         }
+
+        // 현재 선택된 항목 업데이트 및 체크 아이콘 표시
+        item.classList.add("selected");
+        selectedItem = item;
+
+        const img = document.createElement("img");
+        img.src =
+            "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMiAxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIgMTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDogIzMzNjZmZn0KCS5zdDB7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7fQoJLnN0MXtmaWx0ZXI6dXJsKCNBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcik7fQoJLnN0MntmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNGRkZGRkY7fQoJLnN0M3ttYXNrOnVybCgjbWFzay0yXzFfKTt9Cjwvc3R5bGU+CjxnIGlkPSJfeDJEX2ljb24iPgoJPGcgaWQ9Ikljb24tX3gyRl8tRml0LV94MkZfLXNlbGVjdGVkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgMi4wMDAwMDApIj4KCQk8ZyBpZD0iaWNvbl9zZWxlY3RlZCI+CgkJCTxwYXRoIGlkPSJwYXRoLTFfMV8iIGNsYXNzPSJzdDAiIGQ9Ik01LDhDNC43LDgsNC41LDcuOSw0LjMsNy43bC00LTMuOWMtMC40LTAuNC0wLjQtMSwwLTEuNGMwLjQtMC40LDEtMC40LDEuNCwwTDUsNS42bDUuMy01LjMKCQkJCWMwLjQtMC40LDEtMC40LDEuNCwwYzAuNCwwLjQsMC40LDEsMCwxLjRsLTYsNkM1LjUsNy45LDUuMiw4LDUsOCIvPgoJCTwvZz4KCQk8ZGVmcz4KCQkJPGZpbHRlciBpZD0iQWRvYmVfT3BhY2l0eU1hc2tGaWx0ZXIiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CgkJCQk8ZmVDb2xvck1hdHJpeCAgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjEgMCAwIDAgMCAgMCAxIDAgMCAwICAwIDAgMSAwIDAgIDAgMCAwIDEgMCIvPgoJCQk8L2ZpbHRlcj4KCQk8L2RlZnM+CgkJPG1hc2sgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9Im1hc2stMl8xXyI+CgkJCTxnIGNsYXNzPSJzdDEiPgoJCQkJPHBhdGggaWQ9InBhdGgtMV8yXyIgY2xhc3M9InN0MiIgZD0iTTUsOEM0LjcsOCw0LjUsNy45LDQuMyw3LjdsLTQtMy45Yy0wLjQtMC40LTAuNC0xLDAtMS40YzAuNC0wLjQsMS0wLjQsMS40LDBMNSw1LjZsNS4zLTUuMwoJCQkJCWMwLjQtMC40LDEtMC40LDEuNCwwYzAuNCwwLjQsMC40LDEsMCwxLjRsLTYsNkM1LjUsNy45LDUuMiw4LDUsOCIvPgoJCQk8L2c+CgkJPC9tYXNrPgoJCTxnIGlkPSJHcm91cCIgY2xhc3M9InN0MyI+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo="; // 체크 아이콘 이미지
+        img.width = 12;
+        img.height = 12;
+        item.appendChild(img);
+
+        // 선택한 항목을 "전체" 자리로 업데이트
+        selectedValueElement.textContent = item.textContent;
+
+        // 목록 닫기
+        sportSelect.nextElementSibling.style.display = "none";
     });
 });
 

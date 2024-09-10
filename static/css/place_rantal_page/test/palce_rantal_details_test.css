@@ -88,6 +88,13 @@ img {
     vertical-align: middle;
 }
 
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
 a, button {
     font-family: inherit;
     cursor: pointer;
@@ -122,12 +129,25 @@ a {
     border-radius: 16px;
 }
 
+
 /* main > div > header > button */
+.JobImage_JobImage__arrow__left__L7iPC {
+    left: 10px;
+}
+
+.JobImage_JobImage__arrow__left__L7iPC>svg {
+    display: block;
+}
+
+.wds-ewrzbc {
+    color: #171719;
+}
+
 .JobImage_JobImage__arrow__right__kkE03 {
     right: 10px;
 }
 
-.JobImage_JobImage__arrow__xVacl {
+.next-btn, .before-btn {
     position: absolute;
     top: calc(50% - 20px);
     width: 40px;
@@ -165,12 +185,13 @@ a {
 } 
 
 /* main > div > header > div1 */
-.JobImage_JobImage__slider__lrAnZ {
+.JobImage_JobImage__slider__lrAnZ {   
     position: relative;
 }
 
 /* main > div > header > div1 > div1*/
 .SliderContainer_container__Wt515 {
+
     position: relative;
 }
 
@@ -185,11 +206,6 @@ a {
 }
 
 /* ?? */
-element.style {
-    transform: translate3d(0px, 0px, 0px);
-    min-width: 463px;
-    max-width: 463px;
-}
 
 /* /////확인하기////// */
 .keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
@@ -197,12 +213,32 @@ element.style {
     overflow: hidden;
     position: relative;
     width: 100%;
+    
 }
 
 .JobImage_JobImage__slider__item__2qksl, .JobImage_JobImage__slider__item__xl__okOOT {
-    padding-bottom: 25%;
+    padding-bottom: 33.02%;
 }
-
+.image-1 {
+    transform: translate3d(0px, 0px, 0px);
+    min-width: 527px;
+    max-width: 527px;  
+}
+.image-2 {
+    transform: translate3d(6px, 0px, 0px);
+    min-width: 527px;
+    max-width: 527px;
+}
+.image-3 {
+    transform: translate3d(12px, 0px, 0px);
+    min-width: 527px;
+    max-width: 527px;
+}
+.image-4 {
+    transform: translate3d(18px, 0px, 0px);
+    min-width: 527px;
+    max-width: 527px;
+}
 .JobImage_JobImage__slider__item__2qksl>img {
     position: absolute;
     width: 100%;
@@ -213,6 +249,7 @@ element.style {
     object-position: center center;
     outline: 1px solid hsla(225, 5%, 46%, .08);
     outline-offset: -1px;
+    
 }
 
 /* main > div > header > div1 > div2*/
@@ -539,6 +576,10 @@ article div.JobHighlight_JobHighlight__B7peQ {
 .JobHighlightItem_JobHighlightItem__text__xdF9K {
     word-break: keep-all;
     color: rgba(46, 47, 51, .88);
+}
+
+.del-text {
+    color: rgba(97, 97, 97, 0.42);
 }
 
 /* main > div > div > section > section */
@@ -953,6 +994,7 @@ element.style {
     top: 70px;
     right: 0;
     padding-top: 32px;
+    margin-top: 30px;
     width: 380px;
 }
 
@@ -968,7 +1010,8 @@ ul.place-recommendation {
     padding: 25px 22px 15px 22px;
     margin-right: 10px;
     border-radius: 8px;
-    background-color: hsla(225, 5%, 46%, 0.049);
+    background-color: hsla(225, 4%, 43%, 0.082);
+    cursor: pointer;
 }
 
 .place-card {
@@ -1100,6 +1143,17 @@ ul.place-recommendation {
 .place-price-detail {
     font-size: 16px;
     font-weight: 800;
+}
+
+/* 파란색 글씨 */
+.similar-h2{
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.blue-text {
+    color: #06f;
 }
 
 

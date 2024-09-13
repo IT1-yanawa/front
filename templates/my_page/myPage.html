@@ -1879,6 +1879,7 @@
                             </section>
 
                             <article class="profile-edit-section">
+                                <!-- 한 줄 소개 -->
                                 <form>
                                     <span
                                         class="profile-label list-item-label profile-name"
@@ -1964,7 +1965,94 @@
                                         </div>
                                     </li>
                                 </form>
+                                <!-- 운동종목  -->
+                                <form>
+                                    <span
+                                        class="profile-label list-item-label profile-name"
+                                        >선호하는 운동종목</span
+                                    >
+                                    <button
+                                        id="editIntroBtn4"
+                                        class="list-item-btn profile-edit-desc"
+                                    >
+                                        <div class="list-item-text">
+                                            <p
+                                                class="list-item-label profile-name typography-body1"
+                                            >
+                                                선호하는 운동종목을 입력해주세요
+                                            </p>
+                                        </div>
+                                        <div class="list-item-icon">
+                                            <span class="icon-img">
+                                                <svg
+                                                    class="icon-svg"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        d="M8.86407 4.86346C8.5126 5.21493 8.5126 5.78478 8.86407 6.13625L14.7277 11.9999L8.86407 17.8635C8.5126 18.2149 8.5126 18.7848 8.86407 19.1362C9.21554 19.4877 9.78539 19.4877 10.1369 19.1362L16.6369 12.6362C16.9883 12.2848 16.9883 11.7149 16.6369 11.3635L10.1369 4.86346C9.78539 4.51199 9.21554 4.51199 8.86407 4.86346Z"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </button>
 
+                                    <li
+                                        class="list-item-btn profile-edit-desc"
+                                        style="display: none"
+                                    >
+                                        <div
+                                            id="introForm4"
+                                            class="grid-container grid-column"
+                                        >
+                                            <div class="grid-item grid-start">
+                                                <textarea
+                                                    class="input-textarea"
+                                                    name="description"
+                                                    placeholder="선호하는 운동종목을  입력해주세요."
+                                                ></textarea>
+                                            </div>
+                                            <div
+                                                class="grid-container grid-between grid-center profile-edit-actions grid-item"
+                                            >
+                                                <div
+                                                    class="grid-item grid-start"
+                                                >
+                                                    <span
+                                                        class="list-item-label action-empty text-medium"
+                                                        >0 / 50</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="grid-item grid-start profile-edit-buttons"
+                                                >
+                                                    <button
+                                                        id="cancelBtn4"
+                                                        class="btn-outlined outlined btn-assistive btn-sub"
+                                                    >
+                                                        <span class="icon-label"
+                                                            >취소</span
+                                                        >
+                                                        <span
+                                                            class="profile-interaction"
+                                                        ></span>
+                                                    </button>
+                                                    <button
+                                                        id="saveBtn4"
+                                                        class="btn-small btn-sub"
+                                                    >
+                                                        <span class="icon-label"
+                                                            >저장</span
+                                                        >
+                                                        <span
+                                                            class="profile-interaction"
+                                                        ></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </form>
+                                <!-- 포지션 -->
                                 <form>
                                     <span
                                         class="profile-label list-item-label profile-name"
@@ -2051,6 +2139,7 @@
                                         </div>
                                     </li>
                                 </form>
+                                <!-- 운동경력 -->
                                 <form>
                                     <span
                                         class="profile-label list-item-label profile-name"

@@ -9,10 +9,10 @@
         />
         <link
             rel="stylesheet"
-            href="/static/css/place_rantal_page/place_rantal_register.css"
+            href="/static/css/teamrecruit_page/teamrecruitwritePage.css"
         />
         <link rel="icon" href="/static/images/match_page/yanawalogo.png" />
-        <title>장소등록 페이지</title>
+        <title>팀 생성 페이지</title>
     </head>
     <body>
         <div id="match-page">
@@ -21,10 +21,9 @@
             <main class="register-main">
                 <div class="register-con">
                     <div class="register-title">
-                        <h2>장소 등록</h2>
+                        <h2>팀 생성</h2>
                         <div class="register-title-con">
-                            기본 정보를 입력 후 장소대여와 관련된 정보를
-                            작성해주세요.
+                            정보를 입력 후 팀을 생성해주세요
                         </div>
                     </div>
                     <div class="form-warp">
@@ -35,7 +34,7 @@
                                         <ul>
                                             <div class="register-form-header-1">
                                                 <span>1</span>
-                                                <h2>등록회원 기본 정보</h2>
+                                                <h2>팀장 기본 정보</h2>
                                             </div>
                                             <li>
                                                 <span
@@ -43,7 +42,7 @@
                                                     class="span-step"
                                                 >
                                                     <span class="span-step-1"
-                                                        >등록 상세 정보</span
+                                                        >생성 상세 정보</span
                                                     >
                                                 </span>
                                             </li>
@@ -78,7 +77,7 @@
                                             class="register-form-main-title-con"
                                             style="padding-top: 10px"
                                         >
-                                            • 등록하신 정보는 장소대여 이외의
+                                            • 생성하신 정보는 팀원 구하기 이외의
                                             용도로는 활용되지 않습니다.
                                         </p>
                                         <ul>
@@ -189,10 +188,9 @@
                                                                                     class="input-explain-success"
                                                                                 >
                                                                                     *
-                                                                                    장소대여
-                                                                                    신청이
-                                                                                    들어올
-                                                                                    경우,
+                                                                                    매칭,
+                                                                                    관련
+                                                                                    안내가
                                                                                     해당
                                                                                     메일로
                                                                                     전달되오니
@@ -222,10 +220,10 @@
                                                                         <div
                                                                             class="input-explain-error"
                                                                         >
-                                                                            장소대여
-                                                                            신청이
-                                                                            들어올
-                                                                            경우,
+                                                                            *
+                                                                            매칭,
+                                                                            관련
+                                                                            안내가
                                                                             해당
                                                                             메일로
                                                                             전달되오니
@@ -288,10 +286,9 @@
                                                                                     class="input-explain-success"
                                                                                 >
                                                                                     *
-                                                                                    장소대여
-                                                                                    신청이
-                                                                                    들어올
-                                                                                    경우,
+                                                                                    매칭,
+                                                                                    관련
+                                                                                    안내가
                                                                                     해당
                                                                                     연락처로
                                                                                     전달되오니
@@ -322,10 +319,9 @@
                                                                             class="input-explain-error"
                                                                         >
                                                                             *
-                                                                            장소대여
-                                                                            신청이
-                                                                            들어올
-                                                                            경우,
+                                                                            매칭,
+                                                                            관련
+                                                                            안내가
                                                                             해당
                                                                             연락처로
                                                                             전달되오니
@@ -343,85 +339,36 @@
                                             </li>
                                             <li class="left">
                                                 <div class="register-info">
-                                                    <div
-                                                        class="register-info-1"
-                                                    >
-                                                        <div
-                                                            class="register-info-row"
-                                                        >
-                                                            <div
-                                                                class="register-info-col form-labal left"
-                                                            >
-                                                                <label
-                                                                    for="sports"
-                                                                    class="label-name required"
-                                                                >
+                                                    <div class="register-info-1">
+                                                        <div class="register-info-row">
+                                                            <div class="register-info-col form-labal left">
+                                                                <label for="sports" class="label-name required">
                                                                     스포츠종목
                                                                 </label>
                                                             </div>
-                                                            <div
-                                                                class="register-info-col form-control"
-                                                            >
-                                                                <div
-                                                                    class="form-control-input"
-                                                                >
-                                                                    <div
-                                                                        class="form-control-input-content"
-                                                                    >
-                                                                        <select
-                                                                            name="sports"
-                                                                            class="form-input"
-                                                                        >
-                                                                            <option
-                                                                                value=""
-                                                                                disabled
-                                                                                selected
-                                                                            >
-                                                                                스포츠
-                                                                                종목
-                                                                                선택
-                                                                            </option>
-                                                                            <option
-                                                                                value="축구"
-                                                                            >
-                                                                                축구
-                                                                            </option>
-                                                                            <option
-                                                                                value="농구"
-                                                                            >
-                                                                                농구
-                                                                            </option>
-                                                                            <option
-                                                                                value="야구"
-                                                                            >
-                                                                                야구
-                                                                            </option>
-                                                                            <option
-                                                                                value="풋살"
-                                                                            >
-                                                                                풋살
-                                                                            </option>
-                                                                            <!-- 추가옵션 여기에 -->
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    style="
-                                                                        display: flex;
-                                                                        flex-wrap: nowrap;
-                                                                    "
-                                                                >
-                                                                    <div
-                                                                        class="input-explain"
-                                                                    >
-                                                                        <div
-                                                                            class="input-explain-error"
-                                                                        >
-                                                                            *
-                                                                            하나
-                                                                            이상의
-                                                                            종목을
-                                                                            선택해주세요.
+                                                            <div class="register-info-col form-control">
+                                                                <div class="form-control-input">
+                                                                    <div class="form-control-input-content sports-options" style="display: flex; gap: 20px; flex-wrap: wrap; border: 1px solid rgb(225, 227, 232); border-radius: 5px; margin-top: 16px; padding-left: 16px; height: 43px;
+    align-items: center;">
+                                                                        <div>
+                                                                            <input type="radio" name="sport" value="축구" />
+                                                                            <label for="sport" style="display: unset;" >⚽축구</label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input type="radio" name="sport" value="농구" />
+                                                                            <label for="basketball" style="display: unset;">🏀농구</label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input type="radio" name="sport" value="야구" />
+                                                                            <label for="baseball" style="display: unset;">⚾야구</label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input type="radio" name="sport" value="배드민턴" />
+                                                                            <label for="badminton" style="display: unset;">🏸배드민턴</label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input type="radio" name="sport" value="족구" />
+                                                                            <label for="jokgu" style="display: unset;">⚽족구</label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -430,6 +377,8 @@
                                                     </div>
                                                 </div>
                                             </li>
+                                            
+                                            
                                         </ul>
                                         <ul>
                                             <li class="팀명 right">
@@ -447,7 +396,7 @@
                                                                     for="team"
                                                                     class="label-name required"
                                                                 >
-                                                                    팀명/팀장명
+                                                                    팀명
                                                                 </label>
                                                             </div>
                                                             <div
@@ -460,12 +409,12 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 신림드래곤즈/용호중"
+                                                                            placeholder="ex) 전북현대모터스"
                                                                             type="text"
                                                                             class="form-input"
                                                                         />
                                                                         <input
-                                                                            placeholder="ex) 신림드래곤즈/용호중"
+                                                                            placeholder="ex) 전북현대모터스"
                                                                             type="text"
                                                                             class="form-input input-error"
                                                                         />
@@ -512,14 +461,13 @@
                                                     class="span-step"
                                                 >
                                                     <span class="span-step-1"
-                                                        >등록회원 기본
-                                                        정보</span
+                                                        >팀장 기본 정보</span
                                                     >
                                                 </span>
                                             </li>
                                             <div class="register-form-header-1">
                                                 <span>2</span>
-                                                <h2>등록 상세 정보</h2>
+                                                <h2>생성 상세 정보</h2>
                                             </div>
                                             <li>
                                                 <span
@@ -560,13 +508,152 @@
                                         <div class="main-tip">
                                             <div class="tip-title">
                                                 <span class="icon">TIP!</span>
-                                                장소등록 정보를 정확하게
-                                                입력하실수록 장소대여 신청을
-                                                많이 받을 수 있습니다.
+                                                팀 정보가 상세할수록, 팀에 맞는
+                                                팀원을 찾을 확률이 높아집니다.
                                             </div>
                                         </div>
                                         <ul>
                                             <li class="장소 left">
+                                                <div class="register-info">
+                                                    <div class="register-info-1">
+                                                        <div class="register-info-row">
+                                                            <div class="register-info-col form-labal left">
+                                                                <label for="place" class="label-name required">
+                                                                    매칭
+                                                                    등록지역
+                                                                </label>
+                                                            </div>
+                                                            <div class="register-info-col form-control">
+                                                                <div class="form-control-input">
+                                                                    <div class="form-control-input-content">
+                                                                        <select name="place" class="form-input">
+                                                                            <option value="" disabled="" selected="">
+                                                                                매칭
+                                                                                지역
+                                                                                선택
+                                                                            </option>
+                                                                            <option value="서울특별시">
+                                                                                서울특별시
+                                                                            </option>
+                                                                            <option value="부산광역시">
+                                                                                부산광역시
+                                                                            </option>
+                                                                            <option value="대구광역시">
+                                                                                대구광역시
+                                                                            </option>
+                                                                            <option value="인천광역시">
+                                                                                인천광역시
+                                                                            </option>
+                                                                            <option value="광주광역시">
+                                                                                광주광역시
+                                                                            </option>
+                                                                            <option value="대전광역시">
+                                                                                대전광역시
+                                                                            </option>
+                                                                            <option value="울산광역시">
+                                                                                울산광역시
+                                                                            </option>
+                                                                            <option value="세종특별자치시">
+                                                                                세종특별자치시
+                                                                            </option>
+                                                                            <option value="경기도">
+                                                                                경기도
+                                                                            </option>
+                                                                            <option value="강원특별자치도">
+                                                                                강원특별자치도
+                                                                            </option>
+                                                                            <option value="충청북도">
+                                                                                충청북도
+                                                                            </option>
+                                                                            <option value="충청남도">
+                                                                                충청남도
+                                                                            </option>
+                                                                            <option value="전북특별자치도">
+                                                                                전북특별자치도
+                                                                            </option>
+                                                                            <option value="전라남도">
+                                                                                전라남도
+                                                                            </option>
+                                                                            <option value="경상북도">
+                                                                                경상북도
+                                                                            </option>
+                                                                            <option value="경상남도">
+                                                                                경상남도
+                                                                            </option>
+                                                                            <option value="제주특별자치도">
+                                                                                제주특별자치도
+                                                                            </option>
+
+                                                                            <!-- 추가옵션 여기에 -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="register-info-col form-control">
+                                                                <div class="form-control-input">
+                                                                    <div class="form-control-input-content">
+                                                                        <select name="place-detail" class="form-input">
+                                                                            <option value="" disabled="" selected="">
+                                                                                상세 지역 선택
+                                                                            </option>
+                                                                            
+
+                                                                            <!-- 추가옵션 여기에 -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="장소상세 right">
+                                                <div class="register-info">
+                                                    <div class="register-info-1">
+                                                        <div class="register-info-row">
+                                                            <div class="register-info-col form-labal left place-con">
+                                                                <label for="place-detail" class="label-name required">
+                                                                    상세지역/장소명
+                                                                </label>
+                                                                <div class="buttton-div">
+                                                                    <button class="place-buttton" type="button">
+                                                                        <span class="button-span">
+                                                                            장소
+                                                                            조회
+                                                                        </span>
+                                                                        <span></span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="register-info-col form-control">
+                                                                <div class="form-control-input">
+                                                                    <div class="form-control-input-content">
+                                                                        <input placeholder="ex) 노들나루공원 축구장" type="text" class="form-input">
+                                                                        <input placeholder="ex) 노들나루공원 축구장" type="text" class="form-input input-error">
+                                                                        <div style="
+                                                                                display: flex;
+                                                                                flex-wrap: nowrap;
+                                                                            ">
+                                                                            <div class="input-explain">
+                                                                                <div class="input-explain-error">
+                                                                                    *
+                                                                                    형식에
+                                                                                    맞게
+                                                                                    입력해주세요
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li class="생성시간 left">
                                                 <div class="register-info">
                                                     <div
                                                         class="register-info-1"
@@ -578,146 +665,10 @@
                                                                 class="register-info-col form-labal left"
                                                             >
                                                                 <label
-                                                                    for="place"
+                                                                    for="time"
                                                                     class="label-name required"
                                                                 >
-                                                                    장소
-                                                                    등록지역
-                                                                </label>
-                                                            </div>
-                                                            <div
-                                                                class="register-info-col form-control"
-                                                            >
-                                                                <div
-                                                                    class="form-control-input"
-                                                                >
-                                                                    <div
-                                                                        class="form-control-input-content"
-                                                                    >
-                                                                        <select
-                                                                            name="place"
-                                                                            class="form-input"
-                                                                        >
-                                                                            <option
-                                                                                value=""
-                                                                                disabled
-                                                                                selected
-                                                                            >
-                                                                                장소
-                                                                                지역
-                                                                                선택
-                                                                            </option>
-                                                                            <option
-                                                                                value="서울특별시"
-                                                                            >
-                                                                                서울특별시
-                                                                            </option>
-                                                                            <option
-                                                                                value="부산광역시"
-                                                                            >
-                                                                                부산광역시
-                                                                            </option>
-                                                                            <option
-                                                                                value="대구광역시"
-                                                                            >
-                                                                                대구광역시
-                                                                            </option>
-                                                                            <option
-                                                                                value="인천광역시"
-                                                                            >
-                                                                                인천광역시
-                                                                            </option>
-                                                                            <option
-                                                                                value="광주광역시"
-                                                                            >
-                                                                                광주광역시
-                                                                            </option>
-                                                                            <option
-                                                                                value="대전광역시"
-                                                                            >
-                                                                                대전광역시
-                                                                            </option>
-                                                                            <option
-                                                                                value="울산광역시"
-                                                                            >
-                                                                                울산광역시
-                                                                            </option>
-                                                                            <option
-                                                                                value="세종특별자치시"
-                                                                            >
-                                                                                세종특별자치시
-                                                                            </option>
-                                                                            <option
-                                                                                value="경기도"
-                                                                            >
-                                                                                경기도
-                                                                            </option>
-                                                                            <option
-                                                                                value="강원특별자치도"
-                                                                            >
-                                                                                강원특별자치도
-                                                                            </option>
-                                                                            <option
-                                                                                value="충청북도"
-                                                                            >
-                                                                                충청북도
-                                                                            </option>
-                                                                            <option
-                                                                                value="충청남도"
-                                                                            >
-                                                                                충청남도
-                                                                            </option>
-                                                                            <option
-                                                                                value="전북특별자치도"
-                                                                            >
-                                                                                전북특별자치도
-                                                                            </option>
-                                                                            <option
-                                                                                value="전라남도"
-                                                                            >
-                                                                                전라남도
-                                                                            </option>
-                                                                            <option
-                                                                                value="경상북도"
-                                                                            >
-                                                                                경상북도
-                                                                            </option>
-                                                                            <option
-                                                                                value="경상남도"
-                                                                            >
-                                                                                경상남도
-                                                                            </option>
-                                                                            <option
-                                                                                value="제주특별자치도"
-                                                                            >
-                                                                                제주특별자치도
-                                                                            </option>
-
-                                                                            <!-- 추가옵션 여기에 -->
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="장소상세 right">
-                                                <div class="register-info">
-                                                    <div
-                                                        class="register-info-1"
-                                                    >
-                                                        <div
-                                                            class="register-info-row"
-                                                        >
-                                                            <div
-                                                                class="register-info-col form-labal left place-con"
-                                                            >
-                                                                <label
-                                                                    for="place-detail"
-                                                                    class="label-name required"
-                                                                >
-                                                                    상세지역/장소명
+                                                                    팀 활동시간
                                                                 </label>
                                                             </div>
                                                             <div
@@ -730,12 +681,12 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 송파구/우리집 앞마당"
+                                                                            placeholder="ex) 오후7시 ~ 오후 9시"
                                                                             type="text"
                                                                             class="form-input"
                                                                         />
                                                                         <input
-                                                                            placeholder="ex) 송파구/우리집 앞마당"
+                                                                            placeholder="ex) 오후 7시 ~ 오후 9시"
                                                                             type="text"
                                                                             class="form-input input-error"
                                                                         />
@@ -765,98 +716,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                        </ul>
-                                        <ul>
-                                            <li class="등록시간 left">
-                                                <div class="register-info">
-                                                    <div
-                                                        class="register-info-1"
-                                                    >
-                                                        <div
-                                                            class="register-info-row"
-                                                        >
-                                                            <div
-                                                                class="register-info-col form-labal left"
-                                                            >
-                                                                <label
-                                                                    for="time"
-                                                                    class="label-name required"
-                                                                >
-                                                                    장소대여
-                                                                    비용
-                                                                </label>
-                                                            </div>
-                                                            <div
-                                                                class="register-info-col form-control"
-                                                            >
-                                                                <div
-                                                                    class="form-control-input"
-                                                                >
-                                                                    <div>
-                                                                        <input
-                                                                            placeholder="ex) 평일 - 10,000원"
-                                                                            type="text"
-                                                                            class="form-input"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    class="form-control-input"
-                                                                >
-                                                                    <div>
-                                                                        <input
-                                                                            placeholder="ex) 주말·공휴일 - 15,000원"
-                                                                            type="text"
-                                                                            class="form-input"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    class="form-control-input"
-                                                                >
-                                                                    <div>
-                                                                        <input
-                                                                            placeholder="ex) 기타 - 무료"
-                                                                            type="text"
-                                                                            class="form-input"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-
-                                                                <div
-                                                                    style="
-                                                                        display: flex;
-                                                                        flex-wrap: nowrap;
-                                                                    "
-                                                                >
-                                                                    <div
-                                                                        class="input-explain"
-                                                                    >
-                                                                        <div
-                                                                            class="input-explain-error"
-                                                                        >
-                                                                            *
-                                                                            대여
-                                                                            비용이
-                                                                            있을
-                                                                            시,
-                                                                            비용을
-                                                                            입력해주세요.
-                                                                            /
-                                                                            무료
-                                                                            대여일
-                                                                            시
-                                                                            "무료"라고
-                                                                            입력해주세요.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="등록날짜 right">
+                                            <li class="회비 right">
                                                 <div class="register-info">
                                                     <div
                                                         class="register-info-1"
@@ -871,25 +731,8 @@
                                                                     for="date"
                                                                     class="label-name required"
                                                                 >
-                                                                    장소대여
-                                                                    가능날짜
+                                                                    나이대
                                                                 </label>
-                                                                <div
-                                                                    class="buttton-div"
-                                                                >
-                                                                    <button
-                                                                        class="date-buttton"
-                                                                        type="button"
-                                                                    >
-                                                                        <span
-                                                                            class="button-span"
-                                                                        >
-                                                                            오늘로
-                                                                            지정
-                                                                        </span>
-                                                                        <span></span>
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                             <div
                                                                 class="register-info-col form-control"
@@ -901,13 +744,13 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 2024-08-14"
+                                                                            placeholder="ex) 20대~30대"
                                                                             type="text"
                                                                             class="form-input date-img"
                                                                         />
 
                                                                         <input
-                                                                            placeholder="날짜선택"
+                                                                            placeholder="ex) 20대~30대"
                                                                             type="text"
                                                                             class="form-input date-img input-error"
                                                                         />
@@ -924,9 +767,8 @@
                                                                                     class="input-explain-error"
                                                                                 >
                                                                                     *
-                                                                                    장소대여
-                                                                                    가능한
-                                                                                    날을
+                                                                                    원하는
+                                                                                    나이대를
                                                                                     입력해주세요
                                                                                 </div>
                                                                             </div>
@@ -954,8 +796,7 @@
                                                     class="span-step"
                                                 >
                                                     <span class="span-step-1"
-                                                        >등록회원 기본
-                                                        정보</span
+                                                        >팀장 기본 정보</span
                                                     >
                                                 </span>
                                             </li>
@@ -965,7 +806,7 @@
                                                     class="span-step"
                                                 >
                                                     <span class="span-step-1"
-                                                        >등록 상세 정보</span
+                                                        >생성 상세 정보</span
                                                     >
                                                 </span>
                                             </li>
@@ -989,7 +830,7 @@
                                                 type="submit"
                                             >
                                                 <span class="button-span"
-                                                    >등록완료</span
+                                                    >생성완료</span
                                                 >
                                                 <span></span>
                                             </button>
@@ -997,19 +838,18 @@
                                     </header>
                                     <div class="register-form-main">
                                         <div class="register-form-main-title">
-                                            장소 상세정보/이용 규칙 등을
-                                            적어주세요.
+                                            팀장의 상세정보, 원하는 팀원의
+                                            유형을 적어주세요.
                                         </div>
                                         <div class="main-tip">
                                             <div class="tip-title">
                                                 <span class="icon">TIP!</span>
-                                                장소 상세정보/이용 규칙 등을
-                                                입력하시면 상대팀과 경기할때
-                                                원활한 경기가 될 수 있습니다
+                                                자세히 적으실수록, 더 잘 맞는
+                                                팀원을 구하실 수 있습니다.
                                             </div>
                                         </div>
                                         <ul>
-                                            <li class="주의요구사항 left">
+                                            <li class="추가사항 left">
                                                 <div class="register-info">
                                                     <div
                                                         class="register-info-1"
@@ -1024,7 +864,7 @@
                                                                     for="date"
                                                                     class="label-name"
                                                                 >
-                                                                    주의/요구사항
+                                                                    추가사항
                                                                     작성
                                                                 </label>
                                                             </div>
@@ -1039,11 +879,14 @@
                                                                     >
                                                                         <span
                                                                             class="input-textarea"
+                                                                            style="
+                                                                                width: 220%;
+                                                                            "
                                                                         >
                                                                             <textarea
                                                                                 id="textarea"
                                                                                 class="textarea"
-                                                                                placeholder="ex)&#13;&#10; - 경기 시 주의/유의사항&#13;&#10; - 경기 방식 (전/후반 , 풀타임)&#13;&#10; - 기타 요구사항 등등"
+                                                                                placeholder="ex) &#13;&#10;-회비&#13;&#10;-원하는 유형의 팀원(포지션, 성격 등등)&#13;&#10;-팀장의 경력 및 스킬"
                                                                             ></textarea>
                                                                         </span>
                                                                     </div>
@@ -1067,7 +910,43 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="right"></li>
+                                            
+                                            <li class="right">
+                                                <li class="content15" style="
+                                                margin-top: 28px;
+                                            ">
+                                                    <div class="wrap9" style="width: 100%">
+                                                        <label for="file-upload" class="content16" style="display: block; width: 100%">
+                                                            파일 첨부
+                                                        </label>
+                                                        <div class="wrap10" style="
+                                                                width: 100%;
+                                                                display: flex;
+                                                                align-items: center;
+                                                            ">
+                                                            <input type="text" id="content17" class="content18" placeholder="첨부된 파일 경로" readonly="" style="
+                                                                    flex-grow: 1;
+                                                                    margin-right: 10px;
+                                                                ">
+                                                            <label for="file-upload" class="content19" style="
+                                                                    display: inline-block;
+                                                                    cursor: pointer;
+                                                                ">
+                                                                + 파일 추가
+                                                            </label>
+                                                            <input type="file" id="file-upload" class="content20" style="display: none" onchange="document.getElementById('content17').value = this.value.split('\\').pop();">
+                                                        </div>
+                                                        <p class="content21" style="
+                                                                font-size: 12px;
+                                                                color: #999;
+                                                                margin-top: 8px;
+                                                            ">
+                                                            * 파일은 복수로 첨부 가능하며, 최대
+                                                            100MB까지 업로드됩니다.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1078,5 +957,5 @@
             </main>
         </div>
     </body>
-    <script src="/static/js/place_rantal_page/place_rantal_register.js"></script>
+    <script src="/static/js/teamrecruit_page/teamrecruitwritePage.js"></script>
 </html>

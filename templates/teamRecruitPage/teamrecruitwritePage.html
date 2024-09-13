@@ -351,34 +351,24 @@
                                                                     <div class="form-control-input-content sports-options" style="display: flex; gap: 20px; flex-wrap: wrap; border: 1px solid rgb(225, 227, 232); border-radius: 5px; margin-top: 16px; padding-left: 16px; height: 43px;
     align-items: center;">
                                                                         <div>
-                                                                            <input type="checkbox" id="soccer" value="축구" />
-                                                                            <label for="soccer" style="display: unset;" >⚽축구</label>
+                                                                            <input type="radio" name="sport" value="축구" />
+                                                                            <label for="sport" style="display: unset;" >⚽축구</label>
                                                                         </div>
                                                                         <div>
-                                                                            <input type="checkbox" id="basketball" value="농구" />
+                                                                            <input type="radio" name="sport" value="농구" />
                                                                             <label for="basketball" style="display: unset;">🏀농구</label>
                                                                         </div>
                                                                         <div>
-                                                                            <input type="checkbox" id="baseball" value="야구" />
+                                                                            <input type="radio" name="sport" value="야구" />
                                                                             <label for="baseball" style="display: unset;">⚾야구</label>
                                                                         </div>
                                                                         <div>
-                                                                            <input type="checkbox" id="badminton" value="배드민턴" />
+                                                                            <input type="radio" name="sport" value="배드민턴" />
                                                                             <label for="badminton" style="display: unset;">🏸배드민턴</label>
                                                                         </div>
                                                                         <div>
-                                                                            <input type="checkbox" id="jokgu" value="족구" />
+                                                                            <input type="radio" name="sport" value="족구" />
                                                                             <label for="jokgu" style="display: unset;">⚽족구</label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- 선택된 종목을 표시할 위치 -->
-                                                                <div id="selectedSportsDisplay" style="margin-top: 10px;">선택된 종목이 없습니다.</div>
-                                            
-                                                                <div style="display: flex; flex-wrap: nowrap;">
-                                                                    <div class="input-explain">
-                                                                        <div class="input-explain-error">
-                                                                            * 하나 이상의 종목을 선택해주세요.
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -655,6 +645,33 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <select
+                                                                            name="place-detail"
+                                                                            class="form-input"
+                                                                        >
+                                                                            <option
+                                                                                value=""
+                                                                                disabled
+                                                                                selected
+                                                                            >
+                                                                                상세 지역 선택
+                                                                            </option>
+                                                                            
+
+                                                                            <!-- 추가옵션 여기에 -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -677,22 +694,6 @@
                                                                 >
                                                                     상세지역/장소명
                                                                 </label>
-                                                                <div
-                                                                    class="buttton-div"
-                                                                >
-                                                                    <button
-                                                                        class="place-buttton"
-                                                                        type="button"
-                                                                    >
-                                                                        <span
-                                                                            class="button-span"
-                                                                        >
-                                                                            장소
-                                                                            조회
-                                                                        </span>
-                                                                        <span></span>
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                             <div
                                                                 class="register-info-col form-control"
@@ -704,12 +705,12 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 동작구/노들나루공원 축구장"
+                                                                            placeholder="ex) 노들나루공원 축구장"
                                                                             type="text"
                                                                             class="form-input"
                                                                         />
                                                                         <input
-                                                                            placeholder="ex) 동작구/노들나루공원 축구장"
+                                                                            placeholder="ex) 노들나루공원 축구장"
                                                                             type="text"
                                                                             class="form-input input-error"
                                                                         />

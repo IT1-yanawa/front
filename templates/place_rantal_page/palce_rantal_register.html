@@ -366,62 +366,94 @@
                                                                     class="form-control-input"
                                                                 >
                                                                     <div
-                                                                        class="form-control-input-content"
+                                                                        class="form-control-input-content sports-options"
+                                                                        style="
+                                                                            display: flex;
+                                                                            gap: 20px;
+                                                                            flex-wrap: wrap;
+                                                                            border: 1px
+                                                                                solid
+                                                                                rgb(
+                                                                                    225,
+                                                                                    227,
+                                                                                    232
+                                                                                );
+                                                                            border-radius: 5px;
+                                                                            margin-top: 16px;
+                                                                            padding-left: 16px;
+                                                                            height: 43px;
+                                                                            align-items: center;
+                                                                        "
                                                                     >
-                                                                        <select
-                                                                            name="sports"
-                                                                            class="form-input"
-                                                                        >
-                                                                            <option
-                                                                                value=""
-                                                                                disabled
-                                                                                selected
-                                                                            >
-                                                                                스포츠
-                                                                                종목
-                                                                                선택
-                                                                            </option>
-                                                                            <option
+                                                                        <div>
+                                                                            <input
+                                                                                type="radio"
+                                                                                name="sport"
                                                                                 value="축구"
+                                                                            />
+                                                                            <label
+                                                                                for="sport"
+                                                                                style="
+                                                                                    display: unset;
+                                                                                "
+                                                                                >⚽축구</label
                                                                             >
-                                                                                축구
-                                                                            </option>
-                                                                            <option
+                                                                        </div>
+                                                                        <div>
+                                                                            <input
+                                                                                type="radio"
+                                                                                name="sport"
                                                                                 value="농구"
+                                                                            />
+                                                                            <label
+                                                                                for="basketball"
+                                                                                style="
+                                                                                    display: unset;
+                                                                                "
+                                                                                >🏀농구</label
                                                                             >
-                                                                                농구
-                                                                            </option>
-                                                                            <option
+                                                                        </div>
+                                                                        <div>
+                                                                            <input
+                                                                                type="radio"
+                                                                                name="sport"
                                                                                 value="야구"
+                                                                            />
+                                                                            <label
+                                                                                for="baseball"
+                                                                                style="
+                                                                                    display: unset;
+                                                                                "
+                                                                                >⚾야구</label
                                                                             >
-                                                                                야구
-                                                                            </option>
-                                                                            <option
-                                                                                value="풋살"
+                                                                        </div>
+                                                                        <div>
+                                                                            <input
+                                                                                type="radio"
+                                                                                name="sport"
+                                                                                value="배드민턴"
+                                                                            />
+                                                                            <label
+                                                                                for="badminton"
+                                                                                style="
+                                                                                    display: unset;
+                                                                                "
+                                                                                >🏸배드민턴</label
                                                                             >
-                                                                                풋살
-                                                                            </option>
-                                                                            <!-- 추가옵션 여기에 -->
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    style="
-                                                                        display: flex;
-                                                                        flex-wrap: nowrap;
-                                                                    "
-                                                                >
-                                                                    <div
-                                                                        class="input-explain"
-                                                                    >
-                                                                        <div
-                                                                            class="input-explain-error"
-                                                                        >
-                                                                            *
-                                                                            하나
-                                                                            이상의
-                                                                            종목을
-                                                                            선택해주세요.
+                                                                        </div>
+                                                                        <div>
+                                                                            <input
+                                                                                type="radio"
+                                                                                name="sport"
+                                                                                value="족구"
+                                                                            />
+                                                                            <label
+                                                                                for="jokgu"
+                                                                                style="
+                                                                                    display: unset;
+                                                                                "
+                                                                                >⚽족구</label
+                                                                            >
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -632,6 +664,34 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <div
+                                                                class="register-info-col form-control"
+                                                            >
+                                                                <div
+                                                                    class="form-control-input"
+                                                                >
+                                                                    <div
+                                                                        class="form-control-input-content"
+                                                                    >
+                                                                        <select
+                                                                            name="place-detail"
+                                                                            class="form-input"
+                                                                        >
+                                                                            <option
+                                                                                value=""
+                                                                                disabled
+                                                                                selected
+                                                                            >
+                                                                                상세
+                                                                                지역
+                                                                                선택
+                                                                            </option>
+
+                                                                            <!-- 추가옵션 여기에 -->
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -651,7 +711,8 @@
                                                                     for="place-detail"
                                                                     class="label-name required"
                                                                 >
-                                                                    상세지역/장소명
+                                                                    장소
+                                                                    상세주소
                                                                 </label>
                                                             </div>
                                                             <div
@@ -664,12 +725,12 @@
                                                                         class="form-control-input-content"
                                                                     >
                                                                         <input
-                                                                            placeholder="ex) 송파구 올림픽로 123 /우리집 픗살장"
+                                                                            placeholder="ex) 올림픽로 120"
                                                                             type="text"
                                                                             class="form-input"
                                                                         />
                                                                         <input
-                                                                            placeholder="ex) 송파구 올림픽로 123 /우리집 픗살장"
+                                                                            placeholder="ex) 올림픽로 120"
                                                                             type="text"
                                                                             class="form-input input-error"
                                                                         />
@@ -848,36 +909,6 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <input
-                                                                            placeholder="대여가능 요일 입력 )  월, 화"
-                                                                            type="text"
-                                                                            class="form-input date-img date-week"
-                                                                        />
-
-                                                                        <input
-                                                                            placeholder="대여가능 요일 입력 )  월, 화"
-                                                                            type="text"
-                                                                            class="form-input date-img input-error date-week"
-                                                                        />
-                                                                        <div
-                                                                            style="
-                                                                                display: flex;
-                                                                                flex-wrap: nowrap;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="input-explain"
-                                                                            >
-                                                                                <div
-                                                                                    class="input-explain-error"
-                                                                                >
-                                                                                    *
-                                                                                    형식에
-                                                                                    맞게
-                                                                                    입력해주세요
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -957,77 +988,6 @@
                                             </div>
                                         </div>
                                         <ul>
-                                            <li
-                                                class="content15"
-                                                style="margin-top: 28px"
-                                            >
-                                                <div
-                                                    class="wrap9"
-                                                    style="width: 100%"
-                                                >
-                                                    <label
-                                                        for="file-upload"
-                                                        class="content16"
-                                                        style="
-                                                            display: block;
-                                                            width: 100%;
-                                                        "
-                                                    >
-                                                        파일 첨부
-                                                    </label>
-                                                    <div
-                                                        class="wrap10"
-                                                        style="
-                                                            width: 100%;
-                                                            display: flex;
-                                                            align-items: center;
-                                                        "
-                                                    >
-                                                        <input
-                                                            type="text"
-                                                            id="content17"
-                                                            class="content18"
-                                                            placeholder="첨부된 파일 경로"
-                                                            readonly=""
-                                                            style="
-                                                                flex-grow: 1;
-                                                                margin-right: 10px;
-                                                            "
-                                                        />
-                                                        <label
-                                                            for="file-upload"
-                                                            class="content19"
-                                                            style="
-                                                                display: inline-block;
-                                                                cursor: pointer;
-                                                            "
-                                                        >
-                                                            + 파일 추가
-                                                        </label>
-                                                        <input
-                                                            type="file"
-                                                            id="file-upload"
-                                                            class="content20"
-                                                            style="
-                                                                display: none;
-                                                            "
-                                                            onchange="document.getElementById('content17').value = this.value.split('\\').pop();"
-                                                        />
-                                                    </div>
-                                                    <p
-                                                        class="content21"
-                                                        style="
-                                                            font-size: 12px;
-                                                            color: #999;
-                                                            margin-top: 8px;
-                                                        "
-                                                    >
-                                                        * 파일은 복수로 첨부
-                                                        가능하며, 최대 100MB까지
-                                                        업로드됩니다.
-                                                    </p>
-                                                </div>
-                                            </li>
                                             <li class="주의요구사항 left">
                                                 <div class="register-info">
                                                     <div
@@ -1169,6 +1129,18 @@
                                                             드래그</span
                                                         >
                                                     </div>
+                                                    <p
+                                                        class="content21"
+                                                        style="
+                                                            font-size: 12px;
+                                                            color: #999;
+                                                            margin-top: 8px;
+                                                        "
+                                                    >
+                                                        * 장소 사진은 최소 4장,
+                                                        최대 6장 첨부해주시면
+                                                        됩니다.
+                                                    </p>
                                                     <ul
                                                         class="upload-pool"
                                                     ></ul>

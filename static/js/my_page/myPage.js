@@ -132,6 +132,37 @@ saveBtn.addEventListener("click", function (event) {
     profileView.style.display = "none"; // profile-view 화면 숨기기
 });
 // =====================================================================================
+const editIntroBtn4 = document.getElementById("editIntroBtn4");
+const introForm4 = document.getElementById("introForm4");
+const cancelBtn4 = document.getElementById("cancelBtn4");
+const saveBtn4 = document.getElementById("saveBtn4");
+
+// "선호하는 포지션을 입력해주세요" 버튼 클릭 시 입력 폼 보이기
+editIntroBtn4.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm4.closest("li").style.display = "block"; // li 폼 보이기
+});
+
+// 취소 버튼 클릭 시 입력 폼 숨기기
+cancelBtn4.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm4.closest("li").style.display = "none"; // 입력 폼 숨기기
+    profileEdit.style.display = "block"; // profile-edit 화면 유지
+    profileView.style.display = "none"; // profile-view 화면 숨기기
+});
+
+// 저장 버튼 클릭 시 입력 폼 숨기기
+saveBtn4.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 방지
+    introForm4.closest("li").style.display = "none"; // 입력 폼 숨기기
+    profileEdit.style.display = "block"; // profile-edit 화면 유지
+    profileView.style.display = "none"; // profile-view 화면 숨기기
+});
+
+
+
+
+// =====================================================================================
 // 선호하는 포지션
 // 요소 선택
 const editIntroBtn2 = document.getElementById("editIntroBtn2");

@@ -96,11 +96,9 @@ ol, ul {
 }
 .main_heder_all {
     width: 100%;
-   
     top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .08);
     z-index: 800;
-
 }
 .main_heder_all_1 {
     position: absolute;
@@ -142,8 +140,6 @@ ol, ul {
     height: 100%;
     -ms-flex-align: stretch;
     align-items: stretch;
-  
-   
 }
 .logo_img{
     width: 100px;

@@ -139,6 +139,7 @@ const duplicateCheckNickname = document.getElementById(
 const duplicateCheckButtonNickname = document.getElementById(
     "duplicate-check-button-nickname"
 );
+const birthInput = document.getElementById("birth-1");
 
 const mobileInput = document.getElementById("mobile-input");
 const getCodeSpan = document.getElementById("get-code-span");
@@ -218,6 +219,7 @@ const finalButton = document.getElementById("final-button");
             nameInput.value.trim() !== "" &&
             nicknameInput.value.trim() !== "" &&
             getCodeInput.value.trim() !== "" &&
+            birthInput.value.trim() !== "" &&
             passwordInput.value.trim() !== "" &&
             pwOnemoreInput.value.trim() !== "" &&
             [...requiredChecks][0].checked == true &&
@@ -237,6 +239,7 @@ const finalButton = document.getElementById("final-button");
     nameInput.addEventListener("input", updateCodeState);
     nicknameInput.addEventListener("input", updateCodeState);
     getCodeInput.addEventListener("input", updateCodeState);
+    birthInput.addEventListener("input", updateCodeState);
     passwordInput.addEventListener("input", updateCodeState);
     pwOnemoreInput.addEventListener("input", updateCodeState);
     inputchecks.forEach((check) => {

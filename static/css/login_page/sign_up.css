@@ -270,6 +270,10 @@ a {
     padding-right: 22%;
 }
 
+.email .birth-div input {
+    padding-right: 5%;
+}
+
 .input-style {
     width: 100%;
     height: 48px;
@@ -301,6 +305,12 @@ a {
 
 input::placeholder {
     color: rgb(199 200 201);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance:none;
+  margin: 0;
 }
 
 .input-style:focus {

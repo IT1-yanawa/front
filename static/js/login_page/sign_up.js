@@ -146,6 +146,8 @@ const getCodeButton = document.getElementById("get-code-button");
 
 const nameInput = document.getElementById("name-input");
 const getCodeInput = document.getElementById("get-code-input");
+const birthInput = document.getElementById("birth-1");
+const genderInput = document.getElementById("gender");
 const passwordInput = document.getElementById("password-input");
 const pwOnemoreInput = document.getElementById("pw-onemore-input");
 const finalButton = document.getElementById("final-button");
@@ -218,6 +220,8 @@ const finalButton = document.getElementById("final-button");
             nameInput.value.trim() !== "" &&
             nicknameInput.value.trim() !== "" &&
             getCodeInput.value.trim() !== "" &&
+            birthInput.value.trim() !== "" &&
+            genderInput.value.trim() !== "" &&
             passwordInput.value.trim() !== "" &&
             pwOnemoreInput.value.trim() !== "" &&
             [...requiredChecks][0].checked == true &&
@@ -237,6 +241,8 @@ const finalButton = document.getElementById("final-button");
     nameInput.addEventListener("input", updateCodeState);
     nicknameInput.addEventListener("input", updateCodeState);
     getCodeInput.addEventListener("input", updateCodeState);
+    birthInput.addEventListener("input", updateCodeState);
+    genderInput.addEventListener("input", updateCodeState);
     passwordInput.addEventListener("input", updateCodeState);
     pwOnemoreInput.addEventListener("input", updateCodeState);
     inputchecks.forEach((check) => {

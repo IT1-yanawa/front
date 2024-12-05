@@ -975,6 +975,102 @@
                                         <div class="black-gap-4px"></div>
                                     </div>
                                 </div>
+                                <!-- 생년월일(만19세 이상 확인) -->
+                                <div>
+                                    <!-- 생년월일-1 -->
+                                    <div class="birth-wrapper email">
+                                        <div class="birth-div email-1">
+                                            <div class="margin-bottom">
+                                                <label
+                                                    for="birth"
+                                                    class="label-style"
+                                                    >생년월일</label
+                                                >
+                                            </div>
+                                            <input
+                                                id="birth-1"
+                                                type="number"
+                                                placeholder="8자리로 입력해주세요"
+                                                name="birth"
+                                                autocomplete="off"
+                                                class="input-style"
+                                                value=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <!-- 생년월일-2 (만 19세 미만 시: 오류 메시지) -->
+                                    <div class="birth-wrapper email">
+                                        <div class="birth-div email-1">
+                                            <div class="margin-bottom"></div>
+                                            <input
+                                                id="birth-2"
+                                                type="number"
+                                                placeholder="8자리로 입력해주세요"
+                                                name="birth"
+                                                autocomplete="off"
+                                                class="input-style error-style"
+                                                value=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="error">
+                                        <p class="error-message">
+                                            만 19세 미만이므로 가입이
+                                            불가능합니다.
+                                        </p>
+                                    </div>
+                                    <!-- 생년월일-3 (가입 가능 메시지) -->
+                                    <div class="birth-wrapper email">
+                                        <div class="birth-div email-1">
+                                            <div class="margin-bottom"></div>
+                                            <input
+                                                id="birth-3"
+                                                type="number"
+                                                placeholder="8자리로 입력해주세요"
+                                                name="birth"
+                                                autocomplete="off"
+                                                class="input-style"
+                                                value=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="available">
+                                        <p class="available-message">
+                                            만 19세 이상이므로 가입이
+                                            가능합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 성별 선택 -->
+                                <div>
+                                    <div class="gender-wrapper email">
+                                        <div class="gender-div email-1">
+                                            <div class="margin-bottom">
+                                                <label
+                                                    for="gender"
+                                                    class="label-style"
+                                                    >성별</label
+                                                >
+                                            </div>
+                                            <input
+                                                id="gender"
+                                                type="text"
+                                                placeholder="성별을 입력해주세요."
+                                                name="gender"
+                                                class="input-style"
+                                                value=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom"></div>
+                                    <div class="request-code-div">
+                                        <p class="request-code-message">
+                                            '남' 또는 '여' 한 글자만
+                                            입력해주세요.
+                                        </p>
+                                    </div>
+                                </div>
+
                                 <!-- 비밀번호 -->
                                 <div class="password wrapper-8px">
                                     <div class="margin-bottom">
@@ -1093,7 +1189,7 @@
                                             />
                                             <div class="agree-p-div">
                                                 <p class="agree-p">
-                                                    만 18세 이상입니다. (필수)
+                                                    만 19세 이상입니다. (필수)
                                                 </p>
                                             </div>
                                         </div>
